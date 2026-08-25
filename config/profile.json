@@ -1,0 +1,33 @@
+{
+  "name": "Alex Developer",
+  "target_titles": [
+    "Backend Engineer",
+    "Full-Stack Engineer",
+    "Python Developer",
+    "Software Engineer"
+  ],
+  "experience_years": 4,
+  "skills": [
+    "Python",
+    "Django",
+    "FastAPI",
+    "Flask",
+    "SQL",
+    "PostgreSQL",
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "GCP",
+    "CI/CD",
+    "GitHub Actions",
+    "REST APIs",
+    "GraphQL",
+    "JavaScript",
+    "React"
+  ],
+  "resume_summary": "I am a detail-oriented Backend and Full-Stack Software Engineer with 4 years of experience building scalable microservices and APIs. I specialize in Python and robust database architecture (PostgreSQL). I am passionate about cloud infrastructure, containerization, and automation. I value clean code, agile methodologies, and test-driven development.",
+  "location_preferences": [
+    "Remote",
+    "Worldwide"
+  ]
+}

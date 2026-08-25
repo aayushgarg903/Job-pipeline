@@ -1,0 +1,5 @@
+google-generativeai
+notion-client
+python-dotenv
+requests
+beautifulsoup4
