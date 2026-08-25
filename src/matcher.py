@@ -44,16 +44,16 @@ def evaluate_job_fit(job, profile):
     """
     
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash-latest', generation_config={"response_mime_type": "application/json"})
+        model = genai.GenerativeModel('gemini-2.5-flash', generation_config={"response_mime_type": "application/json"})
         response = model.generate_content(prompt)
         result = json.loads(response.text)
         return result
     except Exception as e:
-        # Fallback to gemini-pro if flash is not found or fails
+        # Fallback to gemini-flash-latest if specific version fails
         try:
-            model = genai.GenerativeModel('gemini-pro')
+            model = genai.GenerativeModel('gemini-flash-latest')
             response = model.generate_content(prompt)
-            # Find JSON block in text as gemini-pro doesn't strictly adhere to response_mime_type
+            # Find JSON block in text as some models don't strictly adhere to response_mime_type
             import re
             text = response.text
             json_str = re.search(r'\{.*\}', text, re.DOTALL)
