@@ -33,7 +33,9 @@ def main():
     print(f"Found {len(new_jobs)} new jobs to evaluate.")
     
     for job in new_jobs:
-        print(f"\nEvaluating: {job.get('title')} at {job.get('company')}...")
+        title = job.get('title', '').encode('ascii', 'ignore').decode()
+        company = job.get('company', '').encode('ascii', 'ignore').decode()
+        print(f"\nEvaluating: {title} at {company}...")
         match_result = evaluate_job_fit(job, profile)
         
         if not match_result:

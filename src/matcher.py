@@ -18,7 +18,6 @@ def evaluate_job_fit(job, profile):
     
     # We use a model that supports JSON response formatting if available, or ask it nicely.
     # gemini-1.5-flash is fast and good at structured output.
-    model = genai.GenerativeModel('gemini-1.5-flash', generation_config={"response_mime_type": "application/json"})
     
     job_desc_clean = clean_html(job.get("description", ""))
     
@@ -45,9 +44,22 @@ def evaluate_job_fit(job, profile):
     """
     
     try:
+        model = genai.GenerativeModel('gemini-1.5-flash-latest', generation_config={"response_mime_type": "application/json"})
         response = model.generate_content(prompt)
         result = json.loads(response.text)
         return result
     except Exception as e:
-        print(f"Error calling Gemini API for job {job.get('job_id')}: {e}")
-        return None
+        # Fallback to gemini-pro if flash is not found or fails
+        try:
+            model = genai.GenerativeModel('gemini-pro')
+            response = model.generate_content(prompt)
+            # Find JSON block in text as gemini-pro doesn't strictly adhere to response_mime_type
+            import re
+            text = response.text
+            json_str = re.search(r'\{.*\}', text, re.DOTALL)
+            if json_str:
+                return json.loads(json_str.group())
+            return json.loads(text)
+        except Exception as fallback_e:
+            print(f"Error calling Gemini API for job {job.get('job_id')}: {fallback_e}")
+            return None
