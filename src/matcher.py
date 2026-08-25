@@ -44,7 +44,7 @@ def evaluate_job_fit(job, profile):
     """
     
     try:
-        model = genai.GenerativeModel('gemini-2.5-flash', generation_config={"response_mime_type": "application/json"})
+        model = genai.GenerativeModel('gemini-2.5-pro', generation_config={"response_mime_type": "application/json"})
         response = model.generate_content(prompt)
         result = json.loads(response.text)
         return result
