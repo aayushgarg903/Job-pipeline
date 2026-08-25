@@ -23,7 +23,7 @@ def add_to_notion(job, match_result):
     
     # Prepare properties
     properties = {
-        "Job Title": {
+        "Name": {
             "title": [{"text": {"content": job.get("title", "")[:2000]}}]
         },
         "Company": {
