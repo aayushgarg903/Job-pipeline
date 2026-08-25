@@ -63,6 +63,26 @@ def fetch_arbeitnow_jobs():
         print(f"Error fetching from Arbeitnow: {e}")
         return []
 
+def is_valid_location(location_str):
+    if not location_str:
+        return True
+    loc = location_str.lower()
+    # Accept if it's explicitly India, or generic global/remote
+    allowed = ["india", "worldwide", "global", "anywhere", "remote"]
+    # Reject if it specifically requires a region outside India
+    restricted = ["us only", "usa only", "uk only", "europe only", "eu only", "americas only", "latam"]
+    
+    # If it has a restricted keyword, drop it immediately
+    if any(r in loc for r in restricted):
+        return False
+        
+    # If it contains an allowed keyword, keep it
+    if any(a in loc for a in allowed):
+        return True
+        
+    # If it's a specific country not in the allowed list, drop it
+    return False
+
 def get_new_jobs():
     seen_jobs = load_seen_jobs()
     all_jobs = []
@@ -71,7 +91,8 @@ def get_new_jobs():
     
     new_jobs = []
     for job in all_jobs:
-        if job["job_id"] not in seen_jobs:
+        # Filter by location and check if seen
+        if job["job_id"] not in seen_jobs and is_valid_location(job["location"]):
             new_jobs.append(job)
             
     return new_jobs, seen_jobs
