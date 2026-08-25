@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 from scraper import get_new_jobs, save_seen_jobs
 from matcher import evaluate_job_fit
-from notion_client import add_to_notion
+from notion_integration import add_to_notion
 from notifier import send_email_alert
 
 def load_profile():
