@@ -32,9 +32,6 @@ def add_to_notion(job, match_result):
         "Match Score": {
             "number": match_result.get("match_score", 0)
         },
-        "Status": {
-            "select": {"name": "Inbox"}
-        },
         "URL": {
             "url": job.get("url") if job.get("url") and len(job.get("url")) < 2000 else None
         }
@@ -42,9 +39,8 @@ def add_to_notion(job, match_result):
     
     missing_skills = match_result.get("missing_skills", [])
     if missing_skills:
-        # Notion multi-select options cannot contain commas, so we clean them
-        safe_skills = [{"name": skill.replace(",", "")[:100]} for skill in missing_skills[:100]] # Limit to 100 max
-        properties["Missing Skills"] = {"multi_select": safe_skills}
+        skills_str = ", ".join(missing_skills)[:2000]
+        properties["Missing Skills"] = {"rich_text": [{"text": {"content": skills_str}}]}
         
     # Prepare children (page body)
     children = []
