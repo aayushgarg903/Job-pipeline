@@ -39,8 +39,11 @@ def add_to_notion(job, match_result):
     
     missing_skills = match_result.get("missing_skills", [])
     if missing_skills:
-        skills_str = ", ".join(missing_skills)[:2000]
-        properties["Missing Skills"] = {"rich_text": [{"text": {"content": skills_str}}]}
+        # Notion multi_select expects [{"name": "Skill1"}, {"name": "Skill2"}]
+        # Commas are sometimes not allowed in option names, so we replace them
+        safe_skills = [{"name": str(s).replace(",", "").strip()[:100]} for s in missing_skills if str(s).strip()]
+        if safe_skills:
+            properties["Missing Skills"] = {"multi_select": safe_skills[:15]}
         
     # Prepare children (page body)
     children = []
