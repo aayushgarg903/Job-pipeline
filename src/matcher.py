@@ -49,17 +49,5 @@ def evaluate_job_fit(job, profile):
         result = json.loads(response.text)
         return result
     except Exception as e:
-        # Fallback to gemini-flash-latest if specific version fails
-        try:
-            model = genai.GenerativeModel('gemini-flash-latest')
-            response = model.generate_content(prompt)
-            # Find JSON block in text as some models don't strictly adhere to response_mime_type
-            import re
-            text = response.text
-            json_str = re.search(r'\{.*\}', text, re.DOTALL)
-            if json_str:
-                return json.loads(json_str.group())
-            return json.loads(text)
-        except Exception as fallback_e:
-            print(f"Error calling Gemini API for job {job.get('job_id')}: {fallback_e}")
-            return None
+        print(f"Error calling Gemini API for job {job.get('job_id')}: {e}")
+        return None

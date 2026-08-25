@@ -62,9 +62,9 @@ def main():
         seen_jobs.add(job["job_id"])
         save_seen_jobs(seen_jobs)
         
-        # Respect Gemini free tier rate limit of 15 Requests Per Minute (1 request every 4 seconds)
+        # Respect Gemini free tier rate limit of 15 Requests Per Minute (1 request every 4 seconds, adding buffer)
         import time
-        time.sleep(4)
+        time.sleep(6)
         
     print("\nPipeline execution completed.")
 
