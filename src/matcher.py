@@ -1,6 +1,6 @@
 import os
 import json
-import google.generativeai as genai
+from google import genai
 from bs4 import BeautifulSoup
 
 def clean_html(raw_html):
@@ -14,7 +14,7 @@ def evaluate_job_fit(job, profile):
         print("GEMINI_API_KEY not found in environment variables.")
         return None
         
-    genai.configure(api_key=api_key)
+    client = genai.Client(api_key=api_key)
     
     # We use a model that supports JSON response formatting if available, or ask it nicely.
     # gemini-1.5-flash is fast and good at structured output.
@@ -44,8 +44,13 @@ def evaluate_job_fit(job, profile):
     """
     
     try:
-        model = genai.GenerativeModel('gemini-3.5-flash-lite', generation_config={"response_mime_type": "application/json"})
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(
+            model='gemini-3.5-flash-lite',
+            contents=prompt,
+            config=genai.types.GenerateContentConfig(
+                response_mime_type="application/json"
+            )
+        )
         result = json.loads(response.text)
         return result
     except Exception as e:
