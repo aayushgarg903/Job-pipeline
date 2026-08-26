@@ -33,6 +33,7 @@ jobs:
           GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           NOTIFICATION_RECEIVER: ${{ secrets.NOTIFICATION_RECEIVER }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
         run: |
           python src/main.py
 
@@ -41,4 +42,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data/seen_jobs.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update seen_jobs.json" && git push)
+          git add data/region_state.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update state files" && git push)
