@@ -28,7 +28,7 @@ def main():
         return
         
     print("Fetching new jobs...")
-    new_jobs, seen_jobs = get_new_jobs()
+    new_jobs, seen_jobs = get_new_jobs(profile)
     
     print(f"Found {len(new_jobs)} new jobs to evaluate.")
     

@@ -63,27 +63,61 @@ def fetch_arbeitnow_jobs():
         print(f"Error fetching from Arbeitnow: {e}")
         return []
 
-def is_valid_location(location_str):
+def is_valid_location(location_str, profile):
     if not location_str:
         return True
     loc = location_str.lower()
-    # Accept if it's explicitly India, or generic global/remote
-    allowed = ["india", "worldwide", "global", "anywhere", "remote"]
-    # Reject if it specifically requires a region outside India
+    
+    # Get allowed locations dynamically from profile
+    allowed_prefs = profile.get("location_preferences", [])
+    allowed = [p.lower() for p in allowed_prefs]
+    
+    # Still keep some hardcoded reject rules for typical mismatches if the user is in India
+    # (If your friend is elsewhere, they could even put restrictions in their profile!)
     restricted = ["us only", "usa only", "uk only", "europe only", "eu only", "americas only", "latam"]
     
-    # If it has a restricted keyword, drop it immediately
     if any(r in loc for r in restricted):
         return False
         
-    # If it contains an allowed keyword, keep it
     if any(a in loc for a in allowed):
         return True
         
-    # If it's a specific country not in the allowed list, drop it
     return False
 
-def get_new_jobs():
+def is_relevant_title(title, profile):
+    """
+    Drops jobs before hitting the AI if the title clearly doesn't match the target titles.
+    """
+    if not title:
+        return False
+        
+    t = title.lower()
+    target_titles = [tt.lower() for tt in profile.get("target_titles", [])]
+    
+    # A simple but effective check: see if any word from the target titles is in the job title.
+    # We split target titles into keywords (e.g. "Java Developer" -> "java", "developer")
+    # For backend roles, just checking if "java", "backend", "software", "apex" etc is in the title.
+    
+    target_keywords = set()
+    for tt in target_titles:
+        for word in tt.split():
+            target_keywords.add(word)
+            
+    # Some words are too generic like "developer" or "engineer". We want to ensure 
+    # it doesn't just match "Frontend Developer". So we can create a negative list too.
+    reject_keywords = ["frontend", "react", "ios", "android", "sales", "marketing", "hr", "recruiter", "manager", "data engineer"]
+    
+    if any(r in t for r in reject_keywords):
+        return False
+        
+    # If it contains any of our core keywords (like java, backend, software), keep it!
+    # For your profile, 'software', 'java', 'backend', 'apex' are strong signals.
+    if any(kw in t for kw in target_keywords):
+        return True
+        
+    return False
+
+def get_new_jobs(profile):
     seen_jobs = load_seen_jobs()
     all_jobs = []
     all_jobs.extend(fetch_remotive_jobs())
@@ -91,8 +125,15 @@ def get_new_jobs():
     
     new_jobs = []
     for job in all_jobs:
-        # Filter by location and check if seen
-        if job["job_id"] not in seen_jobs and is_valid_location(job["location"]):
+        # Check if seen
+        if job["job_id"] in seen_jobs:
+            continue
+            
+        # Pre-filtering: Location and Title
+        valid_loc = is_valid_location(job["location"], profile)
+        valid_title = is_relevant_title(job["title"], profile)
+        
+        if valid_loc and valid_title:
             new_jobs.append(job)
             
     return new_jobs, seen_jobs
