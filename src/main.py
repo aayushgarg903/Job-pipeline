@@ -46,8 +46,8 @@ def main():
         print(f"Match Score: {score}/100 - {match_result.get('recommendation')}")
         
         notion_url = None
-        if score >= 75:
-            print("Score >= 75: Saving to Notion...")
+        if score >= 50:
+            print("Score >= 50: Saving to Notion...")
             notion_url = add_to_notion(job, match_result)
             if notion_url:
                 print(f"Saved to Notion: {notion_url}")
