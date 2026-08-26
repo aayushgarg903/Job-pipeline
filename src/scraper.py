@@ -7,7 +7,7 @@ DATA_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "seen_jobs.jso
 
 def load_seen_jobs():
     if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, "r") as f:
+        with open(DATA_FILE, "r", encoding="utf-8") as f:
             try:
                 return set(json.load(f))
             except json.JSONDecodeError:
@@ -16,7 +16,7 @@ def load_seen_jobs():
 
 def save_seen_jobs(seen_jobs):
     os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
-    with open(DATA_FILE, "w") as f:
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(list(seen_jobs), f, indent=2)
 
 def fetch_remotive_jobs():
