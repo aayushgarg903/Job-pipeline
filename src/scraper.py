@@ -150,7 +150,7 @@ def fetch_google_jobs(profile):
                 "company": job.get("employer_name", ""),
                 "url": job.get("job_apply_link", ""),
                 "description": job.get("job_description", ""),
-                "location": f"{job.get('job_city', '')} {job.get('job_state', '')} {job.get('job_country', '')}".strip(),
+                "location": f"{job.get('job_city', '')} {job.get('job_state', '')} {job.get('job_country', '')} {'Remote' if job.get('job_is_remote') else ''}".strip(),
                 "published_date": str(job.get("job_posted_at_datetime_utc", ""))
             })
         return jobs
