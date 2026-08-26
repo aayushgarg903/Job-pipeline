@@ -128,7 +128,7 @@ def fetch_google_jobs(profile):
     primary_title = titles[0] if titles else "Software Engineer"
     
     query = f"{primary_title} in {target_region}"
-    url = "https://jsearch.p.rapidapi.com/search"
+    url = "https://jsearch.p.rapidapi.com/search-v2"
     headers = {
         "x-rapidapi-key": api_key,
         "x-rapidapi-host": "jsearch.p.rapidapi.com"
@@ -140,7 +140,10 @@ def fetch_google_jobs(profile):
         data = response.json()
         
         jobs = []
-        for job in data.get("data", []):
+        jobs_data = data.get("data", [])
+        if isinstance(jobs_data, dict):
+            jobs_data = jobs_data.get("jobs", [])
+        for job in jobs_data:
             jobs.append({
                 "job_id": f"jsearch_{job.get('job_id')}",
                 "title": job.get("job_title", ""),
