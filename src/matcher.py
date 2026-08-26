@@ -2,6 +2,15 @@ import os
 import json
 from google import genai
 from bs4 import BeautifulSoup
+from pydantic import BaseModel, Field
+
+class JobEvaluation(BaseModel):
+    match_score: int = Field(description="Integer between 0 and 100 representing how well the profile matches the job")
+    recommendation: str = Field(description="'Strong Match', 'Potential', or 'Skip'")
+    ai_reasoning: str = Field(description="A 1-2 sentence explanation of why this job received the specific match score")
+    missing_skills: list[str] = Field(description="Array of key skills mentioned in the job but missing in profile")
+    cover_letter: str = Field(description="Tailored, punchy 3-paragraph pitch as a string")
+    interview_questions: list[str] = Field(description="Array of top 3 behavioral/technical questions tailored to the role")
 
 def clean_html(raw_html):
     if not raw_html:
@@ -16,9 +25,6 @@ def evaluate_job_fit(job, profile):
         
     client = genai.Client(api_key=api_key)
     
-    # We use a model that supports JSON response formatting if available, or ask it nicely.
-    # gemini-1.5-flash is fast and good at structured output.
-    
     job_desc_clean = clean_html(job.get("description", ""))
     
     prompt = f"""
@@ -31,16 +37,7 @@ def evaluate_job_fit(job, profile):
     Job Title: {job.get('title')}
     Company: {job.get('company')}
     Job Description:
-    {job_desc_clean[:5000]} # Truncated to avoid token limits just in case
-    
-    Return a JSON object strictly matching this schema:
-    {{
-        "match_score": <integer between 0 and 100 representing how well the profile matches the job>,
-        "recommendation": <"Strong Match", "Potential", or "Skip">,
-        "missing_skills": [<array of key skills mentioned in the job but missing in profile>],
-        "cover_letter": <tailored, punchy 3-paragraph pitch as a string>,
-        "interview_questions": [<array of top 3 behavioral/technical questions tailored to the role>]
-    }}
+    {job_desc_clean[:5000]}
     """
     
     try:
@@ -48,7 +45,8 @@ def evaluate_job_fit(job, profile):
             model='gemini-3.5-flash-lite',
             contents=prompt,
             config=genai.types.GenerateContentConfig(
-                response_mime_type="application/json"
+                response_mime_type="application/json",
+                response_schema=JobEvaluation
             )
         )
         result = json.loads(response.text)

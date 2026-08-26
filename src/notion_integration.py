@@ -48,6 +48,19 @@ def add_to_notion(job, match_result):
     # Prepare children (page body)
     children = []
     
+    # AI Reasoning
+    if "ai_reasoning" in match_result:
+        children.append({
+            "object": "block",
+            "type": "heading_2",
+            "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🧠 AI Match Reasoning"}}]}
+        })
+        children.append({
+            "object": "block",
+            "type": "paragraph",
+            "paragraph": {"rich_text": [{"type": "text", "text": {"content": match_result["ai_reasoning"]}}]}
+        })
+
     # AI Cover Letter
     children.append({
         "object": "block",
