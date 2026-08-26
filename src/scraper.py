@@ -174,6 +174,11 @@ def is_valid_location(location_str, profile):
     if any(r in loc for r in restricted):
         return False
         
+    # JSearch returns 'IN' instead of 'India' for country code
+    if "india" in allowed:
+        if loc.endswith(" in") or loc == "in":
+            return True
+            
     if any(a in loc for a in allowed):
         return True
         
