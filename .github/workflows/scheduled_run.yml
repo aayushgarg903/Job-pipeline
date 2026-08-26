@@ -2,7 +2,7 @@ name: Job Hunting Pipeline 24/7
 
 on:
   schedule:
-    - cron: '0 * * * *' # Runs every 1 hour
+    - cron: '30 * * * *' # Runs at minute 30 past every hour
   workflow_dispatch: # Allows manual trigger from the GitHub Actions tab
 
 jobs:
