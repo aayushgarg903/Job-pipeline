@@ -63,6 +63,98 @@ def fetch_arbeitnow_jobs():
         print(f"Error fetching from Arbeitnow: {e}")
         return []
 
+def fetch_himalayas_jobs():
+    url = "https://himalayas.app/jobs/api"
+    try:
+        response = requests.get(url, params={"limit": 50})
+        response.raise_for_status()
+        data = response.json()
+        jobs = []
+        for job in data.get("jobs", []):
+            # Himalayas location is an array, we'll join it into a string for our filter
+            locs = job.get("locationRestrictions", [])
+            location_str = ", ".join(locs) if locs else "Remote"
+            
+            jobs.append({
+                "job_id": f"himalayas_{job.get('guid', '').split('/')[-1]}",
+                "title": job.get("title", ""),
+                "company": job.get("companyName", ""),
+                "url": job.get("applicationLink", ""),
+                "description": job.get("description", ""),
+                "location": location_str,
+                "published_date": str(job.get("pubDate", ""))
+            })
+        return jobs
+    except Exception as e:
+        print(f"Error fetching from Himalayas: {e}")
+        return []
+
+def fetch_google_jobs(profile):
+    api_key = os.getenv("RAPIDAPI_KEY")
+    if not api_key:
+        print("RAPIDAPI_KEY not set. Skipping Google Jobs (JSearch).")
+        return []
+        
+    regions = profile.get("search_regions", ["Remote"])
+    if not regions:
+        regions = ["Remote"]
+        
+    state_file = os.path.join(os.path.dirname(__file__), "..", "data", "region_state.json")
+    
+    current_index = 0
+    if os.path.exists(state_file):
+        try:
+            with open(state_file, "r") as f:
+                state = json.load(f)
+                current_index = state.get("current_index", 0)
+        except:
+            pass
+            
+    # Safety check if regions array changed length
+    if current_index >= len(regions):
+        current_index = 0
+        
+    target_region = regions[current_index]
+    print(f"Rotating Search: Targeting region '{target_region}' this run.")
+    
+    # Save the next index for the next run
+    next_index = (current_index + 1) % len(regions)
+    os.makedirs(os.path.dirname(state_file), exist_ok=True)
+    with open(state_file, "w") as f:
+        json.dump({"current_index": next_index}, f)
+        
+    # Pick the top title to search, or a generic one
+    titles = profile.get("target_titles", [])
+    primary_title = titles[0] if titles else "Software Engineer"
+    
+    query = f"{primary_title} in {target_region}"
+    url = "https://jsearch.p.rapidapi.com/search"
+    headers = {
+        "x-rapidapi-key": api_key,
+        "x-rapidapi-host": "jsearch.p.rapidapi.com"
+    }
+    
+    try:
+        response = requests.get(url, headers=headers, params={"query": query, "num_pages": "1", "date_posted": "week"})
+        response.raise_for_status()
+        data = response.json()
+        
+        jobs = []
+        for job in data.get("data", []):
+            jobs.append({
+                "job_id": f"jsearch_{job.get('job_id')}",
+                "title": job.get("job_title", ""),
+                "company": job.get("employer_name", ""),
+                "url": job.get("job_apply_link", ""),
+                "description": job.get("job_description", ""),
+                "location": f"{job.get('job_city', '')} {job.get('job_state', '')} {job.get('job_country', '')}".strip(),
+                "published_date": str(job.get("job_posted_at_datetime_utc", ""))
+            })
+        return jobs
+    except Exception as e:
+        print(f"Error fetching from Google Jobs (JSearch): {e}")
+        return []
+
 def is_valid_location(location_str, profile):
     if not location_str:
         return True
@@ -122,6 +214,8 @@ def get_new_jobs(profile):
     all_jobs = []
     all_jobs.extend(fetch_remotive_jobs())
     all_jobs.extend(fetch_arbeitnow_jobs())
+    all_jobs.extend(fetch_himalayas_jobs())
+    all_jobs.extend(fetch_google_jobs(profile))
     
     new_jobs = []
     for job in all_jobs:

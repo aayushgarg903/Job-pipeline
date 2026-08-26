@@ -27,5 +27,13 @@
     "Remote",
     "Worldwide",
     "India"
+  ],
+  "search_regions": [
+    "Delhi NCR, India",
+    "Bangalore, India",
+    "Pune, India",
+    "Hyderabad, India",
+    "North East India",
+    "Remote, India"
   ]
 }
