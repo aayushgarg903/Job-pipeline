@@ -1,0 +1,36 @@
+{
+  "name": "Sakshi Deshwal",
+  "target_titles": [
+    "Data Analyst",
+    "Data Analytics Apprentice",
+    "Junior Data Analyst",
+    "Business Intelligence Analyst",
+    "Data Analyst Intern"
+  ],
+  "experience_years": 0,
+  "skills": [
+    "SQL",
+    "Power BI",
+    "Excel",
+    "Python",
+    "Pandas",
+    "NumPy",
+    "SQLite",
+    "Data Cleaning",
+    "Exploratory Data Analysis",
+    "Data Visualization",
+    "Tableau"
+  ],
+  "resume_summary": "Aspiring Data Analyst (B.Tech Computer Science, 2026) with hands-on experience applying SQL, Power BI, Excel, and Python to clean and analyze datasets. Skilled at turning raw data into KPI dashboards and business insights. Completed data analytics simulations with Deloitte and Tata.",
+  "location_preferences": [
+    "Remote",
+    "India"
+  ],
+  "search_regions": [
+    "Delhi NCR, India",
+    "Bangalore, India",
+    "Pune, India",
+    "Hyderabad, India",
+    "Remote, India"
+  ]
+}

@@ -1,0 +1,45 @@
+name: Sakshi Job Pipeline 24/7
+
+on:
+  schedule:
+    - cron: '47 * * * *' # Runs at minute 47 past every hour to avoid clashing with the main pipeline
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Sakshi Job Hunting Engine
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          GMAIL_SENDER: ${{ secrets.GMAIL_SENDER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          NOTIFICATION_RECEIVER: ${{ secrets.NOTIFICATION_RECEIVER }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+        run: |
+          python src/friend_pipeline.py
+
+      - name: Commit State Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/friend_seen_jobs.json
+          git add data/region_state.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update Sakshi's state files" && git push)
