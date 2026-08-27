@@ -3,7 +3,7 @@ import os
 import requests
 from datetime import datetime
 
-DATA_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "seen_jobs.json")
+DATA_FILE = os.path.join(os.path.dirname(__file__), "..", "data", os.getenv("SEEN_JOBS_FILE", "seen_jobs.json"))
 
 def load_seen_jobs():
     if os.path.exists(DATA_FILE):

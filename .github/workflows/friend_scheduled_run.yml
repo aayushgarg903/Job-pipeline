@@ -2,7 +2,7 @@ name: Sakshi Job Pipeline 24/7
 
 on:
   schedule:
-    - cron: '47 * * * *' # Runs at minute 47 past every hour to avoid clashing with the main pipeline
+    - cron: '0 1-23/2 * * *' # Runs at the top of every odd hour (1, 3, 5...)
   workflow_dispatch:
 
 jobs:
