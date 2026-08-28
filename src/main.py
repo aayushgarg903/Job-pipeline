@@ -1,11 +1,60 @@
 import os
 import json
+import requests
 from dotenv import load_dotenv
 
 from scraper import get_new_jobs, save_seen_jobs
 from matcher import evaluate_job_fit
 from notion_integration import add_to_notion
 from notifier import send_email_alert
+
+def check_job_validity(job):
+    """
+    Checks if the job link is accessible (not 404) and if the job description or page 
+    asks for unwanted fees (like 99 rupees).
+    """
+    url = job.get("url")
+    description = job.get("description", "").lower()
+    
+    # Common fee-related keywords to avoid scams or paid application forms
+    fee_keywords = [
+        "99 rupees", "₹99", "rs 99", "rs. 99", "inr 99", 
+        "application fee", "registration fee", "pay to apply",
+        "security deposit", "refundable deposit"
+    ]
+    
+    # 1. Quick check in description
+    if any(keyword in description for keyword in fee_keywords):
+        print("Skipping: Found fee-related keyword in description.")
+        return False
+        
+    if not url:
+        return True
+        
+    # 2. Check the URL for 404 and also fetch its content for fee checking
+    try:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        }
+        # Timeout to prevent hanging on dead sites
+        response = requests.get(url, headers=headers, timeout=10)
+        
+        if response.status_code == 404:
+            print("Skipping: Job link returned 404 Not Found.")
+            return False
+            
+        # If we successfully loaded the page, let's also scan its text for fee keywords
+        if response.status_code == 200:
+            page_text = response.text.lower()
+            if any(keyword in page_text for keyword in fee_keywords):
+                print("Skipping: Found fee-related keyword on the application page.")
+                return False
+                
+    except requests.RequestException as e:
+        print(f"Skipping: Could not access job link ({e}).")
+        return False
+        
+    return True
 
 def load_profile():
     profile_path = os.path.join(os.path.dirname(__file__), "..", "config", "profile.json")
@@ -36,6 +85,13 @@ def main():
         title = job.get('title', '').encode('ascii', 'ignore').decode()
         company = job.get('company', '').encode('ascii', 'ignore').decode()
         print(f"\nEvaluating: {title} at {company}...")
+        
+        if not check_job_validity(job):
+            # Mark as seen so we don't keep re-checking a broken/paid link
+            seen_jobs.add(job["job_id"])
+            save_seen_jobs(seen_jobs)
+            continue
+            
         match_result = evaluate_job_fit(job, profile)
         
         if not match_result:
