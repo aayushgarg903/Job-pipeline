@@ -1,8 +1,8 @@
 name: Job Hunting Pipeline 24/7
 
 on:
-  schedule:
-    - cron: '0 */2 * * *' # Runs at the top of every even hour (0, 2, 4...)
+#  schedule:
+#    - cron: '0 */2 * * *' # Runs at the top of every even hour (0, 2, 4...)
   workflow_dispatch: # Allows manual trigger from the GitHub Actions tab
 
 jobs:
@@ -19,6 +19,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+          cache: 'pip'
 
       - name: Install Dependencies
         run: |
