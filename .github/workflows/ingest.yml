@@ -1,0 +1,83 @@
+name: ingest
+
+# Postings every 6h (budgeted: JSearch free tier is 200 requests/month, so each run spends ≤ 5),
+# Udyam + taxonomy + radar weekly, facts rebuilt after every run.
+on:
+  schedule:
+    - cron: "17 */6 * * *" # postings
+    - cron: "43 2 * * 1" # weekly: udyam, esco, openalex (Mon 08:13 IST)
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "udyam | jsearch | esco | openalex | all"
+        required: true
+        default: "jsearch"
+      max_requests:
+        description: "JSearch request cap for this run"
+        required: false
+        default: "5"
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      DATABASE_URL_SESSION: ${{ secrets.DATABASE_URL_SESSION }}
+      RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+      DATA_GOV_IN_KEY: ${{ secrets.DATA_GOV_IN_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      EXTRACTOR: ${{ vars.EXTRACTOR || 'dictionary' }}
+      JSEARCH_MONTHLY_CAP: "150"
+      KS_ENV: /dev/null # CI reads secrets from env, never from a file
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Migrate (idempotent)
+        run: pnpm --filter @ks/db migrate
+
+      - name: Pick source
+        id: pick
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "source=${{ inputs.source }}" >> "$GITHUB_OUTPUT"
+            echo "max=${{ inputs.max_requests }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "43 2 * * 1" ]; then
+            echo "source=weekly" >> "$GITHUB_OUTPUT"
+            echo "max=0" >> "$GITHUB_OUTPUT"
+          else
+            echo "source=jsearch" >> "$GITHUB_OUTPUT"
+            echo "max=5" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Ingest postings
+        if: steps.pick.outputs.source == 'jsearch' || steps.pick.outputs.source == 'all'
+        run: pnpm --filter @ks/ingest start --source=jsearch --max-requests=${{ steps.pick.outputs.max }}
+
+      - name: Ingest Udyam, ESCO, OpenAlex
+        if: steps.pick.outputs.source == 'weekly' || steps.pick.outputs.source == 'all'
+        run: |
+          pnpm --filter @ks/ingest start --source=udyam --samples=60 --budget-ms=1800000
+          pnpm --filter @ks/ingest start --source=esco --max-requests=40
+          pnpm --filter @ks/ingest start --source=openalex
+
+      - name: Ingest a single source
+        if: contains(fromJSON('["udyam","esco","openalex"]'), steps.pick.outputs.source)
+        run: pnpm --filter @ks/ingest start --source=${{ steps.pick.outputs.source }}
+
+      - name: Rebuild facts
+        run: pnpm --filter @ks/ingest start facts

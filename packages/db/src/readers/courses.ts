@@ -94,8 +94,9 @@ export function courseReaders(sql: Sql): CourseReaders {
         select c.id, c.name, c.seats, c.duration_hours, c.trainer_qualification,
                co.completed::float8 / nullif(co.enrolled, 0) as completion,
                co.placed_6m::float8 / nullif(co.completed, 0) as placement, co.median_wage as wage,
-               (select sum(e.qty)::int from ks.equipment e where e.course_id = c.id) as sets,
-               (select max(e.unit_cost)::int from ks.equipment e where e.course_id = c.id) as set_cost,
+               -- a "set" is one of every listed item, so usable sets = the scarcest item
+               (select min(e.qty)::int from ks.equipment e where e.course_id = c.id and e.condition <> 'poor') as sets,
+               (select sum(e.unit_cost)::int from ks.equipment e where e.course_id = c.id) as set_cost,
                array(select skill_id from ks.course_skill cs where cs.course_id = c.id) as teaches,
                c.seats = 0 as is_new
         from ks.course c join ks.institution i on i.id = c.institution_id

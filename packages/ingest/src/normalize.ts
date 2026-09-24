@@ -23,15 +23,13 @@ export interface NormalizeContext {
 
 export async function createNormalizeContext(sql: Sql): Promise<NormalizeContext> {
   const geoStats: GeoStats = { indiapost: 0, nominatim: 0 };
-  const [geocoder, ex, catalog, occs, recent] = await Promise.all([
-    createGeocoder(sql, geoStats),
-    selectExtractor(sql),
-    sql<{ id: string; labelEn: string }[]>`select id, label_en as "labelEn" from ks.skill`,
-    sql<{ nco: string; titleEn: string }[]>`select nco_code as nco, title_en as "titleEn" from ks.occupation`,
-    sql<Array<{ id: string; employer_name: string; title: string; description: string; posted_at: Date }>>`
+  const geocoder = await createGeocoder(sql, geoStats);
+  const ex = await selectExtractor(sql);
+  const catalog = await sql<{ id: string; labelEn: string }[]>`select id, label_en as "labelEn" from ks.skill`;
+  const occs = await sql<{ nco: string; titleEn: string }[]>`select nco_code as nco, title_en as "titleEn" from ks.occupation`;
+  const recent = await sql<Array<{ id: string; employer_name: string; title: string; description: string; posted_at: Date }>>`
       select id, employer_name, title, description, posted_at from ks.posting where not is_duplicate
-      and posted_at > now() - interval '60 days' order by posted_at`,
-  ]);
+      and posted_at > now() - interval '60 days' order by posted_at`;
   const deduper = new Deduper();
   for (const p of recent) deduper.add({ id: p.id, employer: p.employer_name, title: p.title, description: p.description, postedAt: p.posted_at });
   return { sql, geocoder, extractor: ex.extractor, extractorName: ex.name, deduper, catalog: [...catalog], occupations: [...occs], geoStats };

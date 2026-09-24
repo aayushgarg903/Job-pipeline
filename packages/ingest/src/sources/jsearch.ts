@@ -42,7 +42,7 @@ export function jobsOf(body: V2Body | null): RawJob[] {
   return Array.isArray(d) ? d : d.jobs ?? [];
 }
 
-export function createJsearchAdapter(sql: Sql, opts: { maxRequests?: number } = {}): SourceAdapter {
+export function createJsearchAdapter(sql: Sql, opts: { maxRequests?: number; start?: number } = {}): SourceAdapter {
   const key = process.env.RAPIDAPI_KEY;
   const monthlyCap = Number(process.env.JSEARCH_MONTHLY_CAP ?? 150);
   return {
@@ -55,7 +55,7 @@ export function createJsearchAdapter(sql: Sql, opts: { maxRequests?: number } = 
       }
       const used = await requestsThisMonth(sql, "jsearch");
       const budget = Math.max(0, Math.min(opts.maxRequests ?? 10, monthlyCap - used));
-      const start = (await lastCursor<{ next: number }>(sql, "jsearch"))?.next ?? 0;
+      const start = opts.start ?? (await lastCursor<{ next: number }>(sql, "jsearch"))?.next ?? 0;
       let ctx: NormalizeContext | null = null;
       let requests = 0, fetched = 0, fresh = 0, dups = 0, latency = 0;
       const errors: string[] = [];
@@ -68,6 +68,10 @@ export function createJsearchAdapter(sql: Sql, opts: { maxRequests?: number } = 
         });
         requests++;
         latency += r.ms;
+        // Log every spent request immediately, so a crash can never hide quota usage.
+        await logHealth(sql, { sourceId: "jsearch", ok: r.status === 200, rows: jobsOf(r.body).length, requests: 1, latencyMs: r.ms,
+          note: `request ${t.query} → HTTP ${r.status}` });
+        console.log(`[jsearch] ${t.query} → ${r.status}, ${jobsOf(r.body).length} jobs, ${r.ms}ms`);
         if (r.status !== 200) {
           errors.push(`${r.status} on "${t.query}"`);
           if (r.status === 429 || r.status === 403) break; // quota exhausted or key blocked: stop spending
@@ -90,7 +94,7 @@ export function createJsearchAdapter(sql: Sql, opts: { maxRequests?: number } = 
       const note = `${requests} requests (month so far ${used + requests}/${monthlyCap}), ${fetched} jobs, ${fresh} new postings, ${dups} duplicates` +
         (errors.length ? `; errors: ${errors.slice(0, 3).join("; ")}` : "") + (budget === 0 ? "; monthly budget exhausted" : "");
       await logHealth(sql, {
-        sourceId: "jsearch", ok: requests > 0 && errors.length < requests, rows: fetched, requests,
+        sourceId: "jsearch", ok: requests > 0 && errors.length < requests, rows: fetched, requests: 0, // already counted per request
         latencyMs: Math.round(latency / Math.max(requests, 1)), note, cursor: { next: i % QUERY_TEMPLATES.length },
       });
       return { rows: fetched, requests, note };

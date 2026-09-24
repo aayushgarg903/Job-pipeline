@@ -106,13 +106,15 @@ export function computeCells(inp: EngineInput): EngineOutput {
       const scale = total(est) > 0 ? anchorTotal / total(est) : 0;
       const w = inp.weights[k] / wSum;
       const nd = nBy.get(k)!;
+      const nObs = new Map<string, number>();
+      for (const o of obs) if (o.kind === k) nObs.set(key(o.lgd, o.nco), (nObs.get(key(o.lgd, o.nco)) ?? 0) + o.n);
       const dTot = new Map<string, number>();
       for (const [kk, v] of est) {
         const [lgd, nco] = kk.split("|") as [string, string];
         const h = v * scale;
         hires.set(kk, (hires.get(kk) ?? 0) + w * h);
         dTot.set(lgd, (dTot.get(lgd) ?? 0) + h);
-        demandFacts.push({ quarter: q, lgd, nco, signal: k, n: 0, hires12m: h });
+        demandFacts.push({ quarter: q, lgd, nco, signal: k, n: nObs.get(kk) ?? 0, hires12m: h });
       }
       for (const d of inp.districts) {
         const n = nd.get(d.lgd) ?? 0; const m = inp.priorStrength[k];
@@ -124,8 +126,6 @@ export function computeCells(inp: EngineInput): EngineOutput {
       for (const k of KINDS) { const n = nBy.get(k)?.get(d.lgd) ?? 0; c += inp.weights[k] * (n / (n + inp.priorStrength[k])); }
       cov.set(d.lgd, Math.min(1, c));
     }
-    // Attach observation counts to the per-signal facts.
-    for (const f of demandFacts) if (f.quarter === q) f.n = obs.filter((o) => o.kind === f.signal && o.lgd === f.lgd && o.nco === f.nco).reduce((s, o) => s + o.n, 0);
 
     const qDemand = new Map<string, number>();
     const rseBy = new Map<string, number>();
