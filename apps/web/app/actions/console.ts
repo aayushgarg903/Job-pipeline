@@ -135,7 +135,8 @@ export async function summarizeTable(input: string[]): Promise<string> {
   const courses: Array<{ name: string; placed: number | null; missing: number }> = [];
 
   for (const ref of refs) {
-    const [kind, id = ""] = ref.split(":");
+    const at = ref.indexOf(":");
+    const kind = ref.slice(0, at), id = ref.slice(at + 1);
     if (kind === "district") {
       const s = await r.district(id);
       if (!s) continue;
@@ -151,7 +152,7 @@ export async function summarizeTable(input: string[]): Promise<string> {
     } else if (kind === "course") {
       const c = await r.course(id);
       if (!c) continue;
-      courses.push({ name: c.name, placed: c.health?.placementRate != null ? Math.round(c.health.placementRate * 100) : null, missing: c.health?.missingSkills.length ?? 0 });
+      courses.push({ name: `${c.name} · ${c.institutionName}`, placed: c.health?.placementRate != null ? Math.round(c.health.placementRate * 100) : null, missing: c.health?.missingSkills.length ?? 0 });
     }
   }
   if (places.length >= 2) return templateNarrate("compare", { places }, l);

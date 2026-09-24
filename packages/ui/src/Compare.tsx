@@ -47,7 +47,23 @@ function subscribe(cb: () => void) {
     window.removeEventListener(EVT, cb);
   };
 }
-const getSnapshot = (param: string) => () => new URLSearchParams(window.location.search).get(param) ?? "";
+// The URL wins; a session copy keeps the table across in-app navigation, whose links drop ?table.
+const STORE_KEY = "ks-table";
+function readStore(): string {
+  try {
+    return window.sessionStorage.getItem(STORE_KEY) ?? "";
+  } catch {
+    return "";
+  }
+}
+function writeStore(v: string) {
+  try {
+    window.sessionStorage.setItem(STORE_KEY, v);
+  } catch {
+    // Storage blocked: the table still lives in the URL for this page.
+  }
+}
+const getSnapshot = (param: string) => () => new URLSearchParams(window.location.search).get(param) ?? readStore();
 const getServerSnapshot = () => "";
 
 export interface CompareProviderProps {
@@ -75,10 +91,17 @@ export function CompareProvider({ children, max = 4, param = "table", labels }: 
       // Keep the comma readable in shared links.
       const search = url.searchParams.toString().replace(/%2C/gi, ",").replace(/%3A/gi, ":");
       window.history.replaceState(null, "", `${url.pathname}${search ? `?${search}` : ""}${url.hash}`);
+      writeStore(next.join(","));
       window.dispatchEvent(new Event(EVT));
     },
     [param],
   );
+
+  // A shared link replaces whatever this tab had on the table.
+  useEffect(() => {
+    const fromUrl = new URLSearchParams(window.location.search).get(param);
+    if (fromUrl !== null) writeStore(fromUrl);
+  }, [raw, param]);
 
   const nameOf = useCallback((ref: string, fallback?: string) => fallback ?? items.get(ref)?.name ?? ref, [items]);
 

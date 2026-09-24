@@ -30,7 +30,7 @@ export function parseTable(raw: string | string[] | null | undefined, max = TABL
   const out: string[] = [];
   for (const part of s.split(",")) {
     const ref = part.trim();
-    if (/^[a-z]+:[\w.-]+$/i.test(ref) && !out.includes(ref)) out.push(ref);
+    if (/^[a-z]+:[\w.:-]+$/i.test(ref) && !out.includes(ref)) out.push(ref);
     if (out.length >= max) break;
   }
   return out;

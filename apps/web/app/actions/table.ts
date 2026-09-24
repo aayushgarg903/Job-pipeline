@@ -23,7 +23,9 @@ export async function resolveTableRefs(input: string[]): Promise<CompareItem[]> 
 
   const out: CompareItem[] = [];
   for (const ref of refs) {
-    const [kind, id] = ref.split(":") as [string, string];
+    // Course ids carry their own colon (iti-nashik-satpur:CTS-ELEC): split on the first one only.
+    const at = ref.indexOf(":");
+    const kind = ref.slice(0, at), id = ref.slice(at + 1);
     if (kind === "district") {
       const s = await r.district(id);
       if (!s) continue;
@@ -33,7 +35,7 @@ export async function resolveTableRefs(input: string[]): Promise<CompareItem[]> 
     } else if (kind === "course") {
       const c = await r.course(id);
       if (!c) continue;
-      const skills = new Map((await r.searchSkills("", 100)).map((s) => [s.id, lang === "mr" && s.labelMr ? s.labelMr : s.labelEn]));
+      const skills = new Map((await r.searchSkills("", 500)).map((s) => [s.id, lang === "mr" && s.labelMr ? s.labelMr : s.labelEn]));
       const item = toCompareItem(courseCard(c, await nameOf(c.lgd), t, lang, (sid) => skills.get(sid) ?? sid, s0.asOf));
       if (item) out.push(item);
     } else if (kind === "skill") {
