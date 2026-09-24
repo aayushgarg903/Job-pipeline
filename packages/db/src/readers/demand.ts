@@ -157,7 +157,12 @@ export function demandReaders(sql: Sql): DemandReaders {
 
     async searchSkills(qs, limit = 10) {
       const q = qs.trim();
-      if (!q) return [];
+      // Empty query = the catalogue (callers build label maps from it), same as the fixtures.
+      if (!q) {
+        const all = await sql<SkillRow[]>`
+          select s.id, s.label_en, s.label_mr, s.kind, s.esco_uri from ks.skill s order by s.label_en limit ${limit}`;
+        return all.map(toSkill);
+      }
       const like = `%${q.replace(/[%_]/g, "")}%`;
       const rows = await sql<SkillRow[]>`
         select s.id, s.label_en, s.label_mr, s.kind, s.esco_uri from ks.skill s

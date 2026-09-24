@@ -43,6 +43,8 @@ export interface SurveyInput {
   weeksToProductivity: number | null;
   skills: Array<{ skillId: SkillId; importance: "mandatory" | "preferred" | "nice"; proficiency: Proficiency }>;
   comment: string | null;
+  /** DPDP Act 2023 s.6: proof of consent. Writers must persist it with the response. */
+  consent?: { at: string; noticeVersion: string; purpose: string };
 }
 
 export interface Writers {
