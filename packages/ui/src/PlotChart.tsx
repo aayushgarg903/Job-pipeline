@@ -63,6 +63,8 @@ export function PlotChart({ title, summary, chart, height = 260, csvName, header
       const draw = () => {
         const w = Math.max(280, Math.floor(el.clientWidth));
         const node = buildChart(Plot, chart, readColors(el), w, height);
+        // Plot labels each mark group ("bar", "rule"); inside role="img" those are noise and invalid on <g>.
+        node.querySelectorAll("g[aria-label]").forEach((g) => g.removeAttribute("aria-label"));
         node.setAttribute("role", "img");
         node.setAttribute("aria-labelledby", titleId);
         node.setAttribute("aria-describedby", sumId);
