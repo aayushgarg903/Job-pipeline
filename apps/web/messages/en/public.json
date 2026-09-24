@@ -1,1 +1,246 @@
-{}
+{
+  "public": {
+    "demo": {
+      "writes": "Demo mode: your answer is kept only in this server's memory and is forgotten when it restarts.",
+      "employer": "Demo mode: you're reviewing as an example Nashik employer."
+    },
+    "employer": {
+      "code": "EMPLOYERS",
+      "title": "Tell us who you need",
+      "lede": "Tell us who you need. It takes about 6 minutes, and it changes what ITIs near you teach.",
+      "why": "Answer for one role you hire for. Only district totals are ever shown, never your organisation's name.",
+      "inboxTitle": "Course changes waiting for you",
+      "inboxBody": "ITIs near you have proposed changes to their courses. Tell them if the changes match what you hire for.",
+      "inboxCta": "Review course changes"
+    },
+    "survey": {
+      "storageNote": "Your answers are saved on this device as you go, so you can come back later.",
+      "steps": {
+        "consent": {
+          "title": "Your consent",
+          "desc": "Under the Digital Personal Data Protection Act, 2023."
+        },
+        "org": {
+          "title": "Your workplace",
+          "desc": "About 1 minute."
+        },
+        "role": {
+          "title": "The role you're hiring for",
+          "desc": "Pick one role. If you hire for several, fill the survey again later."
+        },
+        "skills": {
+          "title": "The skills you need",
+          "desc": "Start with the most important. Up to 5 skills."
+        },
+        "hires": {
+          "title": "Your recent hires",
+          "desc": "People you hired from an ITI or PMKVY centre in the last 12 months."
+        },
+        "comment": {
+          "title": "Anything else",
+          "desc": "Optional. Then send your answers."
+        }
+      },
+      "consent": {
+        "collect": "What we collect: your organisation's name, district, sector and hiring needs.",
+        "why": "Why: to estimate skill demand by district and to suggest changes to skill-course curricula. Nothing else.",
+        "show": "What we show: only totals by district, sector and role. Never your organisation's name.",
+        "never": "What we never do: sell your data, share your details, or use them for marketing.",
+        "keep": "How long we keep it: until the end of the hackathon evaluation, or longer only if the Government of Maharashtra adopts the project and you are told.",
+        "rights": "Your rights: you can ask to see, correct or delete your answers at any time, and withdraw consent the same way.",
+        "question": "Do you agree to share this information for the purpose above?",
+        "yes": "Yes, I agree to share this information for the purpose above",
+        "no": "No, I don't agree",
+        "noNote": "That's fine. Nothing has been recorded. You can close this page."
+      },
+      "fields": {
+        "employerName": "Organisation name",
+        "udyam": "Udyam registration number (optional)",
+        "udyamHint": "Looks like UDYAM-MH-00-0000000. It helps us count one employer once.",
+        "lgd": "Which district is your workplace in?",
+        "choose": "Choose…",
+        "sector": "What does your organisation mainly do?",
+        "sectorOther": "Tell us in your own words",
+        "role": "Which role are you answering about?",
+        "roleHint": "Pick the closest one. If it's not here, choose Other and type it in your own words.",
+        "roleOther": "The role, in your own words",
+        "hires": "How many people do you expect to hire for this role in the next 12 months?",
+        "hiresHint": "A rough number is fine. Count new hires only, not people already working.",
+        "ratio": "When you advertise this kind of role online, how many people do you finally hire per advertisement?",
+        "ratioHint": "Think about the last 12 months. This tells us how to read online job ads for your area.",
+        "skillSearch": "Find a skill",
+        "skillSearchHint": "Type a few letters, for example \"solar\", \"CNC\", \"Tally\" or \"wiring\".",
+        "skillSearching": "Looking…",
+        "skillNoMatch": "No matching skill yet. Try a shorter word, or describe it in the comment at the end.",
+        "skillAdd": "Add {skill}",
+        "skillAdded": "{skill} added.",
+        "skillRemoved": "{skill} removed.",
+        "skillRemove": "Remove {skill}",
+        "skillsChosen": "Skills you chose ({n} of {max})",
+        "skillsNone": "No skills added yet.",
+        "skillsFull": "That's 5 skills, the most we ask for.",
+        "importance": "How important is this skill when you hire?",
+        "proficiency": "What level do they need on day one?",
+        "csat": "How satisfied are you with the people you hired from ITIs or PMKVY centres in the last 12 months?",
+        "csatLow": "1 = Not at all ready for the job",
+        "csatHigh": "5 = Fully job-ready",
+        "weeks": "How long does a new ITI or PMKVY hire take to work at full speed?",
+        "comment": "Anything ITIs should teach, stop teaching, or teach differently?"
+      },
+      "sectors": {
+        "29": "Manufacturing: automobiles and auto parts",
+        "28": "Manufacturing: machinery and equipment",
+        "25": "Manufacturing: metal products, fabrication",
+        "27": "Manufacturing: electrical equipment, including solar and EV",
+        "26": "Manufacturing: electronics and computers",
+        "10": "Food products and processing",
+        "01": "Agriculture and allied",
+        "35": "Electricity, solar installation and power",
+        "49-53": "Warehousing, logistics and transport",
+        "62-63": "IT, software and data services",
+        "86": "Healthcare: hospitals, clinics, labs",
+        "other": "Other"
+      },
+      "roleOtherOption": "Other",
+      "ratios": {
+        "none": "We posted, but hired nobody from it",
+        "lt1": "Less than 1 hire per ad (many ads, few hires)",
+        "one": "About 1 hire per ad",
+        "two3": "2 to 3 hires per ad",
+        "four10": "4 to 10 hires per ad",
+        "gt10": "More than 10 hires per ad",
+        "offline": "We don't advertise this role online"
+      },
+      "importance": {
+        "mandatory": "Must-have: we won't hire without it",
+        "preferred": "Preferred: we hire faster if they have it",
+        "nice": "Nice to have: we can teach it on the job"
+      },
+      "proficiency": {
+        "1": "1. Basic: knows what it is, can do it with close supervision",
+        "2": "2. Working: can do routine tasks alone",
+        "3": "3. Advanced: handles problems and non-routine jobs alone",
+        "4": "4. Expert: can set it up, fix anything, and train others"
+      },
+      "csatNone": "We haven't hired from an ITI or PMKVY centre in the last 12 months",
+      "weeks": {
+        "lt1": "Less than 1 week",
+        "w1to2": "1 to 2 weeks",
+        "w3to4": "3 to 4 weeks",
+        "w5to8": "5 to 8 weeks",
+        "w9to12": "9 to 12 weeks",
+        "gt12": "More than 12 weeks",
+        "none": "We haven't hired from an ITI or PMKVY centre in the last 12 months"
+      },
+      "errors": {
+        "summaryTitle": "Please fix these before going on",
+        "summaryIntro": "{n} answers need a look.",
+        "onStep": "Step {n}",
+        "required": "Please answer this one.",
+        "number": "Please type a whole number, like 12.",
+        "range": "Please use a number from 0 to 5,000.",
+        "tooLong": "That's a little long. Please shorten it.",
+        "pattern": "This doesn't look like a Udyam number (UDYAM-MH-00-0000000). You can leave it blank.",
+        "consent": "We can only record answers if you agree. If you don't, nothing is saved.",
+        "skills": "Please add at least one skill.",
+        "unknown": "One of the skills isn't in our list. Please remove it and pick again.",
+        "server": "We couldn't send your answers just now. They're still saved on this device; please try again."
+      },
+      "sending": "Sending…",
+      "thanks": {
+        "code": "THANK YOU",
+        "title": "Your answer counts",
+        "counted": "Your {hires} expected hires for {role} now count in {district}'s skill demand.",
+        "others": "Other employers told us something similar:",
+        "skills": "The skills you named ({skills}) go into the list ITIs in {district} are checked against, with your {mustHave} must-haves marked as must-haves.",
+        "courses": "In {district} that's {courses} courses at {institutes} institutes. When one of them is missing what you asked for, we suggest a change and send it to local employers like you to review.",
+        "coursesNone": "We don't track a course in {district} for this yet. Your answer is how we show that one is needed.",
+        "reference": "Reference: {id}",
+        "next": "Review course changes near you",
+        "again": "Answer for another role",
+        "rights": "To see, correct or delete your answers, write to the team. You can withdraw consent at any time."
+      }
+    },
+    "prs": {
+      "title": "Course changes to review",
+      "lede": "ITIs and training centres near you have proposed changes. You know what you hire for: tell them if they've got it right.",
+      "count": "{n} changes waiting for you.",
+      "empty": "Nothing to review right now. We'll send you the next change when an ITI near you proposes one.",
+      "back": "All course changes",
+      "code": "{code} · CHANGE #{n}",
+      "title2": "{institute}, {district}",
+      "status": {
+        "draft": "New",
+        "employer-validated": "Backed by employers",
+        "approved": "Approved",
+        "adopted": "Adopted"
+      },
+      "why": "Why this change",
+      "diffTitle": "What would change",
+      "open": "Open and review",
+      "review": {
+        "legend": "Does this change match what you hire for?",
+        "endorse": "Endorse",
+        "change": "Request change",
+        "irrelevant": "Not relevant",
+        "comment": "Comment (optional)",
+        "commentHint": "For example: \"Add Fanuc controls, not Siemens.\"",
+        "send": "Send",
+        "sending": "Sending…",
+        "sealLabel": "Endorsed by {n} local employers",
+        "changes": "{n} asked for a change",
+        "yours": "Your answer: {verdict}.",
+        "thanks": "Thank you. The ITI will see your answer.",
+        "error": "We couldn't send that just now. Please try again.",
+        "pick": "Choose one of the three answers."
+      },
+      "trainers": "Needs {n} × {what}",
+      "equipment": "Needs {n} × {what}"
+    },
+    "me": {
+      "code": "YOUR NEXT CARD",
+      "title": "Where can your skills take you?",
+      "lede": "Tell us what you can do, in your own words. We'll show you jobs near you that need it, and what to learn next.",
+      "privacy": "No login. We don't keep what you type: it is read once (by Google's Gemini AI when it's available) and then forgotten. Your results live only in this page's link.",
+      "textLabel": "What can you do?",
+      "textHint": "Write it the way you'd say it. Marathi, English or both is fine.",
+      "placeholder": "For example: I can do house wiring and fix inverters. मला wiring आणि solar panel बसवता येतं.",
+      "district": "Your district",
+      "choose": "Choose your district",
+      "submit": "Show me where I can go",
+      "errText": "Please write a few words about what you can do.",
+      "errDistrict": "Please choose your district.",
+      "resultTitle": "Here's where your skills can take you in {district}",
+      "understood": "What we understood you can do",
+      "viaAi": "Our AI helper read what you wrote.",
+      "viaWords": "Our AI helper was busy, so we matched your words against our skill list ourselves. It may miss a skill or two.",
+      "viaNone": "We couldn't pick out a skill from what you wrote, so these are the jobs most in demand near you. Try again with the names of tools or tasks you know.",
+      "level": {
+        "1": "a little",
+        "2": "can do it",
+        "3": "good at it",
+        "4": "expert"
+      },
+      "pathCode": "PATH {n} OF {total}",
+      "nearby": "In nearby districts ({names}), about {n} more could be hired.",
+      "haveAll": "You already have the skills employers ask for here.",
+      "have": "You already have: {skills}",
+      "toAdd": "Skills to add",
+      "course": "Nearest course with seats",
+      "courseLine": "{course} at {institute}, {district}: {seats} seats.",
+      "courseWhere": {
+        "home": "In your district.",
+        "nearby": "In a nearby district.",
+        "state": "Further away, elsewhere in Maharashtra."
+      },
+      "noCourse": "We don't know of a course with seats for this yet. Ask at your nearest ITI.",
+      "free": "Free online",
+      "freeLink": "Search SWAYAM for \"{skill}\"",
+      "example": "example",
+      "freeNote": "A starting point, not a recommendation: check the course before you enrol.",
+      "noPaths": "We don't have enough job data for {district} yet to suggest a path. Try a nearby district.",
+      "again": "Try different words",
+      "people": "people"
+    }
+  }
+}
