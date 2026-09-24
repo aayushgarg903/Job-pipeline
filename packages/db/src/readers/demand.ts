@@ -35,11 +35,11 @@ export function demandReaders(sql: Sql): DemandReaders {
       with shortage as (
         select distinct on (c.lgd_code) c.lgd_code, c.skill_id, s.label_en, c.gap
         from ks.demand_cell c join ks.skill s on s.id = c.skill_id
-        where c.quarter = ${q} and c.gap > 0 order by c.lgd_code, c.gap desc),
+        where c.quarter = ${q} and c.gap > 0 and s.kind <> 'transversal' order by c.lgd_code, c.gap desc),
       surplus as (
         select distinct on (c.lgd_code) c.lgd_code, c.skill_id, s.label_en, c.gap
         from ks.demand_cell c join ks.skill s on s.id = c.skill_id
-        where c.quarter = ${q} and c.gap < 0 order by c.lgd_code, c.gap asc)
+        where c.quarter = ${q} and c.gap < 0 and s.kind <> 'transversal' order by c.lgd_code, c.gap asc)
       select d.lgd_code, d.name_en, d.name_mr, d.division, d.population, d.is_aspirational,
              m.mismatch, m.coverage, m.postings, m.udyam_new_12m, m.sources, m.is_demo,
              (select max(finished_at) from ks.pipeline_run where command = 'facts' and ok) as as_of,
@@ -150,7 +150,7 @@ export function demandReaders(sql: Sql): DemandReaders {
           group by skill_id)
         select s.id, s.label_en, s.label_mr, s.kind, s.esco_uri, b.gap, b.sdi, coalesce(d.delta, 0) as delta
         from best b join ks.skill s on s.id = b.skill_id left join sdi1 d on d.skill_id = b.skill_id
-        where ${by === "surplus" ? sql`b.gap < 0` : by === "shortage" ? sql`b.gap > 0` : sql`true`}
+        where s.kind <> 'transversal' and ${by === "surplus" ? sql`b.gap < 0` : by === "shortage" ? sql`b.gap > 0` : sql`true`}
         order by ${order} limit ${limit}`;
       return rows.map((r) => ({ ...toSkill(r), gap: num(r.gap), sdi: num(r.sdi), delta: num(r.delta) }));
     },

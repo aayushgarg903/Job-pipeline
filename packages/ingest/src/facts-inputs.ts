@@ -42,26 +42,44 @@ export async function observations(sql: Sql, quarters: string[]): Promise<Signal
   return obs;
 }
 
-/** Curated P(s|o), blended 70/30 with skill frequencies observed in ≥ 5 postings of that occupation. */
+/**
+ * P(s|o): curated profile, blended with observed evidence where there is enough of it —
+ * 30% skill frequency in ≥ 5 postings of the occupation, and 30% importance-weighted frequency in
+ * ≥ 2 employer survey responses (mandatory 1, preferred 0.6, nice 0.3). The rest stays curated.
+ */
 export async function profiles(sql: Sql): Promise<EngineInput["profiles"]> {
   const curated = await sql<{ nco_code: string; skill_id: string; weight: number; proficiency: number }[]>`
     select nco_code, skill_id, weight, proficiency from ks.occupation_skill`;
-  const observed = await sql<{ nco_code: string; skill_id: string; freq: number; prof: number | null; n: number }[]>`
+  const posts = await sql<{ nco_code: string; skill_id: string; freq: number; prof: number | null }[]>`
     with p as (select id, nco_code from ks.posting where not is_duplicate and nco_code is not null),
     n as (select nco_code, count(*) as n from p group by 1 having count(*) >= 5)
-    select p.nco_code, ps.skill_id, count(*)::float8 / max(n.n) as freq, round(avg(ps.proficiency))::int as prof, max(n.n)::int as n
+    select p.nco_code, ps.skill_id, count(*)::float8 / max(n.n) as freq, round(avg(ps.proficiency))::int as prof
     from p join n on n.nco_code = p.nco_code join ks.posting_skill ps on ps.posting_id = p.id and not ps.negated
     group by 1, 2`;
+  const surveys = await sql<{ nco_code: string; skill_id: string; freq: number; prof: number | null }[]>`
+    with n as (select nco_code, count(*) as n from ks.survey_response group by 1 having count(*) >= 2)
+    select r.nco_code, s.skill_id,
+           sum(case s.importance when 'mandatory' then 1 when 'preferred' then 0.6 else 0.3 end)::float8 / max(n.n) as freq,
+           round(avg(s.proficiency))::int as prof
+    from ks.survey_response r join n on n.nco_code = r.nco_code join ks.survey_skill s on s.response_id = r.id
+    group by 1, 2`;
+  const BLEND = 0.3;
+  const share = new Map<string, number>(); // nco → share of weight taken by observed evidence
+  for (const o of posts) share.set(`p|${o.nco_code}`, BLEND);
+  for (const o of surveys) share.set(`s|${o.nco_code}`, BLEND);
+  const curatedShare = (nco: string) => 1 - (share.get(`p|${nco}`) ?? 0) - (share.get(`s|${nco}`) ?? 0);
+
   const out = new Map<string, EngineInput["profiles"][number]>();
-  const hasObs = new Set(observed.map((o) => o.nco_code));
   for (const c of curated) {
-    out.set(`${c.nco_code}|${c.skill_id}`, { nco: c.nco_code, skillId: c.skill_id, weight: hasObs.has(c.nco_code) ? 0.7 * c.weight : c.weight, proficiency: c.proficiency });
+    out.set(`${c.nco_code}|${c.skill_id}`, { nco: c.nco_code, skillId: c.skill_id, weight: curatedShare(c.nco_code) * c.weight, proficiency: c.proficiency });
   }
-  for (const o of observed) {
+  for (const o of [...posts, ...surveys]) {
     const k = `${o.nco_code}|${o.skill_id}`;
     const cur = out.get(k);
-    if (cur) cur.weight += 0.3 * o.freq;
-    else out.set(k, { nco: o.nco_code, skillId: o.skill_id, weight: 0.3 * o.freq, proficiency: o.prof ?? 2 });
+    if (cur) {
+      cur.weight += BLEND * o.freq;
+      if (o.prof != null && o.prof > cur.proficiency) cur.proficiency = o.prof; // employers asking for more raises the bar
+    } else out.set(k, { nco: o.nco_code, skillId: o.skill_id, weight: BLEND * o.freq, proficiency: o.prof ?? 2 });
   }
   return [...out.values()].map((p) => ({ ...p, weight: Math.min(1, p.weight) }));
 }

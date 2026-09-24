@@ -19,6 +19,7 @@ export function computeCells(inp: EngineInput): EngineOutput {
   const divPop = new Map(divisions.map((v) => [v, inp.districts.filter((d) => d.division === v).reduce((s, d) => s + pop.get(d.lgd)!, 0)]));
   const statePop = [...pop.values()].reduce((a, b) => a + b, 0);
   const nD = inp.districts.length;
+  const trainable = inp.trainableNcos ? new Set(inp.trainableNcos) : null;
 
   const byProfile = new Map<string, Array<{ skillId: string; weight: number; proficiency: number }>>();
   for (const p of inp.profiles) {
@@ -130,11 +131,12 @@ export function computeCells(inp: EngineInput): EngineOutput {
     const qDemand = new Map<string, number>();
     const rseBy = new Map<string, number>();
     for (const d of inp.districts) {
-      let occDemandSum = 0, absGap = 0;
+      let occDemandSum = 0, trainDemand = 0, absGap = 0;
       for (const nco of occs) {
         const h = hires.get(key(d.lgd, nco)) ?? 0;
         const sup = served(d.lgd, (f) => localOcc.get(key(f, nco)) ?? 0, (a, b, s) => a + b * s, 0);
-        occDemandSum += h; absGap += Math.abs(h - sup);
+        occDemandSum += h;
+        if (!trainable || trainable.has(nco)) { trainDemand += h; absGap += Math.abs(h - sup); }
         if (h > 0 || sup > 0) occupationCells.push({ quarter: q, lgd: d.lgd, nco, demand: h, supply: sup });
         for (const pr of byProfile.get(nco)!) {
           for (let p = 1; p <= pr.proficiency; p++) {
@@ -145,7 +147,7 @@ export function computeCells(inp: EngineInput): EngineOutput {
       }
       const H = occDemandSum;
       rseBy.set(d.lgd, H > 0 ? Math.sqrt(varTerm.get(d.lgd) ?? 0) / H : 1);
-      districtMetrics.push({ quarter: q, lgd: d.lgd, mismatch: H > 0 ? Math.min(1, absGap / H) : 0, coverage: cov.get(d.lgd) ?? 0 });
+      districtMetrics.push({ quarter: q, lgd: d.lgd, mismatch: trainDemand > 0 ? Math.min(1, absGap / trainDemand) : 0, coverage: cov.get(d.lgd) ?? 0 });
     }
     quarterDemand.set(q, qDemand);
     quarterRse.set(q, rseBy);

@@ -40,7 +40,7 @@ async function main() {
           console.error(`[${name}]`, e);
         }
       };
-      await run1("udyam", async () => (await import("./sources/udyam")).createUdyamAdapter(sql, { samples: num("samples"), budgetMs: num("budget-ms") }));
+      await run1("udyam", async () => (await import("./sources/udyam")).createUdyamAdapter(sql, { samples: num("samples"), budgetMs: num("budget-ms"), skipTotals: args["skip-totals"] === "true" }));
       await run1("esco", async () => (await import("./sources/esco")).createEscoAdapter(sql, { maxRequests: num("max-requests") }));
       await run1("jsearch", async () => (await import("./sources/jsearch")).createJsearchAdapter(sql, { maxRequests: num("max-requests"), start: num("start") }));
       await run1("openalex", async () => (await import("./sources/openalex")).createOpenAlexAdapter(sql));

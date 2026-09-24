@@ -20,6 +20,8 @@ export interface EngineInput {
   occSupply: Array<{ lgd: string; nco: string; completers: number }>;
   /** Spill-over matrix M[from → to], rows sum to 1. */
   spill: Array<{ from: string; to: string; share: number }>;
+  /** Occupations the ITI/PMKVY system trains for; Mismatch is computed over these only (all if omitted). */
+  trainableNcos?: string[];
 }
 
 export interface OccupationCell { quarter: string; lgd: string; nco: string; demand: number; supply: number }

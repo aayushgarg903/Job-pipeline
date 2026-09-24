@@ -27,11 +27,16 @@ export async function buildFacts(sql: Sql, now = new Date()): Promise<Record<str
   const quarters = quarterRange(latest, WINDOW_QUARTERS);
   const districts = (await sql<{ lgd_code: string; division: string; population: number | null }[]>`
     select lgd_code, division, population from ks.geo_district`).map((d) => ({ lgd: d.lgd_code, division: d.division, population: d.population ?? 1_000_000 }));
-  const [obs, prof, sup] = await Promise.all([observations(sql, quarters), profiles(sql), supply(sql)]);
+  const obs = await observations(sql, quarters);
+  const prof = await profiles(sql);
+  const sup = await supply(sql);
+  // Mismatch covers occupations with an ITI/PMKVY pathway (a trade or QP targets them).
+  const trainableNcos = (await sql<{ nco_code: string }[]>`
+    select distinct nco_code from ks.qualification where nco_code is not null`).map((r) => r.nco_code);
 
   const out = engine.computeCells({
     quarters, baseQuarter: quarters[0]!, districts, observations: obs, weights: WEIGHTS, priorStrength: PRIOR_STRENGTH,
-    profiles: prof, ...sup, spill: spill(districts),
+    profiles: prof, ...sup, spill: spill(districts), trainableNcos,
   });
 
   await replace(sql, "demand_fact", out.demandFacts.map((f) => ({ quarter: f.quarter, lgd_code: f.lgd, nco_code: f.nco, signal: f.signal, n: f.n, hires_12m: f.hires12m })),

@@ -1,10 +1,12 @@
 // Local stand-in for @ks/core's Course Health (Architecture §6.3).
 //   Relevance 35 · Outcomes 30 · Currency 15 · Validation 20, each 0–100.
 //   Declining skill: Theil–Sen slope < 0 with a Mann–Kendall test, BH-FDR q < 0.1 across skills,
-//   sustained (also negative without the latest quarter); plus skills with ~zero demand anywhere.
+//   sustained (also negative without the latest quarter); plus skills whose statewide demand is
+//   below LOW_DEMAND_SHARE of the median skill.
 import type { CourseFlag, CourseHealth, DemandCell } from "@ks/contracts";
 import type { HealthInput } from "./types";
 
+export const LOW_DEMAND_SHARE = 0.2;
 const clamp = (x: number) => Math.max(0, Math.min(100, x));
 const r1 = (x: number) => Math.round(x * 10) / 10;
 
@@ -61,7 +63,8 @@ export function decliningSkills(cells: DemandCell[], quarters: string[]): { decl
   const latest = quarters[quarters.length - 1];
   const totals = [...series.entries()].map(([id, m]) => [id, m.get(latest!) ?? 0] as const);
   const med = [...totals.map(([, v]) => v)].sort((a, b) => a - b)[Math.floor(totals.length / 2)] ?? 0;
-  const zeroDemand = new Set(totals.filter(([, v]) => v < med * 0.01).map(([id]) => id));
+  // "Low demand": statewide demand below a fifth of the median skill (typewriting, DOS, CRT repair…).
+  const zeroDemand = new Set(totals.filter(([, v]) => v < med * LOW_DEMAND_SHARE).map(([id]) => id));
   return { declining, zeroDemand };
 }
 

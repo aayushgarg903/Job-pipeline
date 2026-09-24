@@ -2,9 +2,10 @@
 // The feed has 6.8M Maharashtra rows, and the public sample key returns ≤10 rows per call under a
 // tight rate limit, so full aggregation is impossible. Strategy:
 //   A. exact district totals: filters[LG_DT_Code]=<lgd>&limit=1 → read `total` (36 calls)
-//   B. random-offset samples across the state (10 rows each) → NIC-5 and quarter mix per district
-//   C. udyam_fact = total(d) × P(quarter | d) × P(nic | d), both shrunk toward the state mix
-//      (method = 'apportioned'). With a personal DATA_GOV_IN_KEY, samples are 1000 rows per call.
+//   B. random-offset samples across the state (10 rows each) → NIC-5 mix and registration dates
+//   C. udyam_fact = total(d) × P(quarter) × P(nic | d): P(quarter) is the kernel-smoothed statewide
+//      distribution, P(nic | d) is shrunk toward the state mix (method = 'apportioned').
+//      With a personal DATA_GOV_IN_KEY, samples are 1000 rows per call.
 import type { Sql } from "@ks/db";
 import { type SourceAdapter, healthFromLog, logHealth, storeRaw } from "../store";
 import { getJson, sha256, sleep } from "../util";
@@ -115,6 +116,32 @@ export function mapNic(nic: string, xwalkNics: string[]): string {
   return "other";
 }
 
+/**
+ * Quarter-start → share of all registrations, from Udyam's launch (2020-07) to the current quarter.
+ * Gaussian kernel (σ = 1 quarter) over sample counts plus a 0.5 pseudo-count, so an unlucky
+ * empty quarter in a few hundred samples can't read as a collapse in registrations.
+ */
+export function smoothQuarters(counts: Map<string, number>, now = new Date(), sigma = 1): Map<string, number> {
+  const qs: string[] = [];
+  for (let y = 2020, m = 7; ; m += 3) {
+    if (m > 12) { m -= 12; y++; }
+    const d = new Date(Date.UTC(y, m - 1, 1));
+    if (d > now) break;
+    qs.push(`${y}-${String(m).padStart(2, "0")}-01`);
+  }
+  const raw = qs.map((q) => counts.get(q) ?? 0);
+  const sm = raw.map((_, i) => {
+    let s = 0, w = 0;
+    for (let j = 0; j < raw.length; j++) {
+      const k = Math.exp(-((i - j) ** 2) / (2 * sigma * sigma));
+      s += k * raw[j]!; w += k;
+    }
+    return s / w + 0.5;
+  });
+  const total = sm.reduce((a, b) => a + b, 0);
+  return new Map(qs.map((q, i) => [q, sm[i]! / total]));
+}
+
 /** Rebuild udyam_fact from district totals and all sampled rows (idempotent). */
 export async function buildUdyamFacts(sql: Sql, alpha = 20): Promise<number> {
   const totals = await sql<{ lgd_code: string; total: number }[]>`select lgd_code, total from ks.udyam_district_total`;
@@ -125,7 +152,7 @@ export async function buildUdyamFacts(sql: Sql, alpha = 20): Promise<number> {
   const minQ = "2023-07-01"; // keep ~3 years of quarters
   const cnt = (m: Map<string, number>, k: string, by = 1) => m.set(k, (m.get(k) ?? 0) + by);
   const stateQ = new Map<string, number>(); const stateN = new Map<string, number>();
-  const dQ = new Map<string, Map<string, number>>(); const dN = new Map<string, Map<string, number>>();
+  const dN = new Map<string, Map<string, number>>();
   const dCount = new Map<string, number>();
   let allQ = 0;
   for (const { payload: r } of samples) {
@@ -134,7 +161,7 @@ export async function buildUdyamFacts(sql: Sql, alpha = 20): Promise<number> {
     const nics = nicsOf(r.Activities);
     if (!q) continue;
     allQ++;
-    cnt(stateQ, q); if (!dQ.has(lgd)) dQ.set(lgd, new Map()); cnt(dQ.get(lgd)!, q);
+    cnt(stateQ, q);
     cnt(dCount, lgd);
     for (const n of nics.length ? nics : ["other"]) {
       const mapped = n === "other" ? "other" : mapNic(n, xw);
@@ -149,10 +176,12 @@ export async function buildUdyamFacts(sql: Sql, alpha = 20): Promise<number> {
     return out;
   };
   const stateNSum = [...stateN.values()].reduce((a, b) => a + b, 0);
+  // Per-district samples (~20–60 rows) are far too thin for a time profile, so every district uses
+  // the statewide quarter distribution, kernel-smoothed; only the NIC mix is district-specific.
+  const pq = smoothQuarters(stateQ);
   const rows: Array<{ month: string; lgd_code: string; nic5: string; registrations: number; method: string }> = [];
   for (const t of totals) {
     const n = dCount.get(t.lgd_code) ?? 0;
-    const pq = shrink(dQ.get(t.lgd_code), stateQ, allQ, n);
     const pn = shrink(dN.get(t.lgd_code), stateN, stateNSum, n);
     for (const [q, qp] of pq) {
       if (q < minQ) continue;
