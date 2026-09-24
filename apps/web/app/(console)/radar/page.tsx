@@ -40,7 +40,12 @@ async function RadarBody() {
       <div className="grid gap-8">
         {d.terms.map((term, i) => {
           const g = growth(term.global);
-          const m = growth(term.mhPostings);
+          // A growth ratio needs two quarters of local posts; one quarter or all zeros is said in words.
+          const mhSeen = term.mhPostings.some((p) => p.value > 0);
+          const mhTrend = mhSeen && term.mhPostings.length >= 2;
+          const m = mhTrend ? growth(term.mhPostings) : null;
+          const span = { from: term.global[0]?.period ?? "", to: term.global[term.global.length - 1]?.period ?? "" };
+          const mhLast = term.mhPostings[term.mhPostings.length - 1];
           const dg = doublingAt(term.global);
           const dm = doublingAt(term.mhPostings);
           const lag = dg !== null && dm !== null ? dm - dg : null;
@@ -59,8 +64,10 @@ async function RadarBody() {
                 </p>
                 <p className="m-0">
                   {g !== null && m !== null
-                    ? t("console.radar.growth", { g: formatNumber(g, lang, { maximumFractionDigits: 1 }), m: formatNumber(m, lang, { maximumFractionDigits: 1 }), n: term.global.length })
-                    : null}{" "}
+                    ? t("console.radar.growth", { g: formatNumber(g, lang, { maximumFractionDigits: 1 }), m: formatNumber(m, lang, { maximumFractionDigits: 1 }), ...span })
+                    : g !== null
+                      ? t("console.radar.growthGlobal", { g: formatNumber(g, lang, { maximumFractionDigits: 1 }), ...span })
+                      : null}{" "}
                   {lag !== null && lag > 0 ? t("console.radar.lag", { n: lag }) : lag !== null ? t("console.radar.noLag") : t("console.radar.lagUnknown")}
                 </p>
                 <p className="m-0 text-ink-muted">{term.note}</p>
@@ -74,7 +81,7 @@ async function RadarBody() {
                     csvName={`radar-global-${i}`}
                     headers={{ x: t("console.common.quarter"), y: t("console.radar.globalAxis") }}
                   />
-                  <PlotChart
+                  {mhTrend ? <PlotChart
                     title={t("console.radar.mhChart", { term: term.term })}
                     summary={t("console.radar.mhSummary", { from: formatNumber(term.mhPostings[0]?.value ?? 0, lang), to: formatNumber(term.mhPostings[term.mhPostings.length - 1]?.value ?? 0, lang) })}
                     chart={{ kind: "lineBand", data: term.mhPostings.map(x), yLabel: t("console.radar.mhAxis") }}
@@ -82,7 +89,12 @@ async function RadarBody() {
                     height={200}
                     csvName={`radar-mh-${i}`}
                     headers={{ x: t("console.common.quarter"), y: t("console.radar.mhAxis") }}
-                  />
+                  /> : (
+                    <div className="ks-stock grid content-start gap-2 p-4">
+                      <h3 className="ks-chart__title">{t("console.radar.mhChart", { term: term.term })}</h3>
+                      <p className="m-0">{mhSeen && mhLast ? t("console.radar.mhOne", { n: mhLast.value, period: mhLast.period }) : t("console.radar.mhNone")}</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </Section>
