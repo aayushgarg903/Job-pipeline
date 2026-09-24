@@ -1,0 +1,10 @@
+{
+  "name": "@ks/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts", "./*": "./src/*.ts" },
+  "scripts": { "typecheck": "tsc -p tsconfig.json", "test": "vitest run" },
+  "dependencies": { "@ks/contracts": "workspace:*", "highs": "1.15.3" },
+  "devDependencies": {}
+}

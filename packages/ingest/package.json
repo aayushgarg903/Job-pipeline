@@ -1,0 +1,10 @@
+{
+  "name": "@ks/ingest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts", "./*": "./src/*.ts" },
+  "scripts": { "typecheck": "tsc -p tsconfig.json", "test": "vitest run --passWithNoTests", "start": "tsx src/cli.ts" },
+  "dependencies": { "@ks/contracts": "workspace:*", "@ks/db": "workspace:*", "@ks/ai": "workspace:*", "@ks/core": "workspace:*", "zod": "4.6.5", "dotenv": "18.0.3" },
+  "devDependencies": {}
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@ks/ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts", "./*": "./src/*.ts" },
+  "scripts": { "typecheck": "tsc -p tsconfig.json", "test": "vitest run", "eval": "tsx scripts/eval.ts" },
+  "dependencies": { "@ks/contracts": "workspace:*", "ai": "7.0.113", "@ai-sdk/google": "4.0.79", "zod": "4.6.5", "dotenv": "18.0.3" },
+  "devDependencies": {}
+}

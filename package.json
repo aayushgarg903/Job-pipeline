@@ -1,0 +1,22 @@
+{
+  "name": "kaushal-setu",
+  "private": true,
+  "packageManager": "pnpm@11.3.0",
+  "engines": { "node": ">=20.9" },
+  "scripts": {
+    "dev": "pnpm --filter @ks/web dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "db:migrate": "pnpm --filter @ks/db migrate",
+    "db:seed": "pnpm --filter @ks/db seed",
+    "ingest": "pnpm --filter @ks/ingest start"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.2",
+    "turbo": "2.11.3",
+    "typescript": "5.9.3",
+    "vitest": "5.0.1",
+    "tsx": "4.23.15"
+  }
+}
