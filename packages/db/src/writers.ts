@@ -55,7 +55,7 @@ export function createWriters(sql: Sql): Writers {
           returning id`;
         const id = row!.id;
         await tx`insert into ks.review_item (kind, ref_id, payload)
-                 values ('survey-verify', ${id}, ${tx.json({ employer: name, lgd: input.lgd, nco: input.nco, expectedHires12m: input.expectedHires12m })})`;
+                 values ('survey-verify', ${id}, ${JSON.stringify({ employer: name, lgd: input.lgd, nco: input.nco, expectedHires12m: input.expectedHires12m })}::text::jsonb)`;
         for (const s of input.skills) {
           await tx`insert into ks.survey_skill (response_id, skill_id, importance, proficiency)
                    values (${id}, ${s.skillId}, ${s.importance}, ${s.proficiency})
@@ -88,7 +88,7 @@ export function createWriters(sql: Sql): Writers {
       assert(signedBy == null || (typeof signedBy === "string" && signedBy.length <= 200), "signedBy");
       const [row] = await sql<{ id: string }[]>`
         insert into ks.training_plan (lgd_code, fy, inputs, solution, objective, status, signed_by, signed_at)
-        values (${lgd}, ${fy}, ${sql.json(input as never)}, ${sql.json(result as never)}, ${result.objective}, ${result.status},
+        values (${lgd}, ${fy}, ${JSON.stringify(input)}::text::jsonb, ${JSON.stringify(result)}::text::jsonb, ${result.objective}, ${result.status},
                 ${signedBy}, ${signedBy ? sql`now()` : null})
         returning id`;
       return { id: row!.id };

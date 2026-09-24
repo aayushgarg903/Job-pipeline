@@ -58,7 +58,7 @@ export async function storeRaw(sql: Sql, sourceId: string, externalId: string, p
   const hash = sha256(JSON.stringify(payload));
   const [ins] = await sql<{ id: number }[]>`
     insert into ks.raw_record (source_id, external_id, payload, content_hash)
-    values (${sourceId}, ${externalId}, ${sql.json(payload as never)}, ${hash})
+    values (${sourceId}, ${externalId}, ${JSON.stringify(payload)}::text::jsonb, ${hash})
     on conflict (source_id, external_id) do nothing returning id`;
   if (ins) return { id: ins.id, isNew: true };
   const [ex] = await sql<{ id: number }[]>`select id from ks.raw_record where source_id = ${sourceId} and external_id = ${externalId}`;
@@ -71,7 +71,7 @@ export async function logHealth(sql: Sql, h: HealthEntry): Promise<void> {
   await sql`
     insert into ks.source_health (source_id, ok, rows, requests, latency_ms, note, cursor)
     values (${h.sourceId}, ${h.ok}, ${h.rows}, ${h.requests}, ${h.latencyMs ?? null}, ${h.note ?? null},
-            ${h.cursor == null ? null : sql.json(h.cursor as never)})`;
+            ${h.cursor == null ? null : JSON.stringify(h.cursor)}::text::jsonb)`;
 }
 
 export async function lastCursor<T>(sql: Sql, sourceId: string): Promise<T | null> {
