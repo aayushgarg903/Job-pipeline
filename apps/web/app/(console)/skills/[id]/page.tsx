@@ -54,7 +54,7 @@ async function SkillBody({ params }: { params: Promise<{ id: string }> }) {
         <p className="ks-stock mb-8 p-4">{t("console.skill.noCells", { skill: label })}</p>
       )}
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Section id="trend" title={t("console.skill.trendTitle")}>
           {trend.length ? (
             <PlotChart

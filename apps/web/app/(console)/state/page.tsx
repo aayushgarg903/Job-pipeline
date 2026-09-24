@@ -91,7 +91,7 @@ async function StateBody() {
         </p>
       </Section>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Section id="rising" title={t("console.state.risingTitle")} lede={t("console.state.risingLede")}>
           <ol className="ks-stock m-0 grid list-none gap-2 p-4">
             {d.rising.map((s) => (

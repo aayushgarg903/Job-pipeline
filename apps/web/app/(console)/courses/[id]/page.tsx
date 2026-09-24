@@ -61,7 +61,7 @@ async function CourseBody({ params }: { params: Promise<{ id: string }> }) {
 
       <Section id="health" title={t("console.course.healthTitle")} lede={h ? t("console.course.healthLede", { total: h.total }) : t("console.course.noHealth")}>
         {h ? (
-          <div className="grid gap-4 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             <ul className="ks-stock m-0 grid list-none gap-3 p-4">
               {COMPONENTS.map((k) => (
                 <li key={k}>
@@ -86,7 +86,7 @@ async function CourseBody({ params }: { params: Promise<{ id: string }> }) {
         ) : null}
       </Section>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Section id="matrix" title={t("console.course.matrixTitle")}>
           <PlotChart
             title={t("console.course.matrixChart", { course: c.name })}

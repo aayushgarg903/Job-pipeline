@@ -64,7 +64,7 @@ async function RadarBody() {
                   {lag !== null && lag > 0 ? t("console.radar.lag", { n: lag }) : lag !== null ? t("console.radar.noLag") : t("console.radar.lagUnknown")}
                 </p>
                 <p className="m-0 text-ink-muted">{term.note}</p>
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <PlotChart
                     title={t("console.radar.globalChart", { term: term.term })}
                     summary={t("console.radar.globalSummary", { from: formatNumber(term.global[0]?.value ?? 0, lang), to: formatNumber(term.global[term.global.length - 1]?.value ?? 0, lang) })}

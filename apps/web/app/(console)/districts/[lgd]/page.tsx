@@ -58,7 +58,7 @@ async function DistrictBody({ params }: { params: Promise<{ lgd: string }> }) {
       </div>
 
       <Section id="gaps" title={t("console.district.gapTitle")} lede={t("console.district.gapLede", { district: name })}>
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <PlotChart
             title={t("console.district.chartTitle", { district: name })}
             summary={
