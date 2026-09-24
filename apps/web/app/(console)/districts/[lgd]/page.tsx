@@ -84,7 +84,7 @@ async function DistrictBody({ params }: { params: Promise<{ lgd: string }> }) {
                 { key: "skill", header: t("console.common.skill") },
                 { key: "demand", header: t("fields.demand"), format: "people" },
                 { key: "supply", header: t("fields.supply"), format: "people" },
-                { key: "gap", header: t("fields.gap"), format: "people" },
+                { key: "gap", header: t("fields.gap"), format: "gap" },
               ]}
             />
           </div>

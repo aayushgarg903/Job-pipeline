@@ -8,7 +8,8 @@ import { formatNumber, formatPercent, humanRound } from "./format";
 import { Icon } from "./Icon";
 import { UiLink } from "./UiLink";
 
-export type ColumnFormat = "text" | "number" | "percent" | "people" | "decimal";
+/** "gap": people short; a negative gap is a surplus and reads "{n} too many", never "-920". */
+export type ColumnFormat = "text" | "number" | "percent" | "people" | "decimal" | "gap";
 
 export interface DataColumn<T> {
   key: string;
@@ -28,6 +29,7 @@ export type SortDir = "ascending" | "descending";
 export interface DataTableLabels {
   sortBy: string; // "Sort by {col}"
   empty: string;
+  surplus: string; // "{n} too many"
 }
 
 export interface DataTableProps<T extends Record<string, unknown>> {
@@ -47,12 +49,13 @@ export interface DataTableProps<T extends Record<string, unknown>> {
   className?: string;
 }
 
-function fmt(v: unknown, f: ColumnFormat | undefined, lang: Lang): ReactNode {
+function fmt(v: unknown, f: ColumnFormat | undefined, lang: Lang, surplus = "{n} too many"): ReactNode {
   if (v === null || v === undefined || v === "") return "—";
   if (typeof v !== "number") return String(v);
   switch (f) {
     case "percent": return formatPercent(v, lang);
     case "people": return formatNumber(humanRound(v), lang);
+    case "gap": return v < 0 ? surplus.replace("{n}", formatNumber(humanRound(-v), lang)) : formatNumber(humanRound(v), lang);
     case "decimal": return formatNumber(v, lang, { maximumFractionDigits: 2, minimumFractionDigits: 2 });
     case "text": return String(v);
     default: return formatNumber(v, lang);
@@ -66,7 +69,7 @@ export function hrefFrom(template: string, row: Record<string, unknown>): string
 export function DataTable<T extends Record<string, unknown>>({
   caption, columns, rows, rowKey, initialSort, onOrderChange, rowHref, selectedKey, onRowFocus, lang = "en", labels, className,
 }: DataTableProps<T>) {
-  const L = { sortBy: "Sort by {col}", empty: "No rows yet.", ...labels };
+  const L = { sortBy: "Sort by {col}", empty: "No rows yet.", surplus: "{n} too many", ...labels };
   const [sort, setSort] = useState<{ key: string; dir: SortDir } | null>(initialSort ?? null);
 
   const sorted = useMemo(() => {
@@ -136,7 +139,7 @@ export function DataTable<T extends Record<string, unknown>>({
                 <tr key={k} data-selected={selectedKey === k ? "true" : undefined} onFocus={onRowFocus ? () => onRowFocus(k) : undefined}>
                   {columns.map((c, ci) => {
                     const numeric = !!c.format && c.format !== "text";
-                    const content = c.cell ? c.cell(r) : fmt(r[c.key], c.format, lang);
+                    const content = c.cell ? c.cell(r) : fmt(r[c.key], c.format, lang, L.surplus);
                     const Tag = ci === 0 ? "th" : "td";
                     return (
                       <Tag key={c.key} scope={ci === 0 ? "row" : undefined} data-numeric={numeric ? "true" : undefined}>

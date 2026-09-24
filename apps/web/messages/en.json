@@ -97,7 +97,8 @@
   },
   "table": {
     "sortBy": "Sort by {col}",
-    "empty": "No rows yet."
+    "empty": "No rows yet.",
+    "surplus": "{n} too many"
   },
   "chart": {
     "showTable": "Show as table",
