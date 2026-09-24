@@ -59,7 +59,7 @@ If you are behind at 3:50, skip step 6 and say the one-line version: "There's al
 
 ## Step 3. Compare on the Table (1:15 to 2:05)
 
-**Click:** From Nashik's district card, open **Courses**. On the Nashik Electrician ITI course card press **Place on table**. Search "Electrician Pune", place that card too. Open the tray.
+**Click:** From Nashik's district card, open **Courses**. On the Nashik Electrician ITI course card press **Place on table**. Then open `/districts/490` (Pune), find the ITI Aundh Electrician course and press **Place on table** there too; the tray keeps both. Open the tray.
 
 **Say:**
 "Two ITI Electrician courses, same NCVT trade, one in Nashik and one in Pune. On paper they're identical. On the table, the system underlines where they differ and says it in one sentence." Read the sentence on screen. "Nashik doesn't cover solar PV installation or EV charging. {N employers, e.g. 14} employers in Nashik told us those are must-haves. That's a Nashik trainee finishing this course and not getting the solar job two streets away."
@@ -90,7 +90,7 @@ Close the step with: "And we know who can merge it. This is an NCVT trade, so th
 
 ## Step 5. District Training Plan (2:50 to 3:50)
 
-**Click:** `/plans/[nashik]/2027`. Click **Run plan**. When it finishes, point at the slope chart, then the Trainers list, then the Equipment list. Click **Sign and export PDF**.
+**Before the demo:** sign in at `/signin` with the officer passcode. **Click:** `/plans/487/FY27`. Adjust a knob if you like and click **Re-plan**. Point at the slope chart, then the Trainers list, then the Equipment list. Click **Sign this plan** (it signs as the signed-in officer), then **Download PDF**.
 
 **Say:**
 "Fixing one course isn't enough. The district has to decide seats for next year. This is Nashik's FY27 plan, from an optimiser that respects the real limits: the seat budget, how many trainer-hours each qualification has, how many equipment sets exist, and the capital budget. It maximises expected placements, not salaries, so it doesn't pour every seat into IT." Point at the slope chart. "Seats move from an oversupplied trade to EV and solar. No existing course swings more than 30% in a year, because an ITI can't absorb that." Point at the trainers list. "To do this, Nashik needs to certify these trainers and buy this equipment." Read the marginal re-solve line on screen, e.g. "one more certified trainer here adds about {N} expected placements. The officer changes what they disagree with, and signs." Click sign. "That PDF prints on A4 and goes in the file."
@@ -105,7 +105,7 @@ Close the step with: "And we know who can merge it. This is an NCVT trade, so th
 **Click:** `/radar`. Click the **Battery management systems** term.
 
 **Say:**
-"One more thing districts need is warning. This is a curated example, not an automated model yet. Battery management systems: the global curves on GitHub and in research papers rose first. Pune postings are just starting to show it. And no Maharashtra course we track teaches it. That gap between the global curve and the local one is the time an ITI has to start a module before local employers are desperate for it."
+"One more thing districts need is warning. This is a curated example, not an automated model yet. Battery management systems: the global curves on GitHub and in research papers rose first. Pune postings are just starting to show it. And only a couple of the Maharashtra courses we track teach it (read the number off the card). That gap between the global curve and the local one is the time an ITI has to start a module before local employers are desperate for it."
 
 **Fallback (GitHub or OpenAlex series missing):**
 "The live series are rate-limited today, so this is the cached chart." If the page itself fails: "I'll skip this one and show it in questions." Move to step 7. You are now ahead of time.
@@ -118,19 +118,19 @@ Close the step with: "And we know who can merge it. This is an NCVT trade, so th
 
 > मी ITI मधून इलेक्ट्रिशियन कोर्स केला आहे. घरगुती वायरिंग आणि मोटर रिवाइंडिंग येते. सोलर पॅनल बसवणे थोडे शिकले आहे. मी नाशिकमध्ये राहते.
 
-Click **पुढे** (Next). Wait for three role cards. Tap the first one.
+Click **मी कुठे जाऊ शकतो ते दाखवा**. Wait for three role cards. Tap the first one.
 
 **Say:**
 "Now the person all of this is for. This is an illustrative trainee in Nashik. She types, in Marathi, what she can do: house wiring, motor rewinding, a little solar panel fitting. No form, no account." Point at the cards. "Three roles she can reach nearby. The first one says she's two skills away from solar installer jobs in Nashik, and here's the nearest ITI batch with seats open, plus free SWAYAM modules for the rest. It never says 'readiness 62 percent'. It says where her skills can take her, and what to do next."
 
 **Fallback (Gemini can't parse the text):**
-"The AI that reads free text is overloaded, so let me pick the skills instead." Tap **निवडा** (choose skills) and tick: घरगुती वायरिंग, मोटर रिवाइंडिंग, सोलर पॅनल बसवणे. Same result cards appear, because ranking doesn't need AI. If the page fails entirely, show the step 7 screenshot.
+"The AI that reads free text is busy, so the page falls back to plain word matching and says so on screen." The same kind of result cards appear, because ranking doesn't need AI. If the page fails entirely, show the step 7 screenshot.
 
 ---
 
 ## Step 8. Evidence (5:20 to 5:50)
 
-**Click:** Back to the laptop. On the Nashik course card tap the figure "{N employers} Mandatory" for solar PV. The Evidence Drawer slides in. Scroll to one posting with its highlighted sentence and one survey row.
+**Click:** Back to the laptop. On the Nashik Electrician course card tap the **HEALTH** figure. The Evidence Drawer slides in with the survey and review rows behind the score. For a job posting with its evidence sentence, open the district page and tap the district figure.
 
 **Say:**
 "Last thing, and it's the most important. Every number you've seen is a button. Tap it and you get the rows behind it." Read one highlighted evidence sentence off the screen. "That's the sentence the AI read. This row is an employer who told us solar PV is a must-have. Nothing here is a black box, and nothing is a number you have to take on trust."
