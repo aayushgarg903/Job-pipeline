@@ -122,7 +122,7 @@ export const PRS: CurriculumPr[] = [
     rationale:
       "Pune employers keep asking for people who can turn a spreadsheet into a dashboard. This change drops 6 hours of old macros nobody hires for and adds 10 hours of Power BI, which 11 local employers called a must-have. Total course length grows by 8 hours.",
     endorsements: 4, changeRequests: 1, openedAt: "2026-09-02T10:00:00+05:30", adoptedAt: null,
-    trainerDelta: [{ qualification: "Power BI certified trainer", count: 1 }],
+    trainerDelta: [{ qualification: "Power BI", count: 1 }],
     equipmentDelta: [{ item: "Power BI Pro licence (per seat)", qty: 30 }],
   },
 ];
@@ -130,15 +130,15 @@ export const PRS: CurriculumPr[] = [
 export const PLAN_INPUTS: PlanInput[] = [
   {
     lgd: FOCUS.nashik, fy: "FY27", seatBudget: 400, capexBudget: 6_000_000,
-    trainerHoursAvailable: { "Solar PV trainer": 1800, "Fitter trainer": 4800, "EV trainer": 0 },
-    trainerHireCost: { "Solar PV trainer": 540000, "Fitter trainer": 480000, "EV trainer": 600000 },
+    trainerHoursAvailable: { "Solar PV": 1800, "Fitter": 4800, "EV": 0 },
+    trainerHireCost: { "Solar PV": 540000, "Fitter": 480000, "EV": 600000 },
     hoursPerHiredTrainer: 1600,
     demandBySkill: { "solar-pv-installation": 175, "cnc-programming": 540, "ev-battery-maintenance": 90, "tig-welding": 260 },
     medianWage: 17500,
     courses: [
-      { courseId: "nsk-iti-solar", name: "Solar Technician (Electrical)", isNew: false, seatsPrev: 40, batchSize: 20, maxBatches: 6, completionRate: 0.82, placementProb: 0.71, wage: 18500, trainerQualification: "Solar PV trainer", trainerHoursPerBatch: 900, equipmentSets: 2, equipmentCostPerSet: 450000, teaches: ["solar-pv-installation", "industrial-wiring"] },
-      { courseId: "nsk-iti-fitter", name: "Fitter", isNew: false, seatsPrev: 120, batchSize: 20, maxBatches: 8, completionRate: 0.78, placementProb: 0.54, wage: 16000, trainerQualification: "Fitter trainer", trainerHoursPerBatch: 1200, equipmentSets: 6, equipmentCostPerSet: 250000, teaches: ["tig-welding", "cnc-programming"] },
-      { courseId: "nsk-new-ev", name: "EV Battery Technician (new)", isNew: true, seatsPrev: 0, batchSize: 20, maxBatches: 3, completionRate: 0.8, placementProb: 0.66, wage: 19000, trainerQualification: "EV trainer", trainerHoursPerBatch: 800, equipmentSets: 0, equipmentCostPerSet: 700000, teaches: ["ev-battery-maintenance"] },
+      { courseId: "nsk-iti-solar", name: "Solar Technician (Electrical)", isNew: false, seatsPrev: 40, batchSize: 20, maxBatches: 6, completionRate: 0.82, placementProb: 0.71, wage: 18500, trainerQualification: "Solar PV", trainerHoursPerBatch: 900, equipmentSets: 2, equipmentCostPerSet: 450000, teaches: ["solar-pv-installation", "industrial-wiring"] },
+      { courseId: "nsk-iti-fitter", name: "Fitter", isNew: false, seatsPrev: 120, batchSize: 20, maxBatches: 8, completionRate: 0.78, placementProb: 0.54, wage: 16000, trainerQualification: "Fitter", trainerHoursPerBatch: 1200, equipmentSets: 6, equipmentCostPerSet: 250000, teaches: ["tig-welding", "cnc-programming"] },
+      { courseId: "nsk-new-ev", name: "EV Battery Technician (new)", isNew: true, seatsPrev: 0, batchSize: 20, maxBatches: 3, completionRate: 0.8, placementProb: 0.66, wage: 19000, trainerQualification: "EV", trainerHoursPerBatch: 800, equipmentSets: 0, equipmentCostPerSet: 700000, teaches: ["ev-battery-maintenance"] },
     ],
   },
 ];
@@ -151,7 +151,7 @@ export const SAVED_PLANS: Array<PlanResult & { lgd: string; fy: string; signedBy
       { courseId: "nsk-iti-fitter", name: "Fitter", seatsPrev: 120, seats: 80, batches: 4, opened: true },
       { courseId: "nsk-new-ev", name: "EV Battery Technician (new)", seatsPrev: 0, seats: 40, batches: 2, opened: true },
     ],
-    trainersToHire: { "Solar PV trainer": 2, "EV trainer": 1 },
+    trainersToHire: { "Solar PV": 2, "EV": 1 },
     equipmentToBuy: { "nsk-iti-solar": 3, "nsk-new-ev": 2 },
     oversupplyBySkill: { "industrial-wiring": 12 },
     marginals: [

@@ -164,7 +164,7 @@
   "districtCard": {
     "title": "{division} division",
     "figure": "Gap",
-    "human": "About <b>{gap}</b> people in {district} could be hired for {skill} next year. Local training covers <b>{supply}</b>.",
+    "human": "About <b>{demand}</b> people in {district} could be hired for {skill} next year. Local training covers <b>{supply}</b>, about <b>{gap}</b> short.",
     "humanNone": "Training and jobs in {district} are roughly in step this quarter.",
     "lowSignal": "We've only seen {postings} job posts here, so this leans on what employers told us.",
     "evidenceTitle": "Why {district} shows this gap",

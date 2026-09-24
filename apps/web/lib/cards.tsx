@@ -29,7 +29,7 @@ export function districtCard(s: DistrictSummary, t: Tr, lang: Lang, topCell?: De
   const v = VERDICTS[verdictWord];
   const human = short
     ? t.rich(topCell ? "districtCard.human" : "districtCard.humanGapOnly", {
-        gap: people(short.gap, lang), supply: formatNumber(topCell?.supply ?? 0, lang), district: name, skill: short.label, b: bold,
+        gap: people(short.gap, lang), demand: people(topCell?.demand ?? short.gap, lang), supply: formatNumber(topCell?.supply ?? 0, lang), district: name, skill: short.label, b: bold,
       })
     : t("districtCard.humanNone", { district: name });
   return {

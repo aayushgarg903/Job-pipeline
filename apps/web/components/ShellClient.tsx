@@ -10,6 +10,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 import { resolveTableRefs } from "@/app/actions/table";
+import { summarizeTable } from "@/app/actions/console";
 
 export function AppProviders({
   children, compareLabels, trayLabels, tableLabels,
@@ -23,7 +24,7 @@ export function AppProviders({
     <LinkProvider component={Link as unknown as LinkLike}>
       <CompareProvider labels={compareLabels}>
         {children}
-        <CompareTray resolve={resolveTableRefs} labels={trayLabels} tableLabels={tableLabels} />
+        <CompareTray resolve={resolveTableRefs} summarize={summarizeTable} labels={trayLabels} tableLabels={tableLabels} />
       </CompareProvider>
     </LinkProvider>
   );
