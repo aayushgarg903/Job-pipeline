@@ -10,6 +10,9 @@ import { routes } from "@/lib/routes";
 
 export const metadata: Metadata = { title: "Outcomes" };
 
+// KPIs arrive with up to 3 decimals (56.057 %); one is plenty to read.
+const ONE = { maximumFractionDigits: 1 } as const;
+
 async function OutcomesBody() {
   const [{ lang, t }, d] = await Promise.all([pageContext(), loadOutcomes()]);
   const L = cardLabels(t);
@@ -24,8 +27,8 @@ async function OutcomesBody() {
             const dir = diff > 0 ? "up" : diff < 0 ? "down" : "flat";
             const sentence =
               k.baseline === 0
-                ? t("console.outcomes.fromZero", { current: formatNumber(k.current, lang), unit: k.unit })
-                : t(`console.outcomes.moved.${dir}`, { baseline: formatNumber(k.baseline, lang), current: formatNumber(k.current, lang), unit: k.unit });
+                ? t("console.outcomes.fromZero", { current: formatNumber(k.current, lang, ONE), unit: k.unit })
+                : t(`console.outcomes.moved.${dir}`, { baseline: formatNumber(k.baseline, lang, ONE), current: formatNumber(k.current, lang, ONE), unit: k.unit });
             return (
               <Card
                 key={k.kpi}
@@ -35,14 +38,14 @@ async function OutcomesBody() {
                 title={k.unit}
                 figure={{
                   label: t("console.outcomes.now"),
-                  value: formatNumber(k.current, lang),
-                  delta: { text: formatNumber(Math.abs(diff), lang), dir },
+                  value: formatNumber(k.current, lang, ONE),
+                  delta: { text: formatNumber(Math.abs(diff), lang, ONE), dir },
                   evidenceTitle: k.kpi,
                   evidence: [{ kind: "dataset", title: k.kpi, detail: k.note, source: t("console.outcomes.source"), date: d.asOf, url: null }],
                 }}
-                verdict={{ tone: diff > 0 ? "ok" : diff < 0 ? "gap" : "neutral", glyph: diff > 0 ? "▲" : diff < 0 ? "▼" : "=", word: t(`console.outcomes.word.${dir}`), text: t("console.outcomes.baseline", { baseline: formatNumber(k.baseline, lang), current: formatNumber(k.current, lang) }) }}
+                verdict={{ tone: diff > 0 ? "ok" : diff < 0 ? "gap" : "neutral", glyph: diff > 0 ? "▲" : diff < 0 ? "▼" : "=", word: t(`console.outcomes.word.${dir}`), text: t("console.outcomes.baseline", { baseline: formatNumber(k.baseline, lang, ONE), current: formatNumber(k.current, lang, ONE) }) }}
                 human={<>{sentence} <span className="text-ink-muted">{k.note}</span></>}
-                provenance={{ sources: [{ kind: "placement", label: k.unit, n: k.current }], asOf: d.asOf, isDemo: d.isDemo, lapsed: false }}
+                provenance={{ sources: [{ kind: "placement", label: k.unit, n: Math.round(k.current * 10) / 10 }], asOf: d.asOf, isDemo: d.isDemo, lapsed: false }}
                 lang={lang}
                 labels={L}
               />
