@@ -1,0 +1,80 @@
+/* Map, data table, charts, curriculum diff. Ink on stock. */
+.ks-map { margin: 0; display: grid; gap: 12px; }
+.ks-map__svg { display: block; width: 100%; height: auto; max-height: 72vh; }
+.ks-map__district { stroke: var(--ink); stroke-width: .6; stroke-linejoin: round; cursor: pointer; transition: opacity var(--t-quick); }
+.ks-map__district:hover { stroke-width: 1.6; }
+.ks-map__district:focus-visible, .ks-map__district[data-active="true"] { stroke-width: 2.5; stroke: var(--ink); }
+.ks-map__district:focus-visible { paint-order: stroke; }
+.ks-map__district[data-selected="true"] { stroke-width: 2.5; stroke-dasharray: none; }
+.ks-map__hatch { pointer-events: none; }
+.ks-map__focus-ring { fill: none; stroke: var(--stock-bone); stroke-width: 5; pointer-events: none; }
+.ks-map__focus-ring-inner { fill: none; stroke: var(--ink); stroke-width: 2.5; pointer-events: none; }
+.ks-ramp-0 { fill: var(--stock-bone); }
+.ks-ramp-1 { fill: var(--ramp-1); }
+.ks-ramp-2 { fill: var(--ramp-2); }
+.ks-ramp-3 { fill: var(--ramp-3); }
+.ks-ramp-4 { fill: var(--ramp-4); }
+.ks-ramp-5 { fill: var(--ramp-5); }
+.ks-map__readout { margin: 0; min-height: 1.55em; font-size: 0.9375rem; }
+.ks-legend { display: grid; gap: 6px; margin: 0; }
+.ks-legend__title { font-weight: 600; font-size: 0.875rem; }
+.ks-legend__steps { display: flex; flex-wrap: wrap; gap: 4px 12px; list-style: none; margin: 0; padding: 0; font-size: 0.8125rem; font-variant-numeric: tabular-nums; }
+.ks-legend__step { display: inline-flex; align-items: center; gap: 6px; }
+.ks-legend__swatch { display: inline-block; width: 22px; height: 14px; border: 1px solid var(--ink); flex: none; }
+.ks-legend__swatch svg { display: block; width: 100%; height: 100%; }
+
+/* Data table */
+.ks-dt-wrap { overflow-x: auto; background: var(--stock-bone); color: var(--ink); border: 1px solid var(--ink-muted); border-radius: var(--radius-card); }
+.ks-dt { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+.ks-dt caption { text-align: left; padding: 10px 12px 6px; font-weight: 600; }
+.ks-dt th, .ks-dt td { padding: 8px 12px; border-bottom: var(--rule); text-align: left; }
+.ks-dt thead th { border-bottom: var(--rule-end); font-weight: 600; white-space: nowrap; vertical-align: bottom; }
+.ks-dt [data-numeric="true"] { text-align: right; }
+.ks-dt td[data-numeric="true"], .ks-dt tbody th[data-numeric="true"] { font-family: var(--font-mono), monospace; font-variant-numeric: tabular-nums; }
+.ks-dt tbody tr:hover { background: var(--stock-eggshell); }
+.ks-dt tbody tr[data-selected="true"] { background: var(--stock-eggshell); box-shadow: inset 3px 0 0 var(--ink); }
+.ks-dt__sort { display: inline-flex; align-items: center; gap: 4px; padding: 2px 0; min-height: 28px; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+.ks-dt__sort[data-numeric="true"] { flex-direction: row-reverse; }
+.ks-dt__sort-icon { opacity: .5; }
+th[aria-sort="ascending"] .ks-dt__sort-icon, th[aria-sort="descending"] .ks-dt__sort-icon { opacity: 1; }
+.ks-dt a { color: inherit; text-underline-offset: 3px; }
+
+.ks-map-table { display: grid; gap: 16px; }
+@media (min-width: 1024px) { .ks-map-table { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: start; } }
+
+/* Plot chart */
+.ks-chart { margin: 0; padding: 14px 16px; display: grid; gap: 10px; }
+.ks-chart__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ks-chart__title { margin: 0; font: 500 1.125rem/1.3 var(--font-sans), var(--font-deva-sans), sans-serif; }
+.ks-chart__tools { display: flex; gap: 8px; }
+.ks-chart__summary { margin: 0; font-size: 0.9375rem; color: var(--ink); max-width: 70ch; }
+.ks-chart__plot { position: relative; min-height: var(--chart-h, 260px); }
+.ks-chart__plot svg { display: block; max-width: 100%; height: auto; overflow: visible; font-family: var(--font-sans), sans-serif; }
+.ks-chart__plot [aria-label="tip"] { display: none; }
+.ks-chart__loading { height: var(--chart-h, 260px); }
+
+/* Curriculum diff */
+.ks-diffblock { margin: 0; padding: 12px 14px; font-size: 0.9375rem; }
+.ks-diffblock__title { margin: 0 0 8px; font: 500 1.25rem/1.3 var(--font-display), var(--font-deva), serif; letter-spacing: 0.1em; font-variant-caps: small-caps; }
+.ks-diffblock__title:lang(mr) { letter-spacing: 0; }
+.ks-diffblock table { width: 100%; border-collapse: collapse; }
+.ks-diffblock th, .ks-diffblock td { padding: 4px 8px; text-align: left; vertical-align: baseline; }
+.ks-diffblock__module th { padding-top: 12px; border-bottom: var(--rule); font: 500 0.8125rem/1.4 var(--font-mono), monospace; letter-spacing: var(--track-code); text-transform: uppercase; }
+.ks-diffblock__module .ks-diffblock__hours { font-family: var(--font-mono), monospace; }
+.ks-diffblock__sign { width: 1.5em; font: 600 1rem var(--font-mono), monospace; text-align: center; }
+.ks-diffblock__item { font-family: var(--font-serif), var(--font-deva), serif; font-size: 1.0625rem; }
+.ks-diffblock__hours { font-family: var(--font-mono), monospace; font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
+.ks-diffblock__reason { font-size: 0.8125rem; color: var(--ink-muted); }
+.ks-diffblock tr[data-op="add"] .ks-diffblock__sign, .ks-diffblock tr[data-op="add"] ins { color: var(--signal-ok); }
+.ks-diffblock tr[data-op="drop"] .ks-diffblock__sign, .ks-diffblock tr[data-op="drop"] del { color: var(--signal-gap); }
+.ks-diffblock tr[data-op="resize"] .ks-diffblock__sign { color: var(--signal-watch); }
+.ks-diffblock tr[data-op="keep"] { color: var(--ink-muted); }
+.ks-diffblock tr[data-op="add"] { background: color-mix(in oklab, var(--signal-ok) 7%, transparent); }
+.ks-diffblock tr[data-op="drop"] { background: color-mix(in oklab, var(--signal-gap) 7%, transparent); }
+.ks-diffblock ins { text-decoration: none; }
+.ks-diffblock del { text-decoration-thickness: 1px; }
+@media (max-width: 640px) {
+  .ks-diffblock__reason { display: block; }
+  .ks-diffblock tr:not(.ks-diffblock__module) { display: grid; grid-template-columns: 1.5em 1fr auto; }
+  .ks-diffblock tr:not(.ks-diffblock__module) .ks-diffblock__reason { grid-column: 2 / -1; }
+}

@@ -1,0 +1,270 @@
+{
+  "shell": {
+    "brand": "Kaushal Setu",
+    "tagline": "Where Maharashtra's training meets its jobs",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "navLabel": "Main",
+    "language": "Language / भाषा",
+    "loading": "Loading this page…",
+    "theme": {
+      "group": "Theme",
+      "daylight": "Daylight",
+      "boardroom": "Boardroom"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "state": "State overview",
+    "radar": "Emerging skills",
+    "outcomes": "Outcomes",
+    "employer": "Employer desk",
+    "me": "My next job",
+    "sources": "Data sources",
+    "review": "Review queue",
+    "groups": {
+      "start": "Start",
+      "officials": "Officials and institutes",
+      "employers": "Employers",
+      "candidates": "Job-seekers",
+      "data": "Data"
+    }
+  },
+  "footer": {
+    "accessibility": "Accessibility statement",
+    "feedback": "Feedback",
+    "lastUpdated": "Last updated",
+    "demoNote": "Figures marked SPECIMEN are demo data, not official statistics.",
+    "dept": "Skills, Employment, Entrepreneurship and Innovation Department"
+  },
+  "card": {
+    "asOf": "as of",
+    "specimen": "Specimen · demo data",
+    "specimenWord": "Specimen",
+    "lapsed": "Lapsed · older than it should be",
+    "lapsedWord": "Lapsed",
+    "endorsed": "Endorsed by {n} local employers",
+    "placeOnTable": "Place on table",
+    "onTable": "On table",
+    "open": "Open card",
+    "why": "Show where this number comes from"
+  },
+  "evidence": {
+    "close": "Close",
+    "count": "{n} rows behind this number.",
+    "empty": "We have no rows behind this figure yet. It will fill in as postings and surveys arrive.",
+    "loading": "Fetching the rows behind this number…",
+    "error": "We couldn't load the rows just now. Try again in a moment.",
+    "openSource": "Open source",
+    "kinds": {
+      "posting": "Job post",
+      "survey": "Employer survey",
+      "consultation": "Meeting with employers",
+      "udyam": "New business (Udyam)",
+      "dataset": "Dataset",
+      "cohort": "Trainee cohort"
+    }
+  },
+  "compare": {
+    "placed": "{name} is on the table. {n} of {max}.",
+    "removed": "{name} taken off the table.",
+    "full": "The table holds {max} cards. Take one off first."
+  },
+  "tray": {
+    "title": "On the table ({n} of {max})",
+    "layOut": "Lay the cards out",
+    "clear": "Clear the table",
+    "remove": "Take off the table",
+    "emptySlot": "Empty place",
+    "hint": "Press T on a focused card to add or remove it.",
+    "sheetTitle": "The table",
+    "close": "Close the table"
+  },
+  "compareTable": {
+    "caption": "Cards on the table, field by field. Underlined values differ.",
+    "field": "Field",
+    "differs": "differs",
+    "summary": "Where they differ",
+    "remove": "Take off the table",
+    "empty": "Nothing on the table yet. Use “Place on table” on any card, or press T while a card is focused."
+  },
+  "map": {
+    "legendTitle": "How far training is from jobs",
+    "lowSignal": "Low signal: survey-weighted",
+    "noData": "No data yet",
+    "mapLabel": "Map of Maharashtra's 36 districts",
+    "instructions": "Use the arrow keys to move between districts in table order. Press Enter to open one."
+  },
+  "table": {
+    "sortBy": "Sort by {col}",
+    "empty": "No rows yet."
+  },
+  "chart": {
+    "showTable": "Show as table",
+    "showChart": "Show as chart",
+    "csv": "Download CSV",
+    "loading": "Drawing the chart…"
+  },
+  "diff": {
+    "add": "Add",
+    "drop": "Drop",
+    "resize": "Change hours",
+    "keep": "Keep",
+    "hours": "h",
+    "item": "Module or skill",
+    "change": "Change",
+    "why": "Why",
+    "caption": "Proposed changes to this course"
+  },
+  "fresh": {
+    "title": "Data freshness",
+    "fresh": "Up to date",
+    "lapsed": "Lapsed",
+    "never": "Not fetched yet"
+  },
+  "survey": {
+    "step": "Step {n} of {total}",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Send answers",
+    "saved": "Saved on this device",
+    "restored": "We kept your earlier answers on this device.",
+    "steps": "Survey progress"
+  },
+  "people": {
+    "approx": "about",
+    "people": "people",
+    "employers": "employers",
+    "seats": "seats"
+  },
+  "verdict": {
+    "SHORTAGE": "Shortage",
+    "OVERSUPPLY": "Oversupply",
+    "BALANCED": "Balanced",
+    "HEALTHY": "Healthy",
+    "REVISE": "Revise",
+    "OVERSUPPLIED": "Oversupplied",
+    "OBSOLETE": "Obsolete"
+  },
+  "fields": {
+    "health": "Course health",
+    "seats": "Seats",
+    "placement": "Placed in 6 months",
+    "district": "District",
+    "missing": "Skills employers want, not taught",
+    "flags": "Verdict",
+    "hours": "Course hours",
+    "gap": "People short",
+    "coverage": "Data coverage",
+    "mismatch": "How far training is from jobs",
+    "shortage": "Biggest shortage",
+    "demand": "Hires needed",
+    "supply": "Trained locally"
+  },
+  "districtCard": {
+    "title": "{division} division",
+    "figure": "Gap",
+    "human": "About <b>{gap}</b> people in {district} could be hired for {skill} next year. Local training covers <b>{supply}</b>.",
+    "humanNone": "Training and jobs in {district} are roughly in step this quarter.",
+    "lowSignal": "We've only seen {postings} job posts here, so this leans on what employers told us.",
+    "evidenceTitle": "Why {district} shows this gap",
+    "evidenceIntro": "Postings, surveys and meetings behind {district}'s numbers.",
+    "humanGapOnly": "About <b>{gap}</b> more people in {district} could be hired for {skill} than local training produces."
+  },
+  "courseCard": {
+    "title": "{institution} · {seats} seats",
+    "figure": "Health",
+    "human": "<b>{placed}</b> of every 100 trainees had a job within six months.",
+    "evidenceTitle": "Why this course scores {score}",
+    "evidenceIntro": "What employers and trainees told us about {course}."
+  },
+  "skillCard": {
+    "title": "{district} · working level",
+    "figure": "SDI",
+    "human": "<b>{demand}</b> people will be hired for this in {district} next year. Training here will produce <b>{supply}</b>.",
+    "evidenceTitle": "Why {skill} is in demand in {district}",
+    "verdictText": "{demand} demand · {supply} supply ({ratio}×)"
+  },
+  "home": {
+    "metaTitle": "Kaushal Setu · Training that meets Maharashtra's jobs",
+    "metaDescription": "See where training and jobs don't line up in each district of Maharashtra, and what to do about it.",
+    "introCode": "MH · 36 districts",
+    "introName": "Kaushal Setu",
+    "introTitle": "A bridge between training and jobs",
+    "introBody": "We read job posts, listen to employers and follow trainees, so each district can train people for the jobs that are really there.",
+    "headlineSentence": "across {districts} districts told us who they need to hire.",
+    "headlineSource": "Plus {postings} job posts read this quarter.",
+    "personasLabel": "Choose who you are",
+    "personasHeading": "Where would you like to start?",
+    "official": {
+      "code": "District office",
+      "name": "I plan training for a district",
+      "title": "District skill officers, DSC members",
+      "human": "See which trades your district is short of, and sign next year's seat plan.",
+      "cta": "Open the state map"
+    },
+    "institute": {
+      "code": "ITI · Polytechnic · PMKVY",
+      "name": "I run an institute",
+      "title": "Principals and training partners",
+      "human": "See what's rising before it reaches your classrooms, and how your courses compare.",
+      "cta": "See emerging skills"
+    },
+    "employer": {
+      "code": "Employer",
+      "name": "I hire people",
+      "title": "Factories, shops, farms, offices",
+      "human": "Tell us in six minutes who you need. Review course changes that affect you.",
+      "cta": "Open the employer desk"
+    },
+    "candidate": {
+      "code": "Job-seeker",
+      "name": "I'm looking for work",
+      "title": "Trainees, graduates, anyone",
+      "human": "Here's where your skills can take you near home, and the one course that gets you there.",
+      "cta": "Find my next job"
+    }
+  },
+  "pages": {
+    "accessibility": {
+      "title": "Accessibility statement",
+      "lede": "Kaushal Setu is meant for everyone who plans, teaches, hires or looks for work in Maharashtra.",
+      "p1": "We aim to meet WCAG 2.1 level AA and the Guidelines for Indian Government Websites (GIGW 3.0).",
+      "p2": "Every chart has a written summary and a table. The district map works with the keyboard and has a table beside it. Nothing needs dragging.",
+      "p3": "Text is at least 16px, focus is always visible, and the site works in English and Marathi, with reduced motion and high contrast honoured.",
+      "p4": "If something doesn't work for you, please tell us on the feedback page and say which page and device you used."
+    },
+    "feedback": {
+      "title": "Feedback",
+      "lede": "Tell us what's wrong, missing or confusing. A person reads every message.",
+      "p1": "The feedback form is being set up. Until then, please share feedback through your district skill development office.",
+      "p2": "If a number looks wrong, open its card and use the evidence drawer: tell us which row you disagree with."
+    },
+    "lastUpdated": {
+      "title": "Last updated",
+      "lede": "When each source behind these numbers was last fetched.",
+      "overview": "State figures as of {date}."
+    }
+  },
+  "notFound": {
+    "title": "This page isn't ready yet",
+    "body": "We're still building this part of Kaushal Setu. The state map and the employer desk are good places to start.",
+    "home": "Back to the start"
+  },
+  "prov": {
+    "traced": "trainees traced",
+    "matchingPosts": "matching job posts",
+    "postings": "postings",
+    "surveys": "surveys",
+    "courses": "courses tracked",
+    "employersHeard": "employers heard"
+  },
+  "divisions": {
+    "konkan": "Konkan",
+    "pune": "Pune",
+    "nashik": "Nashik",
+    "sambhajinagar": "Chh. Sambhajinagar",
+    "amravati": "Amravati",
+    "nagpur": "Nagpur"
+  }
+}

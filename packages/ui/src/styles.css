@@ -1,0 +1,57 @@
+/* @ks/ui design system. Import after tailwindcss:
+ *   @import "tailwindcss";
+ *   @import "@ks/ui/styles.css";
+ *   @source "../../packages/ui/src";
+ */
+@import "./css/tokens.css";
+@import "./css/base.css";
+@import "./css/card.css";
+@import "./css/overlay.css";
+@import "./css/data.css";
+@import "./css/shell.css";
+
+/* Tailwind v4 mapping. Default palette is removed: only Design.md tokens exist as utilities. */
+@theme static {
+  --color-*: initial;
+  --font-display: "Cormorant SC", "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-deva: "Tiro Devanagari Marathi", serif;
+  --font-deva-sans: "Noto Sans Devanagari", sans-serif;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --text-3xl: 36px;
+  --text-4xl: 48px;
+  --text-5xl: 56px;
+  --tracking-name: 0.18em;
+  --tracking-code: 0.08em;
+  --radius-card: 2px;
+  --ease-quick: cubic-bezier(.2, 0, 0, 1);
+}
+
+@theme inline {
+  --color-table: var(--table);
+  --color-table-raised: var(--table-raised);
+  --color-table-ink: var(--table-ink);
+  --color-table-muted: var(--table-muted);
+  --color-stock-bone: var(--stock-bone);
+  --color-stock-eggshell: var(--stock-eggshell);
+  --color-stock-nimbus: var(--stock-nimbus);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-brass: var(--brass);
+  --color-signal-gap: var(--signal-gap);
+  --color-signal-ok: var(--signal-ok);
+  --color-signal-watch: var(--signal-watch);
+  --shadow-lift-0: var(--lift-0);
+  --shadow-lift-1: var(--lift-1);
+  --shadow-lift-2: var(--lift-2);
+}
+
+@custom-variant boardroom (&:where([data-theme="boardroom"], [data-theme="boardroom"] *));

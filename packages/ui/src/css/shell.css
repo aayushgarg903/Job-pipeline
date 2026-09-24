@@ -1,0 +1,104 @@
+/* App shell pieces that live on the table: gov strip, rail, footer, freshness, switchers, stepper. */
+.ks-gov {
+  background: var(--table-raised); color: var(--table-ink);
+  border-bottom: 1px solid var(--table-muted);
+  font-size: 0.8125rem; line-height: 1.4;
+}
+.ks-gov__inner { max-width: 1440px; margin: 0 auto; padding: 6px 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; }
+.ks-gov__lockup { display: flex; flex-wrap: wrap; gap: 0 10px; font-weight: 600; }
+.ks-gov__dept { color: var(--table-muted); }
+
+.ks-topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; border-bottom: var(--rule-end); border-color: var(--table-muted); }
+.ks-brand { display: inline-flex; align-items: baseline; gap: 10px; color: var(--table-ink); text-decoration: none; }
+.ks-brand__name { font: 500 1.5rem/1 var(--font-display), serif; letter-spacing: 0.14em; font-variant-caps: small-caps; }
+.ks-brand__mr { font: 400 1.125rem/1 var(--font-deva), serif; letter-spacing: 0; }
+.ks-topbar__tools { display: flex; align-items: center; gap: 8px; }
+
+.ks-shell { display: grid; grid-template-columns: 1fr; min-height: calc(100dvh - 120px); }
+@media (min-width: 1024px) { .ks-shell { grid-template-columns: 216px minmax(0, 1fr); } }
+.ks-main { min-width: 0; padding: 24px 16px calc(48px + var(--tray-h)); max-width: 1280px; width: 100%; margin: 0 auto; box-sizing: border-box; }
+@media (min-width: 768px) { .ks-main { padding-inline: 32px; } }
+.ks-main:focus { outline: none; }
+
+/* Persona rail: left on >=1024px, menu sheet below. */
+.ks-rail { display: none; }
+@media (min-width: 1024px) {
+  .ks-rail { display: block; position: sticky; top: 0; align-self: start; max-height: 100dvh; overflow: auto; padding: 16px 0; border-right: 1px solid var(--table-muted); background: var(--table-raised); min-height: 100%; }
+}
+.ks-rail__group { margin: 0 0 12px; padding: 0; list-style: none; }
+.ks-rail__heading { margin: 12px 16px 4px; font: 500 0.75rem/1.4 var(--font-mono), monospace; letter-spacing: var(--track-code); text-transform: uppercase; color: var(--table-muted); }
+.ks-rail__heading:lang(mr) { font-family: var(--font-deva-sans), sans-serif; }
+.ks-rail__link { position: relative; display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 6px 16px; color: var(--table-ink); text-decoration: none; font-size: 0.9375rem; }
+.ks-rail__link:hover { background: color-mix(in oklab, var(--table-ink) 6%, transparent); }
+.ks-rail__link[aria-current="page"] { font-weight: 600; background: color-mix(in oklab, var(--table-ink) 8%, transparent); }
+.ks-rail__link[aria-current="page"]::before { content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 3px; background: var(--brass); }
+.ks-menu-btn { display: inline-flex; }
+@media (min-width: 1024px) { .ks-menu-btn { display: none; } }
+.ks-menu .ks-rail__link { color: var(--ink); }
+.ks-menu .ks-rail__heading { color: var(--ink-muted); }
+.ks-menu .ks-rail__link[aria-current="page"]::before { background: var(--ink); }
+
+/* Switchers */
+.ks-seg { display: inline-flex; border: 1px solid var(--table-muted); border-radius: var(--radius-card); overflow: hidden; }
+.ks-seg__btn { min-height: 36px; min-width: 44px; padding: 4px 10px; border: 0; background: transparent; color: var(--table-ink); font: 500 0.875rem/1 var(--font-sans), var(--font-deva-sans), sans-serif; cursor: pointer; }
+.ks-seg__btn + .ks-seg__btn { border-left: 1px solid var(--table-muted); }
+.ks-seg__btn[aria-pressed="true"] { background: var(--table-ink); color: var(--table); }
+
+/* Footer */
+.ks-footer { border-top: var(--rule-end); border-color: var(--table-muted); color: var(--table-ink); font-size: 0.875rem; }
+.ks-footer__inner { max-width: 1440px; margin: 0 auto; padding: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+.ks-footer__links { display: flex; flex-wrap: wrap; gap: 4px 16px; list-style: none; margin: 0; padding: 0; }
+.ks-footer a { color: var(--table-ink); text-underline-offset: 3px; }
+.ks-footer__note { color: var(--table-muted); margin: 0; }
+
+/* Freshness strip: small stock tags on the table */
+.ks-fresh { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 0; padding: 0; list-style: none; font-size: 0.8125rem; }
+.ks-fresh__label { color: var(--table-muted); margin-right: 4px; }
+.ks-fresh__item { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; min-height: 28px; background: var(--stock-bone); color: var(--ink); border: 1px solid var(--ink-muted); border-radius: var(--radius-card); }
+.ks-fresh__item[data-ok="false"] { border-color: var(--signal-gap); }
+.ks-fresh__state[data-ok="true"] { color: var(--signal-ok); }
+.ks-fresh__state[data-ok="false"] { color: var(--signal-gap); font: 600 0.75rem var(--font-mono), monospace; letter-spacing: var(--track-code); }
+.ks-fresh__when { font-family: var(--font-mono), monospace; font-size: 0.75rem; color: var(--ink-muted); text-transform: uppercase; }
+
+/* Survey stepper */
+.ks-stepper { display: grid; gap: 16px; padding: 16px 20px 20px; }
+.ks-stepper__steps { display: flex; flex-wrap: wrap; gap: 4px; list-style: none; margin: 0; padding: 0; counter-reset: step; }
+.ks-stepper__dot { flex: 1 1 0; min-width: 32px; padding-top: 6px; border-top: 3px solid var(--ink-faint); font-size: 0.75rem; color: var(--ink-muted); }
+.ks-stepper__dot[data-state="done"] { border-top-color: var(--ink); color: var(--ink); }
+.ks-stepper__dot[aria-current="step"] { border-top-color: var(--ink); color: var(--ink); font-weight: 600; border-top-style: double; border-top-width: 5px; }
+.ks-stepper__count { margin: 0; font: 500 0.8125rem var(--font-mono), monospace; letter-spacing: var(--track-code); text-transform: uppercase; color: var(--ink-muted); }
+.ks-stepper__title { margin: 0; font: 500 1.75rem/1.2 var(--font-display), var(--font-deva), serif; letter-spacing: 0.08em; font-variant-caps: small-caps; }
+.ks-stepper__title:lang(mr) { letter-spacing: 0; }
+.ks-stepper__title:focus { outline: none; }
+.ks-stepper__desc { margin: 0; color: var(--ink-muted); }
+.ks-stepper fieldset { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 12px; }
+.ks-stepper__nav { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding-top: 12px; border-top: var(--rule); }
+.ks-stepper__saved { font-size: 0.8125rem; color: var(--ink-muted); }
+.ks-field { display: grid; gap: 4px; }
+.ks-field label, .ks-field legend { font-weight: 500; }
+.ks-field input, .ks-field select, .ks-field textarea { font: inherit; min-height: 44px; padding: 8px 10px; background: var(--stock-nimbus); color: var(--ink); border: 1px solid var(--ink-muted); border-radius: var(--radius-card); }
+.ks-field__hint { font-size: 0.8125rem; color: var(--ink-muted); }
+
+/* Page scaffolding helpers for product pages */
+.ks-page-head { display: grid; gap: 6px; margin-bottom: 24px; }
+.ks-page-title { margin: 0; font: 500 2.25rem/1.15 var(--font-display), var(--font-deva), serif; letter-spacing: 0.1em; font-variant-caps: small-caps; }
+.ks-page-title:lang(mr) { letter-spacing: 0; font-size: 2.1rem; }
+.ks-page-lede { margin: 0; font-size: 1.125rem; max-width: 62ch; color: var(--table-ink); }
+.ks-section { margin: 32px 0; }
+.ks-section__title { margin: 0 0 12px; font: 600 1.25rem/1.3 var(--font-sans), var(--font-deva-sans), sans-serif; }
+
+/* Print: training plans must print cleanly on A4. */
+@media print {
+  @page { size: A4; margin: 14mm; }
+  :root, :root[data-theme="boardroom"] {
+    color-scheme: light; --grain: none; --tray-h: 0px;
+    --table: #CFC8B8; --table-raised: #C4BCAA; --table-ink: #1C1A17; --table-muted: #4A443B;
+    --stock-bone: #EFE8D8; --stock-eggshell: #F2ECDC; --stock-nimbus: #F4F3EE; --brass: #8C6B2E;
+  }
+  html, body { background: none !important; color: var(--ink) !important; }
+  .ks-gov, .ks-rail, .ks-topbar__tools, .ks-menu-btn, .ks-skip, .ks-card__actions, .ks-chart__tools, .ks-footer__links { display: none !important; }
+  .ks-shell { display: block; }
+  .ks-main { padding: 0; max-width: none; }
+  .ks-card, .ks-stock, .ks-chart, .ks-diffblock { box-shadow: none !important; break-inside: avoid; transform: none !important; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.75rem; }
+}

@@ -1,0 +1,96 @@
+/* Design.md §2 tokens. Daylight is the default; Boardroom is opt-in via [data-theme="boardroom"]. */
+:root {
+  color-scheme: light;
+
+  /* 2.1 Colour: the table (page) and the stock (cards) */
+  --table: #CFC8B8;
+  --table-raised: #C4BCAA;
+  --table-ink: #1C1A17;
+  --table-muted: #4A443B;
+  --stock-bone: #EFE8D8;
+  --stock-eggshell: #F2ECDC;
+  --stock-nimbus: #F4F3EE;
+  --ink: #1C1A17;
+  --ink-muted: #5E574C;
+  --ink-faint: #756D60; /* non-text only */
+  --brass: #8C6B2E; /* on the table only */
+  --signal-gap: #7A1F24;
+  --signal-ok: #2E4A3B;
+  --signal-watch: #7A5A12;
+
+  /* Map ramp: five classed sepia steps mixed from stock and ink tokens (no new hues). */
+  --ramp-1: color-mix(in oklab, var(--ink-muted) 8%, var(--stock-bone));
+  --ramp-2: color-mix(in oklab, var(--ink-muted) 28%, var(--stock-bone));
+  --ramp-3: color-mix(in oklab, var(--ink-muted) 52%, var(--stock-bone));
+  --ramp-4: color-mix(in oklab, var(--ink-muted) 80%, var(--stock-bone));
+  --ramp-5: var(--ink);
+
+  /* 2.2 Type. Families: --font-display/-serif/-sans/-mono/-deva/-deva-sans are set by
+     next/font on <html> (unlayered); fallbacks live in the layered @theme in styles.css. */
+  --track-name: 0.18em;
+  --track-code: 0.08em;
+
+  /* 2.3 Space, shape, depth */
+  --radius-card: 2px;
+  --lift-0: 0 1px 0 rgb(0 0 0 / .25);
+  --lift-1: 0 6px 18px -6px rgb(0 0 0 / .45);
+  --lift-2: 0 18px 40px -12px rgb(0 0 0 / .55);
+  --rule: 1px solid var(--ink-faint);
+  --rule-end: 3px double var(--ink-faint);
+
+  /* Double focus ring: 2px ink inside, 2px table-ink outside. */
+  --focus-ring: 0 0 0 2px var(--ink), 0 0 0 4px var(--table-ink);
+
+  /* 2.4 Motion */
+  --t-quick: 140ms cubic-bezier(.2, 0, 0, 1);
+  --t-slide: 320ms cubic-bezier(.2, .9, .25, 1);
+  --t-exit: 200ms cubic-bezier(.4, 0, 1, 1);
+
+  /* Paper grain: tiny inline SVG noise tile at 3% opacity. */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='.33 .33 .33 0 0 .33 .33 .33 0 0 .33 .33 .33 0 0 0 0 0 0 1'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");
+
+  /* Set by CompareTray so focused elements are never hidden under it. */
+  --tray-h: 0px;
+}
+
+:root[data-theme="boardroom"], [data-theme="boardroom"] {
+  color-scheme: dark;
+  --table: #141210;
+  --table-raised: #1D1A17;
+  --table-ink: #EFE8D8;
+  --table-muted: #A89F8F;
+  --stock-bone: #E3DBC8;
+  --stock-eggshell: #E8E1CF;
+  --stock-nimbus: #DEDAD0;
+  --brass: #B8A27A;
+  /* Re-derive stock-mixed values so a Boardroom subtree picks up its own stock. */
+  --ramp-1: color-mix(in oklab, var(--ink-muted) 8%, var(--stock-bone));
+  --ramp-2: color-mix(in oklab, var(--ink-muted) 28%, var(--stock-bone));
+  --ramp-3: color-mix(in oklab, var(--ink-muted) 52%, var(--stock-bone));
+  --ramp-4: color-mix(in oklab, var(--ink-muted) 80%, var(--stock-bone));
+  --focus-ring: 0 0 0 2px var(--ink), 0 0 0 4px var(--table-ink);
+}
+/* A themed subtree (e.g. the gallery's Boardroom panel) paints its own table. */
+[data-theme="boardroom"]:not(:root) { background: var(--table); color: var(--table-ink); }
+
+@media (prefers-reduced-transparency: reduce) {
+  :root { --grain: none; }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --grain: none;
+    --ink-muted: #1C1A17;
+    --table-muted: var(--table-ink);
+    --rule: 2px solid var(--ink);
+    --rule-end: 4px double var(--ink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-quick: 0ms linear;
+    --t-slide: 0ms linear;
+    --t-exit: 0ms linear;
+  }
+}
