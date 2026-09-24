@@ -33,7 +33,7 @@ async function SkillBody({ params }: { params: Promise<{ id: string }> }) {
   const forecastEnd = trend[trend.length - 1];
   const shortHistory = actual.length < MIN_HISTORY;
   const shortages = byGap.filter((c) => c.gap > 0).slice(0, 10);
-  const sc = top ? skillCard(d.skill, top, dname(top.lgd), d.delta, t, lang, d.asOf) : null;
+  const sc = top ? skillCard(d.skill, top, dname(top.lgd), d.delta, t, lang, d.asOf, d.names[top.lgd]?.provenance) : null;
   const lowCoverage = shortages.filter((c) => (d.names[c.lgd]?.coverage ?? 1) < 0.4).length;
 
   return (

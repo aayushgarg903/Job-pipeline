@@ -1,6 +1,6 @@
 // Contract types -> Card props, with humane copy from messages. Shared by the landing page,
 // the gallery, the compare resolver and (next) the product pages.
-import type { Course, CourseHealth, DemandCell, DistrictSummary, Lang, Skill } from "@ks/contracts";
+import type { Course, CourseHealth, DemandCell, DistrictSummary, Lang, Provenance, Skill } from "@ks/contracts";
 import { formatNumber, formatPercent, humanRound, VERDICTS, type CardProps, type CompareItem } from "@ks/ui";
 import type { ReactNode } from "react";
 import { routes } from "./routes";
@@ -108,7 +108,8 @@ export function courseCard(c: Course & { health: CourseHealth | null }, district
   };
 }
 
-export function skillCard(skill: Skill, cell: DemandCell, districtName: string, delta: number, t: Tr, lang: Lang, asOf: string): CardProps {
+/** `provenance` is the district's own source counts; without it the card shows only its date. */
+export function skillCard(skill: Skill, cell: DemandCell, districtName: string, delta: number, t: Tr, lang: Lang, asOf: string, provenance?: Provenance): CardProps {
   const word = cell.gap > 0 && cell.ratio >= 1.3 ? "SHORTAGE" : cell.ratio < 0.8 ? "OVERSUPPLY" : "BALANCED";
   const v = VERDICTS[word];
   const label = lang === "mr" && skill.labelMr ? skill.labelMr : skill.labelEn;
@@ -125,16 +126,13 @@ export function skillCard(skill: Skill, cell: DemandCell, districtName: string, 
     },
     verdict: {
       tone: v.tone, glyph: v.glyph, word: t(`verdict.${word}`),
-      text: t("skillCard.verdictText", { demand: formatNumber(cell.demand, lang), supply: formatNumber(cell.supply, lang), ratio: formatNumber(cell.ratio, lang, { maximumFractionDigits: 1 }) }),
+      text: t("skillCard.verdictText", { demand: people(cell.demand, lang), supply: people(cell.supply, lang), ratio: formatNumber(cell.ratio, lang, { maximumFractionDigits: 1 }) }),
     },
-    human: t.rich("skillCard.human", { demand: people(cell.demand, lang), supply: formatNumber(cell.supply, lang), district: districtName, b: bold }),
+    human: t.rich("skillCard.human", { demand: people(cell.demand, lang), supply: people(cell.supply, lang), district: districtName, b: bold }),
     provenance: {
-      sources: [
-        { kind: "postings", label: t("prov.postings"), n: Math.round(cell.demand * 0.33) },
-        { kind: "surveys", label: t("prov.surveys"), n: Math.max(3, Math.round(cell.demand / 60)) },
-      ],
+      sources: provenance?.sources ?? [],
       asOf,
-      isDemo: true,
+      isDemo: provenance?.isDemo ?? true,
       lapsed: false,
     },
     href: routes.skill(skill.id),

@@ -66,7 +66,7 @@ export async function loadSkill(id: string) {
     r.skillCells(id), r.skillTrend(id), r.topSkills({ by: "rising", limit: 500 }), r.courses({ limit: 500 }),
     r.postings({ skillId: id, limit: 8 }), r.evidence({ kind: "skill", id, skillId: id }, 10), r.radar(), r.stateOverview(), r.districts(), allSkills(),
   ]);
-  const names = Object.fromEntries(districts.map((d) => [d.district.lgd, { en: d.district.nameEn, mr: d.district.nameMr, coverage: d.coverage }]));
+  const names = Object.fromEntries(districts.map((d) => [d.district.lgd, { en: d.district.nameEn, mr: d.district.nameMr, coverage: d.coverage, provenance: d.provenance }]));
   return {
     skill, cells, trend,
     delta: rising.find((s) => s.id === id)?.delta ?? 0,
