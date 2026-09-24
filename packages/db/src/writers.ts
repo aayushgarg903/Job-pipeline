@@ -2,6 +2,9 @@
 import type { SurveyInput, Writers } from "@ks/contracts";
 import type { Sql } from "./client";
 
+/** Reserved occupation for survey roles we can't map yet (seeded in data/occupations.json). */
+export const UNMAPPED_NCO = "0000.0000";
+
 const IMPORTANCE = new Set(["mandatory", "preferred", "nice"]);
 const VERDICTS = new Set(["endorse", "change", "irrelevant"]);
 /** Endorsements needed to move a draft PR to employer-validated. */
@@ -45,17 +48,21 @@ export function createWriters(sql: Sql): Writers {
         // New responses start unverified: facts ignore them until an officer approves the
         // 'survey-verify' review item (resolveReview), per Architecture §6.1 anti-gaming.
         const c = input.consent ?? null;
+        // Roles we can't map yet (survey "Other", or a code missing from our NCO list) land in a
+        // reserved bucket; the review item carries the employer's own words for an officer to map.
+        const [known] = await tx<{ n: number }[]>`select count(*)::int as n from ks.occupation where nco_code = ${input.nco}`;
+        const nco = known && known.n > 0 ? input.nco : UNMAPPED_NCO;
         const [row] = await tx<{ id: string }[]>`
           insert into ks.survey_response (employer_id, lgd_code, nco_code, sector, expected_hires_12m,
             posting_to_hire_ratio, csat_recent_hires, weeks_to_productivity, comment, verified,
             consent_at, consent_notice_version, consent_purpose)
-          values (${employerId}, ${input.lgd}, ${input.nco}, ${input.sector}, ${input.expectedHires12m},
+          values (${employerId}, ${input.lgd}, ${nco}, ${input.sector}, ${input.expectedHires12m},
             ${input.postingToHireRatio}, ${input.csatRecentHires}, ${input.weeksToProductivity}, ${input.comment}, false,
-            ${c ? new Date(c.at) : null}, ${c?.noticeVersion ?? null}, ${c?.purpose ?? null})
+            ${c?.at ?? null}::timestamptz, ${c?.noticeVersion ?? null}, ${c?.purpose ?? null})
           returning id`;
         const id = row!.id;
         await tx`insert into ks.review_item (kind, ref_id, payload)
-                 values ('survey-verify', ${id}, ${JSON.stringify({ employer: name, lgd: input.lgd, nco: input.nco, expectedHires12m: input.expectedHires12m })}::text::jsonb)`;
+                 values ('survey-verify', ${id}, ${JSON.stringify({ employer: name, lgd: input.lgd, nco: input.nco, storedAs: nco, comment: input.comment, expectedHires12m: input.expectedHires12m })}::text::jsonb)`;
         for (const s of input.skills) {
           await tx`insert into ks.survey_skill (response_id, skill_id, importance, proficiency)
                    values (${id}, ${s.skillId}, ${s.importance}, ${s.proficiency})

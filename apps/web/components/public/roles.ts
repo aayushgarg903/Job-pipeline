@@ -57,7 +57,7 @@ export const ROLES: Role[] = [
   R("ev", "7412.0100", "EV technician / EV charging", "EV तंत्रज्ञ / EV चार्जिंग", "EV technicians", "EV तंत्रज्ञ", ["ev-battery-maintenance", "industrial-wiring", "plc-automation"]),
   R("electronics", "7421.0100", "Electronics mechanic / repair", "इलेक्ट्रॉनिक्स मेकॅनिक / दुरुस्ती", "electronics mechanics", "इलेक्ट्रॉनिक्स मेकॅनिक", ["industrial-wiring", "plc-automation"]),
   R("fitter", "7233.0100", "Fitter", "फिटर", "fitters", "फिटर", ["tig-welding", "cnc-programming"]),
-  R("cnc", "7223.0400", "CNC operator / programmer", "CNC ऑपरेटर / प्रोग्रामर", "CNC operators", "CNC ऑपरेटर", ["cnc-programming", "plc-automation"]),
+  R("cnc", "7223.0200", "CNC operator / programmer", "CNC ऑपरेटर / प्रोग्रामर", "CNC operators", "CNC ऑपरेटर", ["cnc-programming", "plc-automation"]),
   R("machinist", "7223.0100", "Machinist / turner", "मशिनिस्ट / टर्नर", "machinists", "मशिनिस्ट", ["cnc-programming"]),
   R("welder", "7212.0100", "Welder", "वेल्डर", "welders", "वेल्डर", ["tig-welding"]),
   R("mv-mechanic", "7231.0100", "Motor vehicle mechanic", "मोटार वाहन मेकॅनिक", "motor mechanics", "मोटार मेकॅनिक", ["ev-battery-maintenance", "customer-communication"]),

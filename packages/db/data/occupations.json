@@ -1,513 +1,520 @@
 [
- {
-  "nco": "7231.0100",
-  "titleEn": "Motor Vehicle Mechanic",
-  "titleMr": "मोटार वाहन मेकॅनिक",
-  "nsqfLevel": 4,
-  "sector": "auto"
- },
- {
-  "nco": "7231.0200",
-  "titleEn": "Diesel Mechanic",
-  "titleMr": "डिझेल मेकॅनिक",
-  "nsqfLevel": 4,
-  "sector": "auto"
- },
- {
-  "nco": "7231.0300",
-  "titleEn": "Electric Vehicle Service Technician",
-  "titleMr": "इलेक्ट्रिक वाहन सर्व्हिस तंत्रज्ञ",
-  "nsqfLevel": 4,
-  "sector": "auto"
- },
- {
-  "nco": "7212.0100",
-  "titleEn": "Welder, Gas and Electric",
-  "titleMr": "वेल्डर (गॅस व इलेक्ट्रिक)",
-  "nsqfLevel": 4,
-  "sector": "auto"
- },
- {
-  "nco": "7222.0100",
-  "titleEn": "Tool and Die Maker",
-  "titleMr": "टूल अँड डाय मेकर",
-  "nsqfLevel": 5,
-  "sector": "auto"
- },
- {
-  "nco": "7223.0100",
-  "titleEn": "Machinist",
-  "titleMr": "मशिनिस्ट",
-  "nsqfLevel": 4,
-  "sector": "auto"
- },
- {
-  "nco": "7223.0200",
-  "titleEn": "CNC Operator / Setter",
-  "titleMr": "सीएनसी ऑपरेटर / सेटर",
-  "nsqfLevel": 4,
-  "sector": "auto"
- },
- {
-  "nco": "7223.0300",
-  "titleEn": "Turner",
-  "titleMr": "टर्नर",
-  "nsqfLevel": 4,
-  "sector": "auto"
- },
- {
-  "nco": "7233.0100",
-  "titleEn": "Fitter (General)",
-  "titleMr": "फिटर",
-  "nsqfLevel": 4,
-  "sector": "auto"
- },
- {
-  "nco": "7213.0100",
-  "titleEn": "Sheet Metal Worker",
-  "titleMr": "शीट मेटल कामगार",
-  "nsqfLevel": 3,
-  "sector": "auto"
- },
- {
-  "nco": "8211.0100",
-  "titleEn": "Assembler, Mechanical Machinery",
-  "titleMr": "यांत्रिक असेंब्लर",
-  "nsqfLevel": 3,
-  "sector": "auto"
- },
- {
-  "nco": "3118.0100",
-  "titleEn": "Draughtsman, Mechanical",
-  "titleMr": "ड्राफ्ट्समन (मेकॅनिकल)",
-  "nsqfLevel": 5,
-  "sector": "auto"
- },
- {
-  "nco": "7543.0100",
-  "titleEn": "Quality Inspector",
-  "titleMr": "गुणवत्ता निरीक्षक",
-  "nsqfLevel": 4,
-  "sector": "auto"
- },
- {
-  "nco": "3115.0100",
-  "titleEn": "Mechanical Engineering Technician",
-  "titleMr": "यांत्रिक अभियांत्रिकी तंत्रज्ञ",
-  "nsqfLevel": 5,
-  "sector": "auto"
- },
- {
-  "nco": "7411.0100",
-  "titleEn": "Electrician (General)",
-  "titleMr": "इलेक्ट्रिशियन",
-  "nsqfLevel": 4,
-  "sector": "electrical"
- },
- {
-  "nco": "7411.0200",
-  "titleEn": "Wireman",
-  "titleMr": "वायरमन",
-  "nsqfLevel": 3,
-  "sector": "electrical"
- },
- {
-  "nco": "7411.0300",
-  "titleEn": "Solar PV Installer (Suryamitra)",
-  "titleMr": "सौर पीव्ही इंस्टॉलर (सूर्यमित्र)",
-  "nsqfLevel": 4,
-  "sector": "electrical"
- },
- {
-  "nco": "7411.0400",
-  "titleEn": "EV Charging Station Technician",
-  "titleMr": "ईव्ही चार्जिंग स्टेशन तंत्रज्ञ",
-  "nsqfLevel": 4,
-  "sector": "electrical"
- },
- {
-  "nco": "7412.0100",
-  "titleEn": "Electrical Mechanic / Motor Winder",
-  "titleMr": "विद्युत मेकॅनिक / मोटर वाइंडर",
-  "nsqfLevel": 4,
-  "sector": "electrical"
- },
- {
-  "nco": "7413.0100",
-  "titleEn": "Electrical Lineman",
-  "titleMr": "लाइनमन",
-  "nsqfLevel": 4,
-  "sector": "electrical"
- },
- {
-  "nco": "7421.0100",
-  "titleEn": "Electronics Mechanic",
-  "titleMr": "इलेक्ट्रॉनिक्स मेकॅनिक",
-  "nsqfLevel": 4,
-  "sector": "electrical"
- },
- {
-  "nco": "7422.0100",
-  "titleEn": "IoT / Smart Device Installer",
-  "titleMr": "आयओटी / स्मार्ट उपकरण इंस्टॉलर",
-  "nsqfLevel": 4,
-  "sector": "electrical"
- },
- {
-  "nco": "7127.0100",
-  "titleEn": "Refrigeration and AC Mechanic",
-  "titleMr": "रेफ्रिजरेशन व एसी मेकॅनिक",
-  "nsqfLevel": 4,
-  "sector": "electrical"
- },
- {
-  "nco": "3113.0100",
-  "titleEn": "Electrical Engineering Technician",
-  "titleMr": "विद्युत अभियांत्रिकी तंत्रज्ञ",
-  "nsqfLevel": 5,
-  "sector": "electrical"
- },
- {
-  "nco": "3114.0100",
-  "titleEn": "Electronics Engineering Technician",
-  "titleMr": "इलेक्ट्रॉनिक्स अभियांत्रिकी तंत्रज्ञ",
-  "nsqfLevel": 5,
-  "sector": "electrical"
- },
- {
-  "nco": "8212.0100",
-  "titleEn": "Electronic Equipment Assembler",
-  "titleMr": "इलेक्ट्रॉनिक उपकरण असेंब्लर",
-  "nsqfLevel": 3,
-  "sector": "electrical"
- },
- {
-  "nco": "3139.0100",
-  "titleEn": "Industrial Automation / Robotics Technician",
-  "titleMr": "औद्योगिक ऑटोमेशन / रोबोटिक्स तंत्रज्ञ",
-  "nsqfLevel": 5,
-  "sector": "electrical"
- },
- {
-  "nco": "2511.0100",
-  "titleEn": "Systems Analyst",
-  "titleMr": "सिस्टिम्स अ‍ॅनालिस्ट",
-  "nsqfLevel": 7,
-  "sector": "it"
- },
- {
-  "nco": "2512.0100",
-  "titleEn": "Software Developer",
-  "titleMr": "सॉफ्टवेअर डेव्हलपर",
-  "nsqfLevel": 6,
-  "sector": "it"
- },
- {
-  "nco": "2513.0100",
-  "titleEn": "Web Developer",
-  "titleMr": "वेब डेव्हलपर",
-  "nsqfLevel": 5,
-  "sector": "it"
- },
- {
-  "nco": "2519.0100",
-  "titleEn": "Software Tester",
-  "titleMr": "सॉफ्टवेअर टेस्टर",
-  "nsqfLevel": 5,
-  "sector": "it"
- },
- {
-  "nco": "2521.0100",
-  "titleEn": "Database Administrator",
-  "titleMr": "डेटाबेस प्रशासक",
-  "nsqfLevel": 6,
-  "sector": "it"
- },
- {
-  "nco": "2120.0100",
-  "titleEn": "Data Analyst",
-  "titleMr": "डेटा विश्लेषक",
-  "nsqfLevel": 6,
-  "sector": "it"
- },
- {
-  "nco": "2529.0100",
-  "titleEn": "Cyber Security Analyst",
-  "titleMr": "सायबर सुरक्षा विश्लेषक",
-  "nsqfLevel": 6,
-  "sector": "it"
- },
- {
-  "nco": "3511.0100",
-  "titleEn": "Cloud / IT Operations Technician",
-  "titleMr": "क्लाउड / आयटी ऑपरेशन्स तंत्रज्ञ",
-  "nsqfLevel": 5,
-  "sector": "it"
- },
- {
-  "nco": "3512.0100",
-  "titleEn": "ICT User Support Technician",
-  "titleMr": "आयटी सपोर्ट तंत्रज्ञ",
-  "nsqfLevel": 4,
-  "sector": "it"
- },
- {
-  "nco": "3513.0100",
-  "titleEn": "Computer Network Technician",
-  "titleMr": "संगणक नेटवर्क तंत्रज्ञ",
-  "nsqfLevel": 4,
-  "sector": "it"
- },
- {
-  "nco": "4132.0100",
-  "titleEn": "Data Entry Operator",
-  "titleMr": "डेटा एंट्री ऑपरेटर",
-  "nsqfLevel": 3,
-  "sector": "it"
- },
- {
-  "nco": "4222.0100",
-  "titleEn": "Customer Care Executive",
-  "titleMr": "ग्राहक सेवा अधिकारी",
-  "nsqfLevel": 4,
-  "sector": "it"
- },
- {
-  "nco": "2431.0100",
-  "titleEn": "Digital Marketing Executive",
-  "titleMr": "डिजिटल मार्केटिंग कार्यकारी",
-  "nsqfLevel": 5,
-  "sector": "it"
- },
- {
-  "nco": "4321.0100",
-  "titleEn": "Store Keeper / Stock Clerk",
-  "titleMr": "भांडारपाल / स्टॉक क्लार्क",
-  "nsqfLevel": 4,
-  "sector": "logistics"
- },
- {
-  "nco": "4321.0200",
-  "titleEn": "Warehouse Executive",
-  "titleMr": "वेअरहाउस एक्झिक्युटिव्ह",
-  "nsqfLevel": 4,
-  "sector": "logistics"
- },
- {
-  "nco": "9321.0100",
-  "titleEn": "Warehouse Picker / Packer",
-  "titleMr": "वेअरहाउस पिकर / पॅकर",
-  "nsqfLevel": 2,
-  "sector": "logistics"
- },
- {
-  "nco": "8344.0100",
-  "titleEn": "Forklift Operator",
-  "titleMr": "फोर्कलिफ्ट ऑपरेटर",
-  "nsqfLevel": 3,
-  "sector": "logistics"
- },
- {
-  "nco": "9333.0100",
-  "titleEn": "Loader / Freight Handler",
-  "titleMr": "लोडर / माल हाताळणी कामगार",
-  "nsqfLevel": 1,
-  "sector": "logistics"
- },
- {
-  "nco": "1324.0100",
-  "titleEn": "Supply Chain / Logistics Manager",
-  "titleMr": "पुरवठा साखळी / लॉजिस्टिक्स व्यवस्थापक",
-  "nsqfLevel": 7,
-  "sector": "logistics"
- },
- {
-  "nco": "4323.0100",
-  "titleEn": "Logistics / Dispatch Coordinator",
-  "titleMr": "लॉजिस्टिक्स / डिस्पॅच समन्वयक",
-  "nsqfLevel": 4,
-  "sector": "logistics"
- },
- {
-  "nco": "8332.0100",
-  "titleEn": "Heavy Truck Driver",
-  "titleMr": "अवजड ट्रक चालक",
-  "nsqfLevel": 3,
-  "sector": "logistics"
- },
- {
-  "nco": "8321.0100",
-  "titleEn": "Delivery Executive (Two-wheeler)",
-  "titleMr": "डिलिव्हरी एक्झिक्युटिव्ह (दुचाकी)",
-  "nsqfLevel": 2,
-  "sector": "logistics"
- },
- {
-  "nco": "3331.0100",
-  "titleEn": "Clearing and Forwarding Agent",
-  "titleMr": "क्लिअरिंग व फॉरवर्डिंग एजंट",
-  "nsqfLevel": 5,
-  "sector": "logistics"
- },
- {
-  "nco": "8343.0100",
-  "titleEn": "Crane Operator",
-  "titleMr": "क्रेन ऑपरेटर",
-  "nsqfLevel": 3,
-  "sector": "logistics"
- },
- {
-  "nco": "7514.0100",
-  "titleEn": "Fruit and Vegetable Processing Worker",
-  "titleMr": "फळे व भाजीपाला प्रक्रिया कामगार",
-  "nsqfLevel": 3,
-  "sector": "food"
- },
- {
-  "nco": "7512.0100",
-  "titleEn": "Baker",
-  "titleMr": "बेकर",
-  "nsqfLevel": 3,
-  "sector": "food"
- },
- {
-  "nco": "7513.0100",
-  "titleEn": "Dairy Products Maker",
-  "titleMr": "दुग्धजन्य पदार्थ उत्पादक",
-  "nsqfLevel": 3,
-  "sector": "food"
- },
- {
-  "nco": "8160.0100",
-  "titleEn": "Food Processing Machine Operator",
-  "titleMr": "अन्न प्रक्रिया मशीन ऑपरेटर",
-  "nsqfLevel": 3,
-  "sector": "food"
- },
- {
-  "nco": "3257.0200",
-  "titleEn": "Food Safety Supervisor",
-  "titleMr": "अन्न सुरक्षा पर्यवेक्षक",
-  "nsqfLevel": 5,
-  "sector": "food"
- },
- {
-  "nco": "3141.0100",
-  "titleEn": "Food Laboratory Technician",
-  "titleMr": "अन्न प्रयोगशाळा तंत्रज्ञ",
-  "nsqfLevel": 5,
-  "sector": "food"
- },
- {
-  "nco": "3122.0100",
-  "titleEn": "Production Supervisor, Food Plant",
-  "titleMr": "अन्न कारखाना उत्पादन पर्यवेक्षक",
-  "nsqfLevel": 5,
-  "sector": "food"
- },
- {
-  "nco": "7515.0100",
-  "titleEn": "Produce Grader and Sorter",
-  "titleMr": "शेतमाल प्रतवारी कामगार",
-  "nsqfLevel": 2,
-  "sector": "food"
- },
- {
-  "nco": "8189.0100",
-  "titleEn": "Cold Storage / Pack-house Operator",
-  "titleMr": "शीतगृह / पॅकहाउस ऑपरेटर",
-  "nsqfLevel": 3,
-  "sector": "food"
- },
- {
-  "nco": "3142.0100",
-  "titleEn": "Agricultural Technician",
-  "titleMr": "कृषी तंत्रज्ञ",
-  "nsqfLevel": 4,
-  "sector": "food"
- },
- {
-  "nco": "8160.0200",
-  "titleEn": "Winery / Beverage Plant Operator",
-  "titleMr": "वाईनरी / पेय प्रकल्प ऑपरेटर",
-  "nsqfLevel": 3,
-  "sector": "food"
- },
- {
-  "nco": "5321.0100",
-  "titleEn": "General Duty Assistant",
-  "titleMr": "जनरल ड्युटी असिस्टंट",
-  "nsqfLevel": 4,
-  "sector": "health"
- },
- {
-  "nco": "5322.0100",
-  "titleEn": "Home Health Aide",
-  "titleMr": "गृह आरोग्य सहाय्यक",
-  "nsqfLevel": 3,
-  "sector": "health"
- },
- {
-  "nco": "3212.0100",
-  "titleEn": "Medical Laboratory Technician",
-  "titleMr": "वैद्यकीय प्रयोगशाळा तंत्रज्ञ",
-  "nsqfLevel": 5,
-  "sector": "health"
- },
- {
-  "nco": "3212.0200",
-  "titleEn": "Phlebotomy Technician",
-  "titleMr": "फ्लेबोटॉमी तंत्रज्ञ",
-  "nsqfLevel": 4,
-  "sector": "health"
- },
- {
-  "nco": "3213.0100",
-  "titleEn": "Pharmacy Assistant",
-  "titleMr": "फार्मसी सहाय्यक",
-  "nsqfLevel": 4,
-  "sector": "health"
- },
- {
-  "nco": "3221.0100",
-  "titleEn": "Nursing Associate (ANM/GNM)",
-  "titleMr": "परिचारिका सहयोगी (एएनएम/जीएनएम)",
-  "nsqfLevel": 5,
-  "sector": "health"
- },
- {
-  "nco": "3258.0100",
-  "titleEn": "Emergency Medical Technician",
-  "titleMr": "आपत्कालीन वैद्यकीय तंत्रज्ञ",
-  "nsqfLevel": 4,
-  "sector": "health"
- },
- {
-  "nco": "3211.0100",
-  "titleEn": "Radiography / X-ray Technician",
-  "titleMr": "रेडिओग्राफी / एक्स-रे तंत्रज्ञ",
-  "nsqfLevel": 5,
-  "sector": "health"
- },
- {
-  "nco": "3252.0100",
-  "titleEn": "Medical Records Technician",
-  "titleMr": "वैद्यकीय नोंदी तंत्रज्ञ",
-  "nsqfLevel": 4,
-  "sector": "health"
- },
- {
-  "nco": "3257.0100",
-  "titleEn": "Health Sanitary Inspector",
-  "titleMr": "आरोग्य स्वच्छता निरीक्षक",
-  "nsqfLevel": 5,
-  "sector": "health"
- },
- {
-  "nco": "3256.0100",
-  "titleEn": "Medical Assistant / OT Technician",
-  "titleMr": "वैद्यकीय सहाय्यक / ओटी तंत्रज्ञ",
-  "nsqfLevel": 4,
-  "sector": "health"
- }
+  {
+    "nco": "7231.0100",
+    "titleEn": "Motor Vehicle Mechanic",
+    "titleMr": "मोटार वाहन मेकॅनिक",
+    "nsqfLevel": 4,
+    "sector": "auto"
+  },
+  {
+    "nco": "7231.0200",
+    "titleEn": "Diesel Mechanic",
+    "titleMr": "डिझेल मेकॅनिक",
+    "nsqfLevel": 4,
+    "sector": "auto"
+  },
+  {
+    "nco": "7231.0300",
+    "titleEn": "Electric Vehicle Service Technician",
+    "titleMr": "इलेक्ट्रिक वाहन सर्व्हिस तंत्रज्ञ",
+    "nsqfLevel": 4,
+    "sector": "auto"
+  },
+  {
+    "nco": "7212.0100",
+    "titleEn": "Welder, Gas and Electric",
+    "titleMr": "वेल्डर (गॅस व इलेक्ट्रिक)",
+    "nsqfLevel": 4,
+    "sector": "auto"
+  },
+  {
+    "nco": "7222.0100",
+    "titleEn": "Tool and Die Maker",
+    "titleMr": "टूल अँड डाय मेकर",
+    "nsqfLevel": 5,
+    "sector": "auto"
+  },
+  {
+    "nco": "7223.0100",
+    "titleEn": "Machinist",
+    "titleMr": "मशिनिस्ट",
+    "nsqfLevel": 4,
+    "sector": "auto"
+  },
+  {
+    "nco": "7223.0200",
+    "titleEn": "CNC Operator / Setter",
+    "titleMr": "सीएनसी ऑपरेटर / सेटर",
+    "nsqfLevel": 4,
+    "sector": "auto"
+  },
+  {
+    "nco": "7223.0300",
+    "titleEn": "Turner",
+    "titleMr": "टर्नर",
+    "nsqfLevel": 4,
+    "sector": "auto"
+  },
+  {
+    "nco": "7233.0100",
+    "titleEn": "Fitter (General)",
+    "titleMr": "फिटर",
+    "nsqfLevel": 4,
+    "sector": "auto"
+  },
+  {
+    "nco": "7213.0100",
+    "titleEn": "Sheet Metal Worker",
+    "titleMr": "शीट मेटल कामगार",
+    "nsqfLevel": 3,
+    "sector": "auto"
+  },
+  {
+    "nco": "8211.0100",
+    "titleEn": "Assembler, Mechanical Machinery",
+    "titleMr": "यांत्रिक असेंब्लर",
+    "nsqfLevel": 3,
+    "sector": "auto"
+  },
+  {
+    "nco": "3118.0100",
+    "titleEn": "Draughtsman, Mechanical",
+    "titleMr": "ड्राफ्ट्समन (मेकॅनिकल)",
+    "nsqfLevel": 5,
+    "sector": "auto"
+  },
+  {
+    "nco": "7543.0100",
+    "titleEn": "Quality Inspector",
+    "titleMr": "गुणवत्ता निरीक्षक",
+    "nsqfLevel": 4,
+    "sector": "auto"
+  },
+  {
+    "nco": "3115.0100",
+    "titleEn": "Mechanical Engineering Technician",
+    "titleMr": "यांत्रिक अभियांत्रिकी तंत्रज्ञ",
+    "nsqfLevel": 5,
+    "sector": "auto"
+  },
+  {
+    "nco": "7411.0100",
+    "titleEn": "Electrician (General)",
+    "titleMr": "इलेक्ट्रिशियन",
+    "nsqfLevel": 4,
+    "sector": "electrical"
+  },
+  {
+    "nco": "7411.0200",
+    "titleEn": "Wireman",
+    "titleMr": "वायरमन",
+    "nsqfLevel": 3,
+    "sector": "electrical"
+  },
+  {
+    "nco": "7411.0300",
+    "titleEn": "Solar PV Installer (Suryamitra)",
+    "titleMr": "सौर पीव्ही इंस्टॉलर (सूर्यमित्र)",
+    "nsqfLevel": 4,
+    "sector": "electrical"
+  },
+  {
+    "nco": "7411.0400",
+    "titleEn": "EV Charging Station Technician",
+    "titleMr": "ईव्ही चार्जिंग स्टेशन तंत्रज्ञ",
+    "nsqfLevel": 4,
+    "sector": "electrical"
+  },
+  {
+    "nco": "7412.0100",
+    "titleEn": "Electrical Mechanic / Motor Winder",
+    "titleMr": "विद्युत मेकॅनिक / मोटर वाइंडर",
+    "nsqfLevel": 4,
+    "sector": "electrical"
+  },
+  {
+    "nco": "7413.0100",
+    "titleEn": "Electrical Lineman",
+    "titleMr": "लाइनमन",
+    "nsqfLevel": 4,
+    "sector": "electrical"
+  },
+  {
+    "nco": "7421.0100",
+    "titleEn": "Electronics Mechanic",
+    "titleMr": "इलेक्ट्रॉनिक्स मेकॅनिक",
+    "nsqfLevel": 4,
+    "sector": "electrical"
+  },
+  {
+    "nco": "7422.0100",
+    "titleEn": "IoT / Smart Device Installer",
+    "titleMr": "आयओटी / स्मार्ट उपकरण इंस्टॉलर",
+    "nsqfLevel": 4,
+    "sector": "electrical"
+  },
+  {
+    "nco": "7127.0100",
+    "titleEn": "Refrigeration and AC Mechanic",
+    "titleMr": "रेफ्रिजरेशन व एसी मेकॅनिक",
+    "nsqfLevel": 4,
+    "sector": "electrical"
+  },
+  {
+    "nco": "3113.0100",
+    "titleEn": "Electrical Engineering Technician",
+    "titleMr": "विद्युत अभियांत्रिकी तंत्रज्ञ",
+    "nsqfLevel": 5,
+    "sector": "electrical"
+  },
+  {
+    "nco": "3114.0100",
+    "titleEn": "Electronics Engineering Technician",
+    "titleMr": "इलेक्ट्रॉनिक्स अभियांत्रिकी तंत्रज्ञ",
+    "nsqfLevel": 5,
+    "sector": "electrical"
+  },
+  {
+    "nco": "8212.0100",
+    "titleEn": "Electronic Equipment Assembler",
+    "titleMr": "इलेक्ट्रॉनिक उपकरण असेंब्लर",
+    "nsqfLevel": 3,
+    "sector": "electrical"
+  },
+  {
+    "nco": "3139.0100",
+    "titleEn": "Industrial Automation / Robotics Technician",
+    "titleMr": "औद्योगिक ऑटोमेशन / रोबोटिक्स तंत्रज्ञ",
+    "nsqfLevel": 5,
+    "sector": "electrical"
+  },
+  {
+    "nco": "2511.0100",
+    "titleEn": "Systems Analyst",
+    "titleMr": "सिस्टिम्स अ‍ॅनालिस्ट",
+    "nsqfLevel": 7,
+    "sector": "it"
+  },
+  {
+    "nco": "2512.0100",
+    "titleEn": "Software Developer",
+    "titleMr": "सॉफ्टवेअर डेव्हलपर",
+    "nsqfLevel": 6,
+    "sector": "it"
+  },
+  {
+    "nco": "2513.0100",
+    "titleEn": "Web Developer",
+    "titleMr": "वेब डेव्हलपर",
+    "nsqfLevel": 5,
+    "sector": "it"
+  },
+  {
+    "nco": "2519.0100",
+    "titleEn": "Software Tester",
+    "titleMr": "सॉफ्टवेअर टेस्टर",
+    "nsqfLevel": 5,
+    "sector": "it"
+  },
+  {
+    "nco": "2521.0100",
+    "titleEn": "Database Administrator",
+    "titleMr": "डेटाबेस प्रशासक",
+    "nsqfLevel": 6,
+    "sector": "it"
+  },
+  {
+    "nco": "2120.0100",
+    "titleEn": "Data Analyst",
+    "titleMr": "डेटा विश्लेषक",
+    "nsqfLevel": 6,
+    "sector": "it"
+  },
+  {
+    "nco": "2529.0100",
+    "titleEn": "Cyber Security Analyst",
+    "titleMr": "सायबर सुरक्षा विश्लेषक",
+    "nsqfLevel": 6,
+    "sector": "it"
+  },
+  {
+    "nco": "3511.0100",
+    "titleEn": "Cloud / IT Operations Technician",
+    "titleMr": "क्लाउड / आयटी ऑपरेशन्स तंत्रज्ञ",
+    "nsqfLevel": 5,
+    "sector": "it"
+  },
+  {
+    "nco": "3512.0100",
+    "titleEn": "ICT User Support Technician",
+    "titleMr": "आयटी सपोर्ट तंत्रज्ञ",
+    "nsqfLevel": 4,
+    "sector": "it"
+  },
+  {
+    "nco": "3513.0100",
+    "titleEn": "Computer Network Technician",
+    "titleMr": "संगणक नेटवर्क तंत्रज्ञ",
+    "nsqfLevel": 4,
+    "sector": "it"
+  },
+  {
+    "nco": "4132.0100",
+    "titleEn": "Data Entry Operator",
+    "titleMr": "डेटा एंट्री ऑपरेटर",
+    "nsqfLevel": 3,
+    "sector": "it"
+  },
+  {
+    "nco": "4222.0100",
+    "titleEn": "Customer Care Executive",
+    "titleMr": "ग्राहक सेवा अधिकारी",
+    "nsqfLevel": 4,
+    "sector": "it"
+  },
+  {
+    "nco": "2431.0100",
+    "titleEn": "Digital Marketing Executive",
+    "titleMr": "डिजिटल मार्केटिंग कार्यकारी",
+    "nsqfLevel": 5,
+    "sector": "it"
+  },
+  {
+    "nco": "4321.0100",
+    "titleEn": "Store Keeper / Stock Clerk",
+    "titleMr": "भांडारपाल / स्टॉक क्लार्क",
+    "nsqfLevel": 4,
+    "sector": "logistics"
+  },
+  {
+    "nco": "4321.0200",
+    "titleEn": "Warehouse Executive",
+    "titleMr": "वेअरहाउस एक्झिक्युटिव्ह",
+    "nsqfLevel": 4,
+    "sector": "logistics"
+  },
+  {
+    "nco": "9321.0100",
+    "titleEn": "Warehouse Picker / Packer",
+    "titleMr": "वेअरहाउस पिकर / पॅकर",
+    "nsqfLevel": 2,
+    "sector": "logistics"
+  },
+  {
+    "nco": "8344.0100",
+    "titleEn": "Forklift Operator",
+    "titleMr": "फोर्कलिफ्ट ऑपरेटर",
+    "nsqfLevel": 3,
+    "sector": "logistics"
+  },
+  {
+    "nco": "9333.0100",
+    "titleEn": "Loader / Freight Handler",
+    "titleMr": "लोडर / माल हाताळणी कामगार",
+    "nsqfLevel": 1,
+    "sector": "logistics"
+  },
+  {
+    "nco": "1324.0100",
+    "titleEn": "Supply Chain / Logistics Manager",
+    "titleMr": "पुरवठा साखळी / लॉजिस्टिक्स व्यवस्थापक",
+    "nsqfLevel": 7,
+    "sector": "logistics"
+  },
+  {
+    "nco": "4323.0100",
+    "titleEn": "Logistics / Dispatch Coordinator",
+    "titleMr": "लॉजिस्टिक्स / डिस्पॅच समन्वयक",
+    "nsqfLevel": 4,
+    "sector": "logistics"
+  },
+  {
+    "nco": "8332.0100",
+    "titleEn": "Heavy Truck Driver",
+    "titleMr": "अवजड ट्रक चालक",
+    "nsqfLevel": 3,
+    "sector": "logistics"
+  },
+  {
+    "nco": "8321.0100",
+    "titleEn": "Delivery Executive (Two-wheeler)",
+    "titleMr": "डिलिव्हरी एक्झिक्युटिव्ह (दुचाकी)",
+    "nsqfLevel": 2,
+    "sector": "logistics"
+  },
+  {
+    "nco": "3331.0100",
+    "titleEn": "Clearing and Forwarding Agent",
+    "titleMr": "क्लिअरिंग व फॉरवर्डिंग एजंट",
+    "nsqfLevel": 5,
+    "sector": "logistics"
+  },
+  {
+    "nco": "8343.0100",
+    "titleEn": "Crane Operator",
+    "titleMr": "क्रेन ऑपरेटर",
+    "nsqfLevel": 3,
+    "sector": "logistics"
+  },
+  {
+    "nco": "7514.0100",
+    "titleEn": "Fruit and Vegetable Processing Worker",
+    "titleMr": "फळे व भाजीपाला प्रक्रिया कामगार",
+    "nsqfLevel": 3,
+    "sector": "food"
+  },
+  {
+    "nco": "7512.0100",
+    "titleEn": "Baker",
+    "titleMr": "बेकर",
+    "nsqfLevel": 3,
+    "sector": "food"
+  },
+  {
+    "nco": "7513.0100",
+    "titleEn": "Dairy Products Maker",
+    "titleMr": "दुग्धजन्य पदार्थ उत्पादक",
+    "nsqfLevel": 3,
+    "sector": "food"
+  },
+  {
+    "nco": "8160.0100",
+    "titleEn": "Food Processing Machine Operator",
+    "titleMr": "अन्न प्रक्रिया मशीन ऑपरेटर",
+    "nsqfLevel": 3,
+    "sector": "food"
+  },
+  {
+    "nco": "3257.0200",
+    "titleEn": "Food Safety Supervisor",
+    "titleMr": "अन्न सुरक्षा पर्यवेक्षक",
+    "nsqfLevel": 5,
+    "sector": "food"
+  },
+  {
+    "nco": "3141.0100",
+    "titleEn": "Food Laboratory Technician",
+    "titleMr": "अन्न प्रयोगशाळा तंत्रज्ञ",
+    "nsqfLevel": 5,
+    "sector": "food"
+  },
+  {
+    "nco": "3122.0100",
+    "titleEn": "Production Supervisor, Food Plant",
+    "titleMr": "अन्न कारखाना उत्पादन पर्यवेक्षक",
+    "nsqfLevel": 5,
+    "sector": "food"
+  },
+  {
+    "nco": "7515.0100",
+    "titleEn": "Produce Grader and Sorter",
+    "titleMr": "शेतमाल प्रतवारी कामगार",
+    "nsqfLevel": 2,
+    "sector": "food"
+  },
+  {
+    "nco": "8189.0100",
+    "titleEn": "Cold Storage / Pack-house Operator",
+    "titleMr": "शीतगृह / पॅकहाउस ऑपरेटर",
+    "nsqfLevel": 3,
+    "sector": "food"
+  },
+  {
+    "nco": "3142.0100",
+    "titleEn": "Agricultural Technician",
+    "titleMr": "कृषी तंत्रज्ञ",
+    "nsqfLevel": 4,
+    "sector": "food"
+  },
+  {
+    "nco": "8160.0200",
+    "titleEn": "Winery / Beverage Plant Operator",
+    "titleMr": "वाईनरी / पेय प्रकल्प ऑपरेटर",
+    "nsqfLevel": 3,
+    "sector": "food"
+  },
+  {
+    "nco": "5321.0100",
+    "titleEn": "General Duty Assistant",
+    "titleMr": "जनरल ड्युटी असिस्टंट",
+    "nsqfLevel": 4,
+    "sector": "health"
+  },
+  {
+    "nco": "5322.0100",
+    "titleEn": "Home Health Aide",
+    "titleMr": "गृह आरोग्य सहाय्यक",
+    "nsqfLevel": 3,
+    "sector": "health"
+  },
+  {
+    "nco": "3212.0100",
+    "titleEn": "Medical Laboratory Technician",
+    "titleMr": "वैद्यकीय प्रयोगशाळा तंत्रज्ञ",
+    "nsqfLevel": 5,
+    "sector": "health"
+  },
+  {
+    "nco": "3212.0200",
+    "titleEn": "Phlebotomy Technician",
+    "titleMr": "फ्लेबोटॉमी तंत्रज्ञ",
+    "nsqfLevel": 4,
+    "sector": "health"
+  },
+  {
+    "nco": "3213.0100",
+    "titleEn": "Pharmacy Assistant",
+    "titleMr": "फार्मसी सहाय्यक",
+    "nsqfLevel": 4,
+    "sector": "health"
+  },
+  {
+    "nco": "3221.0100",
+    "titleEn": "Nursing Associate (ANM/GNM)",
+    "titleMr": "परिचारिका सहयोगी (एएनएम/जीएनएम)",
+    "nsqfLevel": 5,
+    "sector": "health"
+  },
+  {
+    "nco": "3258.0100",
+    "titleEn": "Emergency Medical Technician",
+    "titleMr": "आपत्कालीन वैद्यकीय तंत्रज्ञ",
+    "nsqfLevel": 4,
+    "sector": "health"
+  },
+  {
+    "nco": "3211.0100",
+    "titleEn": "Radiography / X-ray Technician",
+    "titleMr": "रेडिओग्राफी / एक्स-रे तंत्रज्ञ",
+    "nsqfLevel": 5,
+    "sector": "health"
+  },
+  {
+    "nco": "3252.0100",
+    "titleEn": "Medical Records Technician",
+    "titleMr": "वैद्यकीय नोंदी तंत्रज्ञ",
+    "nsqfLevel": 4,
+    "sector": "health"
+  },
+  {
+    "nco": "3257.0100",
+    "titleEn": "Health Sanitary Inspector",
+    "titleMr": "आरोग्य स्वच्छता निरीक्षक",
+    "nsqfLevel": 5,
+    "sector": "health"
+  },
+  {
+    "nco": "3256.0100",
+    "titleEn": "Medical Assistant / OT Technician",
+    "titleMr": "वैद्यकीय सहाय्यक / ओटी तंत्रज्ञ",
+    "nsqfLevel": 4,
+    "sector": "health"
+  },
+  {
+    "nco": "0000.0000",
+    "titleEn": "Unmapped role (needs review)",
+    "titleMr": "न जुळलेली भूमिका (तपासणी बाकी)",
+    "nsqfLevel": null,
+    "sector": "other"
+  }
 ]
