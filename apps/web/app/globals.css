@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@import "@ks/ui/styles.css";
+
+/* Tailwind v4 ignores node_modules; scan the UI package sources explicitly. */
+@source "../../../packages/ui/src";

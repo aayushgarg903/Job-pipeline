@@ -1,0 +1,168 @@
+/* Page, type, focus, primitives. */
+html {
+  background: var(--table);
+  color: var(--table-ink);
+  font-family: var(--font-sans), var(--font-deva-sans), system-ui, sans-serif;
+  font-size: 100%;
+  line-height: 1.55;
+  scroll-padding-bottom: calc(var(--tray-h) + 16px);
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--table);
+  color: var(--table-ink);
+  font-size: 1rem;
+}
+
+:lang(mr), :lang(hi) {
+  letter-spacing: 0;
+  font-variant-caps: normal;
+  font-style: normal;
+}
+:lang(mr) { font-family: var(--font-deva-sans), var(--font-sans), sans-serif; }
+
+/* Focus: always visible, never removed. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 0;
+  box-shadow: 0 0 0 4px var(--table-ink);
+}
+:where(svg *):focus-visible { outline: none; }
+
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+.ks-skip {
+  position: absolute; left: 16px; top: -100px; z-index: 100;
+  padding: 8px 16px; background: var(--stock-eggshell); color: var(--ink);
+  border: 2px solid var(--ink); font-weight: 600; text-decoration: none;
+}
+.ks-skip:focus { top: 8px; }
+
+.letterpress { color: var(--ink); text-shadow: 0 -1px 0 rgb(0 0 0 / .10); }
+.ks-mono { font-family: var(--font-mono), ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+.ks-rule-end { border: 0; border-bottom: var(--rule-end); margin: 24px 0; }
+
+/* Stock: any light paper surface. */
+.ks-stock {
+  background-color: var(--stock-bone);
+  background-image: var(--grain);
+  color: var(--ink);
+  border: 1px solid var(--ink-muted);
+  border-radius: var(--radius-card);
+}
+
+/* Button */
+.ks-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 40px; padding: 8px 16px;
+  font: 500 0.9375rem/1.2 var(--font-sans), var(--font-deva-sans), sans-serif;
+  border-radius: var(--radius-card); border: 1px solid var(--ink);
+  background: var(--ink); color: var(--stock-bone);
+  cursor: pointer; text-decoration: none;
+  transition: transform var(--t-quick), box-shadow var(--t-quick);
+}
+.ks-btn:hover { box-shadow: var(--lift-1); transform: translateY(-1px); }
+.ks-btn:active { transform: translateY(0); box-shadow: none; }
+.ks-btn[disabled], .ks-btn[aria-disabled="true"] { opacity: .55; cursor: not-allowed; transform: none; box-shadow: none; }
+.ks-btn--secondary { background: var(--stock-eggshell); color: var(--ink); border-color: var(--ink-muted); }
+.ks-btn--ghost { background: transparent; color: inherit; border-color: transparent; text-decoration: underline; text-underline-offset: 3px; }
+.ks-btn--ghost:hover { box-shadow: none; transform: none; }
+.ks-btn--table { background: var(--table-raised); color: var(--table-ink); border-color: var(--table-muted); }
+.ks-btn--sm { min-height: 32px; padding: 4px 10px; font-size: 0.875rem; }
+.ks-btn--lg { min-height: 48px; padding: 12px 22px; font-size: 1rem; }
+.ks-btn svg { flex: none; }
+/* Boardroom: a primary button sitting on the dark table inverts; on stock it stays ink. */
+:where([data-theme="boardroom"]) .ks-btn:not([class*="ks-btn--"]) { background: var(--table-ink); color: var(--table); border-color: var(--table-ink); }
+:where([data-theme="boardroom"]) :is(.ks-stock, .ks-card, .ks-sheet--right, .ks-sheet--left) .ks-btn:not([class*="ks-btn--"]) { background: var(--ink); color: var(--stock-bone); border-color: var(--ink); }
+
+/* Badge: signal = glyph + word, on stock only */
+.ks-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 1px 8px; border: 1px solid currentColor; border-radius: var(--radius-card);
+  font: 600 0.75rem/1.6 var(--font-mono), monospace; letter-spacing: var(--track-code);
+  text-transform: uppercase; white-space: nowrap; color: var(--ink);
+}
+.ks-badge--gap { color: var(--signal-gap); }
+.ks-badge--ok { color: var(--signal-ok); }
+.ks-badge--watch { color: var(--signal-watch); }
+.ks-badge--neutral { color: var(--ink-muted); }
+.ks-badge--solid.ks-badge--gap { background: var(--signal-gap); color: var(--stock-bone); border-color: var(--signal-gap); }
+.ks-badge--solid.ks-badge--ok { background: var(--signal-ok); color: var(--stock-bone); border-color: var(--signal-ok); }
+.ks-badge--solid.ks-badge--watch { background: var(--signal-watch); color: var(--stock-bone); border-color: var(--signal-watch); }
+.ks-badge__glyph { font-size: 0.7rem; }
+
+/* Watermark: honesty marks. Visual only; text lives beside it. */
+.ks-watermark {
+  position: absolute; inset: 0; z-index: 0;
+  display: grid; place-items: center;
+  pointer-events: none; user-select: none; overflow: hidden;
+}
+.ks-watermark__word {
+  font: 500 clamp(2rem, 14cqi, 3.5rem)/1 var(--font-display), serif;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--ink); opacity: .08;
+  transform: rotate(-18deg); white-space: nowrap;
+}
+.ks-watermark--lapsed .ks-watermark__word { color: var(--signal-gap); opacity: .1; }
+.ks-watermark-inline {
+  display: inline-flex; align-items: center; gap: 4px;
+  font: 600 0.75rem/1.4 var(--font-mono), monospace; letter-spacing: var(--track-code);
+  text-transform: uppercase;
+}
+
+/* Seal: embossed employer endorsement. */
+.ks-seal { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); }
+.ks-seal__mark { flex: none; display: block; }
+.ks-seal__count { font: 600 13px var(--font-mono), monospace; fill: var(--ink); }
+.ks-seal__label { font-size: 0.8125rem; line-height: 1.3; color: var(--ink-muted); }
+
+/* People figure: the big humane number */
+.ks-people { margin: 0; color: inherit; }
+.ks-people__num {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 10px; margin: 0;
+  font: 500 3rem/1.05 var(--font-display), var(--font-deva), serif; letter-spacing: 0.04em;
+}
+.ks-people--xl .ks-people__num { font-size: 3.5rem; }
+.ks-people--md .ks-people__num { font-size: 2.25rem; }
+.ks-people__approx { color: var(--ink-muted); }
+.ks-people__unit { font: 400 1.375rem/1.2 var(--font-serif), var(--font-deva), serif; font-style: italic; letter-spacing: 0; }
+.ks-people__sentence { margin: 8px 0 0; font-size: 1.125rem; line-height: 1.5; max-width: 44ch; }
+.ks-people__source { margin: 8px 0 0; font-size: 0.8125rem; color: var(--ink-muted); }
+.ks-on-table .ks-people__approx, .ks-on-table .ks-people__source { color: var(--table-muted); }
+
+/* Skeleton */
+.ks-skeleton { position: relative; overflow: hidden; }
+.ks-skeleton__bar { display: block; height: 12px; margin: 10px auto; border-radius: 1px; background: color-mix(in oklab, var(--ink-faint) 22%, transparent); }
+.ks-skeleton__bar--name { height: 22px; width: 60%; margin-top: 28px; }
+.ks-skeleton__bar--title { width: 40%; }
+.ks-skeleton__bar--line { width: 75%; }
+.ks-skeleton::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(100deg, transparent 20%, rgb(255 255 255 / .35) 50%, transparent 80%);
+  transform: translateX(-100%); animation: ks-shimmer 1.4s infinite;
+}
+@keyframes ks-shimmer { to { transform: translateX(100%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0ms !important; animation-iteration-count: 1 !important;
+    transition-duration: 0ms !important; scroll-behavior: auto !important;
+  }
+  .ks-skeleton::after { display: none; }
+}
+
+@media (prefers-contrast: more) {
+  .ks-stock, .ks-card { border-width: 2px; border-color: var(--ink); }
+  .ks-watermark__word { opacity: .16; }
+}
+.ks-people--center { text-align: center; }
+.ks-people--center .ks-people__num { justify-content: center; }
+.ks-people--center .ks-people__sentence { margin-inline: auto; }

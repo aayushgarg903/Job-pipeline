@@ -1,0 +1,5 @@
+/* Gallery-only layout helpers. */
+.ks-gallery-panel { margin: 48px -16px 0; padding: 24px 16px; border-top: var(--rule-end); border-color: var(--table-muted); }
+@media (min-width: 768px) { .ks-gallery-panel { margin-inline: -32px; padding-inline: 32px; } }
+.ks-gallery-rail .ks-rail { display: block; position: static; max-height: none; min-height: 0; border: 1px solid var(--table-muted); }
+.ks-gallery-table { padding: 16px; background: var(--table-raised); color: var(--table-ink); border-top: 2px solid var(--brass); }
