@@ -165,7 +165,8 @@
     "prs": {
       "title": "Course changes to review",
       "lede": "ITIs and training centres near you have proposed changes. You know what you hire for: tell them if they've got it right.",
-      "count": "{n} changes waiting for you.",
+      "count": "{n, plural, =0 {Nothing waiting for you right now.} one {One change is waiting for you.} other {# changes are waiting for you.}}",
+      "detailTitle": "Review this course change",
       "empty": "Nothing to review right now. We'll send you the next change when an ITI near you proposes one.",
       "back": "All course changes",
       "code": "{code} · CHANGE #{n}",

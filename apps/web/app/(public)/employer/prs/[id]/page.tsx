@@ -29,6 +29,7 @@ async function PrBody({ params }: { params: Promise<{ id: string }> }) {
           {t("prs.back")}
         </Link>
       </nav>
+      <h1 className="ks-page-title m-0">{t("prs.detailTitle")}</h1>
       <p className="m-0 text-sm text-table-muted">{t("demo.employer")}</p>
       {view ? <PrCard {...view} lang={lang} detail headingLevel={2} /> : null}
     </div>

@@ -43,7 +43,7 @@ export function PrReview({
   const legendId = `pr-${prId}-legend`;
 
   return (
-    <section className="ks-stock grid gap-3 p-4" aria-labelledby={legendId}>
+    <div role="group" className="ks-stock grid gap-3 p-4" aria-labelledby={legendId}>
       <div className="flex flex-wrap items-center gap-4">
         <Seal count={view.e} label={t("sealLabel", { n: n(view.e) })} showLabel size={56} />
         <p className="m-0 text-sm text-ink-muted">{t("changes", { n: n(view.c) })}</p>
@@ -87,6 +87,6 @@ export function PrReview({
           {pending ? t("sending") : state.status === "error" ? t("error") : state.status === "ok" ? `${t("yours", { verdict: t(state.verdict) })} ${t("thanks")}` : view.v ? t("yours", { verdict: t(view.v) }) : ""}
         </p>
       </form>
-    </section>
+    </div>
   );
 }
