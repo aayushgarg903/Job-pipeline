@@ -83,7 +83,8 @@ export async function signPlan(_prev: SignState, form: FormData): Promise<SignSt
     updateTag(`plan:${lgd}:${fy}`);
     updateTag(`district:${lgd}`);
     return { status: "signed", demo: false, signedBy: name, signedAt, message: t("saved"), pdfHref: `/api/export/plan?${q}` };
-  } catch {
+  } catch (err) {
+    console.error("[signPlan]", err instanceof Error ? err.message : err);
     return { status: "error", demo: false, signedBy: null, signedAt: null, message: t("saveFailed"), pdfHref: null };
   }
 }
