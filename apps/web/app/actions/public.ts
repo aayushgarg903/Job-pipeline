@@ -14,6 +14,9 @@ import { getReaders } from "@/lib/readers";
 import { DEMO_EMPLOYER_ID, getWriters, writersAreDemo } from "@/lib/writers";
 import { take } from "@/lib/ratelimit";
 
+/** Bump when the consent text in messages/*/public.json changes. */
+const SURVEY_NOTICE_VERSION = "2026-09-25.1";
+
 const LangSchema = z.enum(["en", "mr"]).catch("en");
 const langOf = (fd: FormData): Lang => LangSchema.parse(fd.get("lang"));
 
@@ -58,7 +61,9 @@ export async function submitSurvey(_prev: SurveyState, fd: FormData): Promise<Su
   if (!parsed.ok) return { status: "error", errors: parsed.errors };
 
   const { input, roleKey } = parsed;
-  const { id } = await (await getWriters()).submitSurvey(input);
+  // DPDP s.6: keep proof of consent with the response (the schema already required consent=yes).
+  const consented = { ...input, consent: { at: new Date().toISOString(), noticeVersion: SURVEY_NOTICE_VERSION, purpose: "skills-demand-survey" } };
+  const { id } = await (await getWriters()).submitSurvey(consented);
   updateTag(`district:${input.lgd}`);
 
   // What this answer feeds into, in people-terms.

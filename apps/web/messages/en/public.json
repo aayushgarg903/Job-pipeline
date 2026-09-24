@@ -202,7 +202,7 @@
       "code": "YOUR NEXT CARD",
       "title": "Where can your skills take you?",
       "lede": "Tell us what you can do, in your own words. We'll show you jobs near you that need it, and what to learn next.",
-      "privacy": "No login. We don't keep what you type: it is read once (by Google's Gemini AI when it's available) and then forgotten. Your results live only in this page's link.",
+      "privacy": "No login, and nothing you type is stored by us: it is read once and then dropped. When our AI helper is on, your words are sent to Google's Gemini service to find your skills, under Google's own terms. Your results live only in this page's link.",
       "textLabel": "What can you do?",
       "textHint": "Write it the way you'd say it. Marathi, English or both is fine.",
       "placeholder": "For example: I can do house wiring and fix inverters. मला wiring आणि solar panel बसवता येतं.",
