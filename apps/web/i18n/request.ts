@@ -19,6 +19,13 @@ export async function resolveLocale(): Promise<Lang> {
 export default getRequestConfig(async ({ locale: explicit }) => {
   // An explicit locale (getTranslations({ locale: "mr" })) wins; otherwise cookie / header.
   const locale: Lang = explicit === "en" || explicit === "mr" ? explicit : await resolveLocale();
-  const messages = (await import(`../messages/${locale}.json`)).default;
+  // Base shell strings plus one namespace file per feature area (console = official/institute
+  // pages, public = employer/candidate pages). Area files own their top-level keys.
+  const [base, consoleMsgs, publicMsgs] = await Promise.all([
+    import(`../messages/${locale}.json`).then((m) => m.default),
+    import(`../messages/${locale}/console.json`).then((m) => m.default),
+    import(`../messages/${locale}/public.json`).then((m) => m.default),
+  ]);
+  const messages = { ...base, ...consoleMsgs, ...publicMsgs };
   return { locale, messages, timeZone: "Asia/Kolkata" };
 });
