@@ -145,8 +145,8 @@
         "yes": "Yes"
       },
       "placementTitle": "Did trainees find work?",
-      "placementUnit": "of {seats} trainees",
-      "placementSentence": "had a job within six months: {n} of every 100.",
+      "placementUnit": "of every 100 trainees",
+      "placementSentence": "had a job within six months.",
       "placementSource": "From the six-month phone follow-up of the last batch.",
       "noPlacement": "We don't have a six-month follow-up for this course yet.",
       "prsTitle": "Proposed changes (Curriculum PRs)",

@@ -253,6 +253,8 @@
   },
   "prov": {
     "traced": "trainees traced",
+    "seats": "seats",
+    "skillsTaught": "skills taught",
     "matchingPosts": "matching job posts",
     "postings": "postings",
     "surveys": "surveys",

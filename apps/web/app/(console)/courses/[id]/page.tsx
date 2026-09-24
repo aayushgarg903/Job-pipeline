@@ -43,7 +43,7 @@ async function CourseBody({ params }: { params: Promise<{ id: string }> }) {
   });
   const wantedNotTaught = rowIds.filter((sid) => !taught.has(sid) && (h?.missingSkills.includes(sid) ?? false)).map(label);
   const taughtNotAssessed = c.skills.filter((s) => !s.assessed).map((s) => label(s.skillId));
-  const placedPeople = h?.placementRate != null ? Math.round(c.seats * h.placementRate) : null;
+  const placedPeople = h?.placementRate != null ? Math.round(h.placementRate * 100) : null;
   const isNcvt = c.kind === "ITI";
 
   return (

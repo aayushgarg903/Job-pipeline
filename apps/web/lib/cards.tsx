@@ -82,8 +82,8 @@ export function courseCard(c: Course & { health: CourseHealth | null }, district
     human: placed !== null ? t.rich("courseCard.human", { placed, b: bold }) : undefined,
     provenance: {
       sources: [
-        { kind: "placement", label: t("prov.traced"), n: Math.round(c.seats * 0.8) },
-        { kind: "postings", label: t("prov.matchingPosts"), n: 40 + c.seats },
+        { kind: "supply", label: t("prov.seats"), n: c.seats },
+        { kind: "supply", label: t("prov.skillsTaught"), n: c.skills.length },
       ],
       asOf,
       isDemo: c.isDemo,
