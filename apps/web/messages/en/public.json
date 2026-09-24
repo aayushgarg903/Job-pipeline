@@ -144,7 +144,8 @@
         "consent": "We can only record answers if you agree. If you don't, nothing is saved.",
         "skills": "Please add at least one skill.",
         "unknown": "One of the skills isn't in our list. Please remove it and pick again.",
-        "server": "We couldn't send your answers just now. They're still saved on this device; please try again."
+        "server": "We couldn't send your answers just now. They're still saved on this device; please try again.",
+        "slow": "Lots of answers from this device in the last minute. Please wait a minute and send again; your answers are kept."
       },
       "sending": "Sending…",
       "thanks": {

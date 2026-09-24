@@ -5,7 +5,7 @@ import { z } from "zod";
 import { RATIOS, SECTORS, WEEKS, roleByKey } from "./roles";
 
 /** Error codes map to messages at public.survey.errors.* */
-export type FieldError = "required" | "number" | "range" | "tooLong" | "pattern" | "consent" | "skills" | "unknown";
+export type FieldError = "required" | "number" | "range" | "tooLong" | "pattern" | "consent" | "skills" | "unknown" | "slow";
 export type FieldErrors = Partial<Record<SurveyField, FieldError>>;
 export type SurveyField =
   | "consent" | "employerName" | "udyam" | "lgd" | "sector" | "sectorOther" | "role" | "roleOther"

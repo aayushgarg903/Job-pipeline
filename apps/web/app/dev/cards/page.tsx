@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 // Design-system gallery: every @ks/ui component and state, in Daylight and Boardroom,
 // in English and Marathi. Dev tooling: section headings are English on purpose;
 // component copy comes from messages/{en,mr}.json.
@@ -127,6 +128,8 @@ async function GalleryPageBody() {
 }
 
 export default function GalleryPage() {
+  // Dev tooling only; the gallery never ships to a public deployment unless explicitly enabled.
+  if (process.env.NODE_ENV === "production" && process.env.KS_SHOW_GALLERY !== "1") notFound();
   return (
     <Suspense fallback={<PageSkeleton cards={6} />}>
       <GalleryPageBody />

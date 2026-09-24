@@ -12,8 +12,9 @@ export const LAMBDA_RANGE = { min: 0, max: 2, step: 0.1 } as const;
 /** Knobs an officer can change (capex in ₹ lakh). Missing or out-of-range values fall back to the stored input. */
 export const PlanKnobs = z.object({
   seats: z.coerce.number().int().min(0).max(100_000).optional().catch(undefined),
-  capex: z.coerce.number().min(0).max(100_000).optional().catch(undefined),
-  lambda: z.coerce.number().min(LAMBDA_RANGE.min).max(LAMBDA_RANGE.max).optional().catch(undefined),
+  // Quantised so the solve cache keys stay bounded (whole ₹ lakh, λ in steps of 0.1).
+  capex: z.coerce.number().min(0).max(100_000).transform((v) => Math.round(v)).optional().catch(undefined),
+  lambda: z.coerce.number().min(LAMBDA_RANGE.min).max(LAMBDA_RANGE.max).transform((v) => Math.round(v * 10) / 10).optional().catch(undefined),
 });
 export type PlanKnobs = z.infer<typeof PlanKnobs>;
 

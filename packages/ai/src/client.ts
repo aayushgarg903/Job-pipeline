@@ -192,7 +192,7 @@ export function createRouter(opts: RouterOptions = {}): ModelRouter {
           // The limiter wraps a single attempt, so backoff sleeps don't hold a slot.
           const value = await limit(() => fn(model, AbortSignal.timeout(timeoutMs)));
           const a: Attempt = { model, ok: true, status: 200, ms: Date.now() - t0 };
-          mine.push(a); log.push(a); opts.onAttempt?.(a);
+          mine.push(a); log.push(a); if (log.length > 1000) log.splice(0, 500); opts.onAttempt?.(a);
           failures.set(model, 0);
           return { value, model, attempts: mine };
         } catch (err) {
@@ -202,7 +202,7 @@ export function createRouter(opts: RouterOptions = {}): ModelRouter {
             model, ok: false, status: statusOf(err), ms: Date.now() - t0,
             error: `${(err as Error)?.name ?? "Error"}: ${String((err as Error)?.message ?? err).slice(0, 160)}`,
           };
-          mine.push(a); log.push(a); opts.onAttempt?.(a);
+          mine.push(a); log.push(a); if (log.length > 1000) log.splice(0, 500); opts.onAttempt?.(a);
           if (cls === "fatal") throw err;
           recordFailure(model, err);
           if (cls === "next" || attempt === retries || isOpen(model)) break;

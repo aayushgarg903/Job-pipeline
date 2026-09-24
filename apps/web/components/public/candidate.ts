@@ -48,7 +48,7 @@ function getExtractor(): KsExtractor {
 
 const timeout = <T>(ms: number, value: T) => new Promise<T>((r) => setTimeout(() => r(value), ms));
 
-export async function readSkills(text: string, lang: Lang, catalog: Skill[]): Promise<{ skills: HeldSkill[]; via: ReadVia }> {
+export async function readSkills(text: string, lang: Lang, catalog: Skill[], allowAi = true): Promise<{ skills: HeldSkill[]; via: ReadVia }> {
   const skillsCatalog = catalog.map((s) => ({ id: s.id, labelEn: s.labelEn }));
   // Marathi catalogue labels help the lexical matcher when people write in Devanagari.
   const lexical = () => {
@@ -63,7 +63,7 @@ export async function readSkills(text: string, lang: Lang, catalog: Skill[]): Pr
   };
   if (!text.trim()) return { skills: [], via: "none" };
 
-  if (process.env.KS_CANDIDATE_AI !== "off") {
+  if (allowAi && process.env.KS_CANDIDATE_AI !== "off") {
     try {
       const ex = getExtractor();
       const before = ex.router.attempts().length;

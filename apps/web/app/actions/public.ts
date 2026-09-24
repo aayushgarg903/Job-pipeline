@@ -12,6 +12,7 @@ import { roleByKey, rolePlural } from "@/components/public/roles";
 import { parseSurvey, type FieldErrors } from "@/components/public/survey-schema";
 import { getReaders } from "@/lib/readers";
 import { DEMO_EMPLOYER_ID, getWriters, writersAreDemo } from "@/lib/writers";
+import { take } from "@/lib/ratelimit";
 
 const LangSchema = z.enum(["en", "mr"]).catch("en");
 const langOf = (fd: FormData): Lang => LangSchema.parse(fd.get("lang"));
@@ -50,6 +51,7 @@ export type SurveyState =
 
 export async function submitSurvey(_prev: SurveyState, fd: FormData): Promise<SurveyState> {
   const lang = langOf(fd);
+  if (!(await take("survey", 3))) return { status: "error", errors: { comment: "slow" } };
   const readers = await getReaders();
   const [districts, skills] = await Promise.all([readers.districts(), catalog()]);
   const parsed = parseSurvey(fd, { lgds: new Set(districts.map((d) => d.district.lgd)), skillIds: new Set(skills.map((s) => s.id)) });
@@ -130,7 +132,8 @@ export async function findPathsAction(fd: FormData): Promise<void> {
   const readers = await getReaders();
   if (!(await readers.district(lgd))) redirect("/me?err=district");
   if (text.length < 2) redirect(`/me?err=text&d=${lgd}`);
-  const { skills, via } = await readSkills(text, lang, await catalog());
+  // Gemini calls cost quota: 5 AI reads per minute per visitor, then the lexical matcher only.
+  const { skills, via } = await readSkills(text, lang, await catalog(), await take("candidate-ai", 5));
   const q = new URLSearchParams({ d: lgd, via });
   if (skills.length) q.set("s", encodeHeld(skills));
   redirect(`/me?${q}`);

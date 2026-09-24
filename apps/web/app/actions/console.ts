@@ -12,6 +12,7 @@ import { getReaders } from "@/lib/readers";
 import { REVIEW_QUEUE } from "@/components/console/review";
 import { PlanKnobs, solvePlan } from "@/components/console/plan";
 import { getWriters } from "@/components/console/writers";
+import { getOfficer } from "@/lib/auth";
 
 const Id = z.string().trim().min(1).max(80).regex(/^[\w.-]+$/);
 const Fy = z.string().regex(/^FY\d{2}$/);
@@ -43,7 +44,7 @@ export interface SignState {
 
 const SignInput = z.object({
   lgd: Id, fy: Fy,
-  name: z.string().trim().min(2).max(80),
+  name: z.string().trim().max(80).optional(),
   seats: PlanKnobs.shape.seats, capex: PlanKnobs.shape.capex, lambda: PlanKnobs.shape.lambda,
 });
 
@@ -51,7 +52,11 @@ export async function signPlan(_prev: SignState, form: FormData): Promise<SignSt
   const t = await getTranslations("console.plan.sign");
   const parsed = SignInput.safeParse(Object.fromEntries(form));
   if (!parsed.success) return { status: "error", demo: false, signedBy: null, signedAt: null, message: t("invalid"), pdfHref: null };
-  const { lgd, fy, name, seats, capex, lambda } = parsed.data;
+  const officer = await getOfficer();
+  if (!officer) return { status: "error", demo: false, signedBy: null, signedAt: null, message: t("needOfficer"), pdfHref: null };
+  // The signature is the authenticated officer, never free text from the form.
+  const { lgd, fy, seats, capex, lambda } = parsed.data;
+  const name = officer;
   const l = await lang();
   const r = await getReaders();
   const d = await r.district(lgd);
@@ -98,7 +103,10 @@ export async function resolveReviewItem(_prev: ReviewState, form: FormData): Pro
   const t = await getTranslations("console.review.result");
   const parsed = ReviewInput.safeParse(Object.fromEntries(form));
   if (!parsed.success) return { status: "error", decision: null, demo: false, message: t("invalid") };
-  const { id, decision, by } = parsed.data;
+  const officer = await getOfficer();
+  if (!officer) return { status: "error", decision: null, demo: false, message: t("needOfficer") };
+  const { id, decision } = parsed.data;
+  const by = officer;
   const w = await getWriters();
   if (!w) {
     if (!REVIEW_QUEUE.some((i) => i.id === id)) return { status: "error", decision: null, demo: true, message: t("invalid") };

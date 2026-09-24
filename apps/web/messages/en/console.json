@@ -277,7 +277,8 @@
           "demoBadge": "Demo, not saved",
           "download": "Download the signed plan (PDF)",
           "signedBy": "Signed by {name}"
-        }
+        },
+        "needOfficer": "Only a signed-in district officer can do this. Sign in first."
       }
     },
     "radar": {
@@ -348,7 +349,8 @@
         "rejectedDemo": "Rejected for this demo. Nothing was saved.",
         "approved": "Approved. The numbers will update within the hour.",
         "rejected": "Rejected. It won't count towards any number.",
-        "failed": "We couldn't record that just now. Please try again."
+        "failed": "We couldn't record that just now. Please try again.",
+        "needOfficer": "Only a signed-in district officer can do this. Sign in first."
       },
       "next": "When the queue is empty, check that each source is fresh.",
       "openSources": "Check the data sources",
@@ -428,6 +430,19 @@
       "demoSignature": "Demo signature: this was not recorded in any database and is not an official approval.",
       "footer": "Kaushal Setu · printed {date} · figures marked SPECIMEN are demo data",
       "specimen": "SPECIMEN"
+    },
+    "signin": {
+      "title": "Sign in as a district officer",
+      "intro": "Signing plans and clearing the review queue is limited to officers. Ask your district skills office for today's passcode.",
+      "name": "Your full name, as it should appear on signed plans",
+      "passcode": "Passcode",
+      "submit": "Sign in",
+      "errors": {
+        "invalid": "Please enter your name and the passcode.",
+        "wrong": "That passcode didn't match. Please check with your office.",
+        "disabled": "Officer sign-in isn't set up on this server yet.",
+        "slow": "Too many tries. Please wait a minute."
+      }
     }
   }
 }

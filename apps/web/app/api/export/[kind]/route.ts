@@ -18,7 +18,7 @@ type Ctx = { params: Promise<{ kind: string }> };
 const cell = (v: unknown) => {
   const s = v === null || v === undefined ? "" : String(v);
   // Quote everything that needs it; neutralise spreadsheet formula injection.
-  const safe = /^[=+\-@\t\r]/.test(s) ? `'${s}` : s;
+  const safe = typeof v === "string" && /^[=+\-@\t\r]/.test(s) ? `'${s}` : s;
   return /[",\n\r]/.test(safe) ? `"${safe.replace(/"/g, '""')}"` : safe;
 };
 const toCsv = (header: string[], rows: unknown[][]) => "\uFEFF" + [header, ...rows].map((r) => r.map(cell).join(",")).join("\r\n") + "\r\n";

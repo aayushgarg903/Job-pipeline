@@ -1,6 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalEnv": ["DATABASE_URL", "GEMINI_API_KEY", "GOOGLE_GENERATIVE_AI_API_KEY", "RAPIDAPI_KEY", "DATA_GOV_IN_KEY", "ADZUNA_APP_ID", "ADZUNA_APP_KEY", "NEXT_PUBLIC_SUPABASE_URL", "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY", "REVALIDATE_SECRET"],
+  "globalEnv": ["DATABASE_URL", "GEMINI_API_KEY", "GOOGLE_GENERATIVE_AI_API_KEY", "RAPIDAPI_KEY", "DATA_GOV_IN_KEY", "ADZUNA_APP_ID", "ADZUNA_APP_KEY", "NEXT_PUBLIC_SUPABASE_URL", "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY", "REVALIDATE_SECRET", "CONSOLE_PASSCODE", "DATA_MODE", "KS_CANDIDATE_AI"],
   "tasks": {
     "build": { "dependsOn": ["^build"], "outputs": [".next/**", "!.next/cache/**", "dist/**"] },
     "typecheck": { "dependsOn": ["^typecheck"] },
