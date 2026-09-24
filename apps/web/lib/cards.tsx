@@ -92,6 +92,8 @@ export function courseCard(c: Course & { health: CourseHealth | null }, district
     href: routes.course(c.id),
     compare: {
       ref: `course:${c.id}`,
+      // Same trade in two places reads "Electrician | Electrician" without the institute.
+      name: `${c.name} · ${c.institutionName}`,
       fields: [
         { key: "health", label: t("fields.health"), value: h?.total ?? null, display: h ? `${h.total}/100` : "—" },
         { key: "flags", label: t("fields.flags"), value: h?.flags.map((f) => t(`verdict.${f}`)).join(", ") ?? "—" },
