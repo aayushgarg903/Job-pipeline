@@ -14,7 +14,7 @@ import { getReaders } from "@/lib/readers";
 import { DEMO_EMPLOYER_ID, getWriters, writersAreDemo } from "@/lib/writers";
 import { take } from "@/lib/ratelimit";
 
-/** Bump when the consent text in messages/*/public.json changes. */
+// Bump when the consent text in messages/{en,mr}/public.json changes.
 const SURVEY_NOTICE_VERSION = "2026-09-25.1";
 
 const LangSchema = z.enum(["en", "mr"]).catch("en");
