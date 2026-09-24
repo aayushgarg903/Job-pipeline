@@ -27,7 +27,7 @@ export function CurriculumPr({ pr, course, t, lang, labels, skillLabels, asOf, d
     <article className="grid gap-4" aria-labelledby={`pr-${pr.id}`}>
       <Card
         variant="pr"
-        code={`${course.code} · PR #${num}`}
+        code={num ? `${course.code} · PR #${num}` : `${course.code} · PR`}
         name={t(`console.course.pr.target.${pr.target}`)}
         title={t(`console.course.pr.status.${pr.status}`)}
         figure={{ label: t("console.course.pr.votes"), value: formatNumber(pr.endorsements, lang), evidenceTitle: t("console.course.pr.votesTitle") }}

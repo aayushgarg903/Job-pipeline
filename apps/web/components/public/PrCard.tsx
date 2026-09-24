@@ -29,7 +29,7 @@ export async function PrCard({
   headingLevel?: 2 | 3;
 }) {
   const t = await getTranslations();
-  const num = pr.id.replace(/\D/g, "") || pr.id;
+  const num = pr.id.replace(/\D/g, "");
   const st = STATUS_TONE[pr.status];
   const href = `/employer/prs/${encodeURIComponent(pr.id)}`;
   const rationaleLang = lang === "mr" ? "en" : undefined; // rationales are drafted in English today
@@ -38,7 +38,7 @@ export async function PrCard({
     <div className="grid gap-3">
       <Card
         variant="pr"
-        code={t("public.prs.code", { code: course?.code ?? pr.courseId, n: num })}
+        code={num ? t("public.prs.code", { code: course?.code ?? pr.courseId, n: num }) : course?.code ?? pr.courseId}
         name={course?.name ?? pr.courseId}
         title={t("public.prs.title2", { institute: course?.institutionName ?? "", district: districtName })}
         verdict={{ tone: st.tone, glyph: st.glyph, word: t(`public.prs.status.${pr.status}`) }}
