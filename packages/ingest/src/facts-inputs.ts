@@ -12,7 +12,6 @@ export const PRIOR_STRENGTH: Record<SignalKind, number> = { udyam: 200, postings
 export const SELF_SHARE = 0.85; // spill-over: share of a district's completers who work in-district
 
 export async function observations(sql: Sql, quarters: string[]): Promise<SignalObservation[]> {
-  const first = quarters[0]!;
   const obs: SignalObservation[] = [];
   const udyam = await sql<{ quarter: string; lgd_code: string; nco_code: string; n: number; hires: number }[]>`
     select to_char(f.month, 'YYYY') || '-Q' || extract(quarter from f.month) as quarter, f.lgd_code, x.nco_code,
@@ -22,7 +21,7 @@ export async function observations(sql: Sql, quarters: string[]): Promise<Signal
     group by 1, 2, 3`;
   for (const r of udyam) if (quarters.includes(r.quarter)) obs.push({ kind: "udyam", lgd: r.lgd_code, nco: r.nco_code, quarter: r.quarter, n: r.n, hires12m: r.hires });
 
-  const [ratio] = await sql<{ r: number | null }[]>`select avg(posting_to_hire_ratio)::float8 as r from ks.survey_response where posting_to_hire_ratio is not null`;
+  const [ratio] = await sql<{ r: number | null }[]>`select avg(posting_to_hire_ratio)::float8 as r from ks.survey_response where verified and posting_to_hire_ratio is not null`;
   const hiresPerPosting = ratio?.r ?? 1;
   const posts = await sql<{ quarter: string; lgd_code: string; nco_code: string; n: number }[]>`
     select to_char(posted_at, 'YYYY') || '-Q' || extract(quarter from posted_at) as quarter, lgd_code, nco_code, count(*)::int as n
@@ -30,16 +29,54 @@ export async function observations(sql: Sql, quarters: string[]): Promise<Signal
   for (const r of posts) if (quarters.includes(r.quarter)) obs.push({ kind: "postings", lgd: r.lgd_code, nco: r.nco_code, quarter: r.quarter, n: r.n, hires12m: r.n * hiresPerPosting * 4 });
 
   // A survey answer ("hires in the next 12 months") stays valid for the 4 quarters after collection.
-  const surveys = await sql<{ collected_at: Date; lgd_code: string; nco_code: string; hires: number }[]>`
-    select collected_at, lgd_code, nco_code, expected_hires_12m as hires from ks.survey_response`;
-  for (const s of surveys) {
+  // Only verified responses count (Architecture §6.1); unverified ones wait in the review queue.
+  const surveys = await sql<SurveyRow[]>`
+    select employer_id, collected_at, lgd_code, nco_code, expected_hires_12m as hires from ks.survey_response where verified`;
+  obs.push(...surveyObservations(surveys, quarters));
+  return obs;
+}
+
+export interface SurveyRow { employer_id: string; collected_at: Date; lgd_code: string; nco_code: string; hires: number }
+
+/** Largest share of a district-occupation's survey weight one employer may carry (§6.1 anti-gaming). */
+export const SURVEY_EMPLOYER_CAP = 0.1;
+
+/**
+ * Survey rows → one observation per (district, occupation, quarter).
+ *  - An employer counts once per cell: its latest response in the validity window (re-submitting
+ *    does not add weight).
+ *  - No employer may carry more than SURVEY_EMPLOYER_CAP of the cell's stated hires. With k < 10
+ *    employers a 10% cap is unattainable, so the cap is max(10%, 1/k): no one employer outweighs an
+ *    equal share. Hires above the cap are dropped, not redistributed.
+ *  - n = number of distinct employers, so shrinkage treats the cell as k observations.
+ */
+export function surveyObservations(rows: SurveyRow[], quarters: string[]): SignalObservation[] {
+  const first = quarters[0]!;
+  const inWindow = new Set(quarters);
+  const cells = new Map<string, Map<string, { at: number; hires: number }>>(); // lgd|nco|q → employer → latest
+  for (const s of rows) {
     const q0 = quarterOf(s.collected_at);
+    const at = new Date(s.collected_at).getTime();
     for (let i = 0; i < 4; i++) {
       const q = shiftQuarter(q0, i);
-      if (q >= first && quarters.includes(q)) obs.push({ kind: "surveys", lgd: s.lgd_code, nco: s.nco_code, quarter: q, n: 1, hires12m: s.hires });
+      if (q < first || !inWindow.has(q)) continue;
+      const k = `${s.lgd_code}|${s.nco_code}|${q}`;
+      if (!cells.has(k)) cells.set(k, new Map());
+      const byEmp = cells.get(k)!;
+      const cur = byEmp.get(s.employer_id);
+      if (!cur || at > cur.at) byEmp.set(s.employer_id, { at, hires: Math.max(0, s.hires) });
     }
   }
-  return obs;
+  const out: SignalObservation[] = [];
+  for (const [k, byEmp] of cells) {
+    const [lgd, nco, quarter] = k.split("|") as [string, string, string];
+    const hires = [...byEmp.values()].map((e) => e.hires);
+    const total = hires.reduce((a, b) => a + b, 0);
+    const cap = Math.max(SURVEY_EMPLOYER_CAP, 1 / hires.length) * total;
+    const capped = hires.reduce((a, h) => a + Math.min(h, cap), 0);
+    out.push({ kind: "surveys", lgd, nco, quarter, n: hires.length, hires12m: capped });
+  }
+  return out;
 }
 
 /**
@@ -57,11 +94,12 @@ export async function profiles(sql: Sql): Promise<EngineInput["profiles"]> {
     from p join n on n.nco_code = p.nco_code join ks.posting_skill ps on ps.posting_id = p.id and not ps.negated
     group by 1, 2`;
   const surveys = await sql<{ nco_code: string; skill_id: string; freq: number; prof: number | null }[]>`
-    with n as (select nco_code, count(*) as n from ks.survey_response group by 1 having count(*) >= 2)
+    with n as (select nco_code, count(*) as n from ks.survey_response where verified group by 1 having count(*) >= 2)
     select r.nco_code, s.skill_id,
            sum(case s.importance when 'mandatory' then 1 when 'preferred' then 0.6 else 0.3 end)::float8 / max(n.n) as freq,
            round(avg(s.proficiency))::int as prof
     from ks.survey_response r join n on n.nco_code = r.nco_code join ks.survey_skill s on s.response_id = r.id
+    where r.verified
     group by 1, 2`;
   const BLEND = 0.3;
   const share = new Map<string, number>(); // nco → share of weight taken by observed evidence

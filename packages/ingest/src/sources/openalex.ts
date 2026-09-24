@@ -46,7 +46,7 @@ export function createOpenAlexAdapter(sql: Sql): SourceAdapter {
           .sort((a, b) => a.period.localeCompare(b.period));
         const [skill] = await sql<{ id: string }[]>`select id from ks.skill where id = ${t.skill}`;
         await sql`insert into ks.radar_term (term, skill_id, global, global_source, note, fetched_at)
-          values (${t.term}, ${skill?.id ?? null}, ${sql.json(series)}, 'OpenAlex works per publication year', ${t.note}, now())
+          values (${t.term}, ${skill?.id ?? null}, ${JSON.stringify(series)}::text::jsonb, 'OpenAlex works per publication year', ${t.note}, now())
           on conflict (term) do update set skill_id = excluded.skill_id, global = excluded.global, note = excluded.note, fetched_at = now()`;
         ok++;
         await sleep(300);

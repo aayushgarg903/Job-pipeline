@@ -1,9 +1,9 @@
 // Stage 2: raw posting → posting + posting_skill. Geocode, title→NCO, skills, dedup.
 // Idempotent: re-running over the same raw rows upserts the same posting ids.
-import type { Extractor } from "@ks/contracts";
+import type { ExtractedPosting, Extractor } from "@ks/contracts";
 import type { Sql } from "@ks/db";
 import { Deduper, descriptionHash } from "./dedup";
-import { selectExtractor } from "./extractor";
+import { type ExtractorStats, selectExtractor } from "./extractor";
 import type { Geocoder } from "./geocode";
 import { type GeoStats, createGeocoder, logGeoHealth } from "./sources/geo";
 
@@ -17,7 +17,7 @@ export interface RawJob {
 }
 
 export interface NormalizeContext {
-  sql: Sql; geocoder: Geocoder; extractor: Extractor; extractorName: string; deduper: Deduper;
+  sql: Sql; geocoder: Geocoder; extractor: Extractor; extractorName: string; extractorStats?: () => ExtractorStats; deduper: Deduper;
   catalog: Array<{ id: string; labelEn: string }>; occupations: Array<{ nco: string; titleEn: string }>; geoStats: GeoStats;
 }
 
@@ -32,7 +32,7 @@ export async function createNormalizeContext(sql: Sql): Promise<NormalizeContext
       and posted_at > now() - interval '60 days' order by posted_at`;
   const deduper = new Deduper();
   for (const p of recent) deduper.add({ id: p.id, employer: p.employer_name, title: p.title, description: p.description, postedAt: p.posted_at });
-  return { sql, geocoder, extractor: ex.extractor, extractorName: ex.name, deduper, catalog: [...catalog], occupations: [...occs], geoStats };
+  return { sql, geocoder, extractor: ex.extractor, extractorName: ex.name, extractorStats: ex.stats, deduper, catalog: [...catalog], occupations: [...occs], geoStats };
 }
 
 async function upsertEmployer(sql: Sql, name: string, lgd: string | null): Promise<string> {
@@ -82,29 +82,61 @@ export async function normalizeJob(ctx: NormalizeContext, sourceId: string, rawI
         "evidence_sentence", "negated", "confidence", "model_id")} on conflict do nothing`;
     }
     for (const s of ex.skills.filter((x) => !x.skillId)) {
-      await tx`insert into ks.review_item (kind, ref_id, payload) values ('unknown-skill', ${id}, ${tx.json({ text: s.text, evidence: s.evidence })})`;
+      await tx`insert into ks.review_item (kind, ref_id, payload) values ('unknown-skill', ${id}, ${JSON.stringify({ text: s.text, evidence: s.evidence })}::text::jsonb)`;
     }
     if (!ex.nco || ex.ncoConfidence < 0.75) {
       await tx`insert into ks.review_item (kind, ref_id, payload)
-               select 'low-confidence', ${id}, ${tx.json({ field: "nco", title: job.job_title, guess: ex.nco, confidence: ex.ncoConfidence })}
+               select 'low-confidence', ${id}, ${JSON.stringify({ field: "nco", title: job.job_title, guess: ex.nco, confidence: ex.ncoConfidence })}::text::jsonb
                where not exists (select 1 from ks.review_item where ref_id = ${id} and kind = 'low-confidence')`;
     }
     if (dup.canonicalId && dup.reason === "jaccard") {
       await tx`insert into ks.review_item (kind, ref_id, payload)
-               select 'duplicate', ${id}, ${tx.json({ canonical: dup.canonicalId, similarity: dup.similarity })}
+               select 'duplicate', ${id}, ${JSON.stringify({ canonical: dup.canonicalId, similarity: dup.similarity })}::text::jsonb
                where not exists (select 1 from ks.review_item where ref_id = ${id} and kind = 'duplicate')`;
     }
   });
   return dup.canonicalId ? "duplicate" : "new";
 }
 
-/** Re-run normalisation over every stored JSearch raw record (no API calls). */
-export async function normalizeStoredPostings(sql: Sql): Promise<Record<string, number>> {
+/**
+ * Re-run normalisation over every stored JSearch raw record (no posting API calls). With an LLM
+ * extractor the extraction calls are made up front, KS_NORMALIZE_CONCURRENCY (default 2) at a
+ * time; the database writes then run in order, so dedup stays deterministic.
+ */
+export async function normalizeStoredPostings(sql: Sql): Promise<Record<string, unknown>> {
   const ctx = await createNormalizeContext(sql);
   const raws = await sql<{ id: number; source_id: string; payload: RawJob }[]>`
     select id, source_id, payload from ks.raw_record where source_id = 'jsearch' order by id`;
+  if (ctx.extractorName !== "dictionary") ctx.extractor = prefetch(ctx, raws.map((r) => r.payload));
   const out: Record<string, number> = { new: 0, duplicate: 0, skipped: 0 };
   for (const r of raws) out[await normalizeJob(ctx, r.source_id, r.id, r.payload)]!++;
   await logGeoHealth(sql, ctx.geoStats);
-  return { ...out, total: raws.length };
+  return { ...out, total: raws.length, extractor: ctx.extractorName, ...(ctx.extractorStats ? { llm: ctx.extractorStats() } : {}) } as Record<string, unknown>;
+}
+
+function prefetch(ctx: NormalizeContext, jobs: RawJob[]): Extractor {
+  const inner = ctx.extractor;
+  const n = Math.max(1, Number(process.env.KS_NORMALIZE_CONCURRENCY ?? 2) || 2);
+  const k = (title: string, description: string) => `${title}\u0000${description}`;
+  const cache = new Map<string, Promise<ExtractedPosting>>();
+  let active = 0;
+  const queue: Array<() => void> = [];
+  const run = <T>(fn: () => Promise<T>) => new Promise<T>((resolve, reject) => {
+    const start = () => { active++; fn().then(resolve, reject).finally(() => { active--; queue.shift()?.(); }); };
+    if (active < n) start(); else queue.push(start);
+  });
+  for (const job of jobs) {
+    const description = (job.job_description ?? "").trim();
+    if (!job.job_id || !job.job_title || description.length < 40) continue;
+    const key = k(job.job_title, description);
+    if (cache.has(key)) continue;
+    const p = run(() => inner.extractPosting({ title: job.job_title, description, skillsCatalog: ctx.catalog, occupations: ctx.occupations }));
+    p.catch(() => {}); // surfaced when normalizeJob awaits it
+    cache.set(key, p);
+  }
+  return {
+    parseCandidateSkills: (i) => inner.parseCandidateSkills(i),
+    narrate: (i) => inner.narrate(i),
+    extractPosting: (i) => cache.get(k(i.title, i.description)) ?? inner.extractPosting(i),
+  };
 }

@@ -23,7 +23,14 @@ function validateSurvey(i: SurveyInput) {
     assert(IMPORTANCE.has(s.importance), `importance ${s.importance}`);
     assert([1, 2, 3, 4].includes(s.proficiency), `proficiency ${s.proficiency}`);
   }
+  if (i.consent) {
+    assert(!Number.isNaN(Date.parse(i.consent.at)), "consent.at must be an ISO timestamp");
+    assert(typeof i.consent.noticeVersion === "string" && i.consent.noticeVersion.trim().length > 0 && i.consent.noticeVersion.length <= 64, "consent.noticeVersion");
+    assert(typeof i.consent.purpose === "string" && i.consent.purpose.trim().length > 0 && i.consent.purpose.length <= 500, "consent.purpose");
+  }
 }
+
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 export function createWriters(sql: Sql): Writers {
   return {
@@ -35,13 +42,20 @@ export function createWriters(sql: Sql): Writers {
           select id from ks.employer where lower(name) = lower(${name}) and lgd_code = ${input.lgd} limit 1`;
         const employerId = existing?.id ?? (await tx<{ id: string }[]>`
           insert into ks.employer (name, lgd_code, sector) values (${name}, ${input.lgd}, ${input.sector}) returning id`)[0]!.id;
+        // New responses start unverified: facts ignore them until an officer approves the
+        // 'survey-verify' review item (resolveReview), per Architecture §6.1 anti-gaming.
+        const c = input.consent ?? null;
         const [row] = await tx<{ id: string }[]>`
           insert into ks.survey_response (employer_id, lgd_code, nco_code, sector, expected_hires_12m,
-            posting_to_hire_ratio, csat_recent_hires, weeks_to_productivity, comment)
+            posting_to_hire_ratio, csat_recent_hires, weeks_to_productivity, comment, verified,
+            consent_at, consent_notice_version, consent_purpose)
           values (${employerId}, ${input.lgd}, ${input.nco}, ${input.sector}, ${input.expectedHires12m},
-            ${input.postingToHireRatio}, ${input.csatRecentHires}, ${input.weeksToProductivity}, ${input.comment})
+            ${input.postingToHireRatio}, ${input.csatRecentHires}, ${input.weeksToProductivity}, ${input.comment}, false,
+            ${c ? new Date(c.at) : null}, ${c?.noticeVersion ?? null}, ${c?.purpose ?? null})
           returning id`;
         const id = row!.id;
+        await tx`insert into ks.review_item (kind, ref_id, payload)
+                 values ('survey-verify', ${id}, ${JSON.stringify({ employer: name, lgd: input.lgd, nco: input.nco, expectedHires12m: input.expectedHires12m })}::text::jsonb)`;
         for (const s of input.skills) {
           await tx`insert into ks.survey_skill (response_id, skill_id, importance, proficiency)
                    values (${id}, ${s.skillId}, ${s.importance}, ${s.proficiency})
@@ -51,7 +65,11 @@ export function createWriters(sql: Sql): Writers {
       });
     },
 
+    // Identity is the caller's job (the web layer resolves the signed-in employer). One review per
+    // (pr_id, employer_id): a second verdict from the same employer replaces the first.
     async reviewPr({ prId, employerId, verdict, comment }) {
+      assert(typeof prId === "string" && prId.length > 0 && prId.length <= 200, "prId");
+      assert(UUID.test(employerId), "employerId must be a uuid");
       assert(VERDICTS.has(verdict), `verdict ${verdict}`);
       assert(comment == null || comment.length <= 4000, "comment too long");
       await sql.begin(async (tx) => {
@@ -66,9 +84,11 @@ export function createWriters(sql: Sql): Writers {
     async savePlan({ lgd, fy, input, result, signedBy }) {
       assert(/^\d{3}$/.test(lgd), "lgd");
       assert(/^FY\d{2}$/.test(fy), "fy must look like FY27");
+      // signedBy is stored as given: the web layer guarantees it is an authenticated officer.
+      assert(signedBy == null || (typeof signedBy === "string" && signedBy.length <= 200), "signedBy");
       const [row] = await sql<{ id: string }[]>`
         insert into ks.training_plan (lgd_code, fy, inputs, solution, objective, status, signed_by, signed_at)
-        values (${lgd}, ${fy}, ${sql.json(input as never)}, ${sql.json(result as never)}, ${result.objective}, ${result.status},
+        values (${lgd}, ${fy}, ${JSON.stringify(input)}::text::jsonb, ${JSON.stringify(result)}::text::jsonb, ${result.objective}, ${result.status},
                 ${signedBy}, ${signedBy ? sql`now()` : null})
         returning id`;
       return { id: row!.id };
@@ -77,13 +97,18 @@ export function createWriters(sql: Sql): Writers {
     async resolveReview({ id, decision, by }) {
       assert(decision === "approve" || decision === "reject", "decision");
       await sql.begin(async (tx) => {
-        const [item] = await tx<Array<{ kind: string; payload: Record<string, unknown> }>>`
+        const [item] = await tx<Array<{ kind: string; ref_id: string; payload: Record<string, unknown> }>>`
           update ks.review_item set status = ${decision === "approve" ? "approved" : "rejected"}, decided_by = ${by}, decided_at = now()
-          where id = ${id} returning kind, payload`;
+          where id = ${id} returning kind, ref_id, payload`;
         assert(item, `review item ${id} not found`);
         // Approving an unknown-skill candidate that names a canonical skill teaches the alias table.
         const alias = typeof item.payload.text === "string" ? item.payload.text.toLowerCase().trim() : null;
         const skillId = typeof item.payload.suggestedSkillId === "string" ? item.payload.suggestedSkillId : null;
+        if (item.kind === "survey-verify") {
+          const ok = decision === "approve";
+          await tx`update ks.survey_response set verified = ${ok}, verified_at = case when ${ok} then now() end
+                   where id = ${item.ref_id}::uuid`;
+        }
         if (decision === "approve" && item.kind === "unknown-skill" && alias && skillId) {
           await tx`insert into ks.skill_alias (alias, skill_id, source, confidence) values (${alias}, ${skillId}, 'review', 1)
                    on conflict do nothing`;

@@ -1,6 +1,7 @@
 // pnpm ingest --source=udyam|jsearch|esco|openalex|all [--since=YYYY-MM-DD] [--max-requests=N] [--samples=N]
 // pnpm ingest facts            rebuild supply estimates, demand/supply facts, cells, course health
-// pnpm ingest normalize        re-run normalisation over stored raw postings (no API calls)
+// pnpm ingest normalize        re-run normalisation over stored raw postings (no posting API calls; EXTRACTOR=gemini uses Gemini)
+// pnpm ingest embed [--all]    fill skill.embedding with gemini-embedding (768-d)
 import { createSql } from "@ks/db";
 import { ensureSources } from "./store";
 
@@ -15,7 +16,7 @@ const num = (k: string) => (args[k] ? Number(args[k]) : undefined);
 async function main() {
   const sql = createSql(undefined, 2);
   const t0 = Date.now();
-  const command = args.facts ? "facts" : args.normalize ? "normalize" : `ingest:${args.source ?? "all"}`;
+  const command = args.facts ? "facts" : args.normalize ? "normalize" : args.embed ? "embed" : `ingest:${args.source ?? "all"}`;
   const [run] = await sql<{ id: number }[]>`insert into ks.pipeline_run (command) values (${command}) returning id`;
   const stats: Record<string, unknown> = {};
   let ok = true;
@@ -24,6 +25,9 @@ async function main() {
     if (args.facts) {
       const { buildFacts } = await import("./facts");
       stats.facts = await buildFacts(sql);
+    } else if (args.embed) {
+      const { embedSkills } = await import("./embed-skills");
+      stats.embed = await embedSkills(sql, { all: args.all === "true" });
     } else if (args.normalize) {
       const { normalizeStoredPostings } = await import("./normalize");
       stats.normalize = await normalizeStoredPostings(sql);
@@ -50,7 +54,7 @@ async function main() {
     stats.error = String(e);
     console.error(e);
   }
-  await sql`update ks.pipeline_run set finished_at = now(), ok = ${ok}, stats = ${sql.json(stats as never)} where id = ${run!.id}`;
+  await sql`update ks.pipeline_run set finished_at = now(), ok = ${ok}, stats = ${JSON.stringify(stats)}::text::jsonb where id = ${run!.id}`;
   console.log(JSON.stringify({ command, ok, ms: Date.now() - t0, stats }, null, 2));
   await sql.end();
   if (!ok) process.exit(1);

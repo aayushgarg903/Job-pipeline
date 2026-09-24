@@ -53,7 +53,7 @@ export const trainingPlan = ks.table("training_plan", {
 /** Low-confidence extractions, unknown skills, suspected duplicates. */
 export const reviewItem = ks.table("review_item", {
   id: uuid("id").primaryKey().defaultRandom(),
-  kind: text("kind").notNull(), // unknown-skill | low-confidence | duplicate | geo
+  kind: text("kind").notNull(), // unknown-skill | low-confidence | duplicate | geo | survey-verify
   refId: text("ref_id").notNull(),
   payload: jsonb("payload").notNull(),
   status: text("status").notNull().default("open"), // open | approved | rejected

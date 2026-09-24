@@ -1,11 +1,7 @@
--- Always safe to re-run. Indexes drizzle-kit can't express.
-set search_path to ks, public, extensions;
-create index if not exists skill_label_trgm on ks.skill using gin (label_en extensions.gin_trgm_ops);
-create index if not exists skill_alias_trgm on ks.skill_alias using gin (alias extensions.gin_trgm_ops);
-create index if not exists geo_alias_trgm on ks.geo_alias using gin (alias extensions.gin_trgm_ops);
-create index if not exists skill_embedding_hnsw on ks.skill using hnsw (embedding extensions.vector_cosine_ops);
-
--- RLS on every ks table, no policies; anon/authenticated get nothing (see migrations/0002_rls_lockdown.sql).
+-- Lock schema ks away from Supabase's API roles. The app connects as `postgres` (table owner,
+-- BYPASSRLS), so nothing changes for it; the anon / authenticated keys get no privileges and,
+-- even if a grant slipped back in, RLS with no policies returns zero rows.
+-- scripts/sql/post.sql re-asserts the same on every migrate, so tables added later are covered.
 DO $$
 DECLARE t record;
 BEGIN
@@ -13,6 +9,7 @@ BEGIN
     EXECUTE format('ALTER TABLE ks.%I ENABLE ROW LEVEL SECURITY', t.tablename);
   END LOOP;
 END $$;
+--> statement-breakpoint
 DO $$
 BEGIN
   IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'anon') THEN

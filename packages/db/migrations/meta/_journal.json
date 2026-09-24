@@ -8,6 +8,20 @@
       "when": 1790268868507,
       "tag": "0000_init",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790275427082,
+      "tag": "0001_survey_verify_consent",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790275437678,
+      "tag": "0002_rls_lockdown",
+      "breakpoints": true
     }
   ]
 }
