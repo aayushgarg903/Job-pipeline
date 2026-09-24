@@ -119,7 +119,7 @@ async function CourseBody({ params }: { params: Promise<{ id: string }> }) {
       </div>
 
       <Section id="prs" title={t("console.course.prsTitle")} lede={d.prs.length ? t("console.course.prsLede", { n: d.prs.length }) : t("console.course.noPrs")}>
-        <div className="grid gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {d.prs.map((pr) => (
             <CurriculumPr key={pr.id} pr={pr} course={c} t={t} lang={lang} labels={L} skillLabels={Object.fromEntries(pr.diff.filter((l) => l.skillId).map((l) => [l.skillId!, label(l.skillId!)]))} asOf={d.asOf} districtName={dname} />
           ))}

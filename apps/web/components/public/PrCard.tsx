@@ -35,7 +35,7 @@ export async function PrCard({
   const rationaleLang = lang === "mr" ? "en" : undefined; // rationales are drafted in English today
 
   return (
-    <div className="grid gap-3">
+    <div className="grid grid-cols-1 gap-3">
       <Card
         variant="pr"
         code={num ? t("public.prs.code", { code: course?.code ?? pr.courseId, n: num }) : course?.code ?? pr.courseId}
@@ -57,7 +57,7 @@ export async function PrCard({
         expanded={detail}
         labels={{ asOf: t("card.asOf"), specimen: t("card.specimen"), specimenWord: t("card.specimenWord"), open: t("card.open") }}
       >
-        <div className="mt-3 grid gap-3 text-left">
+        <div className="mt-3 grid grid-cols-1 gap-3 text-left">
           <DiffBlock
             lines={pr.diff}
             skillLabels={skillLabels}

@@ -24,7 +24,7 @@ export function CurriculumPr({ pr, course, t, lang, labels, skillLabels, asOf, d
   const num = pr.id.replace(/\D/g, "");
 
   return (
-    <article className="grid gap-4" aria-labelledby={`pr-${pr.id}`}>
+    <article className="grid grid-cols-1 gap-4" aria-labelledby={`pr-${pr.id}`}>
       <Card
         variant="pr"
         code={num ? `${course.code} · PR #${num}` : `${course.code} · PR`}

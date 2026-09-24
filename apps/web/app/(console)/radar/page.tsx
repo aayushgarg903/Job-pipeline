@@ -37,7 +37,7 @@ async function RadarBody() {
         <strong>{t("console.radar.honestTitle")}</strong> {t("console.radar.honest")}
       </p>
 
-      <div className="grid gap-8">
+      <div className="grid grid-cols-1 gap-8">
         {d.terms.map((term, i) => {
           const g = growth(term.global);
           // A growth ratio needs two quarters of local posts; one quarter or all zeros is said in words.

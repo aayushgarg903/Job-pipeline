@@ -54,7 +54,7 @@ th[aria-sort="ascending"] .ks-dt__sort-icon, th[aria-sort="descending"] .ks-dt__
 .ks-chart__loading { height: var(--chart-h, 260px); }
 
 /* Curriculum diff */
-.ks-diffblock { margin: 0; padding: 12px 14px; font-size: 0.9375rem; }
+.ks-diffblock { position: relative; margin: 0; padding: 12px 14px; font-size: 0.9375rem; overflow-x: auto; }
 .ks-diffblock__title { margin: 0 0 8px; font: 500 1.25rem/1.3 var(--font-display), var(--font-deva), serif; letter-spacing: 0.1em; font-variant-caps: small-caps; }
 .ks-diffblock__title:lang(mr) { letter-spacing: 0; }
 .ks-diffblock table { width: 100%; border-collapse: collapse; }
