@@ -1,7 +1,6 @@
-// The engine seam. SWAP POINT for the lead: facts.ts calls `engine.computeCells` and
-// `engine.computeCourseHealth` through this interface only. `localEngine` (./local.ts) is the
-// stand-in; replace it with an adapter over @ks/core's SDI / gap / health functions in
-// ./index.ts (`export const engine: Engine = ...`). Nothing else in ingest needs to change.
+// The engine seam: facts.ts calls `engine.computeCells` and `engine.computeCourseHealth` through
+// this interface only. ./core.ts adapts @ks/core (default); ./cells.ts + ./health.ts are the
+// original local stand-in, kept behind KS_ENGINE=local.
 import type { CourseHealth, DemandCell, SignalKind, SignalObservation } from "@ks/contracts";
 
 export interface EngineDistrict { lgd: string; division: string; population: number }
@@ -30,6 +29,8 @@ export interface DemandFactOut { quarter: string; lgd: string; nco: string; sign
 export interface SupplyFactOut { quarter: string; lgd: string; skillId: string; proficiency: number; graduates: number; estimatedShare: number }
 
 export interface EngineOutput {
+  /** Prior strengths actually used (the core engine fits them); reported in facts stats. */
+  priorStrength?: Record<SignalKind, number>;
   cells: DemandCell[];
   occupationCells: OccupationCell[];
   districtMetrics: DistrictMetricOut[];
@@ -52,6 +53,10 @@ export interface HealthInput {
   cells: DemandCell[]; // all quarters (for trend tests) — latest used for relevance
   occupationCells: OccupationCell[];
   labels: Record<string, string>; // skillId → label, for explain sentences
+  /** Spill-over matrix; the core engine measures relevance in the course's catchment. */
+  spill?: EngineInput["spill"];
+  /** lgd → district name, for explain sentences (core engine). */
+  districtNames?: Record<string, string>;
 }
 
 export interface Engine {
