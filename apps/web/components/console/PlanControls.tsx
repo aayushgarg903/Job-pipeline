@@ -53,12 +53,15 @@ export function PlanControls({ action, seats, capexLakh, lambda, range, labels }
 
 export interface SignLabels {
   heading: string; intro: string; name: string; nameHint: string; submit: string; pending: string; demoBadge: string; download: string; signedBy: string;
+  signingAs: string; signInFirst: string; signIn: string;
 }
 
 const INITIAL: SignState = { status: "idle", demo: false, signedBy: null, signedAt: null, message: null, pdfHref: null };
 
-export function PlanSign({ lgd, fy, knobs, labels }: {
+export function PlanSign({ lgd, fy, knobs, labels, officer, signInHref }: {
   lgd: string; fy: string; knobs: { seats?: number; capex?: number; lambda?: number }; labels: SignLabels;
+  /** The signed-in officer; the signature is always this name, never free text. */
+  officer: string | null; signInHref: string;
 }) {
   const id = useId();
   const [state, action, pending] = useActionState(signPlan, INITIAL);
@@ -71,14 +74,21 @@ export function PlanSign({ lgd, fy, knobs, labels }: {
       {knobs.seats !== undefined ? <input type="hidden" name="seats" value={knobs.seats} /> : null}
       {knobs.capex !== undefined ? <input type="hidden" name="capex" value={knobs.capex} /> : null}
       {knobs.lambda !== undefined ? <input type="hidden" name="lambda" value={knobs.lambda} /> : null}
-      <div className="ks-field">
-        <label htmlFor={`${id}-name`}>{labels.name}</label>
-        <input id={`${id}-name`} name="name" required minLength={2} maxLength={80} autoComplete="name" />
-        <span className="ks-field__hint">{labels.nameHint}</span>
-      </div>
-      <div className="flex flex-wrap items-center gap-2">
-        <button type="submit" className="ks-btn" disabled={pending}>{pending ? labels.pending : labels.submit}</button>
-      </div>
+      {officer ? (
+        <>
+          <p className="m-0">{labels.signingAs.replace("{name}", officer)}</p>
+          {state.status !== "signed" ? (
+            <div className="flex flex-wrap items-center gap-2">
+              <button type="submit" className="ks-btn" disabled={pending}>{pending ? labels.pending : labels.submit}</button>
+            </div>
+          ) : null}
+        </>
+      ) : (
+        <>
+          <p className="m-0">{labels.signInFirst}</p>
+          <p className="m-0"><a href={signInHref} className="ks-btn">{labels.signIn}</a></p>
+        </>
+      )}
       <div role="status" aria-live="polite">
         {state.status !== "idle" && state.message ? (
           <div className="grid gap-2">

@@ -277,7 +277,10 @@
           "pending": "Signing…",
           "demoBadge": "Demo, not saved",
           "download": "Download the signed plan (PDF)",
-          "signedBy": "Signed by {name}"
+          "signedBy": "Signed by {name}",
+          "signingAs": "You are signing as {name}.",
+          "signInFirst": "Only a signed-in district officer can sign a plan.",
+          "signIn": "Sign in to sign"
         },
         "needOfficer": "Only a signed-in district officer can do this. Sign in first."
       }

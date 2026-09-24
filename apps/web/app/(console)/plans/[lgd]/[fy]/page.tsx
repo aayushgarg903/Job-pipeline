@@ -11,6 +11,7 @@ import { PlanControls, PlanSign } from "@/components/console/PlanControls";
 import { LAKH, LAMBDA_RANGE, lambdaOf, parseKnobs, planTotals, solvePlan } from "@/components/console/plan";
 import { PageSkeleton } from "@/components/PageSkeleton";
 import { FOCUS } from "@/lib/fixtures";
+import { getOfficer } from "@/lib/auth";
 import { routes } from "@/lib/routes";
 
 type Params = Promise<{ lgd: string; fy: string }>;
@@ -20,8 +21,10 @@ async function PlanBody({ params, searchParams }: { params: Params; searchParams
   const p = await params;
   const lgd = decodeURIComponent(p.lgd);
   const fy = decodeURIComponent(p.fy).toUpperCase();
-  const [{ lang, t }, base, sp] = await Promise.all([pageContext(), loadPlanInput(lgd, fy), searchParams]);
+  const [{ lang, t }, base, sp, officer] = await Promise.all([pageContext(), loadPlanInput(lgd, fy), searchParams, getOfficer()]);
   const knobs = parseKnobs(sp);
+  const kq = new URLSearchParams(Object.entries(knobs).filter(([, v]) => v !== undefined).map(([k, v]) => [k, String(v)]));
+  const planQuery = kq.size ? `?${kq}` : "";
   const dname = base.summary ? (lang === "mr" ? base.summary.district.nameMr : base.summary.district.nameEn) : lgd;
   const here = routes.plan(lgd, fy);
 
@@ -145,7 +148,7 @@ async function PlanBody({ params, searchParams }: { params: Params; searchParams
 
           <Section id="sign" title={t("console.plan.signTitle")}>
             <div className="max-w-xl">
-              <PlanSign lgd={lgd} fy={fy} knobs={knobs} labels={t.raw("console.plan.sign.form") as never} />
+              <PlanSign lgd={lgd} fy={fy} knobs={knobs} labels={t.raw("console.plan.sign.form") as never} officer={officer} signInHref={`/signin?next=${encodeURIComponent(`${routes.plan(lgd, fy)}${planQuery}`)}`} />
             </div>
           </Section>
         </>
