@@ -12,6 +12,8 @@ import { PathCard } from "@/components/public/PathCard";
 import { decodeHeld, rankPaths } from "@/components/public/candidate";
 import { roleName } from "@/components/public/roles";
 import { getReaders } from "@/lib/readers";
+import { localProvenance, type Tr } from "@/lib/cards";
+import { humanRound } from "@ks/ui";
 
 export const metadata: Metadata = { title: "Where can your skills take you? · तुमचे पुढचे कार्ड" };
 
@@ -20,7 +22,7 @@ const one = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v);
 
 async function MeBody({ searchParams }: { searchParams: Search }) {
   const sp = await searchParams;
-  const [t, locale, readers] = await Promise.all([getTranslations("public.me"), getLocale(), getReaders()]);
+  const [t, tRoot, locale, readers] = await Promise.all([getTranslations("public.me"), getTranslations(), getLocale(), getReaders()]);
   const lang = (locale === "mr" ? "mr" : "en") as Lang;
   const [districts, catalog] = await Promise.all([readers.districts(), readers.searchSkills("", 500)]);
   const known = new Set(catalog.map((s) => s.id));
@@ -48,7 +50,7 @@ async function MeBody({ searchParams }: { searchParams: Search }) {
           {
             district: home.district.nameEn, districtMr: home.district.nameMr,
             role: top.role.en, roleMr: top.role.mr,
-            openings: top.home.demand || undefined,
+            openings: humanRound(top.home.demand) || undefined,
             have: top.have.map(labelEnOf), haveMr: top.have.map(labelOf),
             gaps: top.gaps.map(labelEnOf), gapsMr: top.gaps.map(labelOf),
             course: top.course?.course.name, seats: top.course?.course.seats, institute: top.course?.course.institutionName,
@@ -89,7 +91,7 @@ async function MeBody({ searchParams }: { searchParams: Search }) {
             <ol className="m-0 grid list-none gap-6 p-0" aria-label={t("resultTitle", { district: nameOf(home) })}>
               {paths.map((p, i) => (
                 <li key={p.role.key} aria-label={roleName(p.role, lang)}>
-                  <PathCard path={p} index={i} total={paths.length} districtName={nameOf(home)} labelOf={labelOf} labelEnOf={labelEnOf} provenance={home.provenance} lang={lang} />
+                  <PathCard path={p} index={i} total={paths.length} districtName={nameOf(home)} labelOf={labelOf} labelEnOf={labelEnOf} provenance={localProvenance(home.provenance, tRoot as unknown as Tr, lang)} lang={lang} />
                 </li>
               ))}
             </ol>

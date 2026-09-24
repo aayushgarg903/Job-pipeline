@@ -21,6 +21,14 @@ export function divisionKey(division: string): string {
 }
 const people = (n: number, lang: Lang) => formatNumber(humanRound(Math.abs(n)), lang);
 
+const PROV_KEY: Record<string, string> = { postings: "prov.postings", surveys: "prov.surveys", udyam: "prov.udyam", consultations: "prov.consultations", supply: "prov.supplyCourses", placement: "prov.traced" };
+
+/** Reader source labels are English; on a Marathi page, name each source in Marathi by its kind. */
+export function localProvenance(p: Provenance, t: Tr, lang: Lang): Provenance {
+  if (lang !== "mr") return p;
+  return { ...p, sources: p.sources.map((s) => (PROV_KEY[s.kind] ? { ...s, label: t(PROV_KEY[s.kind]!) } : s)) };
+}
+
 export function districtCard(s: DistrictSummary, t: Tr, lang: Lang, topCell?: DemandCell, skillLabel?: (id: string) => string): CardProps {
   const d = s.district;
   const name = lang === "mr" ? d.nameMr : d.nameEn;
@@ -45,7 +53,7 @@ export function districtCard(s: DistrictSummary, t: Tr, lang: Lang, topCell?: De
     },
     verdict: { tone: v.tone, glyph: v.glyph, word: t(`verdict.${verdictWord}`), text: short?.label },
     human,
-    provenance: s.provenance,
+    provenance: localProvenance(s.provenance, t, lang),
     href: routes.district(d.lgd),
     compare: {
       ref: `district:${d.lgd}`,
@@ -130,7 +138,7 @@ export function skillCard(skill: Skill, cell: DemandCell, districtName: string, 
     },
     human: t.rich("skillCard.human", { demand: people(cell.demand, lang), supply: people(cell.supply, lang), district: districtName, b: bold }),
     provenance: {
-      sources: provenance?.sources ?? [],
+      sources: provenance ? localProvenance(provenance, t, lang).sources : [],
       asOf,
       isDemo: provenance?.isDemo ?? true,
       lapsed: false,

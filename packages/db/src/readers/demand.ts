@@ -95,12 +95,14 @@ export function demandReaders(sql: Sql): DemandReaders {
 
     async districtCells(lgd, limit = 50) {
       const q = await latestQuarter(sql);
-      // One row per skill: cells are cumulative in proficiency (≥1, ≥2, …), so the same skill
+      // Transversal skills (shift work, teamwork) are left out: they top every district and say
+      // nothing a course can act on. One row per skill: cells are cumulative in proficiency (≥1, ≥2, …), so the same skill
       // appears once per level. Keep the level with the largest |gap| (ties → the higher level).
       const rows = await sql<CellRow[]>`
         select * from (
-          select distinct on (skill_id) * from ks.demand_cell where quarter = ${q} and lgd_code = ${lgd}
-          order by skill_id, abs(gap) desc, proficiency desc) c
+          select distinct on (c.skill_id) c.* from ks.demand_cell c join ks.skill s on s.id = c.skill_id
+          where c.quarter = ${q} and c.lgd_code = ${lgd} and s.kind <> 'transversal'
+          order by c.skill_id, abs(c.gap) desc, c.proficiency desc) c
         order by abs(gap) desc, skill_id limit ${limit}`;
       return rows.map(toCell);
     },
