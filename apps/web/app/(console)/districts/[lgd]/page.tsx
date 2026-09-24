@@ -2,7 +2,7 @@
 // and an honest confidence line, the gap table + sorted bar, the district's courses, voices
 // from postings and surveys, districts to compare with, and the training-plan link.
 import { confidencePhrase, peopleSentence } from "@ks/core";
-import { Card, DataTable, PeopleFigure, PlotChart, formatDate, formatNumber } from "@ks/ui";
+import { Card, DataTable, PeopleFigure, PlotChart, formatDate, formatNumber, humanRound } from "@ks/ui";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { loadEvidence } from "@/app/actions/console";
@@ -63,10 +63,10 @@ async function DistrictBody({ params }: { params: Promise<{ lgd: string }> }) {
             title={t("console.district.chartTitle", { district: name })}
             summary={
               shortages[0]
-                ? t("console.district.chartSummary", { skill: label(shortages[0].skillId), n: formatNumber(shortages[0].gap, lang), count: shortages.length })
+                ? t("console.district.chartSummary", { skill: label(shortages[0].skillId), n: formatNumber(humanRound(shortages[0].gap), lang), count: shortages.length })
                 : t("console.district.chartNone")
             }
-            chart={{ kind: "barSorted", data: shortages.map((c, i) => ({ label: label(c.skillId), value: c.gap, highlight: i === 0 })), xLabel: t("fields.gap") }}
+            chart={{ kind: "barSorted", data: shortages.map((c, i) => ({ label: label(c.skillId), value: humanRound(c.gap), highlight: i === 0 })), xLabel: t("fields.gap") }}
             labels={chartLabels(t)}
             csvName={`gaps-${lgd}`}
             headers={{ label: t("console.common.skill"), value: t("fields.gap") }}
@@ -91,7 +91,7 @@ async function DistrictBody({ params }: { params: Promise<{ lgd: string }> }) {
         </div>
         {biggestSurplus && biggestSurplus.gap < 0 ? (
           <p className="mt-3 max-w-[62ch]">
-            {t("console.district.surplus", { skill: label(biggestSurplus.skillId), n: formatNumber(Math.abs(biggestSurplus.gap), lang) })}
+            {t("console.district.surplus", { skill: label(biggestSurplus.skillId), n: formatNumber(humanRound(Math.abs(biggestSurplus.gap)), lang) })}
           </p>
         ) : null}
       </Section>

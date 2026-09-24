@@ -1,7 +1,7 @@
 // /skills/[id]: one skill across Maharashtra. Skill card, trend with an 80% band (forecast
 // dashed), districts that need it most, courses that teach it, and job posts that ask for it.
 import { MIN_HISTORY } from "@ks/core";
-import { Card, PeopleFigure, PlotChart, formatDate, formatNumber } from "@ks/ui";
+import { Card, PeopleFigure, PlotChart, formatDate, formatNumber, humanRound } from "@ks/ui";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { loadEvidence } from "@/app/actions/console";
@@ -78,10 +78,10 @@ async function SkillBody({ params }: { params: Promise<{ id: string }> }) {
             title={t("console.skill.whereChart", { skill: label })}
             summary={
               shortages[0]
-                ? t("console.skill.whereSummary", { district: dname(shortages[0].lgd), n: formatNumber(shortages[0].gap, lang), count: shortages.length })
+                ? t("console.skill.whereSummary", { district: dname(shortages[0].lgd), n: formatNumber(humanRound(shortages[0].gap), lang), count: shortages.length })
                 : t("console.skill.whereNone")
             }
-            chart={{ kind: "barSorted", data: shortages.map((c, i) => ({ label: dname(c.lgd), value: c.gap, highlight: i === 0 })), xLabel: t("fields.gap") }}
+            chart={{ kind: "barSorted", data: shortages.map((c, i) => ({ label: dname(c.lgd), value: humanRound(c.gap), highlight: i === 0 })), xLabel: t("fields.gap") }}
             labels={chartLabels(t)}
             csvName={`districts-${id}`}
             headers={{ label: t("fields.district"), value: t("fields.gap") }}

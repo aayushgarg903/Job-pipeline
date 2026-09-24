@@ -139,9 +139,9 @@ export function skillCard(skill: Skill, cell: DemandCell, districtName: string, 
     compare: {
       ref: `skill:${skill.id}`,
       fields: [
-        { key: "demand", label: t("fields.demand"), value: cell.demand, display: formatNumber(cell.demand, lang) },
-        { key: "supply", label: t("fields.supply"), value: cell.supply, display: formatNumber(cell.supply, lang) },
-        { key: "gap", label: t("fields.gap"), value: cell.gap, display: formatNumber(cell.gap, lang) },
+        { key: "demand", label: t("fields.demand"), value: cell.demand, display: formatNumber(humanRound(cell.demand), lang) },
+        { key: "supply", label: t("fields.supply"), value: cell.supply, display: formatNumber(humanRound(cell.supply), lang) },
+        { key: "gap", label: t("fields.gap"), value: cell.gap, display: formatNumber(humanRound(cell.gap), lang) },
         { key: "coverage", label: t("fields.coverage"), value: cell.coverage, display: formatPercent(cell.coverage, lang) },
       ],
     },
