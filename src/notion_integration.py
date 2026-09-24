@@ -55,11 +55,13 @@ def add_to_notion(job, match_result):
             "type": "heading_2",
             "heading_2": {"rich_text": [{"type": "text", "text": {"content": "🧠 AI Match Reasoning"}}]}
         })
-        children.append({
-            "object": "block",
-            "type": "paragraph",
-            "paragraph": {"rich_text": [{"type": "text", "text": {"content": match_result["ai_reasoning"]}}]}
-        })
+        reasoning = str(match_result["ai_reasoning"])
+        for chunk in split_text(reasoning):
+            children.append({
+                "object": "block",
+                "type": "paragraph",
+                "paragraph": {"rich_text": [{"type": "text", "text": {"content": chunk}}]}
+            })
 
     # AI Cover Letter
     children.append({
@@ -116,5 +118,6 @@ def add_to_notion(job, match_result):
         )
         return new_page.get("url")
     except Exception as e:
-        print(f"Error saving to Notion for job {job.get('job_id')}: {e}")
+        error_msg = str(e).encode('ascii', 'ignore').decode()
+        print(f"Error saving to Notion for job {job.get('job_id')}: {error_msg}")
         return None

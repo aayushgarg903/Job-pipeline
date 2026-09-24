@@ -1,128 +1,128 @@
 import os
-import json
-import requests
+import asyncio
+import time
 from dotenv import load_dotenv
 
 from scraper import get_new_jobs, save_seen_jobs
-from matcher import evaluate_job_fit
-from notion_integration import add_to_notion
-from notifier import send_email_alert
+from matcher import extract_jobs_batch, get_description_hash
+from db import save_job_intelligence, get_db_connection, log_source_health
 
-def check_job_validity(job):
-    """
-    Checks if the job link is accessible (not 404) and if the job description or page 
-    asks for unwanted fees (like 99 rupees).
-    """
-    url = job.get("url")
-    description = job.get("description", "").lower()
-    
-    # Common fee-related keywords to avoid scams or paid application forms
-    fee_keywords = [
-        "99 rupees", "₹99", "rs 99", "rs. 99", "inr 99", 
-        "application fee", "registration fee", "pay to apply",
-        "security deposit", "refundable deposit"
-    ]
-    
-    # 1. Quick check in description
-    if any(keyword in description for keyword in fee_keywords):
-        print("Skipping: Found fee-related keyword in description.")
-        return False
-        
-    if not url:
-        return True
-        
-    # 2. Check the URL for 404 and also fetch its content for fee checking
-    try:
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        }
-        # Timeout to prevent hanging on dead sites
-        response = requests.get(url, headers=headers, timeout=10)
-        
-        if response.status_code == 404:
-            print("Skipping: Job link returned 404 Not Found.")
-            return False
-            
-        # If we successfully loaded the page, let's also scan its text for fee keywords
-        if response.status_code == 200:
-            page_text = response.text.lower()
-            if any(keyword in page_text for keyword in fee_keywords):
-                print("Skipping: Found fee-related keyword on the application page.")
-                return False
-                
-    except requests.RequestException as e:
-        print(f"Skipping: Could not access job link ({e}).")
-        return False
-        
-    return True
-
-def load_profile():
-    profile_path = os.path.join(os.path.dirname(__file__), "..", "config", "profile.json")
-    try:
-        with open(profile_path, "r") as f:
-            return json.load(f)
-    except Exception as e:
-        print(f"Error loading profile: {e}")
-        return None
-
-def main():
-    # Load environment variables for local testing
+async def main():
     load_dotenv()
-    
-    print("Starting Job-Hunting Pipeline...")
-    
-    profile = load_profile()
-    if not profile:
-        print("Could not load profile. Exiting.")
+
+    print("=" * 60)
+    print("  Labour Market Intelligence Pipeline — Sprint 1")
+    print("=" * 60)
+
+    # ── Step 1: Fetch jobs from all sources ─────────────────────
+    print("\n[1/3] Fetching jobs from all data sources...")
+    new_jobs, seen_jobs = await get_new_jobs()
+    total_fetched = len(new_jobs)
+    print(f"      Found {total_fetched} new jobs to process.\n")
+
+    if not new_jobs:
+        print("No new jobs to process. Exiting.")
         return
-        
-    print("Fetching new jobs...")
-    new_jobs, seen_jobs = get_new_jobs(profile)
-    
-    print(f"Found {len(new_jobs)} new jobs to evaluate.")
-    
-    for job in new_jobs:
-        title = job.get('title', '').encode('ascii', 'ignore').decode()
-        company = job.get('company', '').encode('ascii', 'ignore').decode()
-        print(f"\nEvaluating: {title} at {company}...")
-        
-        if not check_job_validity(job):
-            # Mark as seen so we don't keep re-checking a broken/paid link
-            seen_jobs.add(job["job_id"])
-            save_seen_jobs(seen_jobs)
-            continue
-            
-        match_result = evaluate_job_fit(job, profile)
-        
-        if not match_result:
-            print("Failed to evaluate job fit.")
-            continue
-            
-        score = match_result.get("match_score", 0)
-        print(f"Match Score: {score}/100 - {match_result.get('recommendation')}")
-        
-        notion_url = None
-        if score >= 50:
-            print("Score >= 50: Saving to Notion...")
-            notion_url = add_to_notion(job, match_result)
-            if notion_url:
-                print(f"Saved to Notion: {notion_url}")
-                
-        if score >= 80:
-            print("Score >= 80: Sending email alert...")
-            success = send_email_alert(job, match_result, notion_url)
+
+    # Pipeline run stats
+    jobs_saved = 0
+    jobs_failed = 0
+    jobs_skipped = 0
+
+    # ── Step 2: Check for cached descriptions (save AI cost) ────
+    # If a job description was already processed (same hash in DB),
+    # we skip calling Gemini and mark it as duplicate.
+    jobs_to_process = []
+    try:
+        conn = get_db_connection()
+        with conn.cursor() as cur:
+            for job in new_jobs:
+                desc = job.get('description', '')
+                if not desc:
+                    jobs_skipped += 1
+                    continue
+                desc_hash = get_description_hash(desc)
+                cur.execute(
+                    "SELECT id FROM jobs WHERE description_hash = %s LIMIT 1",
+                    (desc_hash,)
+                )
+                if cur.fetchone():
+                    # Same description already processed — skip Gemini call
+                    jobs_skipped += 1
+                    seen_jobs.add(job['job_id'])
+                else:
+                    jobs_to_process.append(job)
+        conn.close()
+    except Exception as e:
+        print(f"[WARNING] Could not check description cache: {e}")
+        jobs_to_process = new_jobs
+
+    print(f"[2/3] Processing {len(jobs_to_process)} jobs "
+          f"({jobs_skipped} skipped — already cached)\n")
+
+    # ── Step 3: Extract intelligence in batches ──────────────────
+    batch_size = 5
+    total_batches = (len(jobs_to_process) + batch_size - 1) // batch_size
+
+    for i in range(0, len(jobs_to_process), batch_size):
+        batch = jobs_to_process[i:i+batch_size]
+        batch_num = i // batch_size + 1
+        print(f"--- Batch {batch_num}/{total_batches} ({len(batch)} jobs) ---")
+
+        # Call Gemini for this batch
+        extractions = extract_jobs_batch(batch)
+
+        for job in batch:
+            job_id = job["job_id"]
+            # Safe ASCII print (Windows terminal fix)
+            title   = job.get('title', '').encode('ascii', 'ignore').decode()
+            company = job.get('company', '').encode('ascii', 'ignore').decode()
+            print(f"  Job: {title[:60]} @ {company[:30]}")
+
+            extraction = extractions.get(job_id)
+
+            if not extraction:
+                print(f"       [SKIP] Gemini extraction failed — will retry next run")
+                # Do NOT mark as seen → will be retried in next pipeline run
+                jobs_failed += 1
+                continue
+
+            role = extraction.get('role', 'Unknown')
+            skill_count = len(extraction.get('skills', []))
+            work_mode = extraction.get('work_mode', 'on_site')
+            print(f"       Role: {role} | Skills: {skill_count} | Mode: {work_mode}")
+
+            # Save to Supabase
+            success = save_job_intelligence(job, extraction)
+
             if success:
-                print("Email alert sent successfully.")
-                
-        # Mark as seen to prevent re-processing
-        seen_jobs.add(job["job_id"])
+                seen_jobs.add(job_id)
+                jobs_saved += 1
+            else:
+                jobs_failed += 1
+
+        # Save progress after every batch
+        # WHY: If the script crashes mid-run, we don't re-process successful batches
         save_seen_jobs(seen_jobs)
-        
-        # Respect Gemini free tier rate limit of 15 Requests Per Minute (1 request every 4 seconds, adding buffer)
-        import time
-        time.sleep(6)
-        
-    print("\nPipeline execution completed.")
+
+        # Respect Gemini free-tier rate limit (60 requests/min)
+        # We send 1 request per batch of 5 jobs, so 6s wait keeps us safe
+        if i + batch_size < len(jobs_to_process):
+            print(f"  [Rate limit] Waiting 6 seconds before next batch...")
+            time.sleep(6)
+
+    # ── Final Summary ────────────────────────────────────────────
+    print("\n" + "=" * 60)
+    print("  PIPELINE COMPLETE")
+    print("=" * 60)
+    print(f"  Total fetched  : {total_fetched}")
+    print(f"  Saved to DB    : {jobs_saved}")
+    print(f"  Skipped (cache): {jobs_skipped}")
+    print(f"  Failed         : {jobs_failed}")
+    print(f"\n  Check Supabase Table Editor to see your data!")
+    print(f"  URL: https://supabase.com/dashboard/project/tphganbjblurihgpfcek/editor")
+    print("=" * 60)
+
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

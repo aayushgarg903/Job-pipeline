@@ -80,5 +80,4 @@ python src/main.py
 
 ---
 *Built with ❤️ by a Software Engineer who loves automating things.*
-
 5. You can trigger the workflow manually from the "Actions" tab or wait for the cron schedule (every 30 mins).
