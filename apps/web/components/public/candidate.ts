@@ -34,6 +34,19 @@ const ALIASES: Record<SkillId, string[]> = {
   "drone-spraying": ["drone", "spraying"],
   "forest-produce-processing": ["bamboo", "mahua", "forest"],
   "customer-communication": ["customer", "customers", "sales"],
+  // Live-catalogue ids (packages/db); the matcher skips ids the catalogue doesn't have.
+  "domestic-wiring": ["wiring", "electrician", "electrical"],
+  "motor-rewinding": ["rewinding"],
+  "rooftop-solar": ["rooftop"],
+  "arc-welding": ["welding", "welder"],
+  "lathe-turning": ["turning", "lathe"],
+  "tally": ["tally", "accounting"],
+  "ms-excel": ["excel", "spreadsheet"],
+  "customer-handling": ["customer", "customers"],
+  "sales-negotiation": ["sales"],
+  "drone-assembly": ["drone"],
+  "ev-battery-systems": ["battery"],
+  "solar-inverter": ["inverter"],
 };
 let extractor: KsExtractor | null = null;
 
@@ -114,7 +127,16 @@ export async function rankPaths(readers: Readers, opts: { lgd: string; held: Hel
   const nearby = all.filter((d) => d.district.division === home.district.division && d.district.lgd !== lgd);
   const name = (d: DistrictSummary) => (lang === "mr" ? d.district.nameMr : d.district.nameEn);
 
-  const cellsOf = async (code: string) => new Map((await readers.districtCells(code, 100)).map((c) => [c.skillId, c]));
+  // Every skill in the district (a role's core skill may have a small gap), one row per skill:
+  // the working-level (proficiency 1) row when the reader returns several levels.
+  const cellsOf = async (code: string) => {
+    const m = new Map<SkillId, DemandCell>();
+    for (const c of await readers.districtCells(code, 5000)) {
+      const cur = m.get(c.skillId);
+      if (!cur || (c.proficiency === 1 && cur.proficiency !== 1)) m.set(c.skillId, c);
+    }
+    return m;
+  };
   const [homeCells, nearbyCells, courses] = await Promise.all([
     cellsOf(lgd),
     Promise.all(nearby.map((d) => cellsOf(d.district.lgd))),

@@ -18,8 +18,37 @@ export interface Role {
   survey: boolean;
 }
 
+// The live catalogue (packages/db) uses finer skill ids than the demo fixtures. Each role lists
+// both; callers keep only the ids their catalogue knows, so the first known id is the core.
+const LIVE_SKILLS: Record<string, SkillId[]> = {
+  electrician: ["domestic-wiring", "electrical-installation", "electrical-safety", "motor-control-panels", "plc-programming"],
+  solar: ["solar-pv-installation", "rooftop-solar", "solar-inverter", "domestic-wiring", "electrical-safety"],
+  ev: ["ev-battery-systems", "ev-charging-installation", "ev-powertrain", "domestic-wiring", "electrical-safety"],
+  electronics: ["pcb-troubleshooting", "electronics-soldering", "analog-electronics", "multimeter-use"],
+  fitter: ["fitting-assembly", "precision-measurement", "engineering-drawing-reading", "arc-welding"],
+  cnc: ["cnc-machine-operation", "cnc-programming", "fanuc-cnc-control", "precision-measurement"],
+  machinist: ["lathe-turning", "milling", "cnc-machine-operation", "precision-measurement"],
+  welder: ["arc-welding", "mig-mag-welding", "tig-welding", "gas-cutting"],
+  "mv-mechanic": ["engine-overhaul", "vehicle-diagnostics", "automotive-electrical", "brake-suspension-service"],
+  refrigeration: ["refrigeration-systems", "hvac-servicing", "refrigerant-handling", "cold-storage-operation"],
+  "food-operator": ["food-processing-operations", "gmp-hygiene", "food-packaging-machines", "food-safety-haccp"],
+  "food-safety": ["quality-control-food", "food-safety-haccp", "fssai-compliance", "food-lab-testing"],
+  warehouse: ["warehouse-operations", "inventory-management", "picking-packing", "wms-software"],
+  forklift: ["forklift-operation", "material-handling", "workplace-safety"],
+  logistics: ["logistics-coordination", "supply-chain-management", "dispatch-documentation", "ms-excel"],
+  "data-analyst": ["data-analysis", "power-bi", "ms-excel-advanced", "sql"],
+  "customer-support": ["customer-support", "customer-handling", "communication", "crm-software"],
+  gda: ["patient-care", "vital-signs-monitoring", "infection-control", "patient-mobility"],
+  "lab-tech": ["lab-sample-processing", "phlebotomy", "hematology", "clinical-biochemistry"],
+  pharmacy: ["pharmacy-dispensing", "drug-inventory", "customer-handling"],
+  "data-entry": ["data-entry", "ms-excel", "typewriting", "basic-computer-skills"],
+  accounts: ["tally", "accounting-basics", "gst-eway-bill", "ms-excel"],
+  "farm-drone": ["drone-assembly", "organic-farming"],
+  "forest-produce": ["post-harvest-management", "grading-sorting", "packaging-labelling"],
+};
+
 const R = (key: string, nco: string, en: string, mr: string, pluralEn: string, pluralMr: string, skills: SkillId[], survey = true): Role => ({
-  key, nco, en, mr, pluralEn, pluralMr, skills, survey,
+  key, nco, en, mr, pluralEn, pluralMr, skills: [...new Set([...skills, ...(LIVE_SKILLS[key] ?? [])])], survey,
 });
 
 export const ROLES: Role[] = [

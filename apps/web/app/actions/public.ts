@@ -73,8 +73,8 @@ export async function submitSurvey(_prev: SurveyState, fd: FormData): Promise<Su
   const label = new Map(skills.map((s) => [s.id, lang === "mr" && s.labelMr ? s.labelMr : s.labelEn]));
   const order = { mandatory: 0, preferred: 1, nice: 2 } as const;
   const sorted = [...input.skills].sort((a, b) => order[a.importance] - order[b.importance]);
-  const [cells, courses] = await Promise.all([readers.districtCells(input.lgd, 100), readers.courses({ lgd: input.lgd, limit: 200 })]);
-  const core = cells.find((c) => c.skillId === (role?.skills[0] ?? sorted[0]?.skillId)) ?? cells.find((c) => c.skillId === sorted[0]?.skillId);
+  const [cells, courses] = await Promise.all([readers.districtCells(input.lgd, 5000), readers.courses({ lgd: input.lgd, limit: 200 })]);
+  const core = cells.find((c) => c.skillId === role?.skills.find((id) => cells.some((x) => x.skillId === id))) ?? cells.find((c) => c.skillId === sorted[0]?.skillId);
   return {
     status: "ok",
     id,
