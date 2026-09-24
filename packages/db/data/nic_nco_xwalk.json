@@ -1,0 +1,1530 @@
+[
+ {
+  "nic5": "10301",
+  "nicTitle": "Processing and preserving of fruit and vegetables (pulp, juice concentrates)",
+  "nco": "7514.0100",
+  "share": 0.45,
+  "employmentPerUnit": 5,
+  "sector": "food"
+ },
+ {
+  "nic5": "10301",
+  "nicTitle": "Processing and preserving of fruit and vegetables (pulp, juice concentrates)",
+  "nco": "8160.0100",
+  "share": 0.25,
+  "employmentPerUnit": 5,
+  "sector": "food"
+ },
+ {
+  "nic5": "10301",
+  "nicTitle": "Processing and preserving of fruit and vegetables (pulp, juice concentrates)",
+  "nco": "3257.0200",
+  "share": 0.05,
+  "employmentPerUnit": 5,
+  "sector": "food"
+ },
+ {
+  "nic5": "10304",
+  "nicTitle": "Manufacture of pickles, chutney and similar preserved fruit/vegetable products",
+  "nco": "7514.0100",
+  "share": 0.5,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10304",
+  "nicTitle": "Manufacture of pickles, chutney and similar preserved fruit/vegetable products",
+  "nco": "8160.0100",
+  "share": 0.2,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10501",
+  "nicTitle": "Manufacture of pasteurised and processed milk",
+  "nco": "7513.0100",
+  "share": 0.45,
+  "employmentPerUnit": 6,
+  "sector": "food"
+ },
+ {
+  "nic5": "10501",
+  "nicTitle": "Manufacture of pasteurised and processed milk",
+  "nco": "8160.0100",
+  "share": 0.2,
+  "employmentPerUnit": 6,
+  "sector": "food"
+ },
+ {
+  "nic5": "10501",
+  "nicTitle": "Manufacture of pasteurised and processed milk",
+  "nco": "3141.0100",
+  "share": 0.05,
+  "employmentPerUnit": 6,
+  "sector": "food"
+ },
+ {
+  "nic5": "10501",
+  "nicTitle": "Manufacture of pasteurised and processed milk",
+  "nco": "8189.0100",
+  "share": 0.05,
+  "employmentPerUnit": 6,
+  "sector": "food"
+ },
+ {
+  "nic5": "10502",
+  "nicTitle": "Manufacture of butter, ghee, cheese and paneer",
+  "nco": "7513.0100",
+  "share": 0.55,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10502",
+  "nicTitle": "Manufacture of butter, ghee, cheese and paneer",
+  "nco": "8160.0100",
+  "share": 0.15,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10611",
+  "nicTitle": "Flour milling",
+  "nco": "8160.0100",
+  "share": 0.55,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10611",
+  "nicTitle": "Flour milling",
+  "nco": "7515.0100",
+  "share": 0.15,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10612",
+  "nicTitle": "Rice milling",
+  "nco": "8160.0100",
+  "share": 0.5,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10612",
+  "nicTitle": "Rice milling",
+  "nco": "7515.0100",
+  "share": 0.2,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10613",
+  "nicTitle": "Dal (pulses) milling",
+  "nco": "8160.0100",
+  "share": 0.5,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10613",
+  "nicTitle": "Dal (pulses) milling",
+  "nco": "7515.0100",
+  "share": 0.2,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10711",
+  "nicTitle": "Manufacture of bread and bakery products",
+  "nco": "7512.0100",
+  "share": 0.6,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10711",
+  "nicTitle": "Manufacture of bread and bakery products",
+  "nco": "8160.0100",
+  "share": 0.15,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10712",
+  "nicTitle": "Manufacture of biscuits, cakes and pastries",
+  "nco": "7512.0100",
+  "share": 0.4,
+  "employmentPerUnit": 6,
+  "sector": "food"
+ },
+ {
+  "nic5": "10712",
+  "nicTitle": "Manufacture of biscuits, cakes and pastries",
+  "nco": "8160.0100",
+  "share": 0.3,
+  "employmentPerUnit": 6,
+  "sector": "food"
+ },
+ {
+  "nic5": "10712",
+  "nicTitle": "Manufacture of biscuits, cakes and pastries",
+  "nco": "3122.0100",
+  "share": 0.05,
+  "employmentPerUnit": 6,
+  "sector": "food"
+ },
+ {
+  "nic5": "10721",
+  "nicTitle": "Manufacture of sugar",
+  "nco": "8160.0100",
+  "share": 0.4,
+  "employmentPerUnit": 12,
+  "sector": "food"
+ },
+ {
+  "nic5": "10721",
+  "nicTitle": "Manufacture of sugar",
+  "nco": "3122.0100",
+  "share": 0.05,
+  "employmentPerUnit": 12,
+  "sector": "food"
+ },
+ {
+  "nic5": "10721",
+  "nicTitle": "Manufacture of sugar",
+  "nco": "7233.0100",
+  "share": 0.1,
+  "employmentPerUnit": 12,
+  "sector": "food"
+ },
+ {
+  "nic5": "10721",
+  "nicTitle": "Manufacture of sugar",
+  "nco": "7411.0100",
+  "share": 0.05,
+  "employmentPerUnit": 12,
+  "sector": "food"
+ },
+ {
+  "nic5": "10722",
+  "nicTitle": "Manufacture of gur (jaggery) and khandsari",
+  "nco": "8160.0100",
+  "share": 0.5,
+  "employmentPerUnit": 6,
+  "sector": "food"
+ },
+ {
+  "nic5": "10795",
+  "nicTitle": "Processing of spices (grinding, blending)",
+  "nco": "8160.0100",
+  "share": 0.5,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10795",
+  "nicTitle": "Processing of spices (grinding, blending)",
+  "nco": "7515.0100",
+  "share": 0.15,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "10750",
+  "nicTitle": "Manufacture of prepared meals and dishes",
+  "nco": "8160.0100",
+  "share": 0.35,
+  "employmentPerUnit": 5,
+  "sector": "food"
+ },
+ {
+  "nic5": "10750",
+  "nicTitle": "Manufacture of prepared meals and dishes",
+  "nco": "7512.0100",
+  "share": 0.15,
+  "employmentPerUnit": 5,
+  "sector": "food"
+ },
+ {
+  "nic5": "10750",
+  "nicTitle": "Manufacture of prepared meals and dishes",
+  "nco": "3257.0200",
+  "share": 0.05,
+  "employmentPerUnit": 5,
+  "sector": "food"
+ },
+ {
+  "nic5": "11020",
+  "nicTitle": "Manufacture of wines",
+  "nco": "8160.0200",
+  "share": 0.5,
+  "employmentPerUnit": 8,
+  "sector": "food"
+ },
+ {
+  "nic5": "11020",
+  "nicTitle": "Manufacture of wines",
+  "nco": "3141.0100",
+  "share": 0.05,
+  "employmentPerUnit": 8,
+  "sector": "food"
+ },
+ {
+  "nic5": "11020",
+  "nicTitle": "Manufacture of wines",
+  "nco": "7515.0100",
+  "share": 0.1,
+  "employmentPerUnit": 8,
+  "sector": "food"
+ },
+ {
+  "nic5": "52101",
+  "nicTitle": "Warehousing of refrigerated goods (cold storage)",
+  "nco": "8189.0100",
+  "share": 0.5,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "52101",
+  "nicTitle": "Warehousing of refrigerated goods (cold storage)",
+  "nco": "8344.0100",
+  "share": 0.15,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "52101",
+  "nicTitle": "Warehousing of refrigerated goods (cold storage)",
+  "nco": "9333.0100",
+  "share": 0.2,
+  "employmentPerUnit": 4,
+  "sector": "food"
+ },
+ {
+  "nic5": "01632",
+  "nicTitle": "Post-harvest crop activities: cleaning, grading, sorting",
+  "nco": "7515.0100",
+  "share": 0.5,
+  "employmentPerUnit": 5,
+  "sector": "food"
+ },
+ {
+  "nic5": "01632",
+  "nicTitle": "Post-harvest crop activities: cleaning, grading, sorting",
+  "nco": "3142.0100",
+  "share": 0.1,
+  "employmentPerUnit": 5,
+  "sector": "food"
+ },
+ {
+  "nic5": "01632",
+  "nicTitle": "Post-harvest crop activities: cleaning, grading, sorting",
+  "nco": "8189.0100",
+  "share": 0.1,
+  "employmentPerUnit": 5,
+  "sector": "food"
+ },
+ {
+  "nic5": "29102",
+  "nicTitle": "Manufacture of commercial vehicles and passenger cars",
+  "nco": "8211.0100",
+  "share": 0.35,
+  "employmentPerUnit": 20,
+  "sector": "auto"
+ },
+ {
+  "nic5": "29102",
+  "nicTitle": "Manufacture of commercial vehicles and passenger cars",
+  "nco": "7212.0100",
+  "share": 0.1,
+  "employmentPerUnit": 20,
+  "sector": "auto"
+ },
+ {
+  "nic5": "29102",
+  "nicTitle": "Manufacture of commercial vehicles and passenger cars",
+  "nco": "7231.0100",
+  "share": 0.05,
+  "employmentPerUnit": 20,
+  "sector": "auto"
+ },
+ {
+  "nic5": "29102",
+  "nicTitle": "Manufacture of commercial vehicles and passenger cars",
+  "nco": "7543.0100",
+  "share": 0.08,
+  "employmentPerUnit": 20,
+  "sector": "auto"
+ },
+ {
+  "nic5": "29102",
+  "nicTitle": "Manufacture of commercial vehicles and passenger cars",
+  "nco": "3115.0100",
+  "share": 0.05,
+  "employmentPerUnit": 20,
+  "sector": "auto"
+ },
+ {
+  "nic5": "29301",
+  "nicTitle": "Manufacture of parts and accessories for motor vehicles",
+  "nco": "7223.0200",
+  "share": 0.25,
+  "employmentPerUnit": 8,
+  "sector": "auto"
+ },
+ {
+  "nic5": "29301",
+  "nicTitle": "Manufacture of parts and accessories for motor vehicles",
+  "nco": "8211.0100",
+  "share": 0.2,
+  "employmentPerUnit": 8,
+  "sector": "auto"
+ },
+ {
+  "nic5": "29301",
+  "nicTitle": "Manufacture of parts and accessories for motor vehicles",
+  "nco": "7233.0100",
+  "share": 0.1,
+  "employmentPerUnit": 8,
+  "sector": "auto"
+ },
+ {
+  "nic5": "29301",
+  "nicTitle": "Manufacture of parts and accessories for motor vehicles",
+  "nco": "7543.0100",
+  "share": 0.1,
+  "employmentPerUnit": 8,
+  "sector": "auto"
+ },
+ {
+  "nic5": "29301",
+  "nicTitle": "Manufacture of parts and accessories for motor vehicles",
+  "nco": "7212.0100",
+  "share": 0.05,
+  "employmentPerUnit": 8,
+  "sector": "auto"
+ },
+ {
+  "nic5": "29201",
+  "nicTitle": "Manufacture of bodies (coachwork) for motor vehicles",
+  "nco": "7213.0100",
+  "share": 0.4,
+  "employmentPerUnit": 8,
+  "sector": "auto"
+ },
+ {
+  "nic5": "29201",
+  "nicTitle": "Manufacture of bodies (coachwork) for motor vehicles",
+  "nco": "7212.0100",
+  "share": 0.3,
+  "employmentPerUnit": 8,
+  "sector": "auto"
+ },
+ {
+  "nic5": "30911",
+  "nicTitle": "Manufacture of motorcycles and scooters (incl. electric)",
+  "nco": "8211.0100",
+  "share": 0.4,
+  "employmentPerUnit": 12,
+  "sector": "auto"
+ },
+ {
+  "nic5": "30911",
+  "nicTitle": "Manufacture of motorcycles and scooters (incl. electric)",
+  "nco": "7231.0300",
+  "share": 0.1,
+  "employmentPerUnit": 12,
+  "sector": "auto"
+ },
+ {
+  "nic5": "30911",
+  "nicTitle": "Manufacture of motorcycles and scooters (incl. electric)",
+  "nco": "7543.0100",
+  "share": 0.08,
+  "employmentPerUnit": 12,
+  "sector": "auto"
+ },
+ {
+  "nic5": "25111",
+  "nicTitle": "Manufacture of structural metal products (fabrication)",
+  "nco": "7212.0100",
+  "share": 0.45,
+  "employmentPerUnit": 5,
+  "sector": "auto"
+ },
+ {
+  "nic5": "25111",
+  "nicTitle": "Manufacture of structural metal products (fabrication)",
+  "nco": "7213.0100",
+  "share": 0.25,
+  "employmentPerUnit": 5,
+  "sector": "auto"
+ },
+ {
+  "nic5": "25111",
+  "nicTitle": "Manufacture of structural metal products (fabrication)",
+  "nco": "7233.0100",
+  "share": 0.1,
+  "employmentPerUnit": 5,
+  "sector": "auto"
+ },
+ {
+  "nic5": "25910",
+  "nicTitle": "Forging, pressing, stamping and roll-forming of metal",
+  "nco": "7213.0100",
+  "share": 0.3,
+  "employmentPerUnit": 6,
+  "sector": "auto"
+ },
+ {
+  "nic5": "25910",
+  "nicTitle": "Forging, pressing, stamping and roll-forming of metal",
+  "nco": "7223.0100",
+  "share": 0.25,
+  "employmentPerUnit": 6,
+  "sector": "auto"
+ },
+ {
+  "nic5": "25910",
+  "nicTitle": "Forging, pressing, stamping and roll-forming of metal",
+  "nco": "7222.0100",
+  "share": 0.1,
+  "employmentPerUnit": 6,
+  "sector": "auto"
+ },
+ {
+  "nic5": "25920",
+  "nicTitle": "Treatment and coating of metals; machining",
+  "nco": "7223.0200",
+  "share": 0.4,
+  "employmentPerUnit": 5,
+  "sector": "auto"
+ },
+ {
+  "nic5": "25920",
+  "nicTitle": "Treatment and coating of metals; machining",
+  "nco": "7223.0300",
+  "share": 0.2,
+  "employmentPerUnit": 5,
+  "sector": "auto"
+ },
+ {
+  "nic5": "25920",
+  "nicTitle": "Treatment and coating of metals; machining",
+  "nco": "7223.0100",
+  "share": 0.15,
+  "employmentPerUnit": 5,
+  "sector": "auto"
+ },
+ {
+  "nic5": "25939",
+  "nicTitle": "Manufacture of other hand tools and dies",
+  "nco": "7222.0100",
+  "share": 0.5,
+  "employmentPerUnit": 5,
+  "sector": "auto"
+ },
+ {
+  "nic5": "25939",
+  "nicTitle": "Manufacture of other hand tools and dies",
+  "nco": "7223.0100",
+  "share": 0.2,
+  "employmentPerUnit": 5,
+  "sector": "auto"
+ },
+ {
+  "nic5": "24311",
+  "nicTitle": "Casting of iron and steel",
+  "nco": "7223.0100",
+  "share": 0.2,
+  "employmentPerUnit": 8,
+  "sector": "auto"
+ },
+ {
+  "nic5": "24311",
+  "nicTitle": "Casting of iron and steel",
+  "nco": "7233.0100",
+  "share": 0.2,
+  "employmentPerUnit": 8,
+  "sector": "auto"
+ },
+ {
+  "nic5": "24311",
+  "nicTitle": "Casting of iron and steel",
+  "nco": "7543.0100",
+  "share": 0.1,
+  "employmentPerUnit": 8,
+  "sector": "auto"
+ },
+ {
+  "nic5": "28110",
+  "nicTitle": "Manufacture of engines and turbines",
+  "nco": "8211.0100",
+  "share": 0.3,
+  "employmentPerUnit": 10,
+  "sector": "auto"
+ },
+ {
+  "nic5": "28110",
+  "nicTitle": "Manufacture of engines and turbines",
+  "nco": "7223.0200",
+  "share": 0.2,
+  "employmentPerUnit": 10,
+  "sector": "auto"
+ },
+ {
+  "nic5": "28110",
+  "nicTitle": "Manufacture of engines and turbines",
+  "nco": "7233.0100",
+  "share": 0.15,
+  "employmentPerUnit": 10,
+  "sector": "auto"
+ },
+ {
+  "nic5": "28132",
+  "nicTitle": "Manufacture of pumps and compressors",
+  "nco": "7233.0100",
+  "share": 0.3,
+  "employmentPerUnit": 7,
+  "sector": "auto"
+ },
+ {
+  "nic5": "28132",
+  "nicTitle": "Manufacture of pumps and compressors",
+  "nco": "7223.0200",
+  "share": 0.2,
+  "employmentPerUnit": 7,
+  "sector": "auto"
+ },
+ {
+  "nic5": "28132",
+  "nicTitle": "Manufacture of pumps and compressors",
+  "nco": "8211.0100",
+  "share": 0.2,
+  "employmentPerUnit": 7,
+  "sector": "auto"
+ },
+ {
+  "nic5": "28221",
+  "nicTitle": "Manufacture of metal-forming machinery and machine tools",
+  "nco": "7223.0200",
+  "share": 0.3,
+  "employmentPerUnit": 7,
+  "sector": "auto"
+ },
+ {
+  "nic5": "28221",
+  "nicTitle": "Manufacture of metal-forming machinery and machine tools",
+  "nco": "7233.0100",
+  "share": 0.25,
+  "employmentPerUnit": 7,
+  "sector": "auto"
+ },
+ {
+  "nic5": "28221",
+  "nicTitle": "Manufacture of metal-forming machinery and machine tools",
+  "nco": "3118.0100",
+  "share": 0.05,
+  "employmentPerUnit": 7,
+  "sector": "auto"
+ },
+ {
+  "nic5": "28221",
+  "nicTitle": "Manufacture of metal-forming machinery and machine tools",
+  "nco": "3139.0100",
+  "share": 0.05,
+  "employmentPerUnit": 7,
+  "sector": "auto"
+ },
+ {
+  "nic5": "33121",
+  "nicTitle": "Repair and maintenance of industrial machinery",
+  "nco": "7233.0100",
+  "share": 0.5,
+  "employmentPerUnit": 3,
+  "sector": "auto"
+ },
+ {
+  "nic5": "33121",
+  "nicTitle": "Repair and maintenance of industrial machinery",
+  "nco": "7412.0100",
+  "share": 0.15,
+  "employmentPerUnit": 3,
+  "sector": "auto"
+ },
+ {
+  "nic5": "33121",
+  "nicTitle": "Repair and maintenance of industrial machinery",
+  "nco": "7212.0100",
+  "share": 0.1,
+  "employmentPerUnit": 3,
+  "sector": "auto"
+ },
+ {
+  "nic5": "45200",
+  "nicTitle": "Maintenance and repair of motor vehicles",
+  "nco": "7231.0100",
+  "share": 0.55,
+  "employmentPerUnit": 3,
+  "sector": "auto"
+ },
+ {
+  "nic5": "45200",
+  "nicTitle": "Maintenance and repair of motor vehicles",
+  "nco": "7231.0200",
+  "share": 0.15,
+  "employmentPerUnit": 3,
+  "sector": "auto"
+ },
+ {
+  "nic5": "45200",
+  "nicTitle": "Maintenance and repair of motor vehicles",
+  "nco": "7231.0300",
+  "share": 0.05,
+  "employmentPerUnit": 3,
+  "sector": "auto"
+ },
+ {
+  "nic5": "71100",
+  "nicTitle": "Architecture and engineering design/consultancy",
+  "nco": "3118.0100",
+  "share": 0.3,
+  "employmentPerUnit": 4,
+  "sector": "auto"
+ },
+ {
+  "nic5": "71100",
+  "nicTitle": "Architecture and engineering design/consultancy",
+  "nco": "3115.0100",
+  "share": 0.3,
+  "employmentPerUnit": 4,
+  "sector": "auto"
+ },
+ {
+  "nic5": "71100",
+  "nicTitle": "Architecture and engineering design/consultancy",
+  "nco": "3113.0100",
+  "share": 0.1,
+  "employmentPerUnit": 4,
+  "sector": "auto"
+ },
+ {
+  "nic5": "27101",
+  "nicTitle": "Manufacture of electric motors, generators and transformers",
+  "nco": "7412.0100",
+  "share": 0.35,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27101",
+  "nicTitle": "Manufacture of electric motors, generators and transformers",
+  "nco": "8212.0100",
+  "share": 0.2,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27101",
+  "nicTitle": "Manufacture of electric motors, generators and transformers",
+  "nco": "3113.0100",
+  "share": 0.05,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27201",
+  "nicTitle": "Manufacture of batteries (incl. lithium-ion packs)",
+  "nco": "8212.0100",
+  "share": 0.4,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27201",
+  "nicTitle": "Manufacture of batteries (incl. lithium-ion packs)",
+  "nco": "7231.0300",
+  "share": 0.05,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27201",
+  "nicTitle": "Manufacture of batteries (incl. lithium-ion packs)",
+  "nco": "3114.0100",
+  "share": 0.05,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27320",
+  "nicTitle": "Manufacture of electric wires and cables",
+  "nco": "8212.0100",
+  "share": 0.3,
+  "employmentPerUnit": 6,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27320",
+  "nicTitle": "Manufacture of electric wires and cables",
+  "nco": "7411.0100",
+  "share": 0.1,
+  "employmentPerUnit": 6,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27400",
+  "nicTitle": "Manufacture of electric lighting equipment",
+  "nco": "8212.0100",
+  "share": 0.5,
+  "employmentPerUnit": 5,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27501",
+  "nicTitle": "Manufacture of domestic electric appliances",
+  "nco": "8212.0100",
+  "share": 0.4,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27501",
+  "nicTitle": "Manufacture of domestic electric appliances",
+  "nco": "7127.0100",
+  "share": 0.1,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27501",
+  "nicTitle": "Manufacture of domestic electric appliances",
+  "nco": "7421.0100",
+  "share": 0.1,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27900",
+  "nicTitle": "Manufacture of other electrical equipment (EV chargers, panels)",
+  "nco": "7411.0100",
+  "share": 0.2,
+  "employmentPerUnit": 6,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27900",
+  "nicTitle": "Manufacture of other electrical equipment (EV chargers, panels)",
+  "nco": "8212.0100",
+  "share": 0.3,
+  "employmentPerUnit": 6,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27900",
+  "nicTitle": "Manufacture of other electrical equipment (EV chargers, panels)",
+  "nco": "7411.0400",
+  "share": 0.1,
+  "employmentPerUnit": 6,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "27900",
+  "nicTitle": "Manufacture of other electrical equipment (EV chargers, panels)",
+  "nco": "3113.0100",
+  "share": 0.05,
+  "employmentPerUnit": 6,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "26109",
+  "nicTitle": "Manufacture of other electronic components",
+  "nco": "8212.0100",
+  "share": 0.5,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "26109",
+  "nicTitle": "Manufacture of other electronic components",
+  "nco": "3114.0100",
+  "share": 0.08,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "26400",
+  "nicTitle": "Manufacture of consumer electronics",
+  "nco": "8212.0100",
+  "share": 0.45,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "26400",
+  "nicTitle": "Manufacture of consumer electronics",
+  "nco": "7421.0100",
+  "share": 0.1,
+  "employmentPerUnit": 8,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "28192",
+  "nicTitle": "Manufacture of refrigerating and air-conditioning equipment",
+  "nco": "7127.0100",
+  "share": 0.3,
+  "employmentPerUnit": 7,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "28192",
+  "nicTitle": "Manufacture of refrigerating and air-conditioning equipment",
+  "nco": "8212.0100",
+  "share": 0.25,
+  "employmentPerUnit": 7,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "35105",
+  "nicTitle": "Electric power generation using solar energy",
+  "nco": "7411.0300",
+  "share": 0.6,
+  "employmentPerUnit": 3,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "35105",
+  "nicTitle": "Electric power generation using solar energy",
+  "nco": "3113.0100",
+  "share": 0.1,
+  "employmentPerUnit": 3,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "43211",
+  "nicTitle": "Electrical installation works",
+  "nco": "7411.0100",
+  "share": 0.55,
+  "employmentPerUnit": 3,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "43211",
+  "nicTitle": "Electrical installation works",
+  "nco": "7411.0200",
+  "share": 0.25,
+  "employmentPerUnit": 3,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "43211",
+  "nicTitle": "Electrical installation works",
+  "nco": "7411.0300",
+  "share": 0.1,
+  "employmentPerUnit": 3,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "43223",
+  "nicTitle": "Installation of air-conditioning and refrigeration",
+  "nco": "7127.0100",
+  "share": 0.7,
+  "employmentPerUnit": 3,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "33140",
+  "nicTitle": "Repair of electrical equipment (motor rewinding)",
+  "nco": "7412.0100",
+  "share": 0.7,
+  "employmentPerUnit": 2,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "95120",
+  "nicTitle": "Repair of communication equipment (mobiles)",
+  "nco": "7421.0100",
+  "share": 0.7,
+  "employmentPerUnit": 2,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "95220",
+  "nicTitle": "Repair of household appliances",
+  "nco": "7421.0100",
+  "share": 0.4,
+  "employmentPerUnit": 2,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "95220",
+  "nicTitle": "Repair of household appliances",
+  "nco": "7127.0100",
+  "share": 0.35,
+  "employmentPerUnit": 2,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "28299",
+  "nicTitle": "Manufacture of special-purpose machinery (automation, robotics)",
+  "nco": "3139.0100",
+  "share": 0.25,
+  "employmentPerUnit": 6,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "28299",
+  "nicTitle": "Manufacture of special-purpose machinery (automation, robotics)",
+  "nco": "7233.0100",
+  "share": 0.2,
+  "employmentPerUnit": 6,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "28299",
+  "nicTitle": "Manufacture of special-purpose machinery (automation, robotics)",
+  "nco": "3113.0100",
+  "share": 0.1,
+  "employmentPerUnit": 6,
+  "sector": "electrical"
+ },
+ {
+  "nic5": "49231",
+  "nicTitle": "Road freight transport",
+  "nco": "8332.0100",
+  "share": 0.6,
+  "employmentPerUnit": 3,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "49231",
+  "nicTitle": "Road freight transport",
+  "nco": "9333.0100",
+  "share": 0.15,
+  "employmentPerUnit": 3,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "49231",
+  "nicTitle": "Road freight transport",
+  "nco": "4323.0100",
+  "share": 0.1,
+  "employmentPerUnit": 3,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "52109",
+  "nicTitle": "Warehousing and storage n.e.c.",
+  "nco": "4321.0200",
+  "share": 0.15,
+  "employmentPerUnit": 6,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "52109",
+  "nicTitle": "Warehousing and storage n.e.c.",
+  "nco": "9321.0100",
+  "share": 0.35,
+  "employmentPerUnit": 6,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "52109",
+  "nicTitle": "Warehousing and storage n.e.c.",
+  "nco": "8344.0100",
+  "share": 0.15,
+  "employmentPerUnit": 6,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "52109",
+  "nicTitle": "Warehousing and storage n.e.c.",
+  "nco": "9333.0100",
+  "share": 0.2,
+  "employmentPerUnit": 6,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "52109",
+  "nicTitle": "Warehousing and storage n.e.c.",
+  "nco": "4321.0100",
+  "share": 0.1,
+  "employmentPerUnit": 6,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "52241",
+  "nicTitle": "Cargo handling (loading and unloading)",
+  "nco": "9333.0100",
+  "share": 0.6,
+  "employmentPerUnit": 5,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "52241",
+  "nicTitle": "Cargo handling (loading and unloading)",
+  "nco": "8344.0100",
+  "share": 0.15,
+  "employmentPerUnit": 5,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "52241",
+  "nicTitle": "Cargo handling (loading and unloading)",
+  "nco": "8343.0100",
+  "share": 0.1,
+  "employmentPerUnit": 5,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "52291",
+  "nicTitle": "Activities of freight forwarders / clearing agents",
+  "nco": "3331.0100",
+  "share": 0.5,
+  "employmentPerUnit": 3,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "52291",
+  "nicTitle": "Activities of freight forwarders / clearing agents",
+  "nco": "4323.0100",
+  "share": 0.3,
+  "employmentPerUnit": 3,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "53200",
+  "nicTitle": "Courier activities (last-mile delivery)",
+  "nco": "8321.0100",
+  "share": 0.6,
+  "employmentPerUnit": 6,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "53200",
+  "nicTitle": "Courier activities (last-mile delivery)",
+  "nco": "9321.0100",
+  "share": 0.2,
+  "employmentPerUnit": 6,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "53200",
+  "nicTitle": "Courier activities (last-mile delivery)",
+  "nco": "4323.0100",
+  "share": 0.05,
+  "employmentPerUnit": 6,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "47912",
+  "nicTitle": "Retail sale via e-commerce (fulfilment)",
+  "nco": "9321.0100",
+  "share": 0.35,
+  "employmentPerUnit": 5,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "47912",
+  "nicTitle": "Retail sale via e-commerce (fulfilment)",
+  "nco": "8321.0100",
+  "share": 0.25,
+  "employmentPerUnit": 5,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "47912",
+  "nicTitle": "Retail sale via e-commerce (fulfilment)",
+  "nco": "4321.0200",
+  "share": 0.1,
+  "employmentPerUnit": 5,
+  "sector": "logistics"
+ },
+ {
+  "nic5": "62011",
+  "nicTitle": "Writing, modifying and testing of computer programs",
+  "nco": "2512.0100",
+  "share": 0.45,
+  "employmentPerUnit": 6,
+  "sector": "it"
+ },
+ {
+  "nic5": "62011",
+  "nicTitle": "Writing, modifying and testing of computer programs",
+  "nco": "2519.0100",
+  "share": 0.15,
+  "employmentPerUnit": 6,
+  "sector": "it"
+ },
+ {
+  "nic5": "62011",
+  "nicTitle": "Writing, modifying and testing of computer programs",
+  "nco": "2513.0100",
+  "share": 0.15,
+  "employmentPerUnit": 6,
+  "sector": "it"
+ },
+ {
+  "nic5": "62011",
+  "nicTitle": "Writing, modifying and testing of computer programs",
+  "nco": "2511.0100",
+  "share": 0.05,
+  "employmentPerUnit": 6,
+  "sector": "it"
+ },
+ {
+  "nic5": "62013",
+  "nicTitle": "Providing software support and maintenance",
+  "nco": "3512.0100",
+  "share": 0.3,
+  "employmentPerUnit": 5,
+  "sector": "it"
+ },
+ {
+  "nic5": "62013",
+  "nicTitle": "Providing software support and maintenance",
+  "nco": "2512.0100",
+  "share": 0.25,
+  "employmentPerUnit": 5,
+  "sector": "it"
+ },
+ {
+  "nic5": "62013",
+  "nicTitle": "Providing software support and maintenance",
+  "nco": "2521.0100",
+  "share": 0.1,
+  "employmentPerUnit": 5,
+  "sector": "it"
+ },
+ {
+  "nic5": "62013",
+  "nicTitle": "Providing software support and maintenance",
+  "nco": "2519.0100",
+  "share": 0.1,
+  "employmentPerUnit": 5,
+  "sector": "it"
+ },
+ {
+  "nic5": "62020",
+  "nicTitle": "Computer consultancy and facilities management",
+  "nco": "2511.0100",
+  "share": 0.25,
+  "employmentPerUnit": 5,
+  "sector": "it"
+ },
+ {
+  "nic5": "62020",
+  "nicTitle": "Computer consultancy and facilities management",
+  "nco": "3511.0100",
+  "share": 0.2,
+  "employmentPerUnit": 5,
+  "sector": "it"
+ },
+ {
+  "nic5": "62020",
+  "nicTitle": "Computer consultancy and facilities management",
+  "nco": "2529.0100",
+  "share": 0.1,
+  "employmentPerUnit": 5,
+  "sector": "it"
+ },
+ {
+  "nic5": "62020",
+  "nicTitle": "Computer consultancy and facilities management",
+  "nco": "2120.0100",
+  "share": 0.1,
+  "employmentPerUnit": 5,
+  "sector": "it"
+ },
+ {
+  "nic5": "62099",
+  "nicTitle": "Other IT and computer service activities",
+  "nco": "3512.0100",
+  "share": 0.35,
+  "employmentPerUnit": 4,
+  "sector": "it"
+ },
+ {
+  "nic5": "62099",
+  "nicTitle": "Other IT and computer service activities",
+  "nco": "3513.0100",
+  "share": 0.25,
+  "employmentPerUnit": 4,
+  "sector": "it"
+ },
+ {
+  "nic5": "62099",
+  "nicTitle": "Other IT and computer service activities",
+  "nco": "2513.0100",
+  "share": 0.1,
+  "employmentPerUnit": 4,
+  "sector": "it"
+ },
+ {
+  "nic5": "63111",
+  "nicTitle": "Data processing activities",
+  "nco": "4132.0100",
+  "share": 0.5,
+  "employmentPerUnit": 6,
+  "sector": "it"
+ },
+ {
+  "nic5": "63111",
+  "nicTitle": "Data processing activities",
+  "nco": "2120.0100",
+  "share": 0.15,
+  "employmentPerUnit": 6,
+  "sector": "it"
+ },
+ {
+  "nic5": "63111",
+  "nicTitle": "Data processing activities",
+  "nco": "2521.0100",
+  "share": 0.05,
+  "employmentPerUnit": 6,
+  "sector": "it"
+ },
+ {
+  "nic5": "63112",
+  "nicTitle": "Hosting and cloud services",
+  "nco": "3511.0100",
+  "share": 0.4,
+  "employmentPerUnit": 4,
+  "sector": "it"
+ },
+ {
+  "nic5": "63112",
+  "nicTitle": "Hosting and cloud services",
+  "nco": "2521.0100",
+  "share": 0.15,
+  "employmentPerUnit": 4,
+  "sector": "it"
+ },
+ {
+  "nic5": "63112",
+  "nicTitle": "Hosting and cloud services",
+  "nco": "2529.0100",
+  "share": 0.15,
+  "employmentPerUnit": 4,
+  "sector": "it"
+ },
+ {
+  "nic5": "82200",
+  "nicTitle": "Activities of call centres (BPO)",
+  "nco": "4222.0100",
+  "share": 0.8,
+  "employmentPerUnit": 15,
+  "sector": "it"
+ },
+ {
+  "nic5": "82200",
+  "nicTitle": "Activities of call centres (BPO)",
+  "nco": "4132.0100",
+  "share": 0.05,
+  "employmentPerUnit": 15,
+  "sector": "it"
+ },
+ {
+  "nic5": "73100",
+  "nicTitle": "Advertising and digital marketing",
+  "nco": "2431.0100",
+  "share": 0.5,
+  "employmentPerUnit": 4,
+  "sector": "it"
+ },
+ {
+  "nic5": "73100",
+  "nicTitle": "Advertising and digital marketing",
+  "nco": "2513.0100",
+  "share": 0.1,
+  "employmentPerUnit": 4,
+  "sector": "it"
+ },
+ {
+  "nic5": "95110",
+  "nicTitle": "Repair of computers and peripheral equipment",
+  "nco": "3512.0100",
+  "share": 0.5,
+  "employmentPerUnit": 2,
+  "sector": "it"
+ },
+ {
+  "nic5": "95110",
+  "nicTitle": "Repair of computers and peripheral equipment",
+  "nco": "3513.0100",
+  "share": 0.3,
+  "employmentPerUnit": 2,
+  "sector": "it"
+ },
+ {
+  "nic5": "86100",
+  "nicTitle": "Hospital activities",
+  "nco": "5321.0100",
+  "share": 0.25,
+  "employmentPerUnit": 15,
+  "sector": "health"
+ },
+ {
+  "nic5": "86100",
+  "nicTitle": "Hospital activities",
+  "nco": "3221.0100",
+  "share": 0.25,
+  "employmentPerUnit": 15,
+  "sector": "health"
+ },
+ {
+  "nic5": "86100",
+  "nicTitle": "Hospital activities",
+  "nco": "3212.0100",
+  "share": 0.08,
+  "employmentPerUnit": 15,
+  "sector": "health"
+ },
+ {
+  "nic5": "86100",
+  "nicTitle": "Hospital activities",
+  "nco": "3256.0100",
+  "share": 0.07,
+  "employmentPerUnit": 15,
+  "sector": "health"
+ },
+ {
+  "nic5": "86100",
+  "nicTitle": "Hospital activities",
+  "nco": "3211.0100",
+  "share": 0.04,
+  "employmentPerUnit": 15,
+  "sector": "health"
+ },
+ {
+  "nic5": "86100",
+  "nicTitle": "Hospital activities",
+  "nco": "3252.0100",
+  "share": 0.04,
+  "employmentPerUnit": 15,
+  "sector": "health"
+ },
+ {
+  "nic5": "86100",
+  "nicTitle": "Hospital activities",
+  "nco": "3213.0100",
+  "share": 0.04,
+  "employmentPerUnit": 15,
+  "sector": "health"
+ },
+ {
+  "nic5": "86201",
+  "nicTitle": "Medical practice activities (clinics, nursing homes)",
+  "nco": "3221.0100",
+  "share": 0.35,
+  "employmentPerUnit": 4,
+  "sector": "health"
+ },
+ {
+  "nic5": "86201",
+  "nicTitle": "Medical practice activities (clinics, nursing homes)",
+  "nco": "5321.0100",
+  "share": 0.25,
+  "employmentPerUnit": 4,
+  "sector": "health"
+ },
+ {
+  "nic5": "86201",
+  "nicTitle": "Medical practice activities (clinics, nursing homes)",
+  "nco": "3213.0100",
+  "share": 0.1,
+  "employmentPerUnit": 4,
+  "sector": "health"
+ },
+ {
+  "nic5": "86905",
+  "nicTitle": "Diagnostic laboratory and imaging centres",
+  "nco": "3212.0100",
+  "share": 0.45,
+  "employmentPerUnit": 5,
+  "sector": "health"
+ },
+ {
+  "nic5": "86905",
+  "nicTitle": "Diagnostic laboratory and imaging centres",
+  "nco": "3212.0200",
+  "share": 0.25,
+  "employmentPerUnit": 5,
+  "sector": "health"
+ },
+ {
+  "nic5": "86905",
+  "nicTitle": "Diagnostic laboratory and imaging centres",
+  "nco": "3211.0100",
+  "share": 0.15,
+  "employmentPerUnit": 5,
+  "sector": "health"
+ },
+ {
+  "nic5": "86903",
+  "nicTitle": "Ambulance and emergency medical services",
+  "nco": "3258.0100",
+  "share": 0.6,
+  "employmentPerUnit": 4,
+  "sector": "health"
+ },
+ {
+  "nic5": "87100",
+  "nicTitle": "Residential nursing care / home health care",
+  "nco": "5322.0100",
+  "share": 0.6,
+  "employmentPerUnit": 5,
+  "sector": "health"
+ },
+ {
+  "nic5": "87100",
+  "nicTitle": "Residential nursing care / home health care",
+  "nco": "5321.0100",
+  "share": 0.2,
+  "employmentPerUnit": 5,
+  "sector": "health"
+ },
+ {
+  "nic5": "47721",
+  "nicTitle": "Retail sale of pharmaceutical and medical goods (pharmacies)",
+  "nco": "3213.0100",
+  "share": 0.75,
+  "employmentPerUnit": 2,
+  "sector": "health"
+ },
+ {
+  "nic5": "21002",
+  "nicTitle": "Manufacture of allopathic pharmaceutical preparations",
+  "nco": "8160.0100",
+  "share": 0.15,
+  "employmentPerUnit": 15,
+  "sector": "health"
+ },
+ {
+  "nic5": "21002",
+  "nicTitle": "Manufacture of allopathic pharmaceutical preparations",
+  "nco": "3141.0100",
+  "share": 0.1,
+  "employmentPerUnit": 15,
+  "sector": "health"
+ },
+ {
+  "nic5": "21002",
+  "nicTitle": "Manufacture of allopathic pharmaceutical preparations",
+  "nco": "4321.0100",
+  "share": 0.05,
+  "employmentPerUnit": 15,
+  "sector": "health"
+ },
+ {
+  "nic5": "21002",
+  "nicTitle": "Manufacture of allopathic pharmaceutical preparations",
+  "nco": "7543.0100",
+  "share": 0.05,
+  "employmentPerUnit": 15,
+  "sector": "health"
+ }
+]

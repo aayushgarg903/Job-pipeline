@@ -1,0 +1,3420 @@
+[
+ {
+  "id": "cnc-programming",
+  "labelEn": "CNC programming",
+  "labelMr": "सीएनसी प्रोग्रामिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/bf942c60-8539-4951-83ee-63f770da1cb8",
+  "sector": "auto",
+  "aliases": [
+   "cnc programmer",
+   "cnc programming",
+   "g code",
+   "g-code"
+  ]
+ },
+ {
+  "id": "cnc-machine-operation",
+  "labelEn": "CNC machine operation",
+  "labelMr": "सीएनसी मशीन चालवणे",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "cnc machine",
+   "cnc operator",
+   "cnc setter",
+   "cnc turning"
+  ]
+ },
+ {
+  "id": "fanuc-cnc-control",
+  "labelEn": "Fanuc CNC control",
+  "labelMr": "फॅनुक सीएनसी कंट्रोल",
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "fanuc"
+  ]
+ },
+ {
+  "id": "siemens-sinumerik",
+  "labelEn": "Siemens Sinumerik CNC control",
+  "labelMr": null,
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "sinumerik"
+  ]
+ },
+ {
+  "id": "vmc-operation",
+  "labelEn": "VMC operation",
+  "labelMr": "व्हीएमसी ऑपरेशन",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "vertical machining center",
+   "vertical machining centre",
+   "vmc",
+   "vmc operator"
+  ]
+ },
+ {
+  "id": "lathe-turning",
+  "labelEn": "Lathe turning",
+  "labelMr": "लेथ टर्निंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/e4a9ec84-4eb3-494b-8a70-0fcf0d687f03",
+  "sector": "auto",
+  "aliases": [
+   "conventional lathe",
+   "lathe operator",
+   "turner",
+   "turning"
+  ]
+ },
+ {
+  "id": "milling",
+  "labelEn": "Milling operation",
+  "labelMr": "मिलिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/7b969ac9-f085-4afb-a480-c5210fb4da7d",
+  "sector": "auto",
+  "aliases": [
+   "milling machine",
+   "milling operator"
+  ]
+ },
+ {
+  "id": "grinding",
+  "labelEn": "Surface and cylindrical grinding",
+  "labelMr": "ग्राइंडिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/560db5a6-cd42-4d8f-a5ed-69308e5ce011",
+  "sector": "auto",
+  "aliases": [
+   "cylindrical grinding",
+   "grinder operator",
+   "grinding"
+  ]
+ },
+ {
+  "id": "precision-measurement",
+  "labelEn": "Precision measurement",
+  "labelMr": "अचूक मापन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/42c25baf-ccb3-47d9-a872-bb2ceb615538",
+  "sector": "auto",
+  "aliases": [
+   "gauges",
+   "measuring instruments",
+   "metrology",
+   "micrometer",
+   "vernier"
+  ]
+ },
+ {
+  "id": "engineering-drawing-reading",
+  "labelEn": "Reading engineering drawings",
+  "labelMr": "अभियांत्रिकी रेखाचित्र वाचन",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/b07daddc-8625-4360-946e-ad2b0e56ebf6",
+  "sector": "auto",
+  "aliases": [
+   "blueprint reading",
+   "drawing reading",
+   "engineering drawing",
+   "read drawings"
+  ]
+ },
+ {
+  "id": "gd-and-t",
+  "labelEn": "GD&T",
+  "labelMr": "जीडी अँड टी",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/e3688cae-7a28-4405-88b5-6b87179e0d76",
+  "sector": "auto",
+  "aliases": [
+   "gd&t",
+   "gdt",
+   "geometric dimensioning"
+  ]
+ },
+ {
+  "id": "fitting-assembly",
+  "labelEn": "Mechanical fitting and assembly",
+  "labelMr": "यांत्रिक फिटिंग व जोडणी",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/87a0c0e6-c114-4ea1-b2d0-933bce1f3c5f",
+  "sector": "auto",
+  "aliases": [
+   "bench fitting",
+   "fitter",
+   "fitting",
+   "mechanical assembly"
+  ]
+ },
+ {
+  "id": "arc-welding",
+  "labelEn": "Arc welding (SMAW)",
+  "labelMr": "आर्क वेल्डिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/27d26fd6-5795-4f0a-884e-112df7c68314",
+  "sector": "auto",
+  "aliases": [
+   "arc welding",
+   "electric welding",
+   "smaw",
+   "stick welding"
+  ]
+ },
+ {
+  "id": "mig-mag-welding",
+  "labelEn": "MIG/MAG welding",
+  "labelMr": "मिग/मॅग वेल्डिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/f015c5d5-6a1c-4f63-9012-a05f4f34105e",
+  "sector": "auto",
+  "aliases": [
+   "co2 welding",
+   "gmaw",
+   "mag welding",
+   "mig welding"
+  ]
+ },
+ {
+  "id": "tig-welding",
+  "labelEn": "TIG welding",
+  "labelMr": "टिग वेल्डिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/a51adea8-bf02-488a-a0d8-b0961caca5b0",
+  "sector": "auto",
+  "aliases": [
+   "argon welding",
+   "gtaw",
+   "tig",
+   "tig welder"
+  ]
+ },
+ {
+  "id": "gas-cutting",
+  "labelEn": "Gas cutting and brazing",
+  "labelMr": "गॅस कटिंग व ब्रेझिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/8b09c290-c941-4119-870f-bdafbd78c669",
+  "sector": "auto",
+  "aliases": [
+   "brazing",
+   "gas cutting",
+   "gas welding",
+   "oxy-acetylene"
+  ]
+ },
+ {
+  "id": "robotic-welding",
+  "labelEn": "Robotic welding",
+  "labelMr": "रोबोटिक वेल्डिंग",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "robotic welding",
+   "welding robot"
+  ]
+ },
+ {
+  "id": "sheet-metal-fabrication",
+  "labelEn": "Sheet metal fabrication",
+  "labelMr": "शीट मेटल फॅब्रिकेशन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/82f6b2a3-45ca-4841-90d2-83169d7416ee",
+  "sector": "auto",
+  "aliases": [
+   "fabrication",
+   "fabricator",
+   "sheet metal",
+   "structural fabrication"
+  ]
+ },
+ {
+  "id": "tool-and-die-making",
+  "labelEn": "Tool and die making",
+  "labelMr": "टूल अँड डाय मेकिंग",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "die making",
+   "mould making",
+   "press tool",
+   "tool room",
+   "toolmaker"
+  ]
+ },
+ {
+  "id": "jigs-fixtures",
+  "labelEn": "Jigs and fixtures",
+  "labelMr": "जिग्स व फिक्स्चर्स",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "fixtures",
+   "jig and fixture",
+   "jigs"
+  ]
+ },
+ {
+  "id": "hydraulics-pneumatics",
+  "labelEn": "Hydraulics and pneumatics",
+  "labelMr": "हायड्रॉलिक्स व न्यूमॅटिक्स",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/68e66ed6-a171-4350-8ec1-2cfc4cae50e4",
+  "sector": "auto",
+  "aliases": [
+   "hydraulic systems",
+   "hydraulics",
+   "pneumatic systems",
+   "pneumatics"
+  ]
+ },
+ {
+  "id": "preventive-maintenance",
+  "labelEn": "Preventive maintenance",
+  "labelMr": "प्रतिबंधात्मक देखभाल",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/8a4e99e0-f259-4931-888f-604cfdc15b31",
+  "sector": "auto",
+  "aliases": [
+   "breakdown maintenance",
+   "machine maintenance",
+   "pm schedule",
+   "preventive maintenance",
+   "tpm"
+  ]
+ },
+ {
+  "id": "engine-overhaul",
+  "labelEn": "Engine overhaul and repair",
+  "labelMr": "इंजिन दुरुस्ती",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/1bc7c69b-4292-4592-b854-f48165a06082",
+  "sector": "auto",
+  "aliases": [
+   "engine mechanic",
+   "engine overhaul",
+   "engine repair"
+  ]
+ },
+ {
+  "id": "diesel-engine-repair",
+  "labelEn": "Diesel engine repair",
+  "labelMr": "डिझेल इंजिन दुरुस्ती",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "diesel engine",
+   "diesel mechanic",
+   "fip",
+   "fuel injection pump"
+  ]
+ },
+ {
+  "id": "vehicle-diagnostics",
+  "labelEn": "Vehicle diagnostics (OBD scanner)",
+  "labelMr": "वाहन निदान (ओबीडी स्कॅनर)",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/52743af8-ab5d-4ce3-b877-13d349394456",
+  "sector": "auto",
+  "aliases": [
+   "fault diagnosis",
+   "obd",
+   "scan tool",
+   "vehicle diagnostics"
+  ]
+ },
+ {
+  "id": "automotive-electrical",
+  "labelEn": "Automotive electrical systems",
+  "labelMr": "वाहन विद्युत प्रणाली",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/7bb2bd48-0da4-427a-a94f-1eddf5565eba",
+  "sector": "auto",
+  "aliases": [
+   "auto electrical",
+   "auto electrician",
+   "automotive electrical",
+   "vehicle wiring"
+  ]
+ },
+ {
+  "id": "brake-suspension-service",
+  "labelEn": "Brake and suspension service",
+  "labelMr": "ब्रेक व सस्पेन्शन सर्व्हिस",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "brakes",
+   "steering",
+   "suspension",
+   "wheel alignment"
+  ]
+ },
+ {
+  "id": "transmission-repair",
+  "labelEn": "Transmission and clutch repair",
+  "labelMr": "ट्रान्समिशन व क्लच दुरुस्ती",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "clutch",
+   "gearbox",
+   "transmission"
+  ]
+ },
+ {
+  "id": "carburettor-tuning",
+  "labelEn": "Carburettor tuning",
+  "labelMr": "कार्बोरेटर ट्युनिंग",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "carb tuning",
+   "carburetor",
+   "carburettor"
+  ]
+ },
+ {
+  "id": "ev-powertrain",
+  "labelEn": "EV powertrain",
+  "labelMr": "ईव्ही पॉवरट्रेन",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/b979d9ae-37c2-4d1f-b8b8-7539f913cb19",
+  "sector": "auto",
+  "aliases": [
+   "electric motor drive",
+   "ev drivetrain",
+   "ev powertrain",
+   "hub motor"
+  ]
+ },
+ {
+  "id": "ev-battery-systems",
+  "labelEn": "EV battery systems",
+  "labelMr": "ईव्ही बॅटरी प्रणाली",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "battery pack",
+   "ev battery",
+   "li-ion",
+   "lithium ion",
+   "lithium-ion battery"
+  ]
+ },
+ {
+  "id": "battery-management-systems",
+  "labelEn": "Battery management systems (BMS)",
+  "labelMr": "बॅटरी व्यवस्थापन प्रणाली (बीएमएस)",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "battery management",
+   "battery management system",
+   "bms"
+  ]
+ },
+ {
+  "id": "high-voltage-safety",
+  "labelEn": "High-voltage EV safety",
+  "labelMr": "उच्च व्होल्टेज सुरक्षा",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "ev safety",
+   "high voltage safety",
+   "hv safety"
+  ]
+ },
+ {
+  "id": "autocad",
+  "labelEn": "AutoCAD",
+  "labelMr": "ऑटोकॅड",
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/76415d7f-0fde-4364-b45f-5c044580d2aa",
+  "sector": "auto",
+  "aliases": [
+   "2d drafting",
+   "auto cad",
+   "autocad"
+  ]
+ },
+ {
+  "id": "solidworks",
+  "labelEn": "SolidWorks",
+  "labelMr": "सॉलिडवर्क्स",
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "3d modelling",
+   "solid works",
+   "solidworks"
+  ]
+ },
+ {
+  "id": "catia",
+  "labelEn": "CATIA",
+  "labelMr": "कॅटिया",
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "catia"
+  ]
+ },
+ {
+  "id": "manual-drafting",
+  "labelEn": "Manual drafting (drawing board)",
+  "labelMr": "हाताने ड्राफ्टिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/432ab648-aece-4237-969f-8bca94fe181c",
+  "sector": "auto",
+  "aliases": [
+   "drawing board",
+   "hand drafting",
+   "manual drafting"
+  ]
+ },
+ {
+  "id": "cam-programming",
+  "labelEn": "CAM programming (Mastercam)",
+  "labelMr": "सीएएम प्रोग्रामिंग",
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/7a757fa5-9a6f-43ab-9e66-f8f4dba1ffcb",
+  "sector": "auto",
+  "aliases": [
+   "cam programming",
+   "cam software",
+   "mastercam"
+  ]
+ },
+ {
+  "id": "quality-inspection",
+  "labelEn": "Quality inspection",
+  "labelMr": "गुणवत्ता तपासणी",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/1a3660c2-011c-4e96-9b1d-529afc305428",
+  "sector": "auto",
+  "aliases": [
+   "inspection",
+   "qc",
+   "quality check",
+   "quality inspection",
+   "quality inspector"
+  ]
+ },
+ {
+  "id": "iso-9001-iatf",
+  "labelEn": "Quality systems (ISO 9001 / IATF 16949)",
+  "labelMr": "गुणवत्ता प्रणाली (आयएसओ ९००१)",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/8d4271ca-c9fd-40b3-875f-15f78332a49e",
+  "sector": "auto",
+  "aliases": [
+   "iatf",
+   "iatf 16949",
+   "iso 9001",
+   "qms",
+   "quality system"
+  ]
+ },
+ {
+  "id": "five-s-kaizen",
+  "labelEn": "5S and Kaizen",
+  "labelMr": "5S व कायझेन",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "5s",
+   "kaizen",
+   "poka yoke"
+  ]
+ },
+ {
+  "id": "lean-manufacturing",
+  "labelEn": "Lean manufacturing",
+  "labelMr": "लीन मॅन्युफॅक्चरिंग",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "lean",
+   "lean manufacturing",
+   "value stream mapping"
+  ]
+ },
+ {
+  "id": "spc-tools",
+  "labelEn": "SPC and 7 QC tools",
+  "labelMr": null,
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/0c77bcd5-b94a-475d-98e9-5a4327e4d726",
+  "sector": "auto",
+  "aliases": [
+   "7 qc tools",
+   "control chart",
+   "spc",
+   "statistical process control"
+  ]
+ },
+ {
+  "id": "assembly-line-operation",
+  "labelEn": "Assembly line operation",
+  "labelMr": "असेंब्ली लाइन ऑपरेशन",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "assembly line",
+   "line operator",
+   "machine operator",
+   "production operator"
+  ]
+ },
+ {
+  "id": "press-shop-operation",
+  "labelEn": "Power press operation",
+  "labelMr": "पॉवर प्रेस ऑपरेशन",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "power press",
+   "press operator",
+   "press shop"
+  ]
+ },
+ {
+  "id": "painting-coating",
+  "labelEn": "Industrial painting and coating",
+  "labelMr": "औद्योगिक रंगकाम व कोटिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/7d17343d-33ff-439f-ab59-169d9cbde2e2",
+  "sector": "auto",
+  "aliases": [
+   "paint shop",
+   "painting",
+   "powder coating",
+   "spray painting"
+  ]
+ },
+ {
+  "id": "cmm-operation",
+  "labelEn": "CMM operation",
+  "labelMr": null,
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "auto",
+  "aliases": [
+   "cmm",
+   "coordinate measuring machine"
+  ]
+ },
+ {
+  "id": "domestic-wiring",
+  "labelEn": "Domestic and industrial wiring",
+  "labelMr": "घरगुती व औद्योगिक वायरिंग",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "conduit wiring",
+   "electrical wiring",
+   "house wiring",
+   "industrial wiring",
+   "wiring"
+  ]
+ },
+ {
+  "id": "electrical-installation",
+  "labelEn": "Electrical installation and testing",
+  "labelMr": "विद्युत स्थापना व चाचणी",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/52797dce-911c-4e6d-b0cb-491f6469014f",
+  "sector": "electrical",
+  "aliases": [
+   "electrical installation",
+   "electrician",
+   "installation testing"
+  ]
+ },
+ {
+  "id": "motor-rewinding",
+  "labelEn": "Motor rewinding",
+  "labelMr": "मोटर रिवाइंडिंग",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "armature winding",
+   "motor winding",
+   "rewinding",
+   "winding"
+  ]
+ },
+ {
+  "id": "motor-control-panels",
+  "labelEn": "Motor control panels and starters",
+  "labelMr": "मोटर कंट्रोल पॅनेल व स्टार्टर",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "control panel",
+   "dol starter",
+   "mcc panel",
+   "panel wiring",
+   "star delta",
+   "starter"
+  ]
+ },
+ {
+  "id": "transformer-maintenance",
+  "labelEn": "Transformer maintenance",
+  "labelMr": "ट्रान्सफॉर्मर देखभाल",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/386774ac-fe5b-431a-b485-9aec0bf5c09e",
+  "sector": "electrical",
+  "aliases": [
+   "transformer",
+   "transformer maintenance"
+  ]
+ },
+ {
+  "id": "electrical-safety",
+  "labelEn": "Electrical safety and LOTO",
+  "labelMr": "विद्युत सुरक्षा व लॉकआउट",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/6360d655-3494-45f6-bfc6-d5f63afc355b",
+  "sector": "electrical",
+  "aliases": [
+   "electrical safety",
+   "lock out tag out",
+   "lockout tagout",
+   "loto"
+  ]
+ },
+ {
+  "id": "multimeter-use",
+  "labelEn": "Multimeter and test instruments",
+  "labelMr": "मल्टीमीटर व चाचणी उपकरणे",
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/270de514-3206-4cf9-b122-0f148ab06fa1",
+  "sector": "electrical",
+  "aliases": [
+   "clamp meter",
+   "megger",
+   "multimeter",
+   "tester"
+  ]
+ },
+ {
+  "id": "plc-programming",
+  "labelEn": "PLC programming",
+  "labelMr": "पीएलसी प्रोग्रामिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/6468e5fb-f3be-4025-87be-4b6556755c61",
+  "sector": "electrical",
+  "aliases": [
+   "ladder logic",
+   "ladder programming",
+   "plc",
+   "plc programming"
+  ]
+ },
+ {
+  "id": "siemens-plc",
+  "labelEn": "Siemens PLC (TIA Portal)",
+  "labelMr": "सीमेन्स पीएलसी (टीआयए पोर्टल)",
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "s7-1200",
+   "s7-300",
+   "siemens plc",
+   "step 7",
+   "tia portal"
+  ]
+ },
+ {
+  "id": "scada-hmi",
+  "labelEn": "SCADA and HMI",
+  "labelMr": "स्काडा व एचएमआय",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "hmi",
+   "scada",
+   "wincc"
+  ]
+ },
+ {
+  "id": "industrial-automation",
+  "labelEn": "Industrial automation",
+  "labelMr": "औद्योगिक ऑटोमेशन",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/f4a6e9f7-5cff-46c0-894c-59c20bb78694",
+  "sector": "electrical",
+  "aliases": [
+   "automation",
+   "factory automation",
+   "industrial automation"
+  ]
+ },
+ {
+  "id": "industrial-robotics",
+  "labelEn": "Industrial robotics",
+  "labelMr": "औद्योगिक रोबोटिक्स",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/e87ec79a-c9ff-46f5-84fa-7a0f394cdf40",
+  "sector": "electrical",
+  "aliases": [
+   "abb robot",
+   "fanuc robot",
+   "robot operator",
+   "robot programming",
+   "robotics"
+  ]
+ },
+ {
+  "id": "vfd-drives",
+  "labelEn": "VFD and servo drives",
+  "labelMr": "व्हीएफडी व सर्व्हो ड्राइव्ह",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "ac drive",
+   "servo drive",
+   "variable frequency drive",
+   "vfd"
+  ]
+ },
+ {
+  "id": "solar-pv-installation",
+  "labelEn": "Solar PV installation",
+  "labelMr": "सौर पीव्ही स्थापना",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/18d3f89a-6ac5-4ca6-bf93-0baec4e13bcd",
+  "sector": "electrical",
+  "aliases": [
+   "pv installation",
+   "solar installation",
+   "solar panel installation",
+   "solar pv",
+   "solar technician"
+  ]
+ },
+ {
+  "id": "rooftop-solar",
+  "labelEn": "Rooftop solar systems",
+  "labelMr": "छतावरील सौर प्रणाली",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "grid-tied solar",
+   "net metering",
+   "on-grid solar",
+   "rooftop solar"
+  ]
+ },
+ {
+  "id": "solar-inverter",
+  "labelEn": "Solar inverters and batteries",
+  "labelMr": "सौर इन्व्हर्टर व बॅटरी",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "hybrid inverter",
+   "inverter installation",
+   "off-grid",
+   "solar inverter"
+  ]
+ },
+ {
+  "id": "ev-charging-installation",
+  "labelEn": "EV charging station installation",
+  "labelMr": "ईव्ही चार्जिंग स्टेशन स्थापना",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "charging station",
+   "ev charger",
+   "ev charging",
+   "evse"
+  ]
+ },
+ {
+  "id": "electronics-soldering",
+  "labelEn": "Soldering and PCB assembly",
+  "labelMr": "सोल्डरिंग व पीसीबी जोडणी",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/f30a7ea4-77dd-452c-8a2d-b06c12606a7f",
+  "sector": "electrical",
+  "aliases": [
+   "pcb assembly",
+   "smd soldering",
+   "soldering",
+   "through hole"
+  ]
+ },
+ {
+  "id": "pcb-troubleshooting",
+  "labelEn": "PCB fault-finding",
+  "labelMr": "पीसीबी दोषनिवारण",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/e487f6f8-854d-4210-9658-4196f07cc209",
+  "sector": "electrical",
+  "aliases": [
+   "board level repair",
+   "chip level",
+   "fault finding",
+   "pcb repair"
+  ]
+ },
+ {
+  "id": "smt-operation",
+  "labelEn": "SMT line operation",
+  "labelMr": "एसएमटी लाइन ऑपरेशन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/88033500-d3a7-4a94-ba88-0f1680b9d017",
+  "sector": "electrical",
+  "aliases": [
+   "pick and place",
+   "reflow",
+   "smt",
+   "smt operator"
+  ]
+ },
+ {
+  "id": "embedded-systems",
+  "labelEn": "Embedded systems",
+  "labelMr": "एम्बेडेड सिस्टिम्स",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/2180bd8c-86de-4889-8165-adac902eee9d",
+  "sector": "electrical",
+  "aliases": [
+   "arduino",
+   "embedded",
+   "embedded c",
+   "microcontroller",
+   "raspberry pi"
+  ]
+ },
+ {
+  "id": "iot-systems",
+  "labelEn": "IoT systems",
+  "labelMr": "आयओटी प्रणाली",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/f049d050-12da-4e40-813a-2b5eb6df6b51",
+  "sector": "electrical",
+  "aliases": [
+   "internet of things",
+   "iot",
+   "lorawan",
+   "sensors",
+   "smart devices"
+  ]
+ },
+ {
+  "id": "cctv-installation",
+  "labelEn": "CCTV and security systems",
+  "labelMr": "सीसीटीव्ही व सुरक्षा प्रणाली",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "cctv",
+   "dvr",
+   "nvr",
+   "security camera",
+   "surveillance"
+  ]
+ },
+ {
+  "id": "hvac-servicing",
+  "labelEn": "HVAC servicing",
+  "labelMr": "एचव्हीएसी सर्व्हिसिंग",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "ac mechanic",
+   "ac servicing",
+   "ac technician",
+   "air conditioning",
+   "hvac"
+  ]
+ },
+ {
+  "id": "refrigerant-handling",
+  "labelEn": "Refrigerant handling and charging",
+  "labelMr": "रेफ्रिजरंट हाताळणी व गॅस चार्जिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/0b95eb5d-f3eb-4387-a0bb-094a394196c7",
+  "sector": "electrical",
+  "aliases": [
+   "brazing copper",
+   "gas charging",
+   "r32",
+   "r410a",
+   "refrigerant"
+  ]
+ },
+ {
+  "id": "refrigeration-systems",
+  "labelEn": "Refrigeration systems",
+  "labelMr": "रेफ्रिजरेशन प्रणाली",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "chiller",
+   "compressor",
+   "deep freezer",
+   "refrigeration"
+  ]
+ },
+ {
+  "id": "crt-tv-repair",
+  "labelEn": "CRT TV repair",
+  "labelMr": "सीआरटी टीव्ही दुरुस्ती",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "colour tv repair",
+   "crt television",
+   "crt tv",
+   "picture tube"
+  ]
+ },
+ {
+  "id": "lineman-work",
+  "labelEn": "Overhead line work",
+  "labelMr": "लाइनमन काम",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/0c627853-241e-405b-9044-aaff6bca133e",
+  "sector": "electrical",
+  "aliases": [
+   "ht line",
+   "lineman",
+   "lt line",
+   "overhead lines",
+   "pole climbing"
+  ]
+ },
+ {
+  "id": "cable-jointing",
+  "labelEn": "Cable jointing and termination",
+  "labelMr": "केबल जॉइंटिंग व टर्मिनेशन",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "cable jointing",
+   "cable laying",
+   "cable termination",
+   "ht cable"
+  ]
+ },
+ {
+  "id": "earthing-systems",
+  "labelEn": "Earthing and lightning protection",
+  "labelMr": "अर्थिंग व वीज संरक्षण",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "earthing",
+   "grounding",
+   "lightning arrester"
+  ]
+ },
+ {
+  "id": "electrical-drawing",
+  "labelEn": "Electrical drawings and schematics",
+  "labelMr": "विद्युत रेखाचित्रे व आकृत्या",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/fe96f581-4905-4282-819c-922c68bda989",
+  "sector": "electrical",
+  "aliases": [
+   "electrical drawing",
+   "schematic",
+   "single line diagram",
+   "sld",
+   "wiring diagram"
+  ]
+ },
+ {
+  "id": "energy-auditing",
+  "labelEn": "Energy auditing",
+  "labelMr": "ऊर्जा लेखापरीक्षण",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/0ad6d5e8-593f-4191-843c-439b23a468ca",
+  "sector": "electrical",
+  "aliases": [
+   "energy audit",
+   "energy auditor",
+   "energy efficiency"
+  ]
+ },
+ {
+  "id": "home-appliance-repair",
+  "labelEn": "Home appliance repair",
+  "labelMr": "घरगुती उपकरण दुरुस्ती",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/aeb5c424-120a-4d80-82a9-e24c5044714c",
+  "sector": "electrical",
+  "aliases": [
+   "appliance repair",
+   "microwave repair",
+   "mixer repair",
+   "washing machine repair"
+  ]
+ },
+ {
+  "id": "mobile-phone-repair",
+  "labelEn": "Mobile phone repair",
+  "labelMr": "मोबाईल दुरुस्ती",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/55cd5608-1497-4ed1-96d0-cb9494749a09",
+  "sector": "electrical",
+  "aliases": [
+   "mobile repair",
+   "mobile technician",
+   "smartphone repair"
+  ]
+ },
+ {
+  "id": "drone-assembly",
+  "labelEn": "Drone assembly and operation",
+  "labelMr": "ड्रोन जोडणी व संचालन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/a521903b-aa32-4954-9790-961b0df1261f",
+  "sector": "electrical",
+  "aliases": [
+   "drone",
+   "drone pilot",
+   "drone technician",
+   "uav"
+  ]
+ },
+ {
+  "id": "electrical-estimation",
+  "labelEn": "Electrical estimation and costing",
+  "labelMr": "विद्युत अंदाजपत्रक",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "bill of quantities",
+   "boq",
+   "costing",
+   "estimation"
+  ]
+ },
+ {
+  "id": "ht-lt-switchgear",
+  "labelEn": "HT/LT switchgear",
+  "labelMr": null,
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "acb",
+   "ht panel",
+   "mccb",
+   "switchgear",
+   "vcb"
+  ]
+ },
+ {
+  "id": "dg-set-maintenance",
+  "labelEn": "DG set maintenance",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "dg set",
+   "diesel generator",
+   "genset"
+  ]
+ },
+ {
+  "id": "battery-maintenance",
+  "labelEn": "Lead-acid battery maintenance",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "electrical",
+  "aliases": [
+   "battery charging",
+   "battery maintenance",
+   "lead acid"
+  ]
+ },
+ {
+  "id": "analog-electronics",
+  "labelEn": "Analog electronics basics",
+  "labelMr": null,
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/557d1221-0235-4a48-ada5-8fca73443627",
+  "sector": "electrical",
+  "aliases": [
+   "analog circuits",
+   "basic electronics",
+   "op-amp",
+   "transistors"
+  ]
+ },
+ {
+  "id": "python",
+  "labelEn": "Python",
+  "labelMr": "पायथन",
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+  "sector": "it",
+  "aliases": [
+   "django",
+   "pandas",
+   "python"
+  ]
+ },
+ {
+  "id": "sql",
+  "labelEn": "SQL",
+  "labelMr": "एसक्यूएल",
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/598de5b0-5b58-4ea7-8058-a4bc4d18c742",
+  "sector": "it",
+  "aliases": [
+   "database queries",
+   "ms sql",
+   "mysql",
+   "postgresql",
+   "sql"
+  ]
+ },
+ {
+  "id": "java",
+  "labelEn": "Java",
+  "labelMr": "जावा",
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/19a8293b-8e95-4de3-983f-77484079c389",
+  "sector": "it",
+  "aliases": [
+   "j2ee",
+   "java",
+   "spring boot"
+  ]
+ },
+ {
+  "id": "javascript",
+  "labelEn": "JavaScript",
+  "labelMr": "जावास्क्रिप्ट",
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/3cd569a2-4f88-4c1e-9995-8dce8c5e51a7",
+  "sector": "it",
+  "aliases": [
+   "es6",
+   "javascript",
+   "js",
+   "typescript"
+  ]
+ },
+ {
+  "id": "react",
+  "labelEn": "React",
+  "labelMr": "रिअ‍ॅक्ट",
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "react",
+   "react native",
+   "react.js",
+   "reactjs"
+  ]
+ },
+ {
+  "id": "nodejs",
+  "labelEn": "Node.js",
+  "labelMr": null,
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "express.js",
+   "node.js",
+   "nodejs"
+  ]
+ },
+ {
+  "id": "html-css",
+  "labelEn": "HTML and CSS",
+  "labelMr": "एचटीएमएल व सीएसएस",
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/0af062de-eb43-41e9-9b96-249e2cd22d26",
+  "sector": "it",
+  "aliases": [
+   "bootstrap",
+   "css",
+   "html",
+   "tailwind"
+  ]
+ },
+ {
+  "id": "dotnet",
+  "labelEn": "C# and .NET",
+  "labelMr": null,
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/4c016b68-4116-468c-9dc6-42710c239e4a",
+  "sector": "it",
+  "aliases": [
+   ".net",
+   "asp.net",
+   "c#",
+   "dot net"
+  ]
+ },
+ {
+  "id": "php",
+  "labelEn": "PHP",
+  "labelMr": null,
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/4350c38d-0fe9-4ca7-bab9-40ed7f72b04f",
+  "sector": "it",
+  "aliases": [
+   "laravel",
+   "php",
+   "wordpress"
+  ]
+ },
+ {
+  "id": "android-development",
+  "labelEn": "Android development",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/d8829a1d-dbde-435b-b921-29d6462f35c9",
+  "sector": "it",
+  "aliases": [
+   "android",
+   "android developer",
+   "kotlin"
+  ]
+ },
+ {
+  "id": "web-development",
+  "labelEn": "Web development",
+  "labelMr": "वेब डेव्हलपमेंट",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/69bbd53f-fbb0-4476-b4b2-ef7844464e28",
+  "sector": "it",
+  "aliases": [
+   "front end",
+   "frontend",
+   "full stack",
+   "web developer",
+   "web development"
+  ]
+ },
+ {
+  "id": "software-testing",
+  "labelEn": "Software testing",
+  "labelMr": "सॉफ्टवेअर टेस्टिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/913e7e83-b8f8-4574-b1ca-1b38f3fd974a",
+  "sector": "it",
+  "aliases": [
+   "manual testing",
+   "qa",
+   "software testing",
+   "test cases",
+   "tester"
+  ]
+ },
+ {
+  "id": "test-automation",
+  "labelEn": "Test automation (Selenium)",
+  "labelMr": null,
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/7557f0f4-b8bc-4ac0-b91e-222ab1ba744f",
+  "sector": "it",
+  "aliases": [
+   "automation testing",
+   "selenium",
+   "test automation"
+  ]
+ },
+ {
+  "id": "data-analysis",
+  "labelEn": "Data analysis",
+  "labelMr": "डेटा विश्लेषण",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/2b92a5b2-6758-4ee3-9fb4-b6387a55cc8f",
+  "sector": "it",
+  "aliases": [
+   "analytics",
+   "data analysis",
+   "data analyst",
+   "data analytics"
+  ]
+ },
+ {
+  "id": "power-bi",
+  "labelEn": "Power BI",
+  "labelMr": "पॉवर बीआय",
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "dax",
+   "power bi",
+   "powerbi"
+  ]
+ },
+ {
+  "id": "tableau",
+  "labelEn": "Tableau",
+  "labelMr": null,
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "tableau"
+  ]
+ },
+ {
+  "id": "ms-excel-advanced",
+  "labelEn": "Advanced Excel",
+  "labelMr": "प्रगत एक्सेल",
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "advanced excel",
+   "macros",
+   "pivot table",
+   "vlookup"
+  ]
+ },
+ {
+  "id": "statistics",
+  "labelEn": "Statistics",
+  "labelMr": "सांख्यिकी",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/7ee4c2ea-b349-4bd2-81a3-ec31475d4833",
+  "sector": "it",
+  "aliases": [
+   "regression",
+   "statistical analysis",
+   "statistics"
+  ]
+ },
+ {
+  "id": "machine-learning",
+  "labelEn": "Machine learning",
+  "labelMr": "मशीन लर्निंग",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433",
+  "sector": "it",
+  "aliases": [
+   "deep learning",
+   "machine learning",
+   "ml",
+   "scikit-learn"
+  ]
+ },
+ {
+  "id": "generative-ai",
+  "labelEn": "Generative AI and prompt engineering",
+  "labelMr": "जनरेटिव्ह एआय",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "chatgpt",
+   "genai",
+   "generative ai",
+   "llm",
+   "prompt engineering"
+  ]
+ },
+ {
+  "id": "cloud-computing",
+  "labelEn": "Cloud computing",
+  "labelMr": "क्लाउड कॉम्प्युटिंग",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/bd14968e-e409-45af-b362-3495ed7b10e0",
+  "sector": "it",
+  "aliases": [
+   "cloud",
+   "cloud computing",
+   "cloud services"
+  ]
+ },
+ {
+  "id": "aws",
+  "labelEn": "AWS",
+  "labelMr": "एडब्ल्यूएस",
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "amazon web services",
+   "aws",
+   "ec2",
+   "s3"
+  ]
+ },
+ {
+  "id": "azure",
+  "labelEn": "Microsoft Azure",
+  "labelMr": null,
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "azure",
+   "microsoft azure"
+  ]
+ },
+ {
+  "id": "devops",
+  "labelEn": "DevOps and CI/CD",
+  "labelMr": "डेव्हऑप्स",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/f0de4973-0a70-4644-8fd4-3a97080476f4",
+  "sector": "it",
+  "aliases": [
+   "ci/cd",
+   "devops",
+   "docker",
+   "jenkins",
+   "kubernetes"
+  ]
+ },
+ {
+  "id": "linux-administration",
+  "labelEn": "Linux administration",
+  "labelMr": "लिनक्स प्रशासन",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "bash",
+   "linux",
+   "shell scripting",
+   "unix"
+  ]
+ },
+ {
+  "id": "networking",
+  "labelEn": "Computer networking",
+  "labelMr": "संगणक नेटवर्किंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/f9e788df-d68a-4f92-92c7-80e135fc35ff",
+  "sector": "it",
+  "aliases": [
+   "ccna",
+   "lan",
+   "networking",
+   "routers",
+   "switches",
+   "tcp/ip"
+  ]
+ },
+ {
+  "id": "cybersecurity-basics",
+  "labelEn": "Cybersecurity basics",
+  "labelMr": "सायबर सुरक्षा मूलतत्त्वे",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/8088750d-8388-4170-a76f-48354c469c44",
+  "sector": "it",
+  "aliases": [
+   "cyber security",
+   "cybersecurity",
+   "firewall",
+   "information security",
+   "soc analyst"
+  ]
+ },
+ {
+  "id": "it-support",
+  "labelEn": "Desktop and IT support",
+  "labelMr": "डेस्कटॉप व आयटी सपोर्ट",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/db36f7f1-5900-45bd-9ffb-f2b19c4362ac",
+  "sector": "it",
+  "aliases": [
+   "desktop support",
+   "hardware support",
+   "helpdesk",
+   "it support",
+   "service desk"
+  ]
+ },
+ {
+  "id": "computer-hardware",
+  "labelEn": "Computer hardware and assembly",
+  "labelMr": "संगणक हार्डवेअर",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/c77db25e-bb51-4a10-b2ad-99b48b1b4a37",
+  "sector": "it",
+  "aliases": [
+   "computer assembly",
+   "hardware",
+   "hardware and networking"
+  ]
+ },
+ {
+  "id": "data-entry",
+  "labelEn": "Data entry",
+  "labelMr": "डेटा एंट्री",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "back office",
+   "data entry",
+   "data entry operator",
+   "typing speed"
+  ]
+ },
+ {
+  "id": "typewriting",
+  "labelEn": "Typewriting (manual typewriter)",
+  "labelMr": "टंकलेखन",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "manual typing",
+   "typewriter",
+   "typewriting"
+  ]
+ },
+ {
+  "id": "dos-basic-computing",
+  "labelEn": "DOS and legacy computer operation",
+  "labelMr": "डॉस व जुने संगणक संचालन",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "dos",
+   "foxpro",
+   "ms-dos",
+   "windows xp"
+  ]
+ },
+ {
+  "id": "ms-office",
+  "labelEn": "MS Office",
+  "labelMr": "एमएस ऑफिस",
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/cf310cff-0d28-4dbc-9dbb-cc500a3196c2",
+  "sector": "it",
+  "aliases": [
+   "microsoft office",
+   "ms office",
+   "ms word",
+   "powerpoint"
+  ]
+ },
+ {
+  "id": "customer-support",
+  "labelEn": "Customer support (voice/chat)",
+  "labelMr": "ग्राहक सेवा (व्हॉइस/चॅट)",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/75dfe1ee-5935-42ce-b820-697f827825c3",
+  "sector": "it",
+  "aliases": [
+   "bpo",
+   "call centre",
+   "chat process",
+   "customer service",
+   "customer support",
+   "voice process"
+  ]
+ },
+ {
+  "id": "crm-software",
+  "labelEn": "CRM software",
+  "labelMr": null,
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/9889b795-d755-41b2-8afd-2e3c87a65a38",
+  "sector": "it",
+  "aliases": [
+   "crm",
+   "salesforce",
+   "zoho crm"
+  ]
+ },
+ {
+  "id": "api-development",
+  "labelEn": "REST API development",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "api",
+   "api development",
+   "microservices",
+   "rest api"
+  ]
+ },
+ {
+  "id": "git",
+  "labelEn": "Git version control",
+  "labelMr": null,
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "it",
+  "aliases": [
+   "git",
+   "github",
+   "gitlab",
+   "version control"
+  ]
+ },
+ {
+  "id": "database-administration",
+  "labelEn": "Database administration",
+  "labelMr": "डेटाबेस प्रशासन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/0868eef3-2213-4572-9343-74931345a7d3",
+  "sector": "it",
+  "aliases": [
+   "database administration",
+   "database administrator",
+   "dba",
+   "oracle"
+  ]
+ },
+ {
+  "id": "etl-data-pipelines",
+  "labelEn": "ETL and data pipelines",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/9d0d89be-bffa-4393-b6f6-8d05bea49051",
+  "sector": "it",
+  "aliases": [
+   "data engineering",
+   "data pipeline",
+   "etl",
+   "informatica"
+  ]
+ },
+ {
+  "id": "ui-ux-design",
+  "labelEn": "UI/UX design",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/fd33c66c-70c4-40e6-b87c-5495bd3bf26e",
+  "sector": "it",
+  "aliases": [
+   "figma",
+   "ui design",
+   "ui/ux",
+   "ux design"
+  ]
+ },
+ {
+  "id": "digital-marketing",
+  "labelEn": "Digital marketing",
+  "labelMr": "डिजिटल मार्केटिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/43dfbe7f-9e10-4871-b171-e5076737b4cf",
+  "sector": "it",
+  "aliases": [
+   "digital marketing",
+   "google ads",
+   "seo",
+   "social media marketing"
+  ]
+ },
+ {
+  "id": "agile-scrum",
+  "labelEn": "Agile and Scrum",
+  "labelMr": null,
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4",
+  "sector": "it",
+  "aliases": [
+   "agile",
+   "jira",
+   "scrum",
+   "sprint"
+  ]
+ },
+ {
+  "id": "warehouse-operations",
+  "labelEn": "Warehouse operations",
+  "labelMr": "गोदाम कामकाज",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/089ddb19-1c7a-43ff-ba64-070f7ce4787a",
+  "sector": "logistics",
+  "aliases": [
+   "warehouse",
+   "warehouse executive",
+   "warehouse operations",
+   "warehousing"
+  ]
+ },
+ {
+  "id": "inventory-management",
+  "labelEn": "Inventory management",
+  "labelMr": "साठा व्यवस्थापन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/5aaf2780-04d7-4bbf-8b06-af36eafe8eba",
+  "sector": "logistics",
+  "aliases": [
+   "inventory",
+   "inventory control",
+   "stock keeping",
+   "stock management"
+  ]
+ },
+ {
+  "id": "wms-software",
+  "labelEn": "Warehouse management systems (WMS)",
+  "labelMr": "वेअरहाउस मॅनेजमेंट सिस्टिम (डब्ल्यूएमएस)",
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/7c821387-b428-4f75-b5a7-7b038aa81cfd",
+  "sector": "logistics",
+  "aliases": [
+   "warehouse management system",
+   "wms"
+  ]
+ },
+ {
+  "id": "picking-packing",
+  "labelEn": "Order picking and packing",
+  "labelMr": "ऑर्डर पिकिंग व पॅकिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/ee5e2297-39cc-4ed6-89e5-d58016118a7f",
+  "sector": "logistics",
+  "aliases": [
+   "order fulfilment",
+   "packer",
+   "packing",
+   "picker",
+   "picking"
+  ]
+ },
+ {
+  "id": "forklift-operation",
+  "labelEn": "Forklift operation",
+  "labelMr": "फोर्कलिफ्ट चालवणे",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/28cb374e-6261-4133-8371-f9a5470145da",
+  "sector": "logistics",
+  "aliases": [
+   "forklift",
+   "forklift licence",
+   "forklift operator",
+   "reach truck",
+   "stacker"
+  ]
+ },
+ {
+  "id": "material-handling",
+  "labelEn": "Material handling",
+  "labelMr": "माल हाताळणी",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "loader",
+   "loading",
+   "material handling",
+   "unloading"
+  ]
+ },
+ {
+  "id": "barcode-rfid",
+  "labelEn": "Barcode and RFID scanning",
+  "labelMr": "बारकोड व आरएफआयडी स्कॅनिंग",
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/fd79b3c4-e264-41b5-bada-49ba5f317588",
+  "sector": "logistics",
+  "aliases": [
+   "barcode",
+   "handheld scanner",
+   "rfid",
+   "scanner"
+  ]
+ },
+ {
+  "id": "sap-mm",
+  "labelEn": "SAP MM",
+  "labelMr": "एसएपी एमएम",
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "sap",
+   "sap erp",
+   "sap materials management",
+   "sap mm"
+  ]
+ },
+ {
+  "id": "supply-chain-management",
+  "labelEn": "Supply chain management",
+  "labelMr": "पुरवठा साखळी व्यवस्थापन",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/f929c89e-c363-4132-a918-e021d57b307c",
+  "sector": "logistics",
+  "aliases": [
+   "scm",
+   "supply chain",
+   "supply chain management"
+  ]
+ },
+ {
+  "id": "procurement",
+  "labelEn": "Procurement and purchasing",
+  "labelMr": "खरेदी व्यवस्थापन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/9e9a4209-c7cf-4f6e-973e-dc2ffadccc74",
+  "sector": "logistics",
+  "aliases": [
+   "procurement",
+   "purchase",
+   "purchasing",
+   "sourcing",
+   "vendor management"
+  ]
+ },
+ {
+  "id": "logistics-coordination",
+  "labelEn": "Logistics coordination",
+  "labelMr": "लॉजिस्टिक्स समन्वय",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/953c0b65-537a-42fe-a90b-26cd36c64361",
+  "sector": "logistics",
+  "aliases": [
+   "dispatch",
+   "logistics",
+   "logistics coordinator",
+   "logistics executive"
+  ]
+ },
+ {
+  "id": "fleet-management",
+  "labelEn": "Fleet management",
+  "labelMr": "फ्लीट व्यवस्थापन",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "fleet",
+   "fleet management",
+   "tms",
+   "transport management"
+  ]
+ },
+ {
+  "id": "heavy-vehicle-driving",
+  "labelEn": "Heavy vehicle driving",
+  "labelMr": "अवजड वाहन चालवणे",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/8215bbba-2f6d-4530-bf41-904d871eaf72",
+  "sector": "logistics",
+  "aliases": [
+   "heavy driver",
+   "heavy vehicle",
+   "hmv licence",
+   "trailer",
+   "truck driver"
+  ]
+ },
+ {
+  "id": "light-vehicle-driving",
+  "labelEn": "Light vehicle driving",
+  "labelMr": "हलके वाहन चालवणे",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/2a82241a-216e-44d8-bb50-6b9a0ef82084",
+  "sector": "logistics",
+  "aliases": [
+   "car driver",
+   "lmv",
+   "lmv licence",
+   "van driver"
+  ]
+ },
+ {
+  "id": "two-wheeler-delivery",
+  "labelEn": "Two-wheeler delivery",
+  "labelMr": "दुचाकी डिलिव्हरी",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "bike delivery",
+   "delivery boy",
+   "delivery executive",
+   "delivery partner",
+   "last mile"
+  ]
+ },
+ {
+  "id": "route-planning",
+  "labelEn": "Route planning and navigation",
+  "labelMr": "मार्ग नियोजन",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "google maps",
+   "gps navigation",
+   "route optimisation",
+   "route planning"
+  ]
+ },
+ {
+  "id": "cold-chain-management",
+  "labelEn": "Cold chain management",
+  "labelMr": "शीतसाखळी व्यवस्थापन",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/3c20b802-06c0-42e8-8a39-a1ab0ba1832b",
+  "sector": "logistics",
+  "aliases": [
+   "cold chain",
+   "reefer",
+   "temperature controlled logistics"
+  ]
+ },
+ {
+  "id": "export-import-documentation",
+  "labelEn": "Export-import documentation",
+  "labelMr": "निर्यात-आयात दस्तऐवजीकरण",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/c4118654-695f-44bc-b9d3-1b26f3a955f8",
+  "sector": "logistics",
+  "aliases": [
+   "bill of lading",
+   "customs clearance",
+   "exim",
+   "export documentation",
+   "import export"
+  ]
+ },
+ {
+  "id": "gst-eway-bill",
+  "labelEn": "GST and e-way bill",
+  "labelMr": "जीएसटी व ई-वे बिल",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "e-way bill",
+   "eway bill",
+   "gst",
+   "gst returns"
+  ]
+ },
+ {
+  "id": "tally",
+  "labelEn": "Tally Prime / Tally ERP",
+  "labelMr": "टॅली",
+  "kind": "tool",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "tally",
+   "tally erp",
+   "tally prime"
+  ]
+ },
+ {
+  "id": "dispatch-documentation",
+  "labelEn": "Dispatch documentation (LR, challan)",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "delivery challan",
+   "dispatch documents",
+   "invoice",
+   "lr"
+  ]
+ },
+ {
+  "id": "demand-planning",
+  "labelEn": "Demand planning and forecasting",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/68e73bf6-2838-4705-86f4-e4bda4ac8a6f",
+  "sector": "logistics",
+  "aliases": [
+   "demand planning",
+   "forecasting",
+   "s&op"
+  ]
+ },
+ {
+  "id": "stock-audit",
+  "labelEn": "Stock audit and reconciliation",
+  "labelMr": "साठा लेखापरीक्षण",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "cycle count",
+   "physical verification",
+   "stock audit",
+   "stock reconciliation"
+  ]
+ },
+ {
+  "id": "packaging-labelling",
+  "labelEn": "Packaging and labelling",
+  "labelMr": "पॅकेजिंग व लेबलिंग",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "labeling",
+   "labelling",
+   "packaging"
+  ]
+ },
+ {
+  "id": "dangerous-goods-handling",
+  "labelEn": "Dangerous goods handling",
+  "labelMr": null,
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/5b0d14b1-0bf6-4f6b-b922-4becc213f0aa",
+  "sector": "logistics",
+  "aliases": [
+   "dangerous goods",
+   "hazardous material",
+   "hazmat"
+  ]
+ },
+ {
+  "id": "crane-operation",
+  "labelEn": "Crane and hoist operation",
+  "labelMr": "क्रेन चालवणे",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/c96ab6ac-cf85-4c91-86b5-7ac5bb14eb28",
+  "sector": "logistics",
+  "aliases": [
+   "crane",
+   "crane operator",
+   "eot crane",
+   "hoist"
+  ]
+ },
+ {
+  "id": "ecommerce-fulfilment",
+  "labelEn": "E-commerce fulfilment",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "e-commerce",
+   "ecommerce",
+   "fulfilment centre",
+   "returns processing"
+  ]
+ },
+ {
+  "id": "load-planning",
+  "labelEn": "Load and container planning",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/3c73898b-04a6-4e3a-b84a-3a032277c916",
+  "sector": "logistics",
+  "aliases": [
+   "container stuffing",
+   "load planning",
+   "truck loading plan"
+  ]
+ },
+ {
+  "id": "mis-reporting",
+  "labelEn": "MIS and KPI reporting",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "dashboard reporting",
+   "kpi reporting",
+   "mis",
+   "mis reports"
+  ]
+ },
+ {
+  "id": "3pl-operations",
+  "labelEn": "3PL operations",
+  "labelMr": null,
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "logistics",
+  "aliases": [
+   "3pl",
+   "third party logistics"
+  ]
+ },
+ {
+  "id": "food-safety-haccp",
+  "labelEn": "Food safety (HACCP)",
+  "labelMr": "अन्न सुरक्षा (एचएसीसीपी)",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/c6f3b73c-bf11-42a1-abd3-e3539d0853bf",
+  "sector": "food",
+  "aliases": [
+   "food safety",
+   "haccp",
+   "iso 22000"
+  ]
+ },
+ {
+  "id": "fssai-compliance",
+  "labelEn": "FSSAI compliance",
+  "labelMr": "एफएसएसएआय अनुपालन",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "food licence",
+   "fostac",
+   "fss act",
+   "fssai"
+  ]
+ },
+ {
+  "id": "gmp-hygiene",
+  "labelEn": "GMP and food hygiene",
+  "labelMr": "जीएमपी व अन्न स्वच्छता",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/bf7a45c4-0d72-4e6e-9da7-127b2b6656b7",
+  "sector": "food",
+  "aliases": [
+   "ghp",
+   "gmp",
+   "good manufacturing practice",
+   "hygiene",
+   "sanitation"
+  ]
+ },
+ {
+  "id": "food-processing-operations",
+  "labelEn": "Food processing operations",
+  "labelMr": "अन्न प्रक्रिया कामकाज",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/ed883d6b-cd2a-4d87-8bef-13f66f80fcb6",
+  "sector": "food",
+  "aliases": [
+   "food plant",
+   "food processing",
+   "processing plant",
+   "production line food"
+  ]
+ },
+ {
+  "id": "fruit-vegetable-processing",
+  "labelEn": "Fruit and vegetable processing",
+  "labelMr": "फळे व भाजीपाला प्रक्रिया",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/8eb292fb-55f2-4952-b05d-1cbc205f515c",
+  "sector": "food",
+  "aliases": [
+   "dehydration",
+   "fruit processing",
+   "jam",
+   "pickle",
+   "pulp"
+  ]
+ },
+ {
+  "id": "dairy-processing",
+  "labelEn": "Dairy processing",
+  "labelMr": "दुग्ध प्रक्रिया",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/b5cd2ce8-1c77-4028-b23f-3b1194da03ae",
+  "sector": "food",
+  "aliases": [
+   "dairy",
+   "dairy plant",
+   "milk processing",
+   "paneer",
+   "pasteurisation"
+  ]
+ },
+ {
+  "id": "bakery-production",
+  "labelEn": "Bakery production",
+  "labelMr": "बेकरी उत्पादन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/e33ad426-d088-4136-b9f4-8e9c70522932",
+  "sector": "food",
+  "aliases": [
+   "baker",
+   "bakery",
+   "baking",
+   "biscuits"
+  ]
+ },
+ {
+  "id": "grain-milling",
+  "labelEn": "Grain and pulse milling",
+  "labelMr": "धान्य व डाळ मिलिंग",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "dal mill",
+   "flour mill",
+   "grain milling",
+   "rice mill"
+  ]
+ },
+ {
+  "id": "sugar-processing",
+  "labelEn": "Sugar and jaggery processing",
+  "labelMr": "साखर व गूळ प्रक्रिया",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "cane crushing",
+   "jaggery",
+   "sugar factory",
+   "sugar mill"
+  ]
+ },
+ {
+  "id": "wine-beverage-production",
+  "labelEn": "Wine and beverage production",
+  "labelMr": "वाईन व पेय उत्पादन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/d560f55d-9718-48ba-90a6-5c759b39438c",
+  "sector": "food",
+  "aliases": [
+   "beverages",
+   "fermentation",
+   "wine",
+   "winery"
+  ]
+ },
+ {
+  "id": "spice-processing",
+  "labelEn": "Spice processing",
+  "labelMr": "मसाला प्रक्रिया",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "masala",
+   "spice grinding",
+   "spices"
+  ]
+ },
+ {
+  "id": "food-packaging-machines",
+  "labelEn": "Food packaging machine operation",
+  "labelMr": "अन्न पॅकेजिंग मशीन चालवणे",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/01fec851-b5f4-419b-940a-3b4c835adfa8",
+  "sector": "food",
+  "aliases": [
+   "ffs machine",
+   "filling machine",
+   "packaging machine",
+   "sealing machine"
+  ]
+ },
+ {
+  "id": "retort-canning",
+  "labelEn": "Canning and retort processing",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/0df0e777-3ecc-4c83-9220-d121a49c672e",
+  "sector": "food",
+  "aliases": [
+   "canned food",
+   "canning",
+   "retort"
+  ]
+ },
+ {
+  "id": "food-lab-testing",
+  "labelEn": "Food laboratory testing",
+  "labelMr": "अन्न प्रयोगशाळा चाचणी",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "chemical analysis",
+   "food microbiology",
+   "food testing",
+   "lab analysis"
+  ]
+ },
+ {
+  "id": "quality-control-food",
+  "labelEn": "Food quality control",
+  "labelMr": "अन्न गुणवत्ता नियंत्रण",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "food quality",
+   "qa/qc food",
+   "quality control food"
+  ]
+ },
+ {
+  "id": "cold-storage-operation",
+  "labelEn": "Cold storage operation",
+  "labelMr": "शीतगृह संचालन",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "blast freezer",
+   "cold room",
+   "cold storage",
+   "ripening chamber"
+  ]
+ },
+ {
+  "id": "post-harvest-management",
+  "labelEn": "Post-harvest management",
+  "labelMr": "काढणीपश्चात व्यवस्थापन",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "pack house",
+   "packhouse",
+   "post harvest",
+   "post-harvest"
+  ]
+ },
+ {
+  "id": "grading-sorting",
+  "labelEn": "Grading and sorting of produce",
+  "labelMr": "शेतमाल प्रतवारी व वर्गीकरण",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/635b2af3-453e-45af-9a35-60d90641d5ed",
+  "sector": "food",
+  "aliases": [
+   "grading",
+   "sorting",
+   "sorting and grading"
+  ]
+ },
+ {
+  "id": "agri-procurement",
+  "labelEn": "Agri produce procurement",
+  "labelMr": "शेतमाल खरेदी",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "agri procurement",
+   "apmc",
+   "farmer sourcing",
+   "mandi"
+  ]
+ },
+ {
+  "id": "fpo-management",
+  "labelEn": "FPO management",
+  "labelMr": "शेतकरी उत्पादक कंपनी व्यवस्थापन",
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "farmer producer company",
+   "farmer producer organisation",
+   "fpo"
+  ]
+ },
+ {
+  "id": "drip-irrigation",
+  "labelEn": "Drip irrigation systems",
+  "labelMr": "ठिबक सिंचन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/700ea222-8139-4c48-95cf-014855565530",
+  "sector": "food",
+  "aliases": [
+   "drip",
+   "drip irrigation",
+   "micro irrigation",
+   "sprinkler"
+  ]
+ },
+ {
+  "id": "organic-farming",
+  "labelEn": "Organic farming",
+  "labelMr": "सेंद्रिय शेती",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/186da517-9a3e-41cd-9158-4001e3694459",
+  "sector": "food",
+  "aliases": [
+   "organic",
+   "organic certification",
+   "organic farming"
+  ]
+ },
+ {
+  "id": "greenhouse-cultivation",
+  "labelEn": "Protected cultivation (polyhouse)",
+  "labelMr": "हरितगृह शेती",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/9b115fce-f6ee-4d20-96f5-847fc6b11c6b",
+  "sector": "food",
+  "aliases": [
+   "greenhouse",
+   "polyhouse",
+   "protected cultivation",
+   "shade net"
+  ]
+ },
+ {
+  "id": "farm-machinery-operation",
+  "labelEn": "Farm machinery operation",
+  "labelMr": "शेती यंत्रसामग्री चालवणे",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/00dd3271-077f-4a12-a958-e297fdd724ce",
+  "sector": "food",
+  "aliases": [
+   "farm machinery",
+   "harvester",
+   "tractor",
+   "tractor driver"
+  ]
+ },
+ {
+  "id": "poultry-management",
+  "labelEn": "Poultry management",
+  "labelMr": "कुक्कुटपालन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/e04b5fe4-9664-48c0-8268-b4c35d908082",
+  "sector": "food",
+  "aliases": [
+   "broiler",
+   "hatchery",
+   "layer farm",
+   "poultry"
+  ]
+ },
+ {
+  "id": "dairy-farming",
+  "labelEn": "Dairy farming",
+  "labelMr": "दुग्धव्यवसाय",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "animal husbandry",
+   "cattle",
+   "dairy farming",
+   "milking"
+  ]
+ },
+ {
+  "id": "boiler-operation",
+  "labelEn": "Boiler operation",
+  "labelMr": "बॉयलर संचालन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/68bb49f4-59b7-489e-8903-4aea01fb5fc3",
+  "sector": "food",
+  "aliases": [
+   "boiler",
+   "boiler attendant",
+   "boiler operator"
+  ]
+ },
+ {
+  "id": "commercial-cooking",
+  "labelEn": "Commercial cooking",
+  "labelMr": "व्यावसायिक स्वयंपाक",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/f3934441-4bff-4076-9945-e6c51a01c467",
+  "sector": "food",
+  "aliases": [
+   "chef",
+   "commis",
+   "cooking",
+   "food production",
+   "kitchen"
+  ]
+ },
+ {
+  "id": "batch-traceability",
+  "labelEn": "Batch records and traceability",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/f81ff65a-f235-41ea-af47-620e535c51e0",
+  "sector": "food",
+  "aliases": [
+   "batch coding",
+   "batch records",
+   "traceability"
+  ]
+ },
+ {
+  "id": "pest-control-food",
+  "labelEn": "Pest control in food premises",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/08881cb7-5331-4b11-9442-4d7c9fce749e",
+  "sector": "food",
+  "aliases": [
+   "fumigation",
+   "pest control"
+  ]
+ },
+ {
+  "id": "fruit-ripening",
+  "labelEn": "Fruit ripening technology",
+  "labelMr": null,
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "banana ripening",
+   "ethylene",
+   "ripening"
+  ]
+ },
+ {
+  "id": "aquaculture",
+  "labelEn": "Aquaculture",
+  "labelMr": null,
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "food",
+  "aliases": [
+   "aquaculture",
+   "fish farming",
+   "fisheries"
+  ]
+ },
+ {
+  "id": "patient-care",
+  "labelEn": "Patient care",
+  "labelMr": "रुग्णसेवा",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/24f980ba-b44f-4739-b563-205104c3190d",
+  "sector": "health",
+  "aliases": [
+   "bedside care",
+   "gda",
+   "general duty assistant",
+   "patient care"
+  ]
+ },
+ {
+  "id": "vital-signs-monitoring",
+  "labelEn": "Vital signs monitoring",
+  "labelMr": "जीवनावश्यक चिन्हे तपासणी",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/60f826be-0c1b-413b-aad5-4f7546622e16",
+  "sector": "health",
+  "aliases": [
+   "bp monitoring",
+   "pulse",
+   "temperature monitoring",
+   "vital signs",
+   "vitals"
+  ]
+ },
+ {
+  "id": "infection-control",
+  "labelEn": "Infection control",
+  "labelMr": "संसर्ग नियंत्रण",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/6d13053b-ee35-492c-8976-8178420df398",
+  "sector": "health",
+  "aliases": [
+   "autoclave",
+   "infection control",
+   "sterilisation",
+   "sterilization"
+  ]
+ },
+ {
+  "id": "biomedical-waste-management",
+  "labelEn": "Biomedical waste management",
+  "labelMr": "जैववैद्यकीय कचरा व्यवस्थापन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/6f900dcb-c7ff-4d97-8015-9c45b99f7097",
+  "sector": "health",
+  "aliases": [
+   "bio medical waste",
+   "biomedical waste",
+   "bmw"
+  ]
+ },
+ {
+  "id": "first-aid-cpr",
+  "labelEn": "First aid and CPR",
+  "labelMr": "प्रथमोपचार व सीपीआर",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/1d21f6ad-340f-45da-a0a3-4e83867f47a6",
+  "sector": "health",
+  "aliases": [
+   "basic life support",
+   "bls",
+   "cpr",
+   "first aid"
+  ]
+ },
+ {
+  "id": "phlebotomy",
+  "labelEn": "Phlebotomy (blood collection)",
+  "labelMr": "रक्तनमुना संकलन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/0646be77-a425-40da-8577-f77d1198c67f",
+  "sector": "health",
+  "aliases": [
+   "blood collection",
+   "phlebotomist",
+   "phlebotomy",
+   "venipuncture"
+  ]
+ },
+ {
+  "id": "lab-sample-processing",
+  "labelEn": "Lab sample processing",
+  "labelMr": "प्रयोगशाळा नमुना प्रक्रिया",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/cd4b9e72-a18d-44bd-b227-14bbdd162dc1",
+  "sector": "health",
+  "aliases": [
+   "dmlt",
+   "lab technician",
+   "sample collection",
+   "sample processing"
+  ]
+ },
+ {
+  "id": "clinical-biochemistry",
+  "labelEn": "Clinical biochemistry",
+  "labelMr": "क्लिनिकल बायोकेमिस्ट्री",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/3f24c61e-8dbd-4a42-baa5-38d8399a2e37",
+  "sector": "health",
+  "aliases": [
+   "biochemistry",
+   "biochemistry analyser",
+   "clinical chemistry"
+  ]
+ },
+ {
+  "id": "hematology",
+  "labelEn": "Haematology testing",
+  "labelMr": "रक्तविज्ञान चाचणी",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/11335fcc-23af-4afe-bfaf-c0c25abcb5b0",
+  "sector": "health",
+  "aliases": [
+   "cbc",
+   "haematology",
+   "hematology"
+  ]
+ },
+ {
+  "id": "microscopy",
+  "labelEn": "Microscopy",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/deed7f6d-328d-4f67-b74e-9b83180c1c5c",
+  "sector": "health",
+  "aliases": [
+   "microscope",
+   "microscopy",
+   "slide preparation"
+  ]
+ },
+ {
+  "id": "pharmacy-dispensing",
+  "labelEn": "Pharmacy dispensing",
+  "labelMr": "औषध वितरण",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/46b391a6-bbd9-4e80-afb0-ad205101af59",
+  "sector": "health",
+  "aliases": [
+   "chemist",
+   "dispensing",
+   "pharmacist assistant",
+   "pharmacy"
+  ]
+ },
+ {
+  "id": "drug-inventory",
+  "labelEn": "Drug stock and inventory",
+  "labelMr": "औषध साठा व्यवस्थापन",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "health",
+  "aliases": [
+   "drug inventory",
+   "expiry management",
+   "pharmacy stock"
+  ]
+ },
+ {
+  "id": "medical-terminology",
+  "labelEn": "Medical terminology",
+  "labelMr": "वैद्यकीय परिभाषा",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/2806260f-6399-4add-8f11-070141423f9d",
+  "sector": "health",
+  "aliases": [
+   "medical terminology",
+   "medical terms"
+  ]
+ },
+ {
+  "id": "nursing-procedures",
+  "labelEn": "Nursing procedures",
+  "labelMr": "शुश्रूषा प्रक्रिया",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/f98e06f5-a09a-4356-b6a8-d55a7d3c5356",
+  "sector": "health",
+  "aliases": [
+   "anm",
+   "gnm",
+   "injections",
+   "iv cannulation",
+   "nursing",
+   "wound dressing"
+  ]
+ },
+ {
+  "id": "patient-mobility",
+  "labelEn": "Patient mobility and positioning",
+  "labelMr": "रुग्ण हालचाल सहाय्य",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "health",
+  "aliases": [
+   "ambulation",
+   "patient transfer",
+   "positioning",
+   "wheelchair"
+  ]
+ },
+ {
+  "id": "emergency-care",
+  "labelEn": "Emergency medical care",
+  "labelMr": "आपत्कालीन वैद्यकीय सेवा",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/038256f5-7b18-4e6f-8314-2401be1b601b",
+  "sector": "health",
+  "aliases": [
+   "ambulance",
+   "emergency",
+   "emt",
+   "trauma care"
+  ]
+ },
+ {
+  "id": "xray-imaging",
+  "labelEn": "X-ray and imaging",
+  "labelMr": "एक्स-रे व इमेजिंग",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/0b84762c-e400-4a0b-9870-f0221708eac2",
+  "sector": "health",
+  "aliases": [
+   "ct scan",
+   "imaging technician",
+   "radiography",
+   "x-ray"
+  ]
+ },
+ {
+  "id": "ecg-operation",
+  "labelEn": "ECG operation",
+  "labelMr": "ईसीजी चाचणी",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "health",
+  "aliases": [
+   "ecg",
+   "ecg technician",
+   "ekg"
+  ]
+ },
+ {
+  "id": "medical-records",
+  "labelEn": "Medical records and HIS",
+  "labelMr": "वैद्यकीय नोंदी व्यवस्थापन",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/5d7890d5-d229-4b79-a5da-6819e38a52b6",
+  "sector": "health",
+  "aliases": [
+   "emr",
+   "his",
+   "hospital information system",
+   "medical records",
+   "mrd"
+  ]
+ },
+ {
+  "id": "medical-coding",
+  "labelEn": "Medical coding (ICD-10)",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/cf0b92de-4bd0-46ee-b383-7765b4cbcac9",
+  "sector": "health",
+  "aliases": [
+   "cpt coding",
+   "icd-10",
+   "medical coding"
+  ]
+ },
+ {
+  "id": "home-healthcare",
+  "labelEn": "Home health care",
+  "labelMr": "घरगुती आरोग्यसेवा",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/04880044-9668-45b8-b888-f3d9894bac9f",
+  "sector": "health",
+  "aliases": [
+   "caretaker",
+   "elderly care",
+   "geriatric care",
+   "home care"
+  ]
+ },
+ {
+  "id": "maternal-child-care",
+  "labelEn": "Maternal and child care",
+  "labelMr": "माता व बाल संगोपन",
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "health",
+  "aliases": [
+   "anc",
+   "antenatal",
+   "mother and child",
+   "newborn care"
+  ]
+ },
+ {
+  "id": "public-health-sanitation",
+  "labelEn": "Public health and sanitation",
+  "labelMr": "सार्वजनिक आरोग्य व स्वच्छता",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/9570e84e-6699-4c9f-9a12-7bc82d53a231",
+  "sector": "health",
+  "aliases": [
+   "public health",
+   "sanitary inspection",
+   "sanitary inspector",
+   "sanitation"
+  ]
+ },
+ {
+  "id": "health-insurance-pmjay",
+  "labelEn": "Health schemes and insurance (PMJAY)",
+  "labelMr": null,
+  "kind": "knowledge",
+  "escoUri": null,
+  "sector": "health",
+  "aliases": [
+   "ayushman bharat",
+   "insurance claims",
+   "pmjay",
+   "tpa"
+  ]
+ },
+ {
+  "id": "dental-assisting",
+  "labelEn": "Dental assisting",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "health",
+  "aliases": [
+   "dental",
+   "dental assistant"
+  ]
+ },
+ {
+  "id": "dialysis",
+  "labelEn": "Dialysis technique",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "health",
+  "aliases": [
+   "dialysis",
+   "dialysis technician"
+  ]
+ },
+ {
+  "id": "ot-assistance",
+  "labelEn": "Operation theatre assistance",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "health",
+  "aliases": [
+   "operation theatre",
+   "ot assistant",
+   "ot technician"
+  ]
+ },
+ {
+  "id": "medical-equipment-handling",
+  "labelEn": "Medical equipment handling",
+  "labelMr": "वैद्यकीय उपकरणे हाताळणी",
+  "kind": "skill",
+  "escoUri": "http://data.europa.eu/esco/skill/df958b10-9e1c-4a80-9170-5572a5366e84",
+  "sector": "health",
+  "aliases": [
+   "infusion pump",
+   "medical equipment",
+   "patient monitor",
+   "ventilator"
+  ]
+ },
+ {
+  "id": "telemedicine",
+  "labelEn": "Telemedicine support",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "health",
+  "aliases": [
+   "teleconsultation",
+   "telemedicine"
+  ]
+ },
+ {
+  "id": "diet-nutrition",
+  "labelEn": "Diet and nutrition",
+  "labelMr": "आहार व पोषण",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/13d96098-2ff0-46b8-b326-b7c0e18cc1f1",
+  "sector": "health",
+  "aliases": [
+   "diet",
+   "dietician",
+   "nutrition"
+  ]
+ },
+ {
+  "id": "patient-counselling",
+  "labelEn": "Patient counselling",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "health",
+  "aliases": [
+   "counselling",
+   "patient education"
+  ]
+ },
+ {
+  "id": "hospital-housekeeping",
+  "labelEn": "Hospital housekeeping",
+  "labelMr": null,
+  "kind": "skill",
+  "escoUri": null,
+  "sector": "health",
+  "aliases": [
+   "housekeeping",
+   "ward cleaning"
+  ]
+ },
+ {
+  "id": "communication",
+  "labelEn": "Communication",
+  "labelMr": "संवाद कौशल्य",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/15d76317-c71a-4fa2-aadc-2ecc34e627b7",
+  "sector": "cross",
+  "aliases": [
+   "communication skills",
+   "good communication",
+   "verbal communication"
+  ]
+ },
+ {
+  "id": "teamwork",
+  "labelEn": "Teamwork",
+  "labelMr": "संघभावना",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/60c78287-22eb-4103-9c8c-28deaa460da0",
+  "sector": "cross",
+  "aliases": [
+   "team player",
+   "team work",
+   "teamwork"
+  ]
+ },
+ {
+  "id": "problem-solving",
+  "labelEn": "Problem solving",
+  "labelMr": "समस्या निराकरण",
+  "kind": "transversal",
+  "escoUri": null,
+  "sector": "cross",
+  "aliases": [
+   "analytical skills",
+   "problem solving"
+  ]
+ },
+ {
+  "id": "english-communication",
+  "labelEn": "English communication",
+  "labelMr": "इंग्रजी संवाद",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/6d3edede-8951-4621-a835-e04323300fa0",
+  "sector": "cross",
+  "aliases": [
+   "english",
+   "english speaking",
+   "fluent english",
+   "spoken english"
+  ]
+ },
+ {
+  "id": "marathi-communication",
+  "labelEn": "Marathi communication",
+  "labelMr": "मराठी संवाद",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/2080075c-0488-4fbf-a786-734dbbef31ce",
+  "sector": "cross",
+  "aliases": [
+   "marathi",
+   "marathi speaking"
+  ]
+ },
+ {
+  "id": "hindi-communication",
+  "labelEn": "Hindi communication",
+  "labelMr": "हिंदी संवाद",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/d93a7370-bf56-43f5-be54-e108f8ec3107",
+  "sector": "cross",
+  "aliases": [
+   "hindi",
+   "hindi speaking"
+  ]
+ },
+ {
+  "id": "workplace-safety",
+  "labelEn": "Workplace safety (EHS)",
+  "labelMr": "कार्यस्थळ सुरक्षा (ईएचएस)",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/198b614d-a9af-46f5-b3fd-2672b401dd8e",
+  "sector": "cross",
+  "aliases": [
+   "ehs",
+   "hse",
+   "ppe",
+   "safety",
+   "safety norms"
+  ]
+ },
+ {
+  "id": "time-management",
+  "labelEn": "Time management",
+  "labelMr": "वेळेचे व्यवस्थापन",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/d9013e0e-e937-43d5-ab71-0e917ee882b8",
+  "sector": "cross",
+  "aliases": [
+   "punctual",
+   "punctuality",
+   "time management"
+  ]
+ },
+ {
+  "id": "basic-computer-skills",
+  "labelEn": "Basic computer skills",
+  "labelMr": "मूलभूत संगणक कौशल्य",
+  "kind": "transversal",
+  "escoUri": null,
+  "sector": "cross",
+  "aliases": [
+   "basic computer",
+   "computer knowledge",
+   "computer literate",
+   "ms-cit",
+   "mscit"
+  ]
+ },
+ {
+  "id": "ms-excel",
+  "labelEn": "MS Excel",
+  "labelMr": "एमएस एक्सेल",
+  "kind": "tool",
+  "escoUri": "http://data.europa.eu/esco/skill/1973c966-f236-40c9-b2d4-5d71a89019be",
+  "sector": "cross",
+  "aliases": [
+   "excel",
+   "ms excel",
+   "spreadsheet"
+  ]
+ },
+ {
+  "id": "customer-handling",
+  "labelEn": "Customer handling",
+  "labelMr": "ग्राहक हाताळणी",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/0da516ee-e70e-4384-be13-f5ff80be8127",
+  "sector": "cross",
+  "aliases": [
+   "client handling",
+   "customer handling",
+   "customer interaction"
+  ]
+ },
+ {
+  "id": "sales-negotiation",
+  "labelEn": "Sales and negotiation",
+  "labelMr": "विक्री व वाटाघाटी",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/71152876-b629-4a99-b9ea-0f25a0d07e4e",
+  "sector": "cross",
+  "aliases": [
+   "field sales",
+   "negotiation",
+   "sales",
+   "target achievement"
+  ]
+ },
+ {
+  "id": "leadership",
+  "labelEn": "Team leadership",
+  "labelMr": "नेतृत्व",
+  "kind": "transversal",
+  "escoUri": null,
+  "sector": "cross",
+  "aliases": [
+   "leadership",
+   "supervisor",
+   "team lead",
+   "team leader"
+  ]
+ },
+ {
+  "id": "shift-work",
+  "labelEn": "Shift work readiness",
+  "labelMr": "शिफ्टमध्ये काम करण्याची तयारी",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/6f2721bf-40ad-4f5d-8774-a478d1d6f5a6",
+  "sector": "cross",
+  "aliases": [
+   "night shift",
+   "rotational shift",
+   "shifts"
+  ]
+ },
+ {
+  "id": "report-writing",
+  "labelEn": "Report writing and documentation",
+  "labelMr": "अहवाल लेखन व दस्तऐवजीकरण",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/918f5211-b99f-4b29-9a34-6e475583ef55",
+  "sector": "cross",
+  "aliases": [
+   "documentation",
+   "record keeping",
+   "report writing"
+  ]
+ },
+ {
+  "id": "numeracy",
+  "labelEn": "Numeracy",
+  "labelMr": "अंकज्ञान",
+  "kind": "transversal",
+  "escoUri": null,
+  "sector": "cross",
+  "aliases": [
+   "arithmetic",
+   "calculation",
+   "numeracy"
+  ]
+ },
+ {
+  "id": "digital-literacy",
+  "labelEn": "Digital literacy (UPI, smartphone apps)",
+  "labelMr": "डिजिटल साक्षरता",
+  "kind": "transversal",
+  "escoUri": null,
+  "sector": "cross",
+  "aliases": [
+   "digital payments",
+   "mobile apps",
+   "smartphone",
+   "upi"
+  ]
+ },
+ {
+  "id": "critical-thinking",
+  "labelEn": "Critical thinking",
+  "labelMr": "चिकित्सक विचार",
+  "kind": "transversal",
+  "escoUri": null,
+  "sector": "cross",
+  "aliases": [
+   "critical thinking"
+  ]
+ },
+ {
+  "id": "adaptability",
+  "labelEn": "Adaptability",
+  "labelMr": "जुळवून घेण्याची क्षमता",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/49de9958-2aa4-4eef-a89d-fe5d5bcd28c4",
+  "sector": "cross",
+  "aliases": [
+   "adaptability",
+   "adaptable",
+   "flexible"
+  ]
+ },
+ {
+  "id": "attention-to-detail",
+  "labelEn": "Attention to detail",
+  "labelMr": "बारकाईने लक्ष देणे",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/59f56593-c5e6-4bfb-974c-c98643453ca1",
+  "sector": "cross",
+  "aliases": [
+   "attention to detail",
+   "detail oriented"
+  ]
+ },
+ {
+  "id": "entrepreneurship",
+  "labelEn": "Entrepreneurship",
+  "labelMr": "उद्योजकता",
+  "kind": "transversal",
+  "escoUri": "http://data.europa.eu/esco/skill/658605f2-1c95-49f0-bd98-0af7b15ad0b0",
+  "sector": "cross",
+  "aliases": [
+   "entrepreneur",
+   "entrepreneurship",
+   "self employment"
+  ]
+ },
+ {
+  "id": "financial-literacy",
+  "labelEn": "Financial literacy",
+  "labelMr": "आर्थिक साक्षरता",
+  "kind": "transversal",
+  "escoUri": null,
+  "sector": "cross",
+  "aliases": [
+   "banking basics",
+   "financial literacy"
+  ]
+ },
+ {
+  "id": "accounting-basics",
+  "labelEn": "Accounting basics",
+  "labelMr": "लेखा मूलतत्त्वे",
+  "kind": "knowledge",
+  "escoUri": "http://data.europa.eu/esco/skill/ecc18804-a466-40d9-98b4-fba5cd67dd4b",
+  "sector": "cross",
+  "aliases": [
+   "accountant",
+   "accounting",
+   "accounts",
+   "bookkeeping"
+  ]
+ },
+ {
+  "id": "driving-licence-2w",
+  "labelEn": "Two-wheeler driving licence",
+  "labelMr": "दुचाकी वाहन परवाना",
+  "kind": "transversal",
+  "escoUri": null,
+  "sector": "cross",
+  "aliases": [
+   "driving licence",
+   "own bike",
+   "own vehicle",
+   "two wheeler licence"
+  ]
+ },
+ {
+  "id": "grooming-etiquette",
+  "labelEn": "Grooming and etiquette",
+  "labelMr": null,
+  "kind": "transversal",
+  "escoUri": null,
+  "sector": "cross",
+  "aliases": [
+   "etiquette",
+   "grooming",
+   "presentable"
+  ]
+ },
+ {
+  "id": "email-writing",
+  "labelEn": "Business email writing",
+  "labelMr": null,
+  "kind": "transversal",
+  "escoUri": null,
+  "sector": "cross",
+  "aliases": [
+   "drafting emails",
+   "email etiquette",
+   "email writing"
+  ]
+ },
+ {
+  "id": "interpersonal-skills",
+  "labelEn": "Interpersonal skills",
+  "labelMr": null,
+  "kind": "transversal",
+  "escoUri": null,
+  "sector": "cross",
+  "aliases": [
+   "interpersonal",
+   "interpersonal skills"
+  ]
+ }
+]

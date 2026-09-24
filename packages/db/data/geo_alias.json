@@ -1,0 +1,2152 @@
+[
+{
+"alias": "hinjewadi",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "hinjawadi",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "chakan",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "kharadi",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "magarpatta",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "hadapsar",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "wakad",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "baner",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "talegaon",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "talegaon dabhade",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "ranjangaon",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "pimpri",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "chinchwad",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "pimpri-chinchwad",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "pimpri chinchwad",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "pcmc",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "bhosari",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "viman nagar",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "kalyani nagar",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "aundh",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "kothrud",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "shivajinagar",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "yerwada",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "baramati",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "lonavala",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "shirur",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "jejuri",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "kurkumbh",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "daund",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "moshi",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "akurdi",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "nigdi",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "ravet",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "pirangut",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "sanaswadi",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "shikrapur",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "mahalunge",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "bavdhan",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "balewadi",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "pashan",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "kondhwa",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "undri",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "wagholi",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "koregaon park",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "swargate",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "katraj",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "sinhagad road",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "rajgurunagar",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "bhor",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "indapur",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "junnar",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "maval",
+"lgd": "490",
+"source": "curated"
+},
+{
+"alias": "sinnar",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "igatpuri",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "malegaon",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "satpur",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "ambad",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "nashik road",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "deolali",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "ozar",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "niphad",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "dindori",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "yeola",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "manmad",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "gonde",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "vilholi",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "chandwad",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "trimbakeshwar",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "kalwan",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "satana",
+"lgd": "487",
+"source": "curated"
+},
+{
+"alias": "waluj",
+"lgd": "469",
+"source": "curated"
+},
+{
+"alias": "shendra",
+"lgd": "469",
+"source": "curated"
+},
+{
+"alias": "bidkin",
+"lgd": "469",
+"source": "curated"
+},
+{
+"alias": "chikalthana",
+"lgd": "469",
+"source": "curated"
+},
+{
+"alias": "paithan",
+"lgd": "469",
+"source": "curated"
+},
+{
+"alias": "vaijapur",
+"lgd": "469",
+"source": "curated"
+},
+{
+"alias": "sillod",
+"lgd": "469",
+"source": "curated"
+},
+{
+"alias": "auric",
+"lgd": "469",
+"source": "curated"
+},
+{
+"alias": "chitegaon",
+"lgd": "469",
+"source": "curated"
+},
+{
+"alias": "gangapur",
+"lgd": "469",
+"source": "curated"
+},
+{
+"alias": "kannad",
+"lgd": "469",
+"source": "curated"
+},
+{
+"alias": "khuldabad",
+"lgd": "469",
+"source": "curated"
+},
+{
+"alias": "butibori",
+"lgd": "484",
+"source": "curated"
+},
+{
+"alias": "hingna",
+"lgd": "484",
+"source": "curated"
+},
+{
+"alias": "mihan",
+"lgd": "484",
+"source": "curated"
+},
+{
+"alias": "kamptee",
+"lgd": "484",
+"source": "curated"
+},
+{
+"alias": "kalmeshwar",
+"lgd": "484",
+"source": "curated"
+},
+{
+"alias": "umred",
+"lgd": "484",
+"source": "curated"
+},
+{
+"alias": "wadi",
+"lgd": "484",
+"source": "curated"
+},
+{
+"alias": "katol",
+"lgd": "484",
+"source": "curated"
+},
+{
+"alias": "ramtek",
+"lgd": "484",
+"source": "curated"
+},
+{
+"alias": "savner",
+"lgd": "484",
+"source": "curated"
+},
+{
+"alias": "kalyan",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "dombivli",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "dombivali",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "bhiwandi",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "ulhasnagar",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "ambernath",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "badlapur",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "mira road",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "bhayandar",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "bhayander",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "mira-bhayandar",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "mira bhayandar",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "shahapur",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "murbad",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "titwala",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "vashi",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "airoli",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "ghansoli",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "nerul",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "belapur",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "cbd belapur",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "kopar khairane",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "koparkhairane",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "turbhe",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "sanpada",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "rabale",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "mahape",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "digha",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "kalwa",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "mumbra",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "thane west",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "ghodbunder road",
+"lgd": "497",
+"source": "curated"
+},
+{
+"alias": "panvel",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "kharghar",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "taloja",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "kamothe",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "kalamboli",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "ulwe",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "uran",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "jnpt",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "nhava sheva",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "khopoli",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "alibag",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "alibaug",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "pen",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "mahad",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "roha",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "rasayani",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "patalganga",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "karjat",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "murud",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "shrivardhan",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "new panvel",
+"lgd": "491",
+"source": "curated"
+},
+{
+"alias": "vasai",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "virar",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "nalasopara",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "boisar",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "tarapur",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "dahanu",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "wada",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "jawhar",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "mokhada",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "talasari",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "vikramgad",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "vasai-virar",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "vasai virar",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "safale",
+"lgd": "665",
+"source": "curated"
+},
+{
+"alias": "andheri",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "powai",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "bkc",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "bandra kurla complex",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "bandra",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "goregaon",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "malad",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "kandivali",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "borivali",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "vikhroli",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "ghatkopar",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "kurla",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "chembur",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "mulund",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "bhandup",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "santacruz",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "vile parle",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "juhu",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "jogeshwari",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "marol",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "saki naka",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "sakinaka",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "dahisar",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "chandivali",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "khar",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "mankhurd",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "govandi",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "kanjurmarg",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "seepz",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "aarey",
+"lgd": "483",
+"source": "curated"
+},
+{
+"alias": "colaba",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "fort",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "nariman point",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "churchgate",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "worli",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "lower parel",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "dadar",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "byculla",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "mahalaxmi",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "parel",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "sion",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "wadala",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "mahim",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "matunga",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "cuffe parade",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "tardeo",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "grant road",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "marine lines",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "ballard estate",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "prabhadevi",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "south mumbai",
+"lgd": "482",
+"source": "curated"
+},
+{
+"alias": "ichalkaranji",
+"lgd": "480",
+"source": "curated"
+},
+{
+"alias": "kagal",
+"lgd": "480",
+"source": "curated"
+},
+{
+"alias": "shiroli",
+"lgd": "480",
+"source": "curated"
+},
+{
+"alias": "gokul shirgaon",
+"lgd": "480",
+"source": "curated"
+},
+{
+"alias": "kagal midc",
+"lgd": "480",
+"source": "curated"
+},
+{
+"alias": "jaysingpur",
+"lgd": "480",
+"source": "curated"
+},
+{
+"alias": "gadhinglaj",
+"lgd": "480",
+"source": "curated"
+},
+{
+"alias": "karad",
+"lgd": "494",
+"source": "curated"
+},
+{
+"alias": "wai",
+"lgd": "494",
+"source": "curated"
+},
+{
+"alias": "phaltan",
+"lgd": "494",
+"source": "curated"
+},
+{
+"alias": "lonand",
+"lgd": "494",
+"source": "curated"
+},
+{
+"alias": "mahabaleshwar",
+"lgd": "494",
+"source": "curated"
+},
+{
+"alias": "miraj",
+"lgd": "493",
+"source": "curated"
+},
+{
+"alias": "kupwad",
+"lgd": "493",
+"source": "curated"
+},
+{
+"alias": "islampur",
+"lgd": "493",
+"source": "curated"
+},
+{
+"alias": "vita",
+"lgd": "493",
+"source": "curated"
+},
+{
+"alias": "tasgaon",
+"lgd": "493",
+"source": "curated"
+},
+{
+"alias": "shirdi",
+"lgd": "466",
+"source": "curated"
+},
+{
+"alias": "sangamner",
+"lgd": "466",
+"source": "curated"
+},
+{
+"alias": "shrirampur",
+"lgd": "466",
+"source": "curated"
+},
+{
+"alias": "kopargaon",
+"lgd": "466",
+"source": "curated"
+},
+{
+"alias": "supa",
+"lgd": "466",
+"source": "curated"
+},
+{
+"alias": "rahuri",
+"lgd": "466",
+"source": "curated"
+},
+{
+"alias": "ahmednagar midc",
+"lgd": "466",
+"source": "curated"
+},
+{
+"alias": "newasa",
+"lgd": "466",
+"source": "curated"
+},
+{
+"alias": "rahata",
+"lgd": "466",
+"source": "curated"
+},
+{
+"alias": "chiplun",
+"lgd": "492",
+"source": "curated"
+},
+{
+"alias": "lote",
+"lgd": "492",
+"source": "curated"
+},
+{
+"alias": "dapoli",
+"lgd": "492",
+"source": "curated"
+},
+{
+"alias": "lote parshuram",
+"lgd": "492",
+"source": "curated"
+},
+{
+"alias": "guhagar",
+"lgd": "492",
+"source": "curated"
+},
+{
+"alias": "sangameshwar",
+"lgd": "492",
+"source": "curated"
+},
+{
+"alias": "rajapur",
+"lgd": "492",
+"source": "curated"
+},
+{
+"alias": "pandharpur",
+"lgd": "496",
+"source": "curated"
+},
+{
+"alias": "barshi",
+"lgd": "496",
+"source": "curated"
+},
+{
+"alias": "akkalkot",
+"lgd": "496",
+"source": "curated"
+},
+{
+"alias": "mohol",
+"lgd": "496",
+"source": "curated"
+},
+{
+"alias": "chincholi midc",
+"lgd": "496",
+"source": "curated"
+},
+{
+"alias": "bhusawal",
+"lgd": "478",
+"source": "curated"
+},
+{
+"alias": "chalisgaon",
+"lgd": "478",
+"source": "curated"
+},
+{
+"alias": "amalner",
+"lgd": "478",
+"source": "curated"
+},
+{
+"alias": "jamner",
+"lgd": "478",
+"source": "curated"
+},
+{
+"alias": "pachora",
+"lgd": "478",
+"source": "curated"
+},
+{
+"alias": "achalpur",
+"lgd": "468",
+"source": "curated"
+},
+{
+"alias": "badnera",
+"lgd": "468",
+"source": "curated"
+},
+{
+"alias": "paratwada",
+"lgd": "468",
+"source": "curated"
+},
+{
+"alias": "udgir",
+"lgd": "481",
+"source": "curated"
+},
+{
+"alias": "ausa",
+"lgd": "481",
+"source": "curated"
+},
+{
+"alias": "nilanga",
+"lgd": "481",
+"source": "curated"
+},
+{
+"alias": "ballarpur",
+"lgd": "473",
+"source": "curated"
+},
+{
+"alias": "ghugus",
+"lgd": "473",
+"source": "curated"
+},
+{
+"alias": "warora",
+"lgd": "473",
+"source": "curated"
+},
+{
+"alias": "bhadravati",
+"lgd": "473",
+"source": "curated"
+},
+{
+"alias": "rajura",
+"lgd": "473",
+"source": "curated"
+},
+{
+"alias": "brahmapuri",
+"lgd": "473",
+"source": "curated"
+},
+{
+"alias": "aheri",
+"lgd": "475",
+"source": "curated"
+},
+{
+"alias": "desaiganj",
+"lgd": "475",
+"source": "curated"
+},
+{
+"alias": "wadsa",
+"lgd": "475",
+"source": "curated"
+},
+{
+"alias": "armori",
+"lgd": "475",
+"source": "curated"
+},
+{
+"alias": "chamorshi",
+"lgd": "475",
+"source": "curated"
+},
+{
+"alias": "etapalli",
+"lgd": "475",
+"source": "curated"
+},
+{
+"alias": "sironcha",
+"lgd": "475",
+"source": "curated"
+},
+{
+"alias": "kurkheda",
+"lgd": "475",
+"source": "curated"
+},
+{
+"alias": "hinganghat",
+"lgd": "498",
+"source": "curated"
+},
+{
+"alias": "arvi",
+"lgd": "498",
+"source": "curated"
+},
+{
+"alias": "pulgaon",
+"lgd": "498",
+"source": "curated"
+},
+{
+"alias": "pusad",
+"lgd": "500",
+"source": "curated"
+},
+{
+"alias": "wani",
+"lgd": "500",
+"source": "curated"
+},
+{
+"alias": "darwha",
+"lgd": "500",
+"source": "curated"
+},
+{
+"alias": "umarkhed",
+"lgd": "500",
+"source": "curated"
+},
+{
+"alias": "shirpur",
+"lgd": "474",
+"source": "curated"
+},
+{
+"alias": "dondaicha",
+"lgd": "474",
+"source": "curated"
+},
+{
+"alias": "sakri",
+"lgd": "474",
+"source": "curated"
+},
+{
+"alias": "parli",
+"lgd": "470",
+"source": "curated"
+},
+{
+"alias": "ambajogai",
+"lgd": "470",
+"source": "curated"
+},
+{
+"alias": "majalgaon",
+"lgd": "470",
+"source": "curated"
+},
+{
+"alias": "tuljapur",
+"lgd": "488",
+"source": "curated"
+},
+{
+"alias": "paranda",
+"lgd": "488",
+"source": "curated"
+},
+{
+"alias": "omerga",
+"lgd": "488",
+"source": "curated"
+},
+{
+"alias": "umarga",
+"lgd": "488",
+"source": "curated"
+},
+{
+"alias": "khamgaon",
+"lgd": "472",
+"source": "curated"
+},
+{
+"alias": "malkapur",
+"lgd": "472",
+"source": "curated"
+},
+{
+"alias": "shegaon",
+"lgd": "472",
+"source": "curated"
+},
+{
+"alias": "chikhli",
+"lgd": "472",
+"source": "curated"
+},
+{
+"alias": "sawantwadi",
+"lgd": "495",
+"source": "curated"
+},
+{
+"alias": "kudal",
+"lgd": "495",
+"source": "curated"
+},
+{
+"alias": "kankavli",
+"lgd": "495",
+"source": "curated"
+},
+{
+"alias": "vengurla",
+"lgd": "495",
+"source": "curated"
+},
+{
+"alias": "malvan",
+"lgd": "495",
+"source": "curated"
+},
+{
+"alias": "shahada",
+"lgd": "486",
+"source": "curated"
+},
+{
+"alias": "navapur",
+"lgd": "486",
+"source": "curated"
+},
+{
+"alias": "taloda",
+"lgd": "486",
+"source": "curated"
+},
+{
+"alias": "hadgaon",
+"lgd": "485",
+"source": "curated"
+},
+{
+"alias": "kinwat",
+"lgd": "485",
+"source": "curated"
+},
+{
+"alias": "deglur",
+"lgd": "485",
+"source": "curated"
+},
+{
+"alias": "mukhed",
+"lgd": "485",
+"source": "curated"
+},
+{
+"alias": "gangakhed",
+"lgd": "489",
+"source": "curated"
+},
+{
+"alias": "jintur",
+"lgd": "489",
+"source": "curated"
+},
+{
+"alias": "purna",
+"lgd": "489",
+"source": "curated"
+},
+{
+"alias": "tumsar",
+"lgd": "471",
+"source": "curated"
+},
+{
+"alias": "sakoli",
+"lgd": "471",
+"source": "curated"
+},
+{
+"alias": "tirora",
+"lgd": "476",
+"source": "curated"
+},
+{
+"alias": "arjuni morgaon",
+"lgd": "476",
+"source": "curated"
+},
+{
+"alias": "basmat",
+"lgd": "477",
+"source": "curated"
+},
+{
+"alias": "kalamnuri",
+"lgd": "477",
+"source": "curated"
+},
+{
+"alias": "karanja",
+"lgd": "499",
+"source": "curated"
+},
+{
+"alias": "risod",
+"lgd": "499",
+"source": "curated"
+},
+{
+"alias": "mangrulpir",
+"lgd": "499",
+"source": "curated"
+},
+{
+"alias": "akot",
+"lgd": "467",
+"source": "curated"
+},
+{
+"alias": "murtizapur",
+"lgd": "467",
+"source": "curated"
+},
+{
+"alias": "partur",
+"lgd": "479",
+"source": "curated"
+},
+{
+"alias": "ambad jalna",
+"lgd": "479",
+"source": "curated"
+},
+{
+"alias": "mumbai",
+"lgd": "482",
+"source": "curated-ambiguous"
+},
+{
+"alias": "bombay",
+"lgd": "482",
+"source": "curated-ambiguous"
+},
+{
+"alias": "navi mumbai",
+"lgd": "497",
+"source": "curated-ambiguous"
+},
+{
+"alias": "ahilyanagar",
+"lgd": "466",
+"source": "district-name"
+},
+{
+"alias": "ahmednagar",
+"lgd": "466",
+"source": "district-name"
+},
+{
+"alias": "ahmadnagar",
+"lgd": "466",
+"source": "district-name"
+},
+{
+"alias": "nagar",
+"lgd": "466",
+"source": "district-name"
+},
+{
+"alias": "अहिल्यानगर",
+"lgd": "466",
+"source": "district-name-mr"
+},
+{
+"alias": "akola",
+"lgd": "467",
+"source": "district-name"
+},
+{
+"alias": "अकोला",
+"lgd": "467",
+"source": "district-name-mr"
+},
+{
+"alias": "amravati",
+"lgd": "468",
+"source": "district-name"
+},
+{
+"alias": "amraoti",
+"lgd": "468",
+"source": "district-name"
+},
+{
+"alias": "अमरावती",
+"lgd": "468",
+"source": "district-name-mr"
+},
+{
+"alias": "beed",
+"lgd": "470",
+"source": "district-name"
+},
+{
+"alias": "bid",
+"lgd": "470",
+"source": "district-name"
+},
+{
+"alias": "बीड",
+"lgd": "470",
+"source": "district-name-mr"
+},
+{
+"alias": "bhandara",
+"lgd": "471",
+"source": "district-name"
+},
+{
+"alias": "भंडारा",
+"lgd": "471",
+"source": "district-name-mr"
+},
+{
+"alias": "buldhana",
+"lgd": "472",
+"source": "district-name"
+},
+{
+"alias": "buldana",
+"lgd": "472",
+"source": "district-name"
+},
+{
+"alias": "बुलढाणा",
+"lgd": "472",
+"source": "district-name-mr"
+},
+{
+"alias": "chandrapur",
+"lgd": "473",
+"source": "district-name"
+},
+{
+"alias": "chanda",
+"lgd": "473",
+"source": "district-name"
+},
+{
+"alias": "चंद्रपूर",
+"lgd": "473",
+"source": "district-name-mr"
+},
+{
+"alias": "chhatrapati sambhajinagar",
+"lgd": "469",
+"source": "district-name"
+},
+{
+"alias": "aurangabad",
+"lgd": "469",
+"source": "district-name"
+},
+{
+"alias": "chh. sambhajinagar",
+"lgd": "469",
+"source": "district-name"
+},
+{
+"alias": "sambhajinagar",
+"lgd": "469",
+"source": "district-name"
+},
+{
+"alias": "छत्रपती संभाजीनगर",
+"lgd": "469",
+"source": "district-name-mr"
+},
+{
+"alias": "dharashiv",
+"lgd": "488",
+"source": "district-name"
+},
+{
+"alias": "osmanabad",
+"lgd": "488",
+"source": "district-name"
+},
+{
+"alias": "धाराशिव",
+"lgd": "488",
+"source": "district-name-mr"
+},
+{
+"alias": "dhule",
+"lgd": "474",
+"source": "district-name"
+},
+{
+"alias": "dhulia",
+"lgd": "474",
+"source": "district-name"
+},
+{
+"alias": "धुळे",
+"lgd": "474",
+"source": "district-name-mr"
+},
+{
+"alias": "gadchiroli",
+"lgd": "475",
+"source": "district-name"
+},
+{
+"alias": "garhchiroli",
+"lgd": "475",
+"source": "district-name"
+},
+{
+"alias": "गडचिरोली",
+"lgd": "475",
+"source": "district-name-mr"
+},
+{
+"alias": "gondia",
+"lgd": "476",
+"source": "district-name"
+},
+{
+"alias": "gondiya",
+"lgd": "476",
+"source": "district-name"
+},
+{
+"alias": "गोंदिया",
+"lgd": "476",
+"source": "district-name-mr"
+},
+{
+"alias": "hingoli",
+"lgd": "477",
+"source": "district-name"
+},
+{
+"alias": "हिंगोली",
+"lgd": "477",
+"source": "district-name-mr"
+},
+{
+"alias": "jalgaon",
+"lgd": "478",
+"source": "district-name"
+},
+{
+"alias": "जळगाव",
+"lgd": "478",
+"source": "district-name-mr"
+},
+{
+"alias": "jalna",
+"lgd": "479",
+"source": "district-name"
+},
+{
+"alias": "जालना",
+"lgd": "479",
+"source": "district-name-mr"
+},
+{
+"alias": "kolhapur",
+"lgd": "480",
+"source": "district-name"
+},
+{
+"alias": "कोल्हापूर",
+"lgd": "480",
+"source": "district-name-mr"
+},
+{
+"alias": "latur",
+"lgd": "481",
+"source": "district-name"
+},
+{
+"alias": "लातूर",
+"lgd": "481",
+"source": "district-name-mr"
+},
+{
+"alias": "mumbai city",
+"lgd": "482",
+"source": "district-name"
+},
+{
+"alias": "मुंबई शहर",
+"lgd": "482",
+"source": "district-name-mr"
+},
+{
+"alias": "mumbai suburban",
+"lgd": "483",
+"source": "district-name"
+},
+{
+"alias": "bombay suburban",
+"lgd": "483",
+"source": "district-name"
+},
+{
+"alias": "मुंबई उपनगर",
+"lgd": "483",
+"source": "district-name-mr"
+},
+{
+"alias": "nagpur",
+"lgd": "484",
+"source": "district-name"
+},
+{
+"alias": "नागपूर",
+"lgd": "484",
+"source": "district-name-mr"
+},
+{
+"alias": "nanded",
+"lgd": "485",
+"source": "district-name"
+},
+{
+"alias": "नांदेड",
+"lgd": "485",
+"source": "district-name-mr"
+},
+{
+"alias": "nandurbar",
+"lgd": "486",
+"source": "district-name"
+},
+{
+"alias": "नंदुरबार",
+"lgd": "486",
+"source": "district-name-mr"
+},
+{
+"alias": "nashik",
+"lgd": "487",
+"source": "district-name"
+},
+{
+"alias": "nasik",
+"lgd": "487",
+"source": "district-name"
+},
+{
+"alias": "नाशिक",
+"lgd": "487",
+"source": "district-name-mr"
+},
+{
+"alias": "palghar",
+"lgd": "665",
+"source": "district-name"
+},
+{
+"alias": "पालघर",
+"lgd": "665",
+"source": "district-name-mr"
+},
+{
+"alias": "parbhani",
+"lgd": "489",
+"source": "district-name"
+},
+{
+"alias": "परभणी",
+"lgd": "489",
+"source": "district-name-mr"
+},
+{
+"alias": "pune",
+"lgd": "490",
+"source": "district-name"
+},
+{
+"alias": "poona",
+"lgd": "490",
+"source": "district-name"
+},
+{
+"alias": "पुणे",
+"lgd": "490",
+"source": "district-name-mr"
+},
+{
+"alias": "raigad",
+"lgd": "491",
+"source": "district-name"
+},
+{
+"alias": "raigarh",
+"lgd": "491",
+"source": "district-name"
+},
+{
+"alias": "kolaba",
+"lgd": "491",
+"source": "district-name"
+},
+{
+"alias": "रायगड",
+"lgd": "491",
+"source": "district-name-mr"
+},
+{
+"alias": "ratnagiri",
+"lgd": "492",
+"source": "district-name"
+},
+{
+"alias": "रत्नागिरी",
+"lgd": "492",
+"source": "district-name-mr"
+},
+{
+"alias": "sangli",
+"lgd": "493",
+"source": "district-name"
+},
+{
+"alias": "सांगली",
+"lgd": "493",
+"source": "district-name-mr"
+},
+{
+"alias": "satara",
+"lgd": "494",
+"source": "district-name"
+},
+{
+"alias": "सातारा",
+"lgd": "494",
+"source": "district-name-mr"
+},
+{
+"alias": "sindhudurg",
+"lgd": "495",
+"source": "district-name"
+},
+{
+"alias": "सिंधुदुर्ग",
+"lgd": "495",
+"source": "district-name-mr"
+},
+{
+"alias": "solapur",
+"lgd": "496",
+"source": "district-name"
+},
+{
+"alias": "sholapur",
+"lgd": "496",
+"source": "district-name"
+},
+{
+"alias": "सोलापूर",
+"lgd": "496",
+"source": "district-name-mr"
+},
+{
+"alias": "thane",
+"lgd": "497",
+"source": "district-name"
+},
+{
+"alias": "ठाणे",
+"lgd": "497",
+"source": "district-name-mr"
+},
+{
+"alias": "wardha",
+"lgd": "498",
+"source": "district-name"
+},
+{
+"alias": "वर्धा",
+"lgd": "498",
+"source": "district-name-mr"
+},
+{
+"alias": "washim",
+"lgd": "499",
+"source": "district-name"
+},
+{
+"alias": "वाशिम",
+"lgd": "499",
+"source": "district-name-mr"
+},
+{
+"alias": "yavatmal",
+"lgd": "500",
+"source": "district-name"
+},
+{
+"alias": "yeotmal",
+"lgd": "500",
+"source": "district-name"
+},
+{
+"alias": "यवतमाळ",
+"lgd": "500",
+"source": "district-name-mr"
+},
+{
+"alias": "पिंपरी-चिंचवड",
+"lgd": "490",
+"source": "curated-mr"
+},
+{
+"alias": "हिंजवडी",
+"lgd": "490",
+"source": "curated-mr"
+},
+{
+"alias": "चाकण",
+"lgd": "490",
+"source": "curated-mr"
+},
+{
+"alias": "नवी मुंबई",
+"lgd": "497",
+"source": "curated-mr"
+},
+{
+"alias": "कल्याण",
+"lgd": "497",
+"source": "curated-mr"
+},
+{
+"alias": "वसई",
+"lgd": "665",
+"source": "curated-mr"
+},
+{
+"alias": "औरंगाबाद",
+"lgd": "469",
+"source": "curated-mr"
+},
+{
+"alias": "संभाजीनगर",
+"lgd": "469",
+"source": "curated-mr"
+},
+{
+"alias": "उस्मानाबाद",
+"lgd": "488",
+"source": "curated-mr"
+},
+{
+"alias": "अहमदनगर",
+"lgd": "466",
+"source": "curated-mr"
+},
+{
+"alias": "इचलकरंजी",
+"lgd": "480",
+"source": "curated-mr"
+},
+{
+"alias": "मुंबई",
+"lgd": "482",
+"source": "curated-mr"
+}
+]
