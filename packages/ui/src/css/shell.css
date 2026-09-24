@@ -16,7 +16,7 @@
 
 .ks-shell { display: grid; grid-template-columns: 1fr; min-height: calc(100dvh - 120px); }
 @media (min-width: 1024px) { .ks-shell { grid-template-columns: 216px minmax(0, 1fr); } }
-.ks-main { min-width: 0; padding: 24px 16px calc(48px + var(--tray-h)); max-width: 1280px; width: 100%; margin: 0 auto; box-sizing: border-box; }
+.ks-main { min-width: 0; padding: 24px 16px 48px; max-width: 1280px; width: 100%; margin: 0 auto; box-sizing: border-box; }
 @media (min-width: 768px) { .ks-main { padding-inline: 32px; } }
 .ks-main:focus { outline: none; }
 
@@ -45,7 +45,8 @@
 .ks-seg__btn[aria-pressed="true"] { background: var(--table-ink); color: var(--table); }
 
 /* Footer */
-.ks-footer { border-top: var(--rule-end); border-color: var(--table-muted); color: var(--table-ink); font-size: 0.875rem; }
+/* The docked compare tray's height is reserved below the footer, the last focusable content. */
+.ks-footer { border-top: var(--rule-end); border-color: var(--table-muted); color: var(--table-ink); font-size: 0.875rem; padding-bottom: var(--tray-h); }
 .ks-footer__inner { max-width: 1440px; margin: 0 auto; padding: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
 .ks-footer__links { display: flex; flex-wrap: wrap; gap: 4px 16px; list-style: none; margin: 0; padding: 0; }
 .ks-footer a { color: var(--table-ink); text-underline-offset: 3px; }
