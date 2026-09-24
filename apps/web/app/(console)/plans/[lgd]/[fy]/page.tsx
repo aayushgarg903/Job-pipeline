@@ -53,6 +53,10 @@ async function PlanBody({ params, searchParams }: { params: Params; searchParams
     lang,
   );
   const prevFy = `FY${String(Number(fy.slice(2)) - 1).padStart(2, "0")}`;
+  // Marginals that move placements get their own sentence; the rest collapse into one line.
+  const helps = result.marginals.filter((m) => m.deltaPlacements >= 0.5);
+  const idle = result.marginals.filter((m) => m.deltaPlacements < 0.5 && m.resource.startsWith("trainer:"));
+  const idleOther = result.marginals.filter((m) => m.deltaPlacements < 0.5 && !m.resource.startsWith("trainer:"));
   const cuts = result.rows.filter((r) => r.seats < r.seatsPrev);
   const adds = result.rows.filter((r) => r.seats > r.seatsPrev);
   const saved = base.saved;
@@ -132,7 +136,9 @@ async function PlanBody({ params, searchParams }: { params: Params; searchParams
 
           <Section id="marginals" title={t("console.plan.marginalsTitle")} lede={t("console.plan.marginalsLede")}>
             <ul className="ks-stock m-0 grid gap-2 p-4 pl-9">
-              {result.marginals.map((m) => <li key={m.resource}>{m.sentence}</li>)}
+              {helps.map((m) => <li key={m.resource}>{m.sentence}</li>)}
+              {idle.length ? <li>{t("console.plan.marginalsNoChange", { n: idle.length, items: idle.map((m) => m.resource.slice("trainer:".length)).join(", ") })}</li> : null}
+              {idleOther.map((m) => <li key={m.resource}>{m.sentence}</li>)}
             </ul>
             {Object.keys(result.oversupplyBySkill).length ? <p className="mt-2 text-sm">{t("console.plan.oversupply", { n: Object.values(result.oversupplyBySkill).reduce((a, b) => a + Math.round(b), 0) })}</p> : null}
           </Section>
