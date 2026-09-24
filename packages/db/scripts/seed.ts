@@ -1,13 +1,18 @@
-// pnpm --filter @ks/db seed [--reference-only]
+// pnpm --filter @ks/db seed [--reference-only | --demo-employer-only]
 // 1. reference data (real): districts, geometry, aliases, occupations, skills, profiles, crosswalk, trades
 // 2. demo supply side (is_demo=true): institutions, courses, cohorts, trainers, equipment, surveys, PRs
 import { createSql } from "../src/client";
-import { seedDemo } from "./seed/demo";
+import { seedDemo, seedDemoEmployer } from "./seed/demo";
 import { seedReference } from "./seed/reference";
 
 const sql = createSql(process.env.DATABASE_URL_SESSION ?? undefined, 1);
 
 async function main() {
+  if (process.argv.includes("--demo-employer-only")) {
+    console.log("demo employer:", await seedDemoEmployer(sql));
+    await sql.end();
+    return;
+  }
   const ref = await seedReference(sql);
   console.log("reference:", ref);
   if (!process.argv.includes("--reference-only")) {

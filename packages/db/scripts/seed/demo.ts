@@ -105,10 +105,10 @@ export async function seedDemo(sql: Sql): Promise<Record<string, number>> {
     const collected = new Date(Date.UTC(2026, recent ? 6 : 3, day, 10));
     const [resp] = await sql<{ id: string }[]>`
       insert into ks.survey_response (employer_id, lgd_code, nco_code, sector, expected_hires_12m, posting_to_hire_ratio,
-        csat_recent_hires, weeks_to_productivity, comment, collected_at, is_demo)
+        csat_recent_hires, weeks_to_productivity, comment, collected_at, is_demo, verified, verified_at)
       values (${e!.id}, ${s.lgd}, ${s.nco}, ${s.sector}, ${s.hires}, ${Math.round((0.6 + r() * 1.6) * 10) / 10},
         ${recent ? 3 + Math.floor(r() * 2) : 2 + Math.floor(r() * 2)}, ${Math.round(recent ? 5 + r() * 6 : 7 + r() * 8)},
-        ${s.comment}, ${collected}, true) returning id`;
+        ${s.comment}, ${collected}, true, true, ${collected}) returning id`;
     for (const [skillId, importance, proficiency] of s.skills) {
       await sql`insert into ks.survey_skill (response_id, skill_id, importance, proficiency) values (${resp!.id}, ${skillId}, ${importance}, ${proficiency})`;
     }
@@ -116,6 +116,7 @@ export async function seedDemo(sql: Sql): Promise<Record<string, number>> {
   }
 
   const prs = await seedPrs(sql, employerId);
+  await seedDemoEmployer(sql);
   return { institutions: inst.length, courses: courses.length, course_skill: cskills.length, assessment_item: assess.length,
     course_cohort: cohorts.length, trainer: trainers.length, equipment: equipment.length, surveys: nSurvey, curriculum_pr: prs };
 }
@@ -179,4 +180,23 @@ async function seedPrs(sql: Sql, emp: Map<string, string>): Promise<number> {
     }
   }
   return PRS.length;
+}
+
+/** Fixed-id demo employer the web app signs in as (DEMO_EMPLOYER_ID). Idempotent. */
+export const DEMO_EMPLOYER_ID = "00000000-0000-4000-8000-000000000487";
+export const DEMO_EMPLOYER_PRS = ["pr-nashik-elec-solar-ev", "pr-nashik-copa-modernise"];
+
+export async function seedDemoEmployer(sql: Sql): Promise<{ id: string; routed: number }> {
+  await sql`insert into ks.employer (id, name, lgd_code, sector, size_band, verified, is_demo)
+            values (${DEMO_EMPLOYER_ID}, 'Nashik demo employer (specimen)', '487', 'electrical', 'small', false, true)
+            on conflict (id) do update set name = excluded.name, lgd_code = excluded.lgd_code, is_demo = true`;
+  // A clean inbox: routed to both Nashik PRs, no verdicts yet.
+  await sql`delete from ks.pr_review where employer_id = ${DEMO_EMPLOYER_ID}`;
+  let routed = 0;
+  for (const pr of DEMO_EMPLOYER_PRS) {
+    const r = await sql`insert into ks.pr_route (pr_id, employer_id) select ${pr}, ${DEMO_EMPLOYER_ID}
+                        where exists (select 1 from ks.curriculum_pr where id = ${pr}) on conflict do nothing returning pr_id`;
+    routed += r.length;
+  }
+  return { id: DEMO_EMPLOYER_ID, routed };
 }

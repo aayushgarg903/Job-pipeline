@@ -103,6 +103,13 @@ export const surveyResponse = ks.table("survey_response", {
   comment: text("comment"),
   collectedAt: timestamp("collected_at", { withTimezone: true }).notNull().defaultNow(),
   isDemo: boolean("is_demo").notNull().default(false),
+  /** Survey demand never counts until verified (Architecture §6.1 anti-gaming). */
+  verified: boolean("verified").notNull().default(false),
+  verifiedAt: timestamp("verified_at", { withTimezone: true }),
+  /** DPDP Act 2023 s.6 consent record (SurveyInput.consent). */
+  consentAt: timestamp("consent_at", { withTimezone: true }),
+  consentNoticeVersion: text("consent_notice_version"),
+  consentPurpose: text("consent_purpose"),
 }, (t) => [index("survey_lgd_idx").on(t.lgdCode)]);
 
 export const surveySkill = ks.table("survey_skill", {

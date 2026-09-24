@@ -59,7 +59,7 @@ export async function buildFacts(sql: Sql, now = new Date()): Promise<Record<str
     select d.lgd_code,
       (select count(*)::int from ks.posting p where p.lgd_code = d.lgd_code and not p.is_duplicate
          and to_char(p.posted_at, 'YYYY') || '-Q' || extract(quarter from p.posted_at) = ${latest}) as postings,
-      (select count(*)::int from ks.survey_response s where s.lgd_code = d.lgd_code and s.collected_at > now() - interval '12 months') as surveys,
+      (select count(*)::int from ks.survey_response s where s.lgd_code = d.lgd_code and s.verified and s.collected_at > now() - interval '12 months') as surveys,
       (select coalesce(sum(registrations), 0)::float8 from ks.udyam_fact f where f.lgd_code = d.lgd_code
          and f.month >= ${shiftQuarter(latest, -3).replace(/-Q(\d)/, (_, n) => `-${String((Number(n) - 1) * 3 + 1).padStart(2, "0")}-01`)}::date) as udyam12,
       (select count(*)::int from ks.course c join ks.institution i on i.id = c.institution_id where i.lgd_code = d.lgd_code) as courses,
@@ -76,7 +76,7 @@ export async function buildFacts(sql: Sql, now = new Date()): Promise<Record<str
       sources: sql.json([
         { kind: "udyam", label: "Udyam registrations, last 12 months (apportioned)", n: Math.round(c?.udyam12 ?? 0) },
         { kind: "postings", label: "Online postings this quarter (JSearch)", n: c?.postings ?? 0 },
-        { kind: "surveys", label: "Employer survey responses, last 12 months", n: c?.surveys ?? 0 },
+        { kind: "surveys", label: "Verified employer survey responses, last 12 months", n: c?.surveys ?? 0 },
         { kind: "supply", label: "Courses tracked (demo) + state supply estimated", n: c?.courses ?? 0 },
       ]),
       is_demo: c?.demo ? 1 : 0,
