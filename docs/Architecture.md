@@ -212,6 +212,7 @@ r̃_k(d) = ( n_k(d)·r_k(d) + m_k·r̃_k(division(d)) ) / ( n_k(d) + m_k )     -
 - postings → hires uses a **posting-to-hire ratio** asked directly in the employer survey ("how many people did you hire per role you advertised online?"). It's reported as a range; that is our ground truth.
 - Udyam: `Σ_nic Δregistrations(d,nic) · employment_per_unit(nic) · xwalk(nic→o)`. This is the only district-native signal in every district, so it anchors rural districts where postings are near zero.
 - surveys: stated expected hires, reweighted by sector share of district employment (Economic Census).
+  **Anti-gaming:** one employer's responses are capped at 10% of a district-occupation's survey weight. Answers claiming more than 3× that employer's Udyam-size-band norm are flagged to `review_item`. Survey demand never counts until the employer is verified (Udyam number checked).
 
 **Step 3: fuse.**
 ```
