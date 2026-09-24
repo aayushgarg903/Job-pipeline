@@ -9,14 +9,16 @@ interface EvRow { kind: EvidenceRow["kind"]; title: string; detail: string; sour
 const toEv = (r: EvRow): EvidenceRow => ({ ...r, date: iso(r.date) });
 
 export function miscReaders(sql: Sql): MiscReaders {
-  /** Posting evidence: the extracted evidence sentence, per skill and/or district. */
+  /** Posting evidence: one extracted evidence sentence per posting (the most confident), per skill and/or district. */
   const postingEv = (lgd: string | null, skillId: string | null, limit: number) => sql<EvRow[]>`
-    select 'posting' as kind, p.title || ' · ' || p.employer_name as title, ps.evidence_sentence as detail,
-           p.source_id as source, p.posted_at as date, p.url
-    from ks.posting_skill ps join ks.posting p on p.id = ps.posting_id
-    where not p.is_duplicate and not ps.negated
-      and (${lgd}::text is null or p.lgd_code = ${lgd}) and (${skillId}::text is null or ps.skill_id = ${skillId})
-    order by p.posted_at desc limit ${limit}`;
+    select kind, title, detail, source, date, url from (
+      select distinct on (p.id) 'posting' as kind, p.title || ' · ' || p.employer_name as title, ps.evidence_sentence as detail,
+             p.source_id as source, p.posted_at as date, p.url
+      from ks.posting_skill ps join ks.posting p on p.id = ps.posting_id
+      where not p.is_duplicate and not ps.negated
+        and (${lgd}::text is null or p.lgd_code = ${lgd}) and (${skillId}::text is null or ps.skill_id = ${skillId})
+      order by p.id, ps.confidence desc nulls last, ps.skill_id) x
+    order by date desc limit ${limit}`;
 
   const surveyEv = (lgd: string | null, skillId: string | null, limit: number) => sql<EvRow[]>`
     select 'survey' as kind,
