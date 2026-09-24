@@ -1,7 +1,7 @@
 // /state: the state officer's overview. One humane headline, the district map with its
 // table, 36 district cards (most mismatched first), what's rising, flag counts, freshness.
 import type { CourseFlag } from "@ks/contracts";
-import { Badge, Card, FreshnessStrip, MapWithTable, PeopleFigure, VERDICTS, formatNumber, formatPercent, humanRound } from "@ks/ui";
+import { Badge, Card, FreshnessStrip, PeopleFigure, VERDICTS, formatNumber, formatPercent, humanRound } from "@ks/ui";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { loadEvidence } from "@/app/actions/console";
@@ -10,7 +10,7 @@ import { DistrictPicker } from "@/components/console/DistrictPicker";
 import { loadState } from "@/components/console/data";
 import { PageSkeleton } from "@/components/PageSkeleton";
 import { districtCard } from "@/lib/cards";
-import { mhDistricts } from "@/lib/geo";
+import { StateMap } from "@/components/console/StateMap";
 import { routeTemplates, routes } from "@/lib/routes";
 
 export const metadata: Metadata = { title: "State overview" };
@@ -68,8 +68,7 @@ async function StateBody() {
       </section>
 
       <Section id="map" title={t("console.state.mapTitle")} lede={t("console.state.mapLede")}>
-        <MapWithTable
-          geo={mhDistricts}
+        <StateMap
           rows={rows}
           caption={t("console.state.tableCaption")}
           hrefTemplate={routeTemplates.district}
