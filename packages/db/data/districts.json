@@ -1,0 +1,438 @@
+[
+ {
+  "lgd": "466",
+  "nameEn": "Ahilyanagar",
+  "nameMr": "अहिल्यानगर",
+  "division": "Nashik",
+  "population": 4543159,
+  "isAspirational": false,
+  "census2011": "522",
+  "lgdName": "Ahmednagar",
+  "aliases": [
+   "Ahmednagar",
+   "Ahmadnagar",
+   "Nagar"
+  ]
+ },
+ {
+  "lgd": "467",
+  "nameEn": "Akola",
+  "nameMr": "अकोला",
+  "division": "Amravati",
+  "population": 1813906,
+  "isAspirational": false,
+  "census2011": "501",
+  "lgdName": "Akola",
+  "aliases": []
+ },
+ {
+  "lgd": "468",
+  "nameEn": "Amravati",
+  "nameMr": "अमरावती",
+  "division": "Amravati",
+  "population": 2888445,
+  "isAspirational": false,
+  "census2011": "503",
+  "lgdName": "Amravati",
+  "aliases": [
+   "Amraoti"
+  ]
+ },
+ {
+  "lgd": "470",
+  "nameEn": "Beed",
+  "nameMr": "बीड",
+  "division": "Chh. Sambhajinagar",
+  "population": 2585049,
+  "isAspirational": false,
+  "census2011": "523",
+  "lgdName": "Beed",
+  "aliases": [
+   "Bid"
+  ]
+ },
+ {
+  "lgd": "471",
+  "nameEn": "Bhandara",
+  "nameMr": "भंडारा",
+  "division": "Nagpur",
+  "population": 1200334,
+  "isAspirational": false,
+  "census2011": "506",
+  "lgdName": "Bhandara",
+  "aliases": []
+ },
+ {
+  "lgd": "472",
+  "nameEn": "Buldhana",
+  "nameMr": "बुलढाणा",
+  "division": "Amravati",
+  "population": 2586258,
+  "isAspirational": false,
+  "census2011": "500",
+  "lgdName": "Buldhana",
+  "aliases": [
+   "Buldana"
+  ]
+ },
+ {
+  "lgd": "473",
+  "nameEn": "Chandrapur",
+  "nameMr": "चंद्रपूर",
+  "division": "Nagpur",
+  "population": 2204307,
+  "isAspirational": false,
+  "census2011": "509",
+  "lgdName": "Chandrapur",
+  "aliases": [
+   "Chanda"
+  ]
+ },
+ {
+  "lgd": "469",
+  "nameEn": "Chhatrapati Sambhajinagar",
+  "nameMr": "छत्रपती संभाजीनगर",
+  "division": "Chh. Sambhajinagar",
+  "population": 3701282,
+  "isAspirational": false,
+  "census2011": "515",
+  "lgdName": "Aurangabad",
+  "aliases": [
+   "Aurangabad",
+   "Chh. Sambhajinagar",
+   "Sambhajinagar"
+  ]
+ },
+ {
+  "lgd": "488",
+  "nameEn": "Dharashiv",
+  "nameMr": "धाराशिव",
+  "division": "Chh. Sambhajinagar",
+  "population": 1657576,
+  "isAspirational": true,
+  "census2011": "525",
+  "lgdName": "Osmanabad",
+  "aliases": [
+   "Osmanabad"
+  ]
+ },
+ {
+  "lgd": "474",
+  "nameEn": "Dhule",
+  "nameMr": "धुळे",
+  "division": "Nashik",
+  "population": 2050862,
+  "isAspirational": false,
+  "census2011": "498",
+  "lgdName": "Dhule",
+  "aliases": [
+   "Dhulia"
+  ]
+ },
+ {
+  "lgd": "475",
+  "nameEn": "Gadchiroli",
+  "nameMr": "गडचिरोली",
+  "division": "Nagpur",
+  "population": 1072942,
+  "isAspirational": true,
+  "census2011": "508",
+  "lgdName": "Gadchiroli",
+  "aliases": [
+   "Garhchiroli"
+  ]
+ },
+ {
+  "lgd": "476",
+  "nameEn": "Gondia",
+  "nameMr": "गोंदिया",
+  "division": "Nagpur",
+  "population": 1322507,
+  "isAspirational": false,
+  "census2011": "507",
+  "lgdName": "Gondia",
+  "aliases": [
+   "Gondiya"
+  ]
+ },
+ {
+  "lgd": "477",
+  "nameEn": "Hingoli",
+  "nameMr": "हिंगोली",
+  "division": "Chh. Sambhajinagar",
+  "population": 1177345,
+  "isAspirational": false,
+  "census2011": "512",
+  "lgdName": "Hingoli",
+  "aliases": []
+ },
+ {
+  "lgd": "478",
+  "nameEn": "Jalgaon",
+  "nameMr": "जळगाव",
+  "division": "Nashik",
+  "population": 4229917,
+  "isAspirational": false,
+  "census2011": "499",
+  "lgdName": "Jalgaon",
+  "aliases": []
+ },
+ {
+  "lgd": "479",
+  "nameEn": "Jalna",
+  "nameMr": "जालना",
+  "division": "Chh. Sambhajinagar",
+  "population": 1959046,
+  "isAspirational": false,
+  "census2011": "514",
+  "lgdName": "Jalna",
+  "aliases": []
+ },
+ {
+  "lgd": "480",
+  "nameEn": "Kolhapur",
+  "nameMr": "कोल्हापूर",
+  "division": "Pune",
+  "population": 3876001,
+  "isAspirational": false,
+  "census2011": "530",
+  "lgdName": "Kolhapur",
+  "aliases": []
+ },
+ {
+  "lgd": "481",
+  "nameEn": "Latur",
+  "nameMr": "लातूर",
+  "division": "Chh. Sambhajinagar",
+  "population": 2454196,
+  "isAspirational": false,
+  "census2011": "524",
+  "lgdName": "Latur",
+  "aliases": []
+ },
+ {
+  "lgd": "482",
+  "nameEn": "Mumbai City",
+  "nameMr": "मुंबई शहर",
+  "division": "Konkan",
+  "population": 3085411,
+  "isAspirational": false,
+  "census2011": "519",
+  "lgdName": "Mumbai",
+  "aliases": [
+   "Mumbai",
+   "Bombay"
+  ]
+ },
+ {
+  "lgd": "483",
+  "nameEn": "Mumbai Suburban",
+  "nameMr": "मुंबई उपनगर",
+  "division": "Konkan",
+  "population": 9356962,
+  "isAspirational": false,
+  "census2011": "518",
+  "lgdName": "Mumbai Suburban",
+  "aliases": [
+   "Bombay Suburban"
+  ]
+ },
+ {
+  "lgd": "484",
+  "nameEn": "Nagpur",
+  "nameMr": "नागपूर",
+  "division": "Nagpur",
+  "population": 4653570,
+  "isAspirational": false,
+  "census2011": "505",
+  "lgdName": "Nagpur",
+  "aliases": []
+ },
+ {
+  "lgd": "485",
+  "nameEn": "Nanded",
+  "nameMr": "नांदेड",
+  "division": "Chh. Sambhajinagar",
+  "population": 3361292,
+  "isAspirational": false,
+  "census2011": "511",
+  "lgdName": "Nanded",
+  "aliases": []
+ },
+ {
+  "lgd": "486",
+  "nameEn": "Nandurbar",
+  "nameMr": "नंदुरबार",
+  "division": "Nashik",
+  "population": 1648295,
+  "isAspirational": true,
+  "census2011": "497",
+  "lgdName": "Nandurbar",
+  "aliases": []
+ },
+ {
+  "lgd": "487",
+  "nameEn": "Nashik",
+  "nameMr": "नाशिक",
+  "division": "Nashik",
+  "population": 6107187,
+  "isAspirational": false,
+  "census2011": "516",
+  "lgdName": "Nashik",
+  "aliases": [
+   "Nasik"
+  ]
+ },
+ {
+  "lgd": "665",
+  "nameEn": "Palghar",
+  "nameMr": "पालघर",
+  "division": "Konkan",
+  "population": 2990116,
+  "isAspirational": false,
+  "census2011": null,
+  "lgdName": "Palghar",
+  "aliases": []
+ },
+ {
+  "lgd": "489",
+  "nameEn": "Parbhani",
+  "nameMr": "परभणी",
+  "division": "Chh. Sambhajinagar",
+  "population": 1836086,
+  "isAspirational": false,
+  "census2011": "513",
+  "lgdName": "Parbhani",
+  "aliases": []
+ },
+ {
+  "lgd": "490",
+  "nameEn": "Pune",
+  "nameMr": "पुणे",
+  "division": "Pune",
+  "population": 9429408,
+  "isAspirational": false,
+  "census2011": "521",
+  "lgdName": "Pune",
+  "aliases": [
+   "Poona"
+  ]
+ },
+ {
+  "lgd": "491",
+  "nameEn": "Raigad",
+  "nameMr": "रायगड",
+  "division": "Konkan",
+  "population": 2634200,
+  "isAspirational": false,
+  "census2011": "520",
+  "lgdName": "Raigad",
+  "aliases": [
+   "Raigarh",
+   "Kolaba"
+  ]
+ },
+ {
+  "lgd": "492",
+  "nameEn": "Ratnagiri",
+  "nameMr": "रत्नागिरी",
+  "division": "Konkan",
+  "population": 1615069,
+  "isAspirational": false,
+  "census2011": "528",
+  "lgdName": "Ratnagiri",
+  "aliases": []
+ },
+ {
+  "lgd": "493",
+  "nameEn": "Sangli",
+  "nameMr": "सांगली",
+  "division": "Pune",
+  "population": 2822143,
+  "isAspirational": false,
+  "census2011": "531",
+  "lgdName": "Sangli",
+  "aliases": []
+ },
+ {
+  "lgd": "494",
+  "nameEn": "Satara",
+  "nameMr": "सातारा",
+  "division": "Pune",
+  "population": 3003741,
+  "isAspirational": false,
+  "census2011": "527",
+  "lgdName": "Satara",
+  "aliases": []
+ },
+ {
+  "lgd": "495",
+  "nameEn": "Sindhudurg",
+  "nameMr": "सिंधुदुर्ग",
+  "division": "Konkan",
+  "population": 849651,
+  "isAspirational": false,
+  "census2011": "529",
+  "lgdName": "Sindhudurg",
+  "aliases": []
+ },
+ {
+  "lgd": "496",
+  "nameEn": "Solapur",
+  "nameMr": "सोलापूर",
+  "division": "Pune",
+  "population": 4317756,
+  "isAspirational": false,
+  "census2011": "526",
+  "lgdName": "Solapur",
+  "aliases": [
+   "Sholapur"
+  ]
+ },
+ {
+  "lgd": "497",
+  "nameEn": "Thane",
+  "nameMr": "ठाणे",
+  "division": "Konkan",
+  "population": 8070032,
+  "isAspirational": false,
+  "census2011": "517",
+  "lgdName": "Thane",
+  "aliases": []
+ },
+ {
+  "lgd": "498",
+  "nameEn": "Wardha",
+  "nameMr": "वर्धा",
+  "division": "Nagpur",
+  "population": 1300774,
+  "isAspirational": false,
+  "census2011": "504",
+  "lgdName": "Wardha",
+  "aliases": []
+ },
+ {
+  "lgd": "499",
+  "nameEn": "Washim",
+  "nameMr": "वाशिम",
+  "division": "Amravati",
+  "population": 1197160,
+  "isAspirational": true,
+  "census2011": "502",
+  "lgdName": "Washim",
+  "aliases": []
+ },
+ {
+  "lgd": "500",
+  "nameEn": "Yavatmal",
+  "nameMr": "यवतमाळ",
+  "division": "Amravati",
+  "population": 2772348,
+  "isAspirational": false,
+  "census2011": "510",
+  "lgdName": "Yavatmal",
+  "aliases": [
+   "Yeotmal"
+  ]
+ }
+]

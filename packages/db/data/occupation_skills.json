@@ -1,0 +1,3712 @@
+[
+ {
+  "nco": "7231.0100",
+  "skillId": "engine-overhaul",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7231.0100",
+  "skillId": "vehicle-diagnostics",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7231.0100",
+  "skillId": "automotive-electrical",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7231.0100",
+  "skillId": "brake-suspension-service",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7231.0100",
+  "skillId": "transmission-repair",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7231.0100",
+  "skillId": "preventive-maintenance",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7231.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7231.0100",
+  "skillId": "carburettor-tuning",
+  "weight": 0.25,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7231.0100",
+  "skillId": "customer-handling",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7231.0200",
+  "skillId": "diesel-engine-repair",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7231.0200",
+  "skillId": "engine-overhaul",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7231.0200",
+  "skillId": "hydraulics-pneumatics",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7231.0200",
+  "skillId": "vehicle-diagnostics",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7231.0200",
+  "skillId": "preventive-maintenance",
+  "weight": 0.65,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7231.0200",
+  "skillId": "dg-set-maintenance",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7231.0200",
+  "skillId": "workplace-safety",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7231.0300",
+  "skillId": "ev-powertrain",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7231.0300",
+  "skillId": "ev-battery-systems",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7231.0300",
+  "skillId": "battery-management-systems",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7231.0300",
+  "skillId": "high-voltage-safety",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7231.0300",
+  "skillId": "vehicle-diagnostics",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7231.0300",
+  "skillId": "automotive-electrical",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7231.0300",
+  "skillId": "ev-charging-installation",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7231.0300",
+  "skillId": "multimeter-use",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7231.0300",
+  "skillId": "workplace-safety",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7212.0100",
+  "skillId": "arc-welding",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7212.0100",
+  "skillId": "mig-mag-welding",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7212.0100",
+  "skillId": "tig-welding",
+  "weight": 0.45,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "7212.0100",
+  "skillId": "gas-cutting",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7212.0100",
+  "skillId": "engineering-drawing-reading",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7212.0100",
+  "skillId": "sheet-metal-fabrication",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7212.0100",
+  "skillId": "robotic-welding",
+  "weight": 0.2,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7212.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.75,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7212.0100",
+  "skillId": "quality-inspection",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7222.0100",
+  "skillId": "tool-and-die-making",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7222.0100",
+  "skillId": "jigs-fixtures",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7222.0100",
+  "skillId": "lathe-turning",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "7222.0100",
+  "skillId": "milling",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7222.0100",
+  "skillId": "grinding",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "7222.0100",
+  "skillId": "precision-measurement",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7222.0100",
+  "skillId": "engineering-drawing-reading",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7222.0100",
+  "skillId": "cnc-programming",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7222.0100",
+  "skillId": "gd-and-t",
+  "weight": 0.5,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "7223.0100",
+  "skillId": "milling",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7223.0100",
+  "skillId": "lathe-turning",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7223.0100",
+  "skillId": "grinding",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7223.0100",
+  "skillId": "precision-measurement",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7223.0100",
+  "skillId": "engineering-drawing-reading",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7223.0100",
+  "skillId": "cnc-machine-operation",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7223.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7223.0200",
+  "skillId": "cnc-machine-operation",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7223.0200",
+  "skillId": "cnc-programming",
+  "weight": 0.65,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7223.0200",
+  "skillId": "fanuc-cnc-control",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7223.0200",
+  "skillId": "siemens-sinumerik",
+  "weight": 0.25,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7223.0200",
+  "skillId": "vmc-operation",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "7223.0200",
+  "skillId": "precision-measurement",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7223.0200",
+  "skillId": "engineering-drawing-reading",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7223.0200",
+  "skillId": "gd-and-t",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7223.0200",
+  "skillId": "quality-inspection",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7223.0200",
+  "skillId": "shift-work",
+  "weight": 0.5,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "7223.0300",
+  "skillId": "lathe-turning",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7223.0300",
+  "skillId": "precision-measurement",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7223.0300",
+  "skillId": "engineering-drawing-reading",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7223.0300",
+  "skillId": "cnc-machine-operation",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7223.0300",
+  "skillId": "grinding",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7223.0300",
+  "skillId": "workplace-safety",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7233.0100",
+  "skillId": "fitting-assembly",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7233.0100",
+  "skillId": "engineering-drawing-reading",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7233.0100",
+  "skillId": "precision-measurement",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7233.0100",
+  "skillId": "hydraulics-pneumatics",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7233.0100",
+  "skillId": "preventive-maintenance",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7233.0100",
+  "skillId": "gas-cutting",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7233.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.65,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7233.0100",
+  "skillId": "five-s-kaizen",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7213.0100",
+  "skillId": "sheet-metal-fabrication",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7213.0100",
+  "skillId": "press-shop-operation",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7213.0100",
+  "skillId": "arc-welding",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7213.0100",
+  "skillId": "engineering-drawing-reading",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7213.0100",
+  "skillId": "painting-coating",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7213.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8211.0100",
+  "skillId": "assembly-line-operation",
+  "weight": 0.9,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8211.0100",
+  "skillId": "fitting-assembly",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8211.0100",
+  "skillId": "quality-inspection",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8211.0100",
+  "skillId": "five-s-kaizen",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8211.0100",
+  "skillId": "shift-work",
+  "weight": 0.6,
+  "proficiency": 1,
+  "essential": true
+ },
+ {
+  "nco": "8211.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8211.0100",
+  "skillId": "teamwork",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3118.0100",
+  "skillId": "autocad",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3118.0100",
+  "skillId": "solidworks",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3118.0100",
+  "skillId": "catia",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3118.0100",
+  "skillId": "engineering-drawing-reading",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3118.0100",
+  "skillId": "gd-and-t",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3118.0100",
+  "skillId": "manual-drafting",
+  "weight": 0.2,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3118.0100",
+  "skillId": "communication",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7543.0100",
+  "skillId": "quality-inspection",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7543.0100",
+  "skillId": "precision-measurement",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7543.0100",
+  "skillId": "cmm-operation",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7543.0100",
+  "skillId": "spc-tools",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7543.0100",
+  "skillId": "iso-9001-iatf",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7543.0100",
+  "skillId": "engineering-drawing-reading",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7543.0100",
+  "skillId": "report-writing",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7543.0100",
+  "skillId": "gd-and-t",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3115.0100",
+  "skillId": "engineering-drawing-reading",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3115.0100",
+  "skillId": "lean-manufacturing",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3115.0100",
+  "skillId": "preventive-maintenance",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3115.0100",
+  "skillId": "industrial-automation",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3115.0100",
+  "skillId": "autocad",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3115.0100",
+  "skillId": "ms-excel",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3115.0100",
+  "skillId": "iso-9001-iatf",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3115.0100",
+  "skillId": "problem-solving",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0100",
+  "skillId": "domestic-wiring",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0100",
+  "skillId": "electrical-installation",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0100",
+  "skillId": "electrical-safety",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0100",
+  "skillId": "multimeter-use",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0100",
+  "skillId": "motor-control-panels",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "7411.0100",
+  "skillId": "earthing-systems",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7411.0100",
+  "skillId": "electrical-drawing",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7411.0100",
+  "skillId": "solar-pv-installation",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7411.0100",
+  "skillId": "ev-charging-installation",
+  "weight": 0.2,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7411.0100",
+  "skillId": "plc-programming",
+  "weight": 0.2,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7411.0200",
+  "skillId": "domestic-wiring",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0200",
+  "skillId": "electrical-safety",
+  "weight": 0.8,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7411.0200",
+  "skillId": "multimeter-use",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7411.0200",
+  "skillId": "earthing-systems",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7411.0200",
+  "skillId": "electrical-drawing",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7411.0200",
+  "skillId": "electrical-estimation",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7411.0300",
+  "skillId": "solar-pv-installation",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0300",
+  "skillId": "rooftop-solar",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0300",
+  "skillId": "solar-inverter",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0300",
+  "skillId": "electrical-safety",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0300",
+  "skillId": "earthing-systems",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7411.0300",
+  "skillId": "multimeter-use",
+  "weight": 0.65,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7411.0300",
+  "skillId": "domestic-wiring",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7411.0300",
+  "skillId": "workplace-safety",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7411.0300",
+  "skillId": "customer-handling",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7411.0400",
+  "skillId": "ev-charging-installation",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0400",
+  "skillId": "electrical-installation",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0400",
+  "skillId": "electrical-safety",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0400",
+  "skillId": "high-voltage-safety",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7411.0400",
+  "skillId": "ht-lt-switchgear",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7411.0400",
+  "skillId": "multimeter-use",
+  "weight": 0.65,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7411.0400",
+  "skillId": "earthing-systems",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7411.0400",
+  "skillId": "iot-systems",
+  "weight": 0.25,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7412.0100",
+  "skillId": "motor-rewinding",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7412.0100",
+  "skillId": "motor-control-panels",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7412.0100",
+  "skillId": "transformer-maintenance",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7412.0100",
+  "skillId": "vfd-drives",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7412.0100",
+  "skillId": "multimeter-use",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7412.0100",
+  "skillId": "electrical-safety",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7412.0100",
+  "skillId": "preventive-maintenance",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7413.0100",
+  "skillId": "lineman-work",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7413.0100",
+  "skillId": "cable-jointing",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7413.0100",
+  "skillId": "electrical-safety",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7413.0100",
+  "skillId": "transformer-maintenance",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7413.0100",
+  "skillId": "earthing-systems",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7413.0100",
+  "skillId": "ht-lt-switchgear",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7413.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7421.0100",
+  "skillId": "pcb-troubleshooting",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7421.0100",
+  "skillId": "electronics-soldering",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7421.0100",
+  "skillId": "analog-electronics",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7421.0100",
+  "skillId": "multimeter-use",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7421.0100",
+  "skillId": "embedded-systems",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7421.0100",
+  "skillId": "home-appliance-repair",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7421.0100",
+  "skillId": "mobile-phone-repair",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7421.0100",
+  "skillId": "crt-tv-repair",
+  "weight": 0.1,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7422.0100",
+  "skillId": "iot-systems",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7422.0100",
+  "skillId": "networking",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7422.0100",
+  "skillId": "cctv-installation",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7422.0100",
+  "skillId": "embedded-systems",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7422.0100",
+  "skillId": "domestic-wiring",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7422.0100",
+  "skillId": "customer-handling",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7422.0100",
+  "skillId": "digital-literacy",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7127.0100",
+  "skillId": "hvac-servicing",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7127.0100",
+  "skillId": "refrigerant-handling",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7127.0100",
+  "skillId": "refrigeration-systems",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7127.0100",
+  "skillId": "gas-cutting",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7127.0100",
+  "skillId": "multimeter-use",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7127.0100",
+  "skillId": "electrical-safety",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7127.0100",
+  "skillId": "customer-handling",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3113.0100",
+  "skillId": "plc-programming",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3113.0100",
+  "skillId": "industrial-automation",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3113.0100",
+  "skillId": "scada-hmi",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3113.0100",
+  "skillId": "vfd-drives",
+  "weight": 0.5,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "3113.0100",
+  "skillId": "ht-lt-switchgear",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "3113.0100",
+  "skillId": "electrical-drawing",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3113.0100",
+  "skillId": "energy-auditing",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3113.0100",
+  "skillId": "electrical-safety",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3113.0100",
+  "skillId": "siemens-plc",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3114.0100",
+  "skillId": "embedded-systems",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3114.0100",
+  "skillId": "pcb-troubleshooting",
+  "weight": 0.65,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3114.0100",
+  "skillId": "iot-systems",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3114.0100",
+  "skillId": "smt-operation",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3114.0100",
+  "skillId": "analog-electronics",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3114.0100",
+  "skillId": "python",
+  "weight": 0.25,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3114.0100",
+  "skillId": "report-writing",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8212.0100",
+  "skillId": "smt-operation",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8212.0100",
+  "skillId": "electronics-soldering",
+  "weight": 0.8,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8212.0100",
+  "skillId": "quality-inspection",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8212.0100",
+  "skillId": "assembly-line-operation",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8212.0100",
+  "skillId": "five-s-kaizen",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8212.0100",
+  "skillId": "shift-work",
+  "weight": 0.6,
+  "proficiency": 1,
+  "essential": true
+ },
+ {
+  "nco": "8212.0100",
+  "skillId": "attention-to-detail",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3139.0100",
+  "skillId": "plc-programming",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3139.0100",
+  "skillId": "siemens-plc",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3139.0100",
+  "skillId": "industrial-robotics",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3139.0100",
+  "skillId": "scada-hmi",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3139.0100",
+  "skillId": "industrial-automation",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3139.0100",
+  "skillId": "vfd-drives",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "3139.0100",
+  "skillId": "hydraulics-pneumatics",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3139.0100",
+  "skillId": "electrical-drawing",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2511.0100",
+  "skillId": "sql",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2511.0100",
+  "skillId": "agile-scrum",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2511.0100",
+  "skillId": "problem-solving",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2511.0100",
+  "skillId": "communication",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2511.0100",
+  "skillId": "report-writing",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "2511.0100",
+  "skillId": "cloud-computing",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2511.0100",
+  "skillId": "ms-excel-advanced",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2512.0100",
+  "skillId": "java",
+  "weight": 0.5,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "2512.0100",
+  "skillId": "python",
+  "weight": 0.5,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "2512.0100",
+  "skillId": "javascript",
+  "weight": 0.5,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "2512.0100",
+  "skillId": "sql",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2512.0100",
+  "skillId": "git",
+  "weight": 0.65,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2512.0100",
+  "skillId": "api-development",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "2512.0100",
+  "skillId": "agile-scrum",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2512.0100",
+  "skillId": "cloud-computing",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2512.0100",
+  "skillId": "problem-solving",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2512.0100",
+  "skillId": "generative-ai",
+  "weight": 0.25,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2513.0100",
+  "skillId": "html-css",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2513.0100",
+  "skillId": "javascript",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2513.0100",
+  "skillId": "react",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2513.0100",
+  "skillId": "nodejs",
+  "weight": 0.45,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "2513.0100",
+  "skillId": "php",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2513.0100",
+  "skillId": "git",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "2513.0100",
+  "skillId": "web-development",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2513.0100",
+  "skillId": "ui-ux-design",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2513.0100",
+  "skillId": "sql",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2519.0100",
+  "skillId": "software-testing",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2519.0100",
+  "skillId": "test-automation",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "2519.0100",
+  "skillId": "sql",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2519.0100",
+  "skillId": "agile-scrum",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2519.0100",
+  "skillId": "attention-to-detail",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2519.0100",
+  "skillId": "report-writing",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2519.0100",
+  "skillId": "java",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2519.0100",
+  "skillId": "python",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2521.0100",
+  "skillId": "database-administration",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2521.0100",
+  "skillId": "sql",
+  "weight": 0.9,
+  "proficiency": 4,
+  "essential": true
+ },
+ {
+  "nco": "2521.0100",
+  "skillId": "linux-administration",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "2521.0100",
+  "skillId": "cloud-computing",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2521.0100",
+  "skillId": "etl-data-pipelines",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2521.0100",
+  "skillId": "cybersecurity-basics",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2120.0100",
+  "skillId": "data-analysis",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2120.0100",
+  "skillId": "sql",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2120.0100",
+  "skillId": "ms-excel-advanced",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2120.0100",
+  "skillId": "power-bi",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2120.0100",
+  "skillId": "tableau",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2120.0100",
+  "skillId": "python",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "2120.0100",
+  "skillId": "statistics",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2120.0100",
+  "skillId": "communication",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2120.0100",
+  "skillId": "machine-learning",
+  "weight": 0.2,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2120.0100",
+  "skillId": "generative-ai",
+  "weight": 0.2,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2529.0100",
+  "skillId": "cybersecurity-basics",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2529.0100",
+  "skillId": "networking",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2529.0100",
+  "skillId": "linux-administration",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2529.0100",
+  "skillId": "cloud-computing",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2529.0100",
+  "skillId": "python",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2529.0100",
+  "skillId": "report-writing",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3511.0100",
+  "skillId": "cloud-computing",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3511.0100",
+  "skillId": "aws",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3511.0100",
+  "skillId": "azure",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3511.0100",
+  "skillId": "linux-administration",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3511.0100",
+  "skillId": "devops",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3511.0100",
+  "skillId": "networking",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3511.0100",
+  "skillId": "shift-work",
+  "weight": 0.45,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "3512.0100",
+  "skillId": "it-support",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3512.0100",
+  "skillId": "computer-hardware",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3512.0100",
+  "skillId": "networking",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3512.0100",
+  "skillId": "ms-office",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3512.0100",
+  "skillId": "customer-handling",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3512.0100",
+  "skillId": "communication",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3512.0100",
+  "skillId": "cybersecurity-basics",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3512.0100",
+  "skillId": "dos-basic-computing",
+  "weight": 0.1,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "3513.0100",
+  "skillId": "networking",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3513.0100",
+  "skillId": "computer-hardware",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3513.0100",
+  "skillId": "linux-administration",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3513.0100",
+  "skillId": "cctv-installation",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3513.0100",
+  "skillId": "cybersecurity-basics",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3513.0100",
+  "skillId": "it-support",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4132.0100",
+  "skillId": "data-entry",
+  "weight": 0.9,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4132.0100",
+  "skillId": "ms-office",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4132.0100",
+  "skillId": "ms-excel",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4132.0100",
+  "skillId": "english-communication",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4132.0100",
+  "skillId": "attention-to-detail",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4132.0100",
+  "skillId": "basic-computer-skills",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4132.0100",
+  "skillId": "typewriting",
+  "weight": 0.15,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4132.0100",
+  "skillId": "tally",
+  "weight": 0.25,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4222.0100",
+  "skillId": "customer-support",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "4222.0100",
+  "skillId": "communication",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "4222.0100",
+  "skillId": "english-communication",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "4222.0100",
+  "skillId": "hindi-communication",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4222.0100",
+  "skillId": "marathi-communication",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4222.0100",
+  "skillId": "crm-software",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4222.0100",
+  "skillId": "basic-computer-skills",
+  "weight": 0.65,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4222.0100",
+  "skillId": "shift-work",
+  "weight": 0.6,
+  "proficiency": 1,
+  "essential": true
+ },
+ {
+  "nco": "2431.0100",
+  "skillId": "digital-marketing",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2431.0100",
+  "skillId": "ms-excel",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2431.0100",
+  "skillId": "communication",
+  "weight": 0.65,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "2431.0100",
+  "skillId": "ui-ux-design",
+  "weight": 0.2,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2431.0100",
+  "skillId": "generative-ai",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "2431.0100",
+  "skillId": "data-analysis",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4321.0100",
+  "skillId": "inventory-management",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "4321.0100",
+  "skillId": "stock-audit",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4321.0100",
+  "skillId": "ms-excel",
+  "weight": 0.65,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4321.0100",
+  "skillId": "tally",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4321.0100",
+  "skillId": "sap-mm",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4321.0100",
+  "skillId": "barcode-rfid",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4321.0100",
+  "skillId": "report-writing",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4321.0100",
+  "skillId": "numeracy",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4321.0200",
+  "skillId": "warehouse-operations",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "4321.0200",
+  "skillId": "wms-software",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4321.0200",
+  "skillId": "inventory-management",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "4321.0200",
+  "skillId": "picking-packing",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4321.0200",
+  "skillId": "barcode-rfid",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4321.0200",
+  "skillId": "ms-excel",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4321.0200",
+  "skillId": "mis-reporting",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4321.0200",
+  "skillId": "gst-eway-bill",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4321.0200",
+  "skillId": "leadership",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "9321.0100",
+  "skillId": "picking-packing",
+  "weight": 0.9,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "9321.0100",
+  "skillId": "barcode-rfid",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "9321.0100",
+  "skillId": "material-handling",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "9321.0100",
+  "skillId": "packaging-labelling",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "9321.0100",
+  "skillId": "shift-work",
+  "weight": 0.7,
+  "proficiency": 1,
+  "essential": true
+ },
+ {
+  "nco": "9321.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "9321.0100",
+  "skillId": "ecommerce-fulfilment",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8344.0100",
+  "skillId": "forklift-operation",
+  "weight": 0.95,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "8344.0100",
+  "skillId": "material-handling",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8344.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.75,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8344.0100",
+  "skillId": "warehouse-operations",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8344.0100",
+  "skillId": "load-planning",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8344.0100",
+  "skillId": "shift-work",
+  "weight": 0.55,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "9333.0100",
+  "skillId": "material-handling",
+  "weight": 0.9,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "9333.0100",
+  "skillId": "load-planning",
+  "weight": 0.35,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "9333.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.6,
+  "proficiency": 1,
+  "essential": true
+ },
+ {
+  "nco": "9333.0100",
+  "skillId": "teamwork",
+  "weight": 0.5,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "9333.0100",
+  "skillId": "shift-work",
+  "weight": 0.6,
+  "proficiency": 1,
+  "essential": true
+ },
+ {
+  "nco": "9333.0100",
+  "skillId": "communication",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "1324.0100",
+  "skillId": "supply-chain-management",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "1324.0100",
+  "skillId": "procurement",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "1324.0100",
+  "skillId": "demand-planning",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "1324.0100",
+  "skillId": "sap-mm",
+  "weight": 0.5,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "1324.0100",
+  "skillId": "ms-excel-advanced",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "1324.0100",
+  "skillId": "mis-reporting",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "1324.0100",
+  "skillId": "leadership",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "1324.0100",
+  "skillId": "3pl-operations",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "1324.0100",
+  "skillId": "export-import-documentation",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4323.0100",
+  "skillId": "logistics-coordination",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "4323.0100",
+  "skillId": "dispatch-documentation",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4323.0100",
+  "skillId": "gst-eway-bill",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4323.0100",
+  "skillId": "fleet-management",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4323.0100",
+  "skillId": "route-planning",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "4323.0100",
+  "skillId": "ms-excel",
+  "weight": 0.65,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "4323.0100",
+  "skillId": "communication",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8332.0100",
+  "skillId": "heavy-vehicle-driving",
+  "weight": 0.95,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "8332.0100",
+  "skillId": "route-planning",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8332.0100",
+  "skillId": "dispatch-documentation",
+  "weight": 0.4,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "8332.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8332.0100",
+  "skillId": "preventive-maintenance",
+  "weight": 0.3,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "8332.0100",
+  "skillId": "teamwork",
+  "weight": 0.4,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "8321.0100",
+  "skillId": "two-wheeler-delivery",
+  "weight": 0.9,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8321.0100",
+  "skillId": "driving-licence-2w",
+  "weight": 0.9,
+  "proficiency": 1,
+  "essential": true
+ },
+ {
+  "nco": "8321.0100",
+  "skillId": "route-planning",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8321.0100",
+  "skillId": "digital-literacy",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8321.0100",
+  "skillId": "customer-handling",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8321.0100",
+  "skillId": "marathi-communication",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3331.0100",
+  "skillId": "export-import-documentation",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3331.0100",
+  "skillId": "gst-eway-bill",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "3331.0100",
+  "skillId": "logistics-coordination",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3331.0100",
+  "skillId": "dangerous-goods-handling",
+  "weight": 0.25,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3331.0100",
+  "skillId": "communication",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3331.0100",
+  "skillId": "ms-excel",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8343.0100",
+  "skillId": "crane-operation",
+  "weight": 0.95,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "8343.0100",
+  "skillId": "material-handling",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8343.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "8343.0100",
+  "skillId": "load-planning",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8343.0100",
+  "skillId": "teamwork",
+  "weight": 0.4,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "8343.0100",
+  "skillId": "communication",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7514.0100",
+  "skillId": "fruit-vegetable-processing",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7514.0100",
+  "skillId": "gmp-hygiene",
+  "weight": 0.8,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7514.0100",
+  "skillId": "food-safety-haccp",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7514.0100",
+  "skillId": "grading-sorting",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7514.0100",
+  "skillId": "food-packaging-machines",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7514.0100",
+  "skillId": "batch-traceability",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7514.0100",
+  "skillId": "shift-work",
+  "weight": 0.5,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "7512.0100",
+  "skillId": "bakery-production",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7512.0100",
+  "skillId": "gmp-hygiene",
+  "weight": 0.75,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7512.0100",
+  "skillId": "food-safety-haccp",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7512.0100",
+  "skillId": "fssai-compliance",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7512.0100",
+  "skillId": "commercial-cooking",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7512.0100",
+  "skillId": "numeracy",
+  "weight": 0.4,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "7513.0100",
+  "skillId": "dairy-processing",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "7513.0100",
+  "skillId": "gmp-hygiene",
+  "weight": 0.8,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7513.0100",
+  "skillId": "food-safety-haccp",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7513.0100",
+  "skillId": "cold-chain-management",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7513.0100",
+  "skillId": "quality-control-food",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7513.0100",
+  "skillId": "boiler-operation",
+  "weight": 0.25,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8160.0100",
+  "skillId": "food-processing-operations",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "8160.0100",
+  "skillId": "food-packaging-machines",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8160.0100",
+  "skillId": "gmp-hygiene",
+  "weight": 0.75,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8160.0100",
+  "skillId": "preventive-maintenance",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8160.0100",
+  "skillId": "batch-traceability",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8160.0100",
+  "skillId": "shift-work",
+  "weight": 0.6,
+  "proficiency": 1,
+  "essential": true
+ },
+ {
+  "nco": "8160.0100",
+  "skillId": "workplace-safety",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3257.0200",
+  "skillId": "food-safety-haccp",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3257.0200",
+  "skillId": "fssai-compliance",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3257.0200",
+  "skillId": "gmp-hygiene",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3257.0200",
+  "skillId": "quality-control-food",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3257.0200",
+  "skillId": "pest-control-food",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3257.0200",
+  "skillId": "report-writing",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3257.0200",
+  "skillId": "leadership",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3141.0100",
+  "skillId": "food-lab-testing",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3141.0100",
+  "skillId": "quality-control-food",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3141.0100",
+  "skillId": "microscopy",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3141.0100",
+  "skillId": "fssai-compliance",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3141.0100",
+  "skillId": "report-writing",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3141.0100",
+  "skillId": "attention-to-detail",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3122.0100",
+  "skillId": "food-processing-operations",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3122.0100",
+  "skillId": "leadership",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3122.0100",
+  "skillId": "food-safety-haccp",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3122.0100",
+  "skillId": "lean-manufacturing",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3122.0100",
+  "skillId": "mis-reporting",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3122.0100",
+  "skillId": "batch-traceability",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3122.0100",
+  "skillId": "ms-excel",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7515.0100",
+  "skillId": "grading-sorting",
+  "weight": 0.9,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7515.0100",
+  "skillId": "post-harvest-management",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "7515.0100",
+  "skillId": "packaging-labelling",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7515.0100",
+  "skillId": "gmp-hygiene",
+  "weight": 0.45,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "7515.0100",
+  "skillId": "cold-storage-operation",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "7515.0100",
+  "skillId": "teamwork",
+  "weight": 0.4,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "8189.0100",
+  "skillId": "cold-storage-operation",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "8189.0100",
+  "skillId": "cold-chain-management",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "8189.0100",
+  "skillId": "refrigeration-systems",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8189.0100",
+  "skillId": "post-harvest-management",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8189.0100",
+  "skillId": "fruit-ripening",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8189.0100",
+  "skillId": "inventory-management",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8189.0100",
+  "skillId": "forklift-operation",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3142.0100",
+  "skillId": "drip-irrigation",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3142.0100",
+  "skillId": "organic-farming",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3142.0100",
+  "skillId": "greenhouse-cultivation",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3142.0100",
+  "skillId": "post-harvest-management",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3142.0100",
+  "skillId": "fpo-management",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3142.0100",
+  "skillId": "farm-machinery-operation",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3142.0100",
+  "skillId": "marathi-communication",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8160.0200",
+  "skillId": "wine-beverage-production",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "8160.0200",
+  "skillId": "gmp-hygiene",
+  "weight": 0.75,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "8160.0200",
+  "skillId": "food-packaging-machines",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8160.0200",
+  "skillId": "quality-control-food",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8160.0200",
+  "skillId": "boiler-operation",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "8160.0200",
+  "skillId": "teamwork",
+  "weight": 0.4,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "5321.0100",
+  "skillId": "patient-care",
+  "weight": 0.95,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "5321.0100",
+  "skillId": "vital-signs-monitoring",
+  "weight": 0.8,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "5321.0100",
+  "skillId": "infection-control",
+  "weight": 0.8,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "5321.0100",
+  "skillId": "patient-mobility",
+  "weight": 0.7,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "5321.0100",
+  "skillId": "first-aid-cpr",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "5321.0100",
+  "skillId": "biomedical-waste-management",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "5321.0100",
+  "skillId": "communication",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "5321.0100",
+  "skillId": "marathi-communication",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "5322.0100",
+  "skillId": "home-healthcare",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "5322.0100",
+  "skillId": "patient-care",
+  "weight": 0.8,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "5322.0100",
+  "skillId": "vital-signs-monitoring",
+  "weight": 0.65,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "5322.0100",
+  "skillId": "patient-mobility",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "5322.0100",
+  "skillId": "diet-nutrition",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "5322.0100",
+  "skillId": "first-aid-cpr",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "5322.0100",
+  "skillId": "communication",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3212.0100",
+  "skillId": "lab-sample-processing",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3212.0100",
+  "skillId": "clinical-biochemistry",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3212.0100",
+  "skillId": "hematology",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3212.0100",
+  "skillId": "microscopy",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3212.0100",
+  "skillId": "phlebotomy",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3212.0100",
+  "skillId": "biomedical-waste-management",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3212.0100",
+  "skillId": "infection-control",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3212.0100",
+  "skillId": "report-writing",
+  "weight": 0.45,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3212.0200",
+  "skillId": "phlebotomy",
+  "weight": 0.95,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3212.0200",
+  "skillId": "lab-sample-processing",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3212.0200",
+  "skillId": "infection-control",
+  "weight": 0.75,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3212.0200",
+  "skillId": "biomedical-waste-management",
+  "weight": 0.65,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3212.0200",
+  "skillId": "patient-care",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3212.0200",
+  "skillId": "communication",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3213.0100",
+  "skillId": "pharmacy-dispensing",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3213.0100",
+  "skillId": "drug-inventory",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3213.0100",
+  "skillId": "medical-terminology",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3213.0100",
+  "skillId": "customer-handling",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3213.0100",
+  "skillId": "tally",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3213.0100",
+  "skillId": "basic-computer-skills",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3221.0100",
+  "skillId": "nursing-procedures",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3221.0100",
+  "skillId": "patient-care",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3221.0100",
+  "skillId": "vital-signs-monitoring",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3221.0100",
+  "skillId": "infection-control",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3221.0100",
+  "skillId": "maternal-child-care",
+  "weight": 0.5,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "3221.0100",
+  "skillId": "first-aid-cpr",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3221.0100",
+  "skillId": "medical-equipment-handling",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3221.0100",
+  "skillId": "medical-terminology",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3258.0100",
+  "skillId": "emergency-care",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3258.0100",
+  "skillId": "first-aid-cpr",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3258.0100",
+  "skillId": "vital-signs-monitoring",
+  "weight": 0.75,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3258.0100",
+  "skillId": "patient-mobility",
+  "weight": 0.65,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3258.0100",
+  "skillId": "medical-equipment-handling",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3258.0100",
+  "skillId": "light-vehicle-driving",
+  "weight": 0.2,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3211.0100",
+  "skillId": "xray-imaging",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3211.0100",
+  "skillId": "patient-care",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3211.0100",
+  "skillId": "medical-equipment-handling",
+  "weight": 0.65,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3211.0100",
+  "skillId": "infection-control",
+  "weight": 0.5,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3211.0100",
+  "skillId": "ecg-operation",
+  "weight": 0.3,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3211.0100",
+  "skillId": "teamwork",
+  "weight": 0.4,
+  "proficiency": 1,
+  "essential": false
+ },
+ {
+  "nco": "3252.0100",
+  "skillId": "medical-records",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3252.0100",
+  "skillId": "medical-coding",
+  "weight": 0.55,
+  "proficiency": 3,
+  "essential": false
+ },
+ {
+  "nco": "3252.0100",
+  "skillId": "medical-terminology",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3252.0100",
+  "skillId": "ms-excel",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3252.0100",
+  "skillId": "data-entry",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3252.0100",
+  "skillId": "health-insurance-pmjay",
+  "weight": 0.4,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3257.0100",
+  "skillId": "public-health-sanitation",
+  "weight": 0.9,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3257.0100",
+  "skillId": "biomedical-waste-management",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3257.0100",
+  "skillId": "food-safety-haccp",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3257.0100",
+  "skillId": "report-writing",
+  "weight": 0.6,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3257.0100",
+  "skillId": "communication",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3257.0100",
+  "skillId": "pest-control-food",
+  "weight": 0.35,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3256.0100",
+  "skillId": "ot-assistance",
+  "weight": 0.8,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3256.0100",
+  "skillId": "infection-control",
+  "weight": 0.85,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3256.0100",
+  "skillId": "medical-equipment-handling",
+  "weight": 0.7,
+  "proficiency": 3,
+  "essential": true
+ },
+ {
+  "nco": "3256.0100",
+  "skillId": "patient-care",
+  "weight": 0.6,
+  "proficiency": 2,
+  "essential": true
+ },
+ {
+  "nco": "3256.0100",
+  "skillId": "medical-terminology",
+  "weight": 0.55,
+  "proficiency": 2,
+  "essential": false
+ },
+ {
+  "nco": "3256.0100",
+  "skillId": "dialysis",
+  "weight": 0.2,
+  "proficiency": 2,
+  "essential": false
+ }
+]

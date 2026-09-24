@@ -1,0 +1,1736 @@
+[
+ {
+  "code": "CTS-ELEC",
+  "name": "Electrician",
+  "kind": "ITI",
+  "sector": "electrical",
+  "nco": "7411.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 2400,
+  "nsqfLevel": 5,
+  "trainerQualification": "CITS Electrician",
+  "equipment": [
+   "Multimeter & megger set",
+   "Motor control trainer panel",
+   "Wiring practice boards",
+   "Solar PV training kit"
+  ],
+  "skills": [
+   {
+    "skillId": "domestic-wiring",
+    "proficiency": 3,
+    "hours": 300,
+    "module": "Wiring & installation"
+   },
+   {
+    "skillId": "electrical-installation",
+    "proficiency": 3,
+    "hours": 240,
+    "module": "Wiring & installation"
+   },
+   {
+    "skillId": "electrical-safety",
+    "proficiency": 3,
+    "hours": 120,
+    "module": "Safety"
+   },
+   {
+    "skillId": "multimeter-use",
+    "proficiency": 3,
+    "hours": 120,
+    "module": "Measurement"
+   },
+   {
+    "skillId": "motor-control-panels",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Motors & starters"
+   },
+   {
+    "skillId": "motor-rewinding",
+    "proficiency": 2,
+    "hours": 160,
+    "module": "Motors & starters"
+   },
+   {
+    "skillId": "earthing-systems",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Wiring & installation"
+   },
+   {
+    "skillId": "electrical-drawing",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Drawing"
+   },
+   {
+    "skillId": "transformer-maintenance",
+    "proficiency": 2,
+    "hours": 100,
+    "module": "Transformers"
+   }
+  ]
+ },
+ {
+  "code": "CTS-WIRE",
+  "name": "Wireman",
+  "kind": "ITI",
+  "sector": "electrical",
+  "nco": "7411.0200",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 2400,
+  "nsqfLevel": 4,
+  "trainerQualification": "CITS Wireman",
+  "equipment": [
+   "Wiring practice boards",
+   "Megger",
+   "Conduit bending kit"
+  ],
+  "skills": [
+   {
+    "skillId": "domestic-wiring",
+    "proficiency": 3,
+    "hours": 400,
+    "module": "Wiring"
+   },
+   {
+    "skillId": "electrical-safety",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Safety"
+   },
+   {
+    "skillId": "multimeter-use",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Measurement"
+   },
+   {
+    "skillId": "earthing-systems",
+    "proficiency": 2,
+    "hours": 100,
+    "module": "Earthing"
+   },
+   {
+    "skillId": "electrical-drawing",
+    "proficiency": 2,
+    "hours": 100,
+    "module": "Drawing"
+   },
+   {
+    "skillId": "electrical-estimation",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Estimation"
+   }
+  ]
+ },
+ {
+  "code": "CTS-FITT",
+  "name": "Fitter",
+  "kind": "ITI",
+  "sector": "auto",
+  "nco": "7233.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 2400,
+  "nsqfLevel": 5,
+  "trainerQualification": "CITS Fitter",
+  "equipment": [
+   "Bench vices & fitting tools",
+   "Precision measuring set",
+   "Drilling machine",
+   "Hydraulic trainer"
+  ],
+  "skills": [
+   {
+    "skillId": "fitting-assembly",
+    "proficiency": 3,
+    "hours": 500,
+    "module": "Fitting"
+   },
+   {
+    "skillId": "precision-measurement",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Metrology"
+   },
+   {
+    "skillId": "engineering-drawing-reading",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Engineering drawing"
+   },
+   {
+    "skillId": "hydraulics-pneumatics",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Hydraulics"
+   },
+   {
+    "skillId": "preventive-maintenance",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Maintenance"
+   },
+   {
+    "skillId": "gas-cutting",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Allied"
+   },
+   {
+    "skillId": "workplace-safety",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Safety"
+   }
+  ]
+ },
+ {
+  "code": "CTS-TURN",
+  "name": "Turner",
+  "kind": "ITI",
+  "sector": "auto",
+  "nco": "7223.0300",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 2400,
+  "nsqfLevel": 5,
+  "trainerQualification": "CITS Turner",
+  "equipment": [
+   "Centre lathe",
+   "Precision measuring set",
+   "Tool grinder"
+  ],
+  "skills": [
+   {
+    "skillId": "lathe-turning",
+    "proficiency": 3,
+    "hours": 600,
+    "module": "Turning"
+   },
+   {
+    "skillId": "precision-measurement",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Metrology"
+   },
+   {
+    "skillId": "engineering-drawing-reading",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Engineering drawing"
+   },
+   {
+    "skillId": "grinding",
+    "proficiency": 2,
+    "hours": 100,
+    "module": "Grinding"
+   },
+   {
+    "skillId": "workplace-safety",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Safety"
+   }
+  ]
+ },
+ {
+  "code": "CTS-MACH",
+  "name": "Machinist",
+  "kind": "ITI",
+  "sector": "auto",
+  "nco": "7223.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 2400,
+  "nsqfLevel": 5,
+  "trainerQualification": "CITS Machinist",
+  "equipment": [
+   "Milling machine",
+   "Centre lathe",
+   "CNC turning simulator",
+   "Precision measuring set"
+  ],
+  "skills": [
+   {
+    "skillId": "milling",
+    "proficiency": 3,
+    "hours": 500,
+    "module": "Milling"
+   },
+   {
+    "skillId": "lathe-turning",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Turning"
+   },
+   {
+    "skillId": "grinding",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Grinding"
+   },
+   {
+    "skillId": "precision-measurement",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Metrology"
+   },
+   {
+    "skillId": "engineering-drawing-reading",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "Engineering drawing"
+   },
+   {
+    "skillId": "cnc-programming",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "CNC basics"
+   },
+   {
+    "skillId": "cnc-machine-operation",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "CNC basics"
+   }
+  ]
+ },
+ {
+  "code": "CTS-WELD",
+  "name": "Welder",
+  "kind": "ITI",
+  "sector": "auto",
+  "nco": "7212.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 1200,
+  "nsqfLevel": 4,
+  "trainerQualification": "CITS Welder",
+  "equipment": [
+   "Arc welding sets",
+   "MIG welding set",
+   "TIG welding set",
+   "Gas cutting set"
+  ],
+  "skills": [
+   {
+    "skillId": "arc-welding",
+    "proficiency": 3,
+    "hours": 360,
+    "module": "SMAW"
+   },
+   {
+    "skillId": "gas-cutting",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "Gas welding & cutting"
+   },
+   {
+    "skillId": "mig-mag-welding",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "GMAW"
+   },
+   {
+    "skillId": "tig-welding",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "GTAW"
+   },
+   {
+    "skillId": "engineering-drawing-reading",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Drawing"
+   },
+   {
+    "skillId": "workplace-safety",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Safety"
+   }
+  ]
+ },
+ {
+  "code": "CTS-MMV",
+  "name": "Mechanic Motor Vehicle",
+  "kind": "ITI",
+  "sector": "auto",
+  "nco": "7231.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 2400,
+  "nsqfLevel": 5,
+  "trainerQualification": "CITS Mechanic Motor Vehicle",
+  "equipment": [
+   "Engine cut-section models",
+   "OBD scanner",
+   "Brake & suspension rig",
+   "Hydraulic lift"
+  ],
+  "skills": [
+   {
+    "skillId": "engine-overhaul",
+    "proficiency": 3,
+    "hours": 400,
+    "module": "Engine"
+   },
+   {
+    "skillId": "carburettor-tuning",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Fuel systems"
+   },
+   {
+    "skillId": "brake-suspension-service",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Chassis"
+   },
+   {
+    "skillId": "transmission-repair",
+    "proficiency": 2,
+    "hours": 160,
+    "module": "Transmission"
+   },
+   {
+    "skillId": "automotive-electrical",
+    "proficiency": 2,
+    "hours": 160,
+    "module": "Electrical"
+   },
+   {
+    "skillId": "vehicle-diagnostics",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Diagnostics"
+   },
+   {
+    "skillId": "preventive-maintenance",
+    "proficiency": 2,
+    "hours": 100,
+    "module": "Service"
+   }
+  ]
+ },
+ {
+  "code": "CTS-MDSL",
+  "name": "Mechanic Diesel",
+  "kind": "ITI",
+  "sector": "auto",
+  "nco": "7231.0200",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 1200,
+  "nsqfLevel": 4,
+  "trainerQualification": "CITS Mechanic Diesel",
+  "equipment": [
+   "Diesel engine test bed",
+   "FIP calibration bench",
+   "Tool kits"
+  ],
+  "skills": [
+   {
+    "skillId": "diesel-engine-repair",
+    "proficiency": 3,
+    "hours": 400,
+    "module": "Diesel engine"
+   },
+   {
+    "skillId": "engine-overhaul",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Overhaul"
+   },
+   {
+    "skillId": "hydraulics-pneumatics",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Hydraulics"
+   },
+   {
+    "skillId": "dg-set-maintenance",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Gensets"
+   },
+   {
+    "skillId": "carburettor-tuning",
+    "proficiency": 1,
+    "hours": 40,
+    "module": "Legacy fuel systems"
+   },
+   {
+    "skillId": "preventive-maintenance",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Service"
+   }
+  ]
+ },
+ {
+  "code": "CTS-MEV",
+  "name": "Mechanic Electric Vehicle",
+  "kind": "ITI",
+  "sector": "auto",
+  "nco": "7231.0300",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 2400,
+  "nsqfLevel": 5,
+  "trainerQualification": "CITS Mechanic Electric Vehicle",
+  "equipment": [
+   "EV powertrain trainer",
+   "Battery pack & BMS trainer",
+   "Insulated HV tool kit",
+   "EV diagnostic scanner"
+  ],
+  "skills": [
+   {
+    "skillId": "ev-powertrain",
+    "proficiency": 3,
+    "hours": 300,
+    "module": "EV powertrain"
+   },
+   {
+    "skillId": "ev-battery-systems",
+    "proficiency": 3,
+    "hours": 300,
+    "module": "Battery systems"
+   },
+   {
+    "skillId": "battery-management-systems",
+    "proficiency": 2,
+    "hours": 160,
+    "module": "BMS"
+   },
+   {
+    "skillId": "high-voltage-safety",
+    "proficiency": 3,
+    "hours": 120,
+    "module": "HV safety"
+   },
+   {
+    "skillId": "vehicle-diagnostics",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "Diagnostics"
+   },
+   {
+    "skillId": "automotive-electrical",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "Electrical"
+   },
+   {
+    "skillId": "ev-charging-installation",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Charging"
+   }
+  ]
+ },
+ {
+  "code": "CTS-ELMC",
+  "name": "Electronics Mechanic",
+  "kind": "ITI",
+  "sector": "electrical",
+  "nco": "7421.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 2400,
+  "nsqfLevel": 5,
+  "trainerQualification": "CITS Electronics Mechanic",
+  "equipment": [
+   "Soldering stations",
+   "Oscilloscopes",
+   "CRT TV trainer",
+   "Microcontroller kits"
+  ],
+  "skills": [
+   {
+    "skillId": "analog-electronics",
+    "proficiency": 3,
+    "hours": 300,
+    "module": "Basic electronics"
+   },
+   {
+    "skillId": "electronics-soldering",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Soldering"
+   },
+   {
+    "skillId": "pcb-troubleshooting",
+    "proficiency": 3,
+    "hours": 300,
+    "module": "Fault finding"
+   },
+   {
+    "skillId": "crt-tv-repair",
+    "proficiency": 3,
+    "hours": 240,
+    "module": "TV servicing"
+   },
+   {
+    "skillId": "multimeter-use",
+    "proficiency": 3,
+    "hours": 100,
+    "module": "Measurement"
+   },
+   {
+    "skillId": "home-appliance-repair",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Appliances"
+   },
+   {
+    "skillId": "embedded-systems",
+    "proficiency": 1,
+    "hours": 60,
+    "module": "Microcontrollers"
+   }
+  ]
+ },
+ {
+  "code": "CTS-RACT",
+  "name": "Refrigeration and Air Conditioner Technician",
+  "kind": "ITI",
+  "sector": "electrical",
+  "nco": "7127.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 2400,
+  "nsqfLevel": 5,
+  "trainerQualification": "CITS Refrigeration & AC",
+  "equipment": [
+   "Split AC trainer",
+   "Refrigerant recovery unit",
+   "Vacuum pump & gauge manifold",
+   "Brazing kit"
+  ],
+  "skills": [
+   {
+    "skillId": "refrigeration-systems",
+    "proficiency": 3,
+    "hours": 300,
+    "module": "Refrigeration"
+   },
+   {
+    "skillId": "hvac-servicing",
+    "proficiency": 3,
+    "hours": 300,
+    "module": "Air conditioning"
+   },
+   {
+    "skillId": "refrigerant-handling",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Gas charging"
+   },
+   {
+    "skillId": "gas-cutting",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Brazing"
+   },
+   {
+    "skillId": "multimeter-use",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Electrical"
+   },
+   {
+    "skillId": "electrical-safety",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Safety"
+   }
+  ]
+ },
+ {
+  "code": "CTS-DMEC",
+  "name": "Draughtsman Mechanical",
+  "kind": "ITI",
+  "sector": "auto",
+  "nco": "3118.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 2400,
+  "nsqfLevel": 5,
+  "trainerQualification": "CITS Draughtsman Mechanical",
+  "equipment": [
+   "Drawing boards",
+   "CAD lab (AutoCAD)",
+   "SolidWorks licences"
+  ],
+  "skills": [
+   {
+    "skillId": "manual-drafting",
+    "proficiency": 3,
+    "hours": 400,
+    "module": "Drafting"
+   },
+   {
+    "skillId": "engineering-drawing-reading",
+    "proficiency": 3,
+    "hours": 300,
+    "module": "Engineering drawing"
+   },
+   {
+    "skillId": "autocad",
+    "proficiency": 3,
+    "hours": 300,
+    "module": "CAD"
+   },
+   {
+    "skillId": "gd-and-t",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Tolerancing"
+   },
+   {
+    "skillId": "solidworks",
+    "proficiency": 1,
+    "hours": 60,
+    "module": "3D modelling"
+   }
+  ]
+ },
+ {
+  "code": "CTS-TDM",
+  "name": "Tool and Die Maker (Press Tools, Jigs & Fixtures)",
+  "kind": "ITI",
+  "sector": "auto",
+  "nco": "7222.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 2400,
+  "nsqfLevel": 5,
+  "trainerQualification": "CITS Tool & Die Maker",
+  "equipment": [
+   "Surface grinder",
+   "Milling machine",
+   "Jig boring machine",
+   "EDM wire-cut"
+  ],
+  "skills": [
+   {
+    "skillId": "tool-and-die-making",
+    "proficiency": 3,
+    "hours": 500,
+    "module": "Press tools"
+   },
+   {
+    "skillId": "jigs-fixtures",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Jigs & fixtures"
+   },
+   {
+    "skillId": "milling",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Machining"
+   },
+   {
+    "skillId": "grinding",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "Grinding"
+   },
+   {
+    "skillId": "precision-measurement",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "Metrology"
+   },
+   {
+    "skillId": "engineering-drawing-reading",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "Drawing"
+   },
+   {
+    "skillId": "cnc-programming",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "CNC"
+   }
+  ]
+ },
+ {
+  "code": "CTS-SOLE",
+  "name": "Solar Technician (Electrical)",
+  "kind": "ITI",
+  "sector": "electrical",
+  "nco": "7411.0300",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 1200,
+  "nsqfLevel": 4,
+  "trainerQualification": "CITS Solar Technician",
+  "equipment": [
+   "Rooftop solar mock-up structure",
+   "Solar PV training kit",
+   "Hybrid inverter trainer"
+  ],
+  "skills": [
+   {
+    "skillId": "solar-pv-installation",
+    "proficiency": 3,
+    "hours": 300,
+    "module": "Solar PV"
+   },
+   {
+    "skillId": "rooftop-solar",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "Rooftop systems"
+   },
+   {
+    "skillId": "solar-inverter",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "Inverters & batteries"
+   },
+   {
+    "skillId": "electrical-safety",
+    "proficiency": 3,
+    "hours": 80,
+    "module": "Safety"
+   },
+   {
+    "skillId": "earthing-systems",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Earthing"
+   },
+   {
+    "skillId": "domestic-wiring",
+    "proficiency": 2,
+    "hours": 100,
+    "module": "Wiring"
+   }
+  ]
+ },
+ {
+  "code": "CTS-COPA",
+  "name": "Computer Operator and Programming Assistant (COPA)",
+  "kind": "ITI",
+  "sector": "it",
+  "nco": "4132.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 1200,
+  "nsqfLevel": 4,
+  "trainerQualification": "CITS COPA",
+  "equipment": [
+   "Computer lab (20 PCs)",
+   "Typewriting lab",
+   "Projector"
+  ],
+  "skills": [
+   {
+    "skillId": "basic-computer-skills",
+    "proficiency": 2,
+    "hours": 200,
+    "module": "Computer fundamentals"
+   },
+   {
+    "skillId": "dos-basic-computing",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "DOS & Windows"
+   },
+   {
+    "skillId": "typewriting",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Typing"
+   },
+   {
+    "skillId": "ms-office",
+    "proficiency": 2,
+    "hours": 200,
+    "module": "Office"
+   },
+   {
+    "skillId": "ms-excel",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Spreadsheet"
+   },
+   {
+    "skillId": "html-css",
+    "proficiency": 1,
+    "hours": 80,
+    "module": "Web basics"
+   },
+   {
+    "skillId": "data-entry",
+    "proficiency": 2,
+    "hours": 100,
+    "module": "Data entry"
+   }
+  ]
+ },
+ {
+  "code": "CTS-IOTS",
+  "name": "IoT Technician (Smart City)",
+  "kind": "ITI",
+  "sector": "electrical",
+  "nco": "7422.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 2400,
+  "nsqfLevel": 5,
+  "trainerQualification": "CITS IoT Technician",
+  "equipment": [
+   "IoT sensor kits",
+   "Raspberry Pi / Arduino kits",
+   "Network switch & router",
+   "CCTV trainer"
+  ],
+  "skills": [
+   {
+    "skillId": "iot-systems",
+    "proficiency": 3,
+    "hours": 400,
+    "module": "IoT"
+   },
+   {
+    "skillId": "embedded-systems",
+    "proficiency": 3,
+    "hours": 300,
+    "module": "Embedded"
+   },
+   {
+    "skillId": "networking",
+    "proficiency": 2,
+    "hours": 160,
+    "module": "Networking"
+   },
+   {
+    "skillId": "cctv-installation",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Surveillance"
+   },
+   {
+    "skillId": "electronics-soldering",
+    "proficiency": 2,
+    "hours": 100,
+    "module": "Electronics"
+   },
+   {
+    "skillId": "python",
+    "proficiency": 1,
+    "hours": 80,
+    "module": "Programming"
+   }
+  ]
+ },
+ {
+  "code": "CTS-DRON",
+  "name": "Drone Technician",
+  "kind": "ITI",
+  "sector": "electrical",
+  "nco": "7422.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 1200,
+  "nsqfLevel": 4,
+  "trainerQualification": "CITS Drone Technician",
+  "equipment": [
+   "Training drones",
+   "Drone assembly kits",
+   "Flight simulator"
+  ],
+  "skills": [
+   {
+    "skillId": "drone-assembly",
+    "proficiency": 3,
+    "hours": 400,
+    "module": "Drone assembly & flying"
+   },
+   {
+    "skillId": "electronics-soldering",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Electronics"
+   },
+   {
+    "skillId": "embedded-systems",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Flight controllers"
+   },
+   {
+    "skillId": "workplace-safety",
+    "proficiency": 2,
+    "hours": 40,
+    "module": "Safety"
+   },
+   {
+    "skillId": "iot-systems",
+    "proficiency": 1,
+    "hours": 40,
+    "module": "Payloads & sensors"
+   }
+  ]
+ },
+ {
+  "code": "CTS-FPG",
+  "name": "Food Production (General)",
+  "kind": "ITI",
+  "sector": "food",
+  "nco": "7512.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 1200,
+  "nsqfLevel": 4,
+  "trainerQualification": "CITS Food Production",
+  "equipment": [
+   "Commercial kitchen",
+   "Bakery oven",
+   "Food safety kit"
+  ],
+  "skills": [
+   {
+    "skillId": "commercial-cooking",
+    "proficiency": 3,
+    "hours": 400,
+    "module": "Food production"
+   },
+   {
+    "skillId": "bakery-production",
+    "proficiency": 2,
+    "hours": 200,
+    "module": "Bakery"
+   },
+   {
+    "skillId": "gmp-hygiene",
+    "proficiency": 2,
+    "hours": 100,
+    "module": "Hygiene"
+   },
+   {
+    "skillId": "food-safety-haccp",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Food safety"
+   },
+   {
+    "skillId": "fssai-compliance",
+    "proficiency": 1,
+    "hours": 30,
+    "module": "FSSAI"
+   }
+  ]
+ },
+ {
+  "code": "CTS-HSI",
+  "name": "Health Sanitary Inspector",
+  "kind": "ITI",
+  "sector": "health",
+  "nco": "3257.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 1200,
+  "nsqfLevel": 5,
+  "trainerQualification": "CITS Health Sanitary Inspector",
+  "equipment": [
+   "Water testing kit",
+   "Sanitation models",
+   "Laboratory glassware"
+  ],
+  "skills": [
+   {
+    "skillId": "public-health-sanitation",
+    "proficiency": 3,
+    "hours": 400,
+    "module": "Public health"
+   },
+   {
+    "skillId": "biomedical-waste-management",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Waste management"
+   },
+   {
+    "skillId": "food-safety-haccp",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Food hygiene"
+   },
+   {
+    "skillId": "pest-control-food",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Vector control"
+   },
+   {
+    "skillId": "report-writing",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Inspection reports"
+   }
+  ]
+ },
+ {
+  "code": "CTS-STEN",
+  "name": "Stenographer and Secretarial Assistant (English)",
+  "kind": "ITI",
+  "sector": "it",
+  "nco": "4132.0100",
+  "qpCode": null,
+  "qpCodeVerified": null,
+  "durationHours": 1200,
+  "nsqfLevel": 4,
+  "trainerQualification": "CITS Stenography",
+  "equipment": [
+   "Typewriting lab",
+   "Computer lab"
+  ],
+  "skills": [
+   {
+    "skillId": "typewriting",
+    "proficiency": 3,
+    "hours": 400,
+    "module": "Shorthand & typing"
+   },
+   {
+    "skillId": "english-communication",
+    "proficiency": 3,
+    "hours": 200,
+    "module": "English"
+   },
+   {
+    "skillId": "ms-office",
+    "proficiency": 2,
+    "hours": 160,
+    "module": "Office"
+   },
+   {
+    "skillId": "dos-basic-computing",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Computer basics"
+   },
+   {
+    "skillId": "report-writing",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Correspondence"
+   }
+  ]
+ },
+ {
+  "code": "PMK-GDA",
+  "name": "General Duty Assistant",
+  "kind": "PMKVY",
+  "sector": "health",
+  "nco": "5321.0100",
+  "qpCode": "HSS/Q5101",
+  "qpCodeVerified": true,
+  "durationHours": 420,
+  "nsqfLevel": 4,
+  "trainerQualification": "ToT-certified GDA trainer (HSSC)",
+  "equipment": [
+   "Hospital bed & manikin",
+   "BP apparatus & thermometer",
+   "Wheelchair & stretcher",
+   "PPE kit"
+  ],
+  "skills": [
+   {
+    "skillId": "patient-care",
+    "proficiency": 3,
+    "hours": 120,
+    "module": "Patient care"
+   },
+   {
+    "skillId": "vital-signs-monitoring",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Vitals"
+   },
+   {
+    "skillId": "infection-control",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Infection control"
+   },
+   {
+    "skillId": "patient-mobility",
+    "proficiency": 2,
+    "hours": 40,
+    "module": "Mobility"
+   },
+   {
+    "skillId": "first-aid-cpr",
+    "proficiency": 2,
+    "hours": 40,
+    "module": "First aid"
+   },
+   {
+    "skillId": "biomedical-waste-management",
+    "proficiency": 2,
+    "hours": 30,
+    "module": "BMW"
+   }
+  ]
+ },
+ {
+  "code": "PMK-PHLB",
+  "name": "Phlebotomy Technician",
+  "kind": "PMKVY",
+  "sector": "health",
+  "nco": "3212.0200",
+  "qpCode": "HSS/Q0501",
+  "qpCodeVerified": false,
+  "durationHours": 390,
+  "nsqfLevel": 4,
+  "trainerQualification": "ToT-certified Phlebotomy trainer (HSSC)",
+  "equipment": [
+   "Phlebotomy arm manikin",
+   "Centrifuge",
+   "Sample transport box"
+  ],
+  "skills": [
+   {
+    "skillId": "phlebotomy",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "Blood collection"
+   },
+   {
+    "skillId": "lab-sample-processing",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Sample handling"
+   },
+   {
+    "skillId": "infection-control",
+    "proficiency": 2,
+    "hours": 50,
+    "module": "Infection control"
+   },
+   {
+    "skillId": "biomedical-waste-management",
+    "proficiency": 2,
+    "hours": 30,
+    "module": "BMW"
+   },
+   {
+    "skillId": "patient-care",
+    "proficiency": 2,
+    "hours": 30,
+    "module": "Patient interaction"
+   }
+  ]
+ },
+ {
+  "code": "PMK-WHP",
+  "name": "Warehouse Picker",
+  "kind": "PMKVY",
+  "sector": "logistics",
+  "nco": "9321.0100",
+  "qpCode": "LSC/Q2305",
+  "qpCodeVerified": false,
+  "durationHours": 240,
+  "nsqfLevel": 3,
+  "trainerQualification": "ToT-certified Warehouse trainer (LSC)",
+  "equipment": [
+   "Racking & bins",
+   "Handheld barcode scanners",
+   "Pallet jack"
+  ],
+  "skills": [
+   {
+    "skillId": "picking-packing",
+    "proficiency": 2,
+    "hours": 100,
+    "module": "Picking & packing"
+   },
+   {
+    "skillId": "barcode-rfid",
+    "proficiency": 2,
+    "hours": 40,
+    "module": "Scanning"
+   },
+   {
+    "skillId": "material-handling",
+    "proficiency": 2,
+    "hours": 40,
+    "module": "Handling"
+   },
+   {
+    "skillId": "packaging-labelling",
+    "proficiency": 2,
+    "hours": 30,
+    "module": "Packaging"
+   },
+   {
+    "skillId": "workplace-safety",
+    "proficiency": 2,
+    "hours": 30,
+    "module": "Safety"
+   }
+  ]
+ },
+ {
+  "code": "PMK-FORK",
+  "name": "Forklift Operator",
+  "kind": "PMKVY",
+  "sector": "logistics",
+  "nco": "8344.0100",
+  "qpCode": "LSC/Q2306",
+  "qpCodeVerified": false,
+  "durationHours": 300,
+  "nsqfLevel": 4,
+  "trainerQualification": "ToT-certified Forklift trainer (LSC)",
+  "equipment": [
+   "Forklift (electric)",
+   "Reach truck",
+   "Pallets & racking"
+  ],
+  "skills": [
+   {
+    "skillId": "forklift-operation",
+    "proficiency": 3,
+    "hours": 180,
+    "module": "Forklift driving"
+   },
+   {
+    "skillId": "material-handling",
+    "proficiency": 2,
+    "hours": 40,
+    "module": "Handling"
+   },
+   {
+    "skillId": "workplace-safety",
+    "proficiency": 3,
+    "hours": 50,
+    "module": "Safety"
+   },
+   {
+    "skillId": "warehouse-operations",
+    "proficiency": 2,
+    "hours": 30,
+    "module": "Warehouse basics"
+   },
+   {
+    "skillId": "preventive-maintenance",
+    "proficiency": 1,
+    "hours": 20,
+    "module": "Daily checks"
+   }
+  ]
+ },
+ {
+  "code": "PMK-SURY",
+  "name": "Solar PV Installer - Suryamitra",
+  "kind": "PMKVY",
+  "sector": "electrical",
+  "nco": "7411.0300",
+  "qpCode": "SGJ/Q0101",
+  "qpCodeVerified": true,
+  "durationHours": 600,
+  "nsqfLevel": 4,
+  "trainerQualification": "ToT-certified Suryamitra trainer (SCGJ)",
+  "equipment": [
+   "Solar PV training kit",
+   "Rooftop mounting structure",
+   "Inverter trainer"
+  ],
+  "skills": [
+   {
+    "skillId": "solar-pv-installation",
+    "proficiency": 3,
+    "hours": 240,
+    "module": "Solar PV installation"
+   },
+   {
+    "skillId": "rooftop-solar",
+    "proficiency": 2,
+    "hours": 120,
+    "module": "Rooftop systems"
+   },
+   {
+    "skillId": "solar-inverter",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Inverters"
+   },
+   {
+    "skillId": "electrical-safety",
+    "proficiency": 3,
+    "hours": 60,
+    "module": "Safety"
+   },
+   {
+    "skillId": "multimeter-use",
+    "proficiency": 2,
+    "hours": 40,
+    "module": "Testing"
+   },
+   {
+    "skillId": "customer-handling",
+    "proficiency": 2,
+    "hours": 20,
+    "module": "Customer interaction"
+   }
+  ]
+ },
+ {
+  "code": "PMK-CNCT",
+  "name": "CNC Operator - Turning",
+  "kind": "PMKVY",
+  "sector": "auto",
+  "nco": "7223.0200",
+  "qpCode": "CSC/Q0110",
+  "qpCodeVerified": false,
+  "durationHours": 390,
+  "nsqfLevel": 4,
+  "trainerQualification": "ToT-certified CNC trainer (CGSC)",
+  "equipment": [
+   "CNC turning centre (Fanuc)",
+   "CNC simulator lab",
+   "Precision measuring set"
+  ],
+  "skills": [
+   {
+    "skillId": "cnc-machine-operation",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "CNC operation"
+   },
+   {
+    "skillId": "cnc-programming",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Part programming"
+   },
+   {
+    "skillId": "fanuc-cnc-control",
+    "proficiency": 2,
+    "hours": 50,
+    "module": "Fanuc control"
+   },
+   {
+    "skillId": "precision-measurement",
+    "proficiency": 3,
+    "hours": 50,
+    "module": "Inspection"
+   },
+   {
+    "skillId": "engineering-drawing-reading",
+    "proficiency": 2,
+    "hours": 30,
+    "module": "Drawing"
+   }
+  ]
+ },
+ {
+  "code": "PMK-DEO",
+  "name": "Domestic Data Entry Operator",
+  "kind": "PMKVY",
+  "sector": "it",
+  "nco": "4132.0100",
+  "qpCode": "SSC/Q2212",
+  "qpCodeVerified": true,
+  "durationHours": 390,
+  "nsqfLevel": 3,
+  "trainerQualification": "ToT-certified IT-ITeS trainer (SSC NASSCOM)",
+  "equipment": [
+   "Computer lab (20 PCs)"
+  ],
+  "skills": [
+   {
+    "skillId": "data-entry",
+    "proficiency": 2,
+    "hours": 160,
+    "module": "Data entry"
+   },
+   {
+    "skillId": "ms-office",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Office tools"
+   },
+   {
+    "skillId": "ms-excel",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Spreadsheets"
+   },
+   {
+    "skillId": "basic-computer-skills",
+    "proficiency": 2,
+    "hours": 40,
+    "module": "Computer basics"
+   },
+   {
+    "skillId": "attention-to-detail",
+    "proficiency": 2,
+    "hours": 30,
+    "module": "Accuracy"
+   }
+  ]
+ },
+ {
+  "code": "PMK-CCE",
+  "name": "Customer Care Executive - Call Centre",
+  "kind": "PMKVY",
+  "sector": "it",
+  "nco": "4222.0100",
+  "qpCode": "SSC/Q2203",
+  "qpCodeVerified": false,
+  "durationHours": 400,
+  "nsqfLevel": 4,
+  "trainerQualification": "ToT-certified IT-ITeS trainer (SSC NASSCOM)",
+  "equipment": [
+   "Computer lab with headsets",
+   "CRM demo software"
+  ],
+  "skills": [
+   {
+    "skillId": "customer-support",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "Customer service"
+   },
+   {
+    "skillId": "communication",
+    "proficiency": 3,
+    "hours": 80,
+    "module": "Communication"
+   },
+   {
+    "skillId": "english-communication",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "English"
+   },
+   {
+    "skillId": "crm-software",
+    "proficiency": 2,
+    "hours": 40,
+    "module": "CRM"
+   },
+   {
+    "skillId": "basic-computer-skills",
+    "proficiency": 2,
+    "hours": 40,
+    "module": "Computers"
+   }
+  ]
+ },
+ {
+  "code": "PMK-JSD",
+  "name": "Junior Software Developer",
+  "kind": "PMKVY",
+  "sector": "it",
+  "nco": "2512.0100",
+  "qpCode": "SSC/Q0508",
+  "qpCodeVerified": false,
+  "durationHours": 600,
+  "nsqfLevel": 5,
+  "trainerQualification": "ToT-certified IT-ITeS trainer (SSC NASSCOM)",
+  "equipment": [
+   "Computer lab (20 PCs)",
+   "Cloud sandbox accounts"
+  ],
+  "skills": [
+   {
+    "skillId": "java",
+    "proficiency": 2,
+    "hours": 160,
+    "module": "Programming"
+   },
+   {
+    "skillId": "sql",
+    "proficiency": 2,
+    "hours": 100,
+    "module": "Databases"
+   },
+   {
+    "skillId": "html-css",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Web"
+   },
+   {
+    "skillId": "javascript",
+    "proficiency": 2,
+    "hours": 100,
+    "module": "Web"
+   },
+   {
+    "skillId": "git",
+    "proficiency": 2,
+    "hours": 40,
+    "module": "Version control"
+   },
+   {
+    "skillId": "software-testing",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Testing"
+   }
+  ]
+ },
+ {
+  "code": "PMK-FSS",
+  "name": "Food Safety Supervisor - Manufacturing",
+  "kind": "PMKVY",
+  "sector": "food",
+  "nco": "3257.0200",
+  "qpCode": "FIC/Q7601",
+  "qpCodeVerified": false,
+  "durationHours": 390,
+  "nsqfLevel": 5,
+  "trainerQualification": "ToT-certified Food Safety trainer (FICSI)",
+  "equipment": [
+   "Food testing kit",
+   "HACCP documentation templates"
+  ],
+  "skills": [
+   {
+    "skillId": "food-safety-haccp",
+    "proficiency": 3,
+    "hours": 120,
+    "module": "HACCP"
+   },
+   {
+    "skillId": "fssai-compliance",
+    "proficiency": 3,
+    "hours": 80,
+    "module": "FSSAI"
+   },
+   {
+    "skillId": "gmp-hygiene",
+    "proficiency": 3,
+    "hours": 80,
+    "module": "GMP"
+   },
+   {
+    "skillId": "quality-control-food",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "QC"
+   },
+   {
+    "skillId": "report-writing",
+    "proficiency": 2,
+    "hours": 30,
+    "module": "Records"
+   }
+  ]
+ },
+ {
+  "code": "PMK-FVP",
+  "name": "Fruit and Vegetable Processing Technician",
+  "kind": "PMKVY",
+  "sector": "food",
+  "nco": "7514.0100",
+  "qpCode": "FIC/Q0102",
+  "qpCodeVerified": false,
+  "durationHours": 390,
+  "nsqfLevel": 4,
+  "trainerQualification": "ToT-certified Food Processing trainer (FICSI)",
+  "equipment": [
+   "Pulper & juice extractor",
+   "Sealing machine",
+   "Refractometer"
+  ],
+  "skills": [
+   {
+    "skillId": "fruit-vegetable-processing",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "Processing"
+   },
+   {
+    "skillId": "gmp-hygiene",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Hygiene"
+   },
+   {
+    "skillId": "food-packaging-machines",
+    "proficiency": 2,
+    "hours": 60,
+    "module": "Packaging"
+   },
+   {
+    "skillId": "grading-sorting",
+    "proficiency": 2,
+    "hours": 40,
+    "module": "Grading"
+   },
+   {
+    "skillId": "food-safety-haccp",
+    "proficiency": 2,
+    "hours": 50,
+    "module": "Food safety"
+   }
+  ]
+ },
+ {
+  "code": "PMK-EVCS",
+  "name": "EV Charging Station Technician",
+  "kind": "PMKVY",
+  "sector": "electrical",
+  "nco": "7411.0400",
+  "qpCode": "ASC/Q1417",
+  "qpCodeVerified": false,
+  "durationHours": 390,
+  "nsqfLevel": 4,
+  "trainerQualification": "ToT-certified EV trainer (ASDC)",
+  "equipment": [
+   "AC/DC EV charger trainer",
+   "HV insulated tool kit"
+  ],
+  "skills": [
+   {
+    "skillId": "ev-charging-installation",
+    "proficiency": 3,
+    "hours": 160,
+    "module": "Charger installation"
+   },
+   {
+    "skillId": "electrical-installation",
+    "proficiency": 2,
+    "hours": 80,
+    "module": "Electrical"
+   },
+   {
+    "skillId": "high-voltage-safety",
+    "proficiency": 3,
+    "hours": 60,
+    "module": "HV safety"
+   },
+   {
+    "skillId": "electrical-safety",
+    "proficiency": 3,
+    "hours": 40,
+    "module": "Safety"
+   },
+   {
+    "skillId": "multimeter-use",
+    "proficiency": 2,
+    "hours": 30,
+    "module": "Testing"
+   }
+  ]
+ }
+]
