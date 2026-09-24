@@ -5,7 +5,9 @@
 // so forms always work in a demo. Never call cookies()/headers() in here.
 import type { SurveyInput, Writers } from "@ks/contracts";
 
-export const DEMO_EMPLOYER_ID = "demo-employer-nashik";
+// Fixed id of "Nashik demo employer (specimen)", seeded by packages/db/scripts/seed/demo.ts
+// (employer ids are uuids; the fixture inbox ignores the id).
+export const DEMO_EMPLOYER_ID = "00000000-0000-4000-8000-000000000487";
 
 type Verdict = "endorse" | "change" | "irrelevant";
 interface DemoReview { prId: string; employerId: string; verdict: Verdict; comment: string | null; at: string }
