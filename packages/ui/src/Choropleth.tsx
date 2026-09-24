@@ -88,7 +88,8 @@ export function Choropleth({
 
   const paths = useMemo(() => {
     const projection = geoMercator().fitSize([width, height], geo as unknown as GeoPermissibleObjects);
-    const path = geoPath(projection);
+    // One decimal is a tenth of a pixel on this viewBox; the default (3) nearly doubles the path text.
+    const path = geoPath(projection).digits(1);
     return geo.features.map((f) => ({ lgd: f.properties.lgd, name: f.properties.name, d: path(f as unknown as GeoPermissibleObjects) ?? "" }));
   }, [geo, width, height]);
 
@@ -118,10 +119,10 @@ export function Choropleth({
   function focusDistrict(lgd: string) {
     setActive(lgd);
     onFocusDistrict?.(lgd);
-    svgRef.current?.querySelector<SVGPathElement>(`[data-lgd="${lgd}"]`)?.focus();
+    svgRef.current?.querySelector<SVGUseElement>(`[data-lgd="${lgd}"]`)?.focus();
   }
 
-  function onKey(e: KeyboardEvent<SVGPathElement>, lgd: string) {
+  function onKey(e: KeyboardEvent<SVGUseElement>, lgd: string) {
     const i = seq.indexOf(lgd);
     const go = (j: number) => {
       e.preventDefault();
@@ -154,6 +155,8 @@ export function Choropleth({
             <line x1="0" y1="0" x2="0" y2="6" stroke="var(--stock-bone)" strokeWidth="2.2" />
             <line x1="3" y1="0" x2="3" y2="6" stroke="var(--ink)" strokeWidth="0.9" />
           </pattern>
+          {/* Each outline is sent once; the district, its hatch and the focus ring all <use> it. */}
+          {paths.map((p) => <path key={p.lgd} id={`${uid}-g-${p.lgd}`} d={p.d} />)}
         </defs>
         {ordered.map((p) => {
           const d = byLgd.get(p.lgd);
@@ -161,8 +164,8 @@ export function Choropleth({
           const low = d ? d.coverage < lowCoverage : true;
           return (
             <g key={p.lgd}>
-              <path
-                d={p.d}
+              <use
+                href={`#${uid}-g-${p.lgd}`}
                 data-lgd={p.lgd}
                 className={`ks-map__district ks-ramp-${cls}`}
                 data-selected={selected === p.lgd ? "true" : undefined}
@@ -178,7 +181,7 @@ export function Choropleth({
                 onMouseEnter={() => setActive(p.lgd)}
                 onClick={() => choose(p.lgd)}
               />
-              {low ? <path d={p.d} className="ks-map__hatch" fill={`url(#${uid}-hatch)`} fillOpacity={cls >= 4 ? 0.9 : 0.55} aria-hidden="true" /> : null}
+              {low ? <use href={`#${uid}-g-${p.lgd}`} className="ks-map__hatch" fill={`url(#${uid}-hatch)`} fillOpacity={cls >= 4 ? 0.9 : 0.55} aria-hidden="true" /> : null}
             </g>
           );
         })}
@@ -186,8 +189,8 @@ export function Choropleth({
           const p = paths.find((x) => x.lgd === (active ?? selected));
           return p ? (
             <g aria-hidden="true">
-              <path d={p.d} className="ks-map__focus-ring" />
-              <path d={p.d} className="ks-map__focus-ring-inner" />
+              <use href={`#${uid}-g-${p.lgd}`} className="ks-map__focus-ring" />
+              <use href={`#${uid}-g-${p.lgd}`} className="ks-map__focus-ring-inner" />
             </g>
           ) : null;
         })() : null}
