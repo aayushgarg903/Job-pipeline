@@ -9,7 +9,7 @@ export type Sql = postgres.Sql;
 
 export function loadEnv(): void {
   if (!process.env.DATABASE_URL) {
-    config({ path: process.env.KS_ENV ?? "/home/faith/stuff/SIH/Job-pipeline/.env", quiet: true });
+    config({ path: process.env.KS_ENV ?? "../../.env", quiet: true });
   }
 }
 

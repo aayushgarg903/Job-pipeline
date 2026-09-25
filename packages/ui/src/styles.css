@@ -12,7 +12,6 @@
 
 /* Tailwind v4 mapping. Default palette is removed: only Design.md tokens exist as utilities. */
 @theme static {
-  --color-*: initial;
   --font-display: "Cormorant SC", "Cormorant Garamond", Georgia, serif;
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans: Inter, system-ui, sans-serif;

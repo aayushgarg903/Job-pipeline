@@ -10,7 +10,7 @@ import { fileURLToPath } from "node:url";
 import { config } from "dotenv";
 import postgres from "postgres";
 
-config({ path: process.env.KS_ENV ?? "/home/faith/stuff/SIH/Job-pipeline/.env", quiet: true });
+config({ path: process.env.KS_ENV ?? "../../.env", quiet: true });
 const here = dirname(fileURLToPath(import.meta.url));
 const migDir = join(here, "..", "migrations");
 

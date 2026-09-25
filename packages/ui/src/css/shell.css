@@ -8,30 +8,30 @@
 .ks-gov__lockup { display: flex; flex-wrap: wrap; gap: 0 10px; font-weight: 600; }
 .ks-gov__dept { color: var(--table-muted); }
 
-.ks-topbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 16px; border-bottom: var(--rule-end); border-color: var(--table-muted); }
+.ks-topbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 24px; border-bottom: 1px solid var(--ink-faint); background: var(--table-raised); }
 .ks-brand { display: inline-flex; align-items: baseline; gap: 10px; color: var(--table-ink); text-decoration: none; }
-.ks-brand__name { font: 500 1.5rem/1 var(--font-display), serif; letter-spacing: 0.14em; font-variant-caps: small-caps; }
-.ks-brand__mr { font: 400 1.125rem/1 var(--font-deva), serif; letter-spacing: 0; }
+.ks-brand__name { font: 700 1.25rem/1 var(--font-sans), sans-serif; letter-spacing: -0.02em; font-variant-caps: normal; }
+.ks-brand__mr { font: 500 1rem/1 var(--font-deva-sans), sans-serif; letter-spacing: 0; color: var(--table-muted); }
 .ks-topbar__tools { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 8px; min-width: 0; max-width: 100%; }
 
-.ks-shell { display: grid; grid-template-columns: 1fr; min-height: calc(100dvh - 120px); }
-@media (min-width: 1024px) { .ks-shell { grid-template-columns: 216px minmax(0, 1fr); } }
-.ks-main { min-width: 0; padding: 24px 16px 48px; max-width: 1280px; width: 100%; margin: 0 auto; box-sizing: border-box; }
-@media (min-width: 768px) { .ks-main { padding-inline: 32px; } }
+.ks-shell { display: grid; grid-template-columns: 1fr; min-height: calc(100dvh - 120px); background: var(--table); }
+@media (min-width: 1024px) { .ks-shell { grid-template-columns: 240px minmax(0, 1fr); } }
+.ks-main { min-width: 0; padding: 32px 24px 64px; max-width: 1280px; width: 100%; margin: 0 auto; box-sizing: border-box; }
+@media (min-width: 768px) { .ks-main { padding-inline: 40px; } }
 .ks-main:focus { outline: none; }
 
 /* Persona rail: left on >=1024px, menu sheet below. */
 .ks-rail { display: none; }
 @media (min-width: 1024px) {
-  .ks-rail { display: block; position: sticky; top: 0; align-self: start; max-height: 100dvh; overflow: auto; padding: 16px 0; border-right: 1px solid var(--table-muted); background: var(--table-raised); min-height: 100%; }
+  .ks-rail { display: block; position: sticky; top: 0; align-self: start; max-height: 100dvh; overflow: auto; padding: 24px 0; border-right: 1px solid var(--ink-faint); background: var(--table-raised); min-height: 100%; }
 }
 .ks-rail__group { margin: 0 0 12px; padding: 0; list-style: none; }
-.ks-rail__heading { margin: 12px 16px 4px; font: 500 0.75rem/1.4 var(--font-mono), monospace; letter-spacing: var(--track-code); text-transform: uppercase; color: var(--table-muted); }
+.ks-rail__heading { margin: 24px 20px 8px; font: 600 0.75rem/1.4 var(--font-sans), sans-serif; letter-spacing: 0.05em; text-transform: uppercase; color: var(--table-muted); }
 .ks-rail__heading:lang(mr) { font-family: var(--font-deva-sans), sans-serif; }
-.ks-rail__link { position: relative; display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 6px 16px; color: var(--table-ink); text-decoration: none; font-size: 0.9375rem; }
-.ks-rail__link:hover { background: color-mix(in oklab, var(--table-ink) 6%, transparent); }
-.ks-rail__link[aria-current="page"] { font-weight: 600; background: color-mix(in oklab, var(--table-ink) 8%, transparent); }
-.ks-rail__link[aria-current="page"]::before { content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 3px; background: var(--brass); }
+.ks-rail__link { position: relative; display: flex; align-items: center; gap: 10px; min-height: 36px; padding: 6px 12px; margin: 2px 16px; border-radius: 6px; color: var(--table-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: all 0.2s; }
+.ks-rail__link:hover { background: var(--stock-eggshell); color: var(--table-ink); }
+.ks-rail__link[aria-current="page"] { font-weight: 600; background: var(--stock-eggshell); color: var(--table-ink); }
+.ks-rail__link[aria-current="page"]::before { display: none; }
 .ks-menu-btn { display: inline-flex; }
 @media (min-width: 1024px) { .ks-menu-btn { display: none; } }
 .ks-menu .ks-rail__link { color: var(--ink); }

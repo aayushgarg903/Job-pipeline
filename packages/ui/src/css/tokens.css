@@ -3,20 +3,20 @@
   color-scheme: light;
 
   /* 2.1 Colour: the table (page) and the stock (cards) */
-  --table: #CFC8B8;
-  --table-raised: #C4BCAA;
-  --table-ink: #1C1A17;
-  --table-muted: #4A443B;
-  --stock-bone: #EFE8D8;
-  --stock-eggshell: #F2ECDC;
-  --stock-nimbus: #F4F3EE;
-  --ink: #1C1A17;
-  --ink-muted: #5E574C;
-  --ink-faint: #756D60; /* non-text only */
-  --brass: #8C6B2E; /* on the table only */
-  --signal-gap: #7A1F24;
-  --signal-ok: #2E4A3B;
-  --signal-watch: #7A5A12;
+  --table: #FAFAFA;
+  --table-raised: #FFFFFF;
+  --table-ink: #09090B;
+  --table-muted: #71717A;
+  --stock-bone: #FFFFFF;
+  --stock-eggshell: #F4F4F5;
+  --stock-nimbus: #F4F4F5;
+  --ink: #09090B;
+  --ink-muted: #71717A;
+  --ink-faint: #E4E4E7;
+  --brass: #000000;
+  --signal-gap: #E11D48;
+  --signal-ok: #16A34A;
+  --signal-watch: #D97706;
 
   /* Map ramp: five classed sepia steps mixed from stock and ink tokens (no new hues). */
   --ramp-1: color-mix(in oklab, var(--ink-muted) 8%, var(--stock-bone));
@@ -46,8 +46,8 @@
   --t-slide: 320ms cubic-bezier(.2, .9, .25, 1);
   --t-exit: 200ms cubic-bezier(.4, 0, 1, 1);
 
-  /* Paper grain: tiny inline SVG noise tile at 3% opacity. */
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='.33 .33 .33 0 0 .33 .33 .33 0 0 .33 .33 .33 0 0 0 0 0 0 1'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");
+  /* Paper grain: disabled for minimalist look */
+  --grain: none;
 
   /* Set by CompareTray so focused elements are never hidden under it. */
   --tray-h: 0px;

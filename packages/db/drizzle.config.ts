@@ -1,7 +1,7 @@
 import { config } from "dotenv";
 import { defineConfig } from "drizzle-kit";
 
-config({ path: process.env.KS_ENV ?? "/home/faith/stuff/SIH/Job-pipeline/.env", quiet: true });
+config({ path: process.env.KS_ENV ?? "../../.env", quiet: true });
 
 export default defineConfig({
   dialect: "postgresql",

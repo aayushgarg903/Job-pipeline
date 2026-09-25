@@ -8,7 +8,7 @@ import type { z } from "zod";
 
 export const DEFAULT_MODEL = "gemini-3.6-flash";
 export const DEFAULT_FALLBACKS = ["gemini-3.5-flash", "gemini-3.1-flash-lite", "gemini-flash-lite-latest"];
-export const DEFAULT_ENV_PATH = "/home/faith/stuff/SIH/Job-pipeline/.env";
+export const DEFAULT_ENV_PATH = "../../.env";
 
 let envLoaded = false;
 /** Loads secrets once from KS_ENV (or the project .env). Never overrides variables already set. */
